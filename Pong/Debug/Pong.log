@@ -1,0 +1,3 @@
+﻿  stdafx.cpp
+  Pong.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory

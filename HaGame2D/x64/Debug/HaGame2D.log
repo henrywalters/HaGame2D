@@ -1,0 +1,811 @@
+﻿  ZeldaClone.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\zeldaclone.cpp(107): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\zeldaclone.cpp(157): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  UIComponent.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\uicomponent.cpp(16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\uicomponent.cpp(17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  TextRenderer.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  SpriteSheetHelper.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(133): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(134): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(136): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheethelper.cpp(142): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  SpriteRenderer.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  SpriteAnimationRenderer.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Scene.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.cpp(38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.cpp(41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.cpp(45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.cpp(46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.cpp(208): warning C4244: 'argument': conversion from 'Uint32' to 'float', possible loss of data
+  Rect.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\rect.cpp(17): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\rect.cpp(17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  QuadTree.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Pong_GameLoop.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Pong_ComputerController.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Pong_BallController.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Pong.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(74): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(75): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(76): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(78): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(79): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(80): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(86): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(96): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(98): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(117): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\pong.cpp(118): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  OrthogonolCharacterController.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MapBuilder.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.h(89): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.h(90): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(150): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(151): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(152): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(155): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(158): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(162): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(166): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(169): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(201): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(216): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(240): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(241): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\mapbuilder.cpp(242): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  InputComponent.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  HaType.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(51): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(52): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(57): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(58): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(69): warning C4018: '>': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(140): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(140): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(156): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(157): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(158): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(162): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(163): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\hatype.cpp(179): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  HaGame2D.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spriteanimationrenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  GridLines.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  GridDrawer.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(43): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\spritesheetloader.h(58): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.h(89): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.h(90): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.cpp(18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.cpp(19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.cpp(23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.cpp(32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\grid.h(162): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\grid.h(159): note: while compiling class template member function 'GridIndex Grid<GridCell>::getSpatialIndex(Vector,Vector)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.cpp(21): note: see reference to function template instantiation 'GridIndex Grid<GridCell>::getSpatialIndex(Vector,Vector)' being compiled
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\griddrawer.h(36): note: see reference to class template instantiation 'Grid<GridCell>' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\grid.h(163): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\grid.h(147): warning C4715: 'Grid<GridCell>::get': not all control paths return a value
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\grid.h(147): warning C4715: 'Grid<GridCell>::get': not all control paths return a value
+  Compiling...
+  GraphicsComponent.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  GameObjectTree.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  GameObject.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Game.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\scene.h(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\game.h(10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Display.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(11): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(59): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(60): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(67): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(68): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(69): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(94): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(94): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(102): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(102): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(112): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(190): warning C4838: conversion from 'int' to 'Uint8' requires a narrowing conversion
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(199): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(209): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.cpp(223): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'TTF_Font *'
+  Component.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  CollisionComponent.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Circle.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Camera.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+  ButtonComponent.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  BoxRenderer.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  BoxComponent.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  BoxCollider.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\boxcollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+Circle.obj : error LNK2019: unresolved external symbol SDL_SetRenderDrawColor referenced in function "public: virtual void __cdecl Circle::draw(class Display *)" (?draw@Circle@@UEAAXPEAVDisplay@@@Z)
+Display.obj : error LNK2001: unresolved external symbol SDL_SetRenderDrawColor
+Rect.obj : error LNK2001: unresolved external symbol SDL_SetRenderDrawColor
+Display.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_FreeSurface referenced in function "public: struct PNG __cdecl Display::loadPNG(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadPNG@Display@@QEAA?AUPNG@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_ConvertSurface referenced in function "public: struct PNG __cdecl Display::loadPNG(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadPNG@Display@@QEAA?AUPNG@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_UpperBlit referenced in function "public: void __cdecl Display::drawPNG(struct PNG)" (?drawPNG@Display@@QEAAXUPNG@@@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_CreateWindow referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_GetWindowSurface referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_CreateRenderer referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_CreateTextureFromSurface referenced in function "public: struct Text __cdecl Display::loadText(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct RGB)" (?loadText@Display@@QEAA?AUText@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H0URGB@@@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderSetViewport referenced in function "public: void __cdecl Display::draw(void)" (?draw@Display@@QEAAXXZ)
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderClear referenced in function "public: void __cdecl Display::clear(void)" (?clear@Display@@QEAAXXZ)
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderDrawLine referenced in function "public: void __cdecl <lambda_a15e08987a76ff4263ae949bbd17ca86>::operator()(void)const " (??R<lambda_a15e08987a76ff4263ae949bbd17ca86>@@QEBAXXZ)
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderDrawRect referenced in function "public: void __cdecl <lambda_ab4eba5b5cc76d296b3259e0db46b4e5>::operator()(void)const " (??R<lambda_ab4eba5b5cc76d296b3259e0db46b4e5>@@QEBAXXZ)
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderFillRect referenced in function "public: void __cdecl <lambda_3ee4b5f916858239dd908e89918f3151>::operator()(void)const " (??R<lambda_3ee4b5f916858239dd908e89918f3151>@@QEBAXXZ)
+Rect.obj : error LNK2001: unresolved external symbol SDL_RenderFillRect
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderCopy referenced in function "public: void __cdecl <lambda_17c7a3ed9b990ee1342a13ccd60d98a7>::operator()(void)const " (??R<lambda_17c7a3ed9b990ee1342a13ccd60d98a7>@@QEBAXXZ)
+Display.obj : error LNK2019: unresolved external symbol SDL_RenderPresent referenced in function "public: void __cdecl Display::render(void)" (?render@Display@@QEAAXXZ)
+Display.obj : error LNK2019: unresolved external symbol SDL_DestroyTexture referenced in function "public: void __cdecl Display::clearText(struct Text)" (?clearText@Display@@QEAAXUText@@@Z)
+Display.obj : error LNK2019: unresolved external symbol SDL_Init referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol IMG_Init referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol IMG_Load referenced in function "public: struct PNG __cdecl Display::loadPNG(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadPNG@Display@@QEAA?AUPNG@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Display.obj : error LNK2019: unresolved external symbol TTF_Init referenced in function "public: __cdecl Display::Display(int,int,char *)" (??0Display@@QEAA@HHPEAD@Z)
+Display.obj : error LNK2019: unresolved external symbol TTF_OpenFont referenced in function "public: struct Text __cdecl Display::loadText(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct RGB)" (?loadText@Display@@QEAA?AUText@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H0URGB@@@Z)
+Display.obj : error LNK2019: unresolved external symbol TTF_RenderText_Solid referenced in function "public: struct Text __cdecl Display::loadText(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct RGB)" (?loadText@Display@@QEAA?AUText@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H0URGB@@@Z)
+UIComponent.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+ZeldaClone.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+Game.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+HaType.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+Scene.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+SpriteAnimationRenderer.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+Game.obj : error LNK2019: unresolved external symbol SDL_Delay referenced in function "public: void __cdecl Game::tick(void)" (?tick@Game@@QEAAXXZ)
+Input.obj : error LNK2019: unresolved external symbol SDL_SetClipboardText referenced in function "public: void __cdecl Input::pollEvents(void)" (?pollEvents@Input@@QEAAXXZ)
+Input.obj : error LNK2019: unresolved external symbol SDL_GetClipboardText referenced in function "public: void __cdecl Input::pollEvents(void)" (?pollEvents@Input@@QEAAXXZ)
+Input.obj : error LNK2019: unresolved external symbol SDL_GetModState referenced in function "public: void __cdecl Input::pollEvents(void)" (?pollEvents@Input@@QEAAXXZ)
+Input.obj : error LNK2019: unresolved external symbol SDL_StartTextInput referenced in function "public: __cdecl Input::Input(void)" (??0Input@@QEAA@XZ)
+Input.obj : error LNK2019: unresolved external symbol SDL_GetMouseState referenced in function "public: void __cdecl Input::pollEvents(void)" (?pollEvents@Input@@QEAAXXZ)
+Input.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function "public: void __cdecl Input::pollEvents(void)" (?pollEvents@Input@@QEAAXXZ)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+SDL2_image.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2_ttf.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2main.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\henry\Documents\Visual Studio 2017\Projects\HaGame2D\x64\Debug\HaGame2D.exe : fatal error LNK1120: 32 unresolved externals

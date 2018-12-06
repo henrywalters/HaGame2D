@@ -1,0 +1,2 @@
+float x = 100.000000,float y = 100.000000,string tag = wall,bool collider = true,int id = 112312
+float x = 100.000000,float y = 100.000000,string tag = wall,bool collider = true,string id = Harry Potter
