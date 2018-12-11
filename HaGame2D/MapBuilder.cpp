@@ -119,8 +119,9 @@ public:
 };
 
 
-MapBuilder::MapBuilder()
+MapBuilder::MapBuilder(char * save)
 {
+	saveFile = save;
 	int mapWidth = 3000;
 	int mapHeight = 3000;
 	int rows = 100, cols = 100;
@@ -181,8 +182,8 @@ MapBuilder::MapBuilder()
 	newMapText->setFontColor(Color::black());
 	newMapText->setAllignment(TextAllignments::Center);
 
-	btn->onClickFunc = [mapDrawer]() {
-		mapDrawer->save("mapdrawerfile.txt");
+	btn->onClickFunc = [mapDrawer, save]() {
+		mapDrawer->save(save);
 	};
 
 	auto loadMapBtn = tools.add();
@@ -230,10 +231,10 @@ MapBuilder::MapBuilder()
 
 	//mapDrawer = mapLayers[0];
 
-	auto tileSheet = pallet.display->loadTexture("../Assets/mapbuilder-tiles.png");
+	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
 	auto tiles = SpriteSheetLoader::load("mapbuilder-tiles.txt");
 
-	const int tileSize = 100;
+	const int tileSize = 50;
 
 	for (int i = 0; i < tiles.size(); i++) {
 		auto palletTile = pallet.add();

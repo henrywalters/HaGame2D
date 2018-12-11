@@ -68,6 +68,7 @@ public:
 	bool active = true;
 
 	GameObject(); // : GameObjectTree(this) {};
+
 	virtual ~GameObject();
 
 	//Directly set the three primary properties

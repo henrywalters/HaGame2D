@@ -4,8 +4,10 @@
 
 class MapBuilder
 {
+	char * saveFile;
+
 public:
-	MapBuilder();
+	MapBuilder(char * save);
 	~MapBuilder();
 };
 

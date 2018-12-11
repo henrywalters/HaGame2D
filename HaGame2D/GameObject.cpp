@@ -18,9 +18,17 @@ GameObject::GameObject()
 GameObject::~GameObject()
 {
 	for (int i = 0; i < componentCount; i++) {
-		free(components[i]);		
+		delete components[i];		
 	}
 	componentCount = 0;
+	if (childGameObjectCount == 0) {
+		active = false;
+	}
+	else {
+		for (auto gameObject : childGameObjects) {
+			delete gameObject;
+		}
+	}
 }
 
 void GameObject::setPosition(Vector pos) {
@@ -72,7 +80,9 @@ void GameObject::update() {
 	oldScale = scale;
 
 	for (int i = 0; i < componentCount; i++) {
-		components[i]->update();
+		if (components[i]->active) {
+			components[i]->update();
+		}
 	}
 }
 

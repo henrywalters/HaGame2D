@@ -78,7 +78,7 @@ void Scene::initializeGameObjects() {
 }
 
 GameObject * Scene::instantiate(GameObject * gameObject) {
-	Scene::instantiate((char *)TEMP_GAMEOBJECT_ID, gameObject);
+	Scene::instantiate((char *)std::to_string(Random::number(0, 100000)).c_str(), gameObject);
 	for (int i = 0; i < gameObject->componentCount; i++) {
 		gameObject->components[i]->initialize(display, input, this);
 		gameObject->components[i]->onCreate();
@@ -90,6 +90,7 @@ GameObject * Scene::instantiate(GameObject * gameObject) {
 
 void Scene::destroy(GameObject * gameObject) {
 	for (int i = 0; i < gameObject->componentCount; i++) {
+		gameObject->components[i]->active = false;
 		gameObject->components[i]->onDestroy();
 	}
 
@@ -99,6 +100,7 @@ void Scene::destroy(GameObject * gameObject) {
 
 	//This MUST be changed soon. 
 	gameObject->active = false;
+
 }
 
 void Scene::tick() {
@@ -143,7 +145,7 @@ void Scene::tick() {
 
 			auto * collider = currentObject->getComponent<BoxCollider>();
 
-			if (collider != NULL && !currentObject->staticObject) {
+			if (collider != NULL && collider->active && !currentObject->staticObject) {
 				tick = SDL_GetTicks();
 				std::vector<GameObject *> neighbors = quadTree->getNeighbors(currentObject);
 				int quadNeighbors = SDL_GetTicks();

@@ -13,6 +13,8 @@ public:
 
 	float speed = 2.0f;
 
+	Vector currentDirection = Vector::Zero();
+
 	bool xAxisLocked = false;
 	bool yAxisLocked = false;
 

@@ -18,11 +18,14 @@ public:
 	Input *input;
 
 	Component();
-	virtual ~Component();
+
+	virtual ~Component() {
+		active = false;
+		onDestroy();
+	};
 
 	GameObject * transform;
 	Scene * gameScene;
-
 
 	virtual void onCreate() {};
 	virtual void onDestroy() {};

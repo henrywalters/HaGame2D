@@ -14,7 +14,6 @@ OrthogonolCharacterController::~OrthogonolCharacterController()
 {
 }
 
-
 void OrthogonolCharacterController::update() {
 
 	BoxCollider *collider = transform->getComponent<BoxCollider>();
@@ -24,24 +23,37 @@ void OrthogonolCharacterController::update() {
 	Vector vel = Vector::Zero();
 
 	float epsilon = 3;
-
+	Vector tmpDir = Vector::Zero();
+	bool moved = false;
 	if (!xAxisLocked) {
 		if (input->right) {
 			vel.x = speed;
+			tmpDir += Vector(1, 0);
+			moved = true;
 		}
 
 		if (input->left) {
 			vel.x = -1 * speed;
+			tmpDir += Vector(-1, 0);
+			moved = true;
 		}
 	}
 
 	if (!yAxisLocked) {
 		if (input->up) {
 			vel.y = -1 * speed;
+			tmpDir += Vector(0, -1);
+			moved = true;
 		}
 		else if (input->down) {
 			vel.y = speed;
+			tmpDir += Vector(0, 1);
+			moved = true;
 		}
+	}
+
+	if (moved) {
+		currentDirection = tmpDir;
 	}
 
 	Vector finalVelocity = vel.normalized() * speed;

@@ -5,8 +5,3 @@ Component::Component()
 {
 	transform = NULL;
 }
-
-
-Component::~Component()
-{
-}
