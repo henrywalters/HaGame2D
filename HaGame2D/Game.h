@@ -22,10 +22,12 @@ class Game
 	std::unordered_map<std::string, GameScene> scenes;
 	std::vector<std::string> keys;
 	std::vector<std::string> activeKeys;
+
+
+public:
 	Display * display;
 	Input * input;
 
-public:
 	Game(int _screenWidth = DEFAULT_WIDTH, int _screenHeight = DEFAULT_HEIGHT, char * title = "HaGame2D: Untitled Game");
 	~Game();
 

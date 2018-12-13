@@ -46,19 +46,6 @@ class CamController : public Component {
 	}
 };
 
-class SaveButton : public ButtonComponent {
-public:
-	SaveButton(float width, float height) : ButtonComponent(width, height) {
-
-	}
-
-	std::function<void()> onClickFunc;
-
-	void onClick() {
-		onClickFunc();
-	}
-};
-
 class TileButton : public ButtonComponent {
 public :
 
@@ -118,6 +105,67 @@ public:
 
 };
 
+template <class T>
+class ValueButtonComponent : public ButtonComponent {
+	T _value;
+public:
+	std::function<void(T)> onClickFunc;
+
+	ValueButtonComponent(float width, float height, T value) : ButtonComponent(width, height) {
+		_value = value;
+	}
+
+	~ValueButtonComponent() {};
+
+	void onClick() {
+		onClickFunc(_value);
+	}
+};
+
+class Btn {
+public:
+	static GameObject * initialize(Scene *scene, Vector pos, Vector size, std::string msg, RGB color = Color::black()) {
+		auto btn = scene->add();
+		btn->move(pos);
+		auto btnComp = btn->addComponent(new ButtonComponent(size.x, size.y));
+		auto text = btn->addComponent(new TextRenderer(size.x, size.y));
+		text->setFontSize(16);
+		text->setMessage(msg);
+		text->setFontColor(color);
+		text->setAllignment(TextAllignments::Center);
+		return btn;
+	}
+};
+
+template <class T>
+class ValueBtn {
+public:
+	static GameObject * initialize(Scene *scene, Vector pos, Vector size, std::string msg, T value, RGB color = Color::black()) {
+		auto btn = scene->add();
+		btn->move(pos);
+		auto btnComp = btn->addComponent(new ValueButtonComponent<T>(size.x, size.y, value));
+		auto text = btn->addComponent(new TextRenderer(size.x, size.y));
+		text->setFontSize(16);
+		text->setMessage(msg);
+		text->setFontColor(color);
+		text->setAllignment(TextAllignments::Center);
+		return btn;
+	}
+};
+
+class Label {
+public:
+	static GameObject * initialize(Scene *scene, Vector pos, Vector size, std::string msg, RGB color = Color::black()) {
+		auto text = scene->add();
+		text->move(pos);
+		auto renderer = text->addComponent(new TextRenderer(size.x, size.y));
+		renderer->setAllignment(TextAllignments::Center);
+		renderer->setFontSize(16);
+		renderer->setFontColor(color);
+		renderer->setMessage(msg);
+		return text;
+	}
+};
 
 MapBuilder::MapBuilder(char * save)
 {
@@ -126,13 +174,15 @@ MapBuilder::MapBuilder(char * save)
 	int mapHeight = 3000;
 	int rows = 100, cols = 100;
 
+
+
 	const int layers = 5;
 
-	const int screenWidth = 800;
-	const int screenHeight = 600;
+	const int screenWidth = 1800;
+	const int screenHeight = 900;
 
-	const int worldWidth = 600;
-	const int worldHeight = 500;
+	const int worldWidth = 1500;
+	const int worldHeight = 850;
 
 	const int palletWidth = screenWidth;
 	const int palletHeight = screenHeight - worldHeight;
@@ -144,9 +194,23 @@ MapBuilder::MapBuilder(char * save)
 
 	Game builder = Game(screenWidth, screenHeight, "Map Builer: Untitled.map");
 
+	SDL_DisplayMode dm;
+	SDL_GetDesktopDisplayMode(0, &dm);
+
+	auto w = dm.w;
+	auto h = dm.h;
+
+	printf("Screen height %f & width %f ", w, h);
+
+	SDL_SetWindowFullscreen(builder.display->window, 0);
+
 	Scene world = *builder.addScene("world");
 	Scene pallet = *builder.addScene("pallet");
 	Scene tools = *builder.addScene("tools");
+
+	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
+	auto tiles = SpriteSheetLoader::load("mapbuilder-tiles.txt");
+
 
 	world.setDisplayPort(0, 0, worldWidth, worldHeight);
 	pallet.setDisplayPort(0, worldHeight, palletWidth, palletHeight);
@@ -166,73 +230,51 @@ MapBuilder::MapBuilder(char * save)
 	toolBg->z_index = 1;
 	toolBg->addComponent(new BoxRenderer(toolWidth, toolHeight, true, toolColor));
 
+	Label::initialize(&tools, Vector(0, 0), Vector(toolWidth, 50), "Map Builder");
 
-	auto toolTitle = tools.add()->addComponent(new TextRenderer(toolWidth, 50));
-	toolTitle->setMessage("Map Builder");
-	toolTitle->setFontColor(Color::black());
-	toolTitle->setAllignment(TextAllignments::Center);
-
-	auto newMapBtn = tools.add();
-	newMapBtn->move(Vector(10, 50));
-
-	auto btn = newMapBtn->addComponent(new SaveButton(80, 50));
-	auto newMapText = newMapBtn->addComponent(new TextRenderer(80, 50));
-	newMapText->setFontSize(16);
-	newMapText->setMessage("Save Map");
-	newMapText->setFontColor(Color::black());
-	newMapText->setAllignment(TextAllignments::Center);
-
-	btn->onClickFunc = [mapDrawer, save]() {
+	Btn::initialize(&tools, Vector(10, 50), Vector(80, 50), "Save")->getComponent<ButtonComponent>()->onClickFunc = [mapDrawer, save]() {
 		mapDrawer->save(save);
 	};
 
-	auto loadMapBtn = tools.add();
-	loadMapBtn->move(Vector(100, 50));
+	Btn::initialize(&tools, Vector(100, 50), Vector(80, 50), "Load")->getComponent<ButtonComponent>()->onClickFunc = [mapDrawer, tileSheet, save]() {
+		std::cout << "Loading map: " << save << "\n";
+		mapDrawer->tryLoad(save, tileSheet);
+	};
 
-	loadMapBtn->addComponent(new ButtonComponent(80, 50));
-	auto loadMapText = loadMapBtn->addComponent(new TextRenderer(80, 50));
-	loadMapText->setFontSize(16);
-	loadMapText->setMessage("Load Map");
-	loadMapText->setFontColor(Color::black());
-	loadMapText->setAllignment(TextAllignments::Center);
+	Btn::initialize(&tools, Vector(190, 50), Vector(80, 50), "Clear", Color::red())->getComponent<ButtonComponent>()->onClickFunc = [mapDrawer]() {
+		mapDrawer->clearAll();
+	};
 
+	Label::initialize(&tools, Vector(10, 125), Vector(180, 35), "Layer Controls");
+
+	Label::initialize(&tools, Vector(190, 125), Vector(toolWidth - 180, 35), "Brush Size");
 
 	for (int i = 0; i < layers; i++) {
-		auto selectLayer = tools.add();
-		selectLayer->move(Vector(100, 125 + i * 60));
-		auto selectLayerBtn = selectLayer->addComponent(new SelectLayerButton(80, 50, i));
 
-		auto selectLayerText = selectLayer->addComponent(new TextRenderer(80, 50));
-		selectLayerText->setMessage(std::to_string(i));
-		selectLayerText->setAllignment(TextAllignments::Center);
-		selectLayerText->setFontColor(Color::black());
-		selectLayerText->setFontSize(16);
-
-		selectLayerBtn->onClickFunc = [mapDrawer](int layer) {
+		ValueBtn<int>::initialize(&tools, Vector(100, 160 + i * 60), Vector(80, 50), std::to_string(i), i)->getComponent<ValueButtonComponent<int>>()->onClickFunc = [mapDrawer](int layer) {
 			mapDrawer->setLayer(layer);
 			std::cout << "Selected layer: " << layer << "\n";
 		};
 
-		auto toggleLayer = tools.add();
-		toggleLayer->move(Vector(10, 125 + i * 60));
-		auto toggleLayerBtn = toggleLayer->addComponent(new ViewLayerButton(80, 50, i));
-		auto toggleLayerText = toggleLayer->addComponent(new TextRenderer(80, 50));
-		toggleLayerText->setMessage("Hide");
-		toggleLayerText->setFontColor(Color::black());
-		toggleLayerText->setAllignment(TextAllignments::Center);
-		toggleLayerText->setFontSize(16);
-
-		toggleLayerBtn->onClickFunc = [toggleLayerText, mapDrawer](int z_index, bool active) {
-			mapDrawer->toggle(z_index);
+		ValueBtn<int>::initialize(&tools, Vector(10, 160 + i * 60), Vector(80, 50), "Hide", i)->getComponent<ValueButtonComponent<int>>()->onClickFunc = [mapDrawer](int layer) {
+			mapDrawer->toggle(layer);
+			std::cout << "Selected layer: " << layer << "\n";
 		};
-		
 
+		
+	}
+
+	ValueBtn<int>::initialize(&tools, Vector(210, 160), Vector(80, 40), "1", 1)->getComponent<ValueButtonComponent<int>>()->onClickFunc = [mapDrawer](int size) {
+		mapDrawer->setBrushSize(size);
+	};
+
+	for (int i = 1; i < 10; i++) {
+		ValueBtn<int>::initialize(&tools, Vector(210, 160 + i * 45), Vector(80, 40), std::to_string(i * 2), i * 2)->getComponent<ValueButtonComponent<int>>()->onClickFunc = [mapDrawer](int size) {
+			mapDrawer->setBrushSize(size);
+		};
 	}
 
 	//mapDrawer = mapLayers[0];
-
-	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
-	auto tiles = SpriteSheetLoader::load("mapbuilder-tiles.txt");
 
 	const int tileSize = 50;
 

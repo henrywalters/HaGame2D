@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 
     //SpriteSheetHelper helper = SpriteSheetHelper(800, 100);
 
-	//MapBuilder builder("demo.txt");
+	//MapBuilder builder("adventure.map");
 
 	//HaType hatype;
 	/*

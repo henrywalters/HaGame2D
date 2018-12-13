@@ -21,19 +21,65 @@ void GridDrawer::update() {
 		GridIndex mIndex = grid.getSpatialIndex(transform->position, Vector(mX, mY));
 
 		if (input->fire1 && display->inDisplayPort(Vector(input->mouseX, input->mouseY)) && mIndex.x < grid.cols && mIndex.y < grid.rows && mIndex.x >= 0 && mIndex.y >= 0) {
-			auto palletCell = grid.get(mIndex.x, mIndex.y);
-			auto pallet = palletCell.layers[z_index];
-			pallet->type = currentPallet->type;
-			pallet->color = currentPallet->color;
-			pallet->spriteSheet = currentPallet->spriteSheet;
-			pallet->spriteSheetCell = currentPallet->spriteSheetCell;
+			if (brushSize > 1) {
+				for (int i = brushSize / -2; i < brushSize / 2; i++) {
+					for (int j = brushSize / -2; j < brushSize / 2; j++) {
+						int x = mIndex.x + i;
+						int y = mIndex.y + j;
+						if (x >= 0 && x < grid.cols && y >= 0 && y < grid.rows) {
+							auto palletCell = grid.get(mIndex.x + i, mIndex.y + j);
+							auto pallet = palletCell.layers[z_index];
+							pallet->type = currentPallet->type;
+							pallet->color = currentPallet->color;
+							pallet->spriteSheet = currentPallet->spriteSheet;
+							pallet->spriteSheetCell = currentPallet->spriteSheetCell;
+						}
+					}
+				}
+			}
+			else {
+				auto palletCell = grid.get(mIndex.x, mIndex.y);
+				auto pallet = palletCell.layers[z_index];
+				pallet->type = currentPallet->type;
+				pallet->color = currentPallet->color;
+				pallet->spriteSheet = currentPallet->spriteSheet;
+				pallet->spriteSheetCell = currentPallet->spriteSheetCell;
+			}
 		}
 
-		if (input->fire2 && display->inDisplayPort(Vector(input->mouseX, input->mouseY)) && mIndex.x < grid.cols && mIndex.y < grid.rows && mIndex.x >= 0 && mIndex.y >= 0) {
-			auto palletCell = grid.get(mIndex.x, mIndex.y);
-			auto pallet = palletCell.layers[z_index];
-			pallet->type = PalletType::Empty;
+		else if (input->fire2 && display->inDisplayPort(Vector(input->mouseX, input->mouseY)) && mIndex.x < grid.cols && mIndex.y < grid.rows && mIndex.x >= 0 && mIndex.y >= 0) {
+			if (brushSize > 1) {
+				for (int i = brushSize / -2; i < brushSize / 2; i++) {
+					for (int j = brushSize / -2; j < brushSize / 2; j++) {
+						int x = mIndex.x + i;
+						int y = mIndex.y + j;
+						if (x >= 0 && x < grid.cols && y >= 0 && y < grid.rows) {
+							auto palletCell = grid.get(mIndex.x + i, mIndex.y + j);
+							auto pallet = palletCell.layers[z_index];
+							pallet->type = PalletType::Empty;
+						}
+					}
+				}
+			}
+			else {
+				auto palletCell = grid.get(mIndex.x, mIndex.y);
+				auto pallet = palletCell.layers[z_index];
+				pallet->type = PalletType::Empty;
+			}
 		}
+
+
+		//draw a little box to show where you'll draw at.
+		Vector scale = Vector(relativeWidth / width, relativeHeight / height);
+		float relColSize = scale.x * grid.colSize;
+		float relRowSize = scale.y * grid.rowSize;
+		Vector pos = Vector(transform->relativePosition.x + (mIndex.x - brushSize / 2) * relColSize, transform->relativePosition.y + (mIndex.y - brushSize / 2) * relRowSize);
+		Vector size = Vector(brushSize * grid.colSize, brushSize * grid.rowSize);
+		
+		size.x = size.x * scale.x;
+		size.y = size.y * scale.y;
+
+		display->drawRect(pos.x + 1, pos.y + 1, size.x, size.y, Color::red(), 18);
 
 		GridIndex iter = grid.begin();
 

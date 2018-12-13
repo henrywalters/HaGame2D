@@ -14,7 +14,7 @@ ButtonComponent::~ButtonComponent()
 }
 
 void ButtonComponent::onClick() {
-
+	onClickFunc();
 }
 
 void ButtonComponent::updateUI() {

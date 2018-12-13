@@ -408,7 +408,7 @@ ZeldaClone::ZeldaClone()
 
 	auto mapTileDef = SpriteSheetLoader::getSpriteMap("mapbuilder-tiles.txt");
 	auto mapTiles = overWorld.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
-	auto mapData = MapLoader::load("demo.txt");
+	auto mapData = MapLoader::load("adventure.map");
 
 	for (MapCell mapCell : mapData) {
 		auto mapTile = mapTileDef[mapCell.key];

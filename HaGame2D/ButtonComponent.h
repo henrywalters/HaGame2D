@@ -10,6 +10,7 @@ public:
 	
 	RGB color = Color::white();
 	
+	std::function<void()> onClickFunc;
 
 	ButtonComponent(float _width, float _height);
 	~ButtonComponent();
