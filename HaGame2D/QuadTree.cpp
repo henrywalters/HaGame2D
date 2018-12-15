@@ -161,6 +161,26 @@ void QuadTree::insert(GameObject * gameObject) {
 				}
 				else {
 					inserted = true;
+					Quadrant * p1Quad = current->getBoundingQuad(Vector(gameObject->position.x + currentBox.width, gameObject->position.y));
+					Quadrant * p2Quad = current->getBoundingQuad(Vector(gameObject->position.x, gameObject->position.y));
+					Quadrant * p3Quad = current->getBoundingQuad(Vector(gameObject->position.x, gameObject->position.y + currentBox.height));
+					Quadrant * p4Quad = current->getBoundingQuad(Vector(gameObject->position.x + currentBox.width, gameObject->position.y + currentBox.height));
+
+					if (p1Quad != boundingBox) {
+						p1Quad->gameObjects.push_back(gameObject);
+					}
+
+					if (p2Quad != boundingBox) {
+						p2Quad->gameObjects.push_back(gameObject);
+					}
+
+					if (p3Quad != boundingBox) {
+						p3Quad->gameObjects.push_back(gameObject);
+					}
+
+					if (p4Quad != boundingBox) {
+						p4Quad->gameObjects.push_back(gameObject);
+					}
 				}
 			}
 			else {

@@ -172,7 +172,7 @@ MapBuilder::MapBuilder(char * save)
 	saveFile = save;
 	int mapWidth = 3000;
 	int mapHeight = 3000;
-	int rows = 100, cols = 100;
+	int rows = 50, cols = 50;
 
 
 

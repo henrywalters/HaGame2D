@@ -150,8 +150,8 @@ void Scene::tick() {
 				std::vector<GameObject *> neighbors = quadTree->getNeighbors(currentObject);
 				int quadNeighbors = SDL_GetTicks();
 				tick = SDL_GetTicks();
-				//collider->checkCollisions(neighbors);
-				collider->checkCollisions(gameObjects);
+				collider->checkCollisions(neighbors);
+				//collider->checkCollisions(gameObjects);
 			}
 
 			if (currentObject->parentGameObject->positionUpdated) {
