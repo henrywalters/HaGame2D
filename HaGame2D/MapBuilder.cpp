@@ -170,10 +170,9 @@ public:
 MapBuilder::MapBuilder(char * save)
 {
 	saveFile = save;
-	int mapWidth = 3000;
-	int mapHeight = 3000;
-	int rows = 50, cols = 50;
-
+	int mapWidth = 4000;
+	int mapHeight = 4000;
+	int rows = 75, cols = 75;
 
 
 	const int layers = 5;
@@ -182,7 +181,7 @@ MapBuilder::MapBuilder(char * save)
 	const int screenHeight = 900;
 
 	const int worldWidth = 1500;
-	const int worldHeight = 850;
+	const int worldHeight = 700;
 
 	const int palletWidth = screenWidth;
 	const int palletHeight = screenHeight - worldHeight;
@@ -208,8 +207,8 @@ MapBuilder::MapBuilder(char * save)
 	Scene pallet = *builder.addScene("pallet");
 	Scene tools = *builder.addScene("tools");
 
-	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
-	auto tiles = SpriteSheetLoader::load("mapbuilder-tiles.txt");
+	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/terrain.png");
+	auto tiles = SpriteSheetLoader::load("terrain-tiles.ssd");
 
 
 	world.setDisplayPort(0, 0, worldWidth, worldHeight);
@@ -276,18 +275,38 @@ MapBuilder::MapBuilder(char * save)
 
 	//mapDrawer = mapLayers[0];
 
-	const int tileSize = 50;
+	const int tileSize = 20;
+	const int rowSize = 10;
+
+	int offsetX = 0;
+	int offsetY = 0;
 
 	for (int i = 0; i < tiles.size(); i++) {
 		auto palletTile = pallet.add();
 		palletTile->addComponent(new SpriteRenderer(tileSheet, tiles[i], tileSize, tileSize));
-		palletTile->move(Vector(i * tileSize, 0));
+
+		if (i % rowSize == 0) {
+			offsetX = 0;
+			offsetY += tileSize;
+		}
+		else {
+			offsetX += tileSize;
+		}
+
+		palletTile->move(Vector(offsetX, offsetY));
 		auto palletTileBtn = palletTile->addComponent(new TileButton(tileSize, tileSize));
 		palletTileBtn->spriteSheet = tileSheet;
 		palletTileBtn->cell = tiles[i];
 		palletTileBtn->onClickFunc = [mapDrawer](PalletItem * pallet) {
 			mapDrawer->setPallet(pallet->spriteSheet, pallet->spriteSheetCell);
 		};
+		/*
+		palletTileBtn->onHoverFunc = [pallet, palletTileBtn]() {
+			Vector pos = palletTileBtn->transform->position;
+			Vector size = Vector(palletTileBtn->cell.width, palletTileBtn->cell.height);
+			pallet.display->drawRect(pos.x, pos.y, size.x, size.y, Color::blue());
+		};
+		*/
 	}
 
 

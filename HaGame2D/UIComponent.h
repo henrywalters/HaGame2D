@@ -10,6 +10,7 @@ class UIComponent : public BoxComponent
 {
 	bool focused;
 	bool canClick = true;
+	bool isClicked = false;
 	int lastClick;
 public:
 	UIComponent();
@@ -20,6 +21,7 @@ public:
 	virtual void onMouseDown() {};
 	virtual void onFocus() {};
 	virtual void onBlur() {};
+	virtual void onHover() {};
 	virtual void onInput(std::string input) {};
 	virtual void onFocusedInput(std::string input) {};
 

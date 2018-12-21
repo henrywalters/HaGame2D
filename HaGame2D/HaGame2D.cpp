@@ -14,9 +14,9 @@ int main(int argc, char* argv[])
 {
 	ZeldaClone zelda = ZeldaClone();
 
-    //SpriteSheetHelper helper = SpriteSheetHelper(800, 100);
-
-	//MapBuilder builder("demo.map");
+    //SpriteSheetHelper helper = SpriteSheetHelper(320, 320);
+	//SpriteSheetHelper::autoLoad(320, 320, 10, 10, "terrain-tiles.ssd");
+	//MapBuilder builder("dungeon.map");
 
 	return 0;
 }

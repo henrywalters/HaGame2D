@@ -231,6 +231,7 @@
     <ClCompile Include="HaGame2D.cpp" />
     <ClCompile Include="HaString.cpp" />
     <ClCompile Include="HaType.cpp" />
+    <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="MapBuilder.cpp" />

@@ -3,6 +3,7 @@
 #include "DataSample.h"
 #include "Camera.h"
 #include "Random.h"
+
 const char * TEMP_GAMEOBJECT_ID = "tmp";
 
 std::unordered_map<char *, GameObject *> Scene::gameObjectTable;
@@ -168,7 +169,7 @@ void Scene::tick() {
 		objectQueue.pop();
 
 		for (int i = 0; i < currentObject->childGameObjectCount; i++) {
-			if (currentObject->childGameObjects[i]->active) {
+			if (currentObject->childGameObjects[i]->active && (currentObject->trackedOffScreen || currentObject->isWithinViewport(viewport))) {
 				objectQueue.push(currentObject->childGameObjects[i]);
 			}
 		}

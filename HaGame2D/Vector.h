@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 class Vector
 {
 public:
@@ -27,6 +28,8 @@ public:
 
 	Vector& operator += (const Vector & b);
 	Vector& operator -= (const Vector & b);
+
+	bool isContainedBy(float x, float y, float w, float h);
 
 	void display();
 

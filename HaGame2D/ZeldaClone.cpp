@@ -408,7 +408,7 @@ ZeldaClone::ZeldaClone()
 
 	auto mapTileDef = SpriteSheetLoader::getSpriteMap("mapbuilder-tiles.txt");
 	auto mapTiles = overWorld.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
-	auto mapData = MapLoader::load("demo.map");
+	auto mapData = MapLoader::load("testing-arena.map");
 
 	for (MapCell mapCell : mapData) {
 		auto mapTile = mapTileDef[mapCell.key];
@@ -440,6 +440,7 @@ ZeldaClone::ZeldaClone()
 			tile->addComponent(new BoxCollider(tileSize, tileSize));
 			//tile->addComponent(new BoxRenderer(tileSize, tileSize));
 			tile->addComponent(new SpriteRenderer(mapTiles, mapTileDef["squib"], tileSize, tileSize));
+			tile->trackedOffScreen = false;
 			tile->z_index = 15;
 		}
 

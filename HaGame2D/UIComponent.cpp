@@ -24,9 +24,9 @@ void UIComponent::update() {
 		}
 	}
 
-	if (input->fire1) {
-		if (mX >= transform->position.x && mX < transform->position.x + width && mY >= transform->position.y && mY < transform->position.y + height) {
-				
+	if (mX >= transform->position.x && mX < transform->position.x + width && mY >= transform->position.y && mY < transform->position.y + height) {
+		//onHover();
+		if (input->fire1) {
 			if (canClick) {
 				onClick();
 				lastClick = SDL_GetTicks();
@@ -35,19 +35,18 @@ void UIComponent::update() {
 
 			gotFocus = true;
 		}
-	}
 
-	if (input->fire1Down) {
-		if (mX >= transform->position.x && mX < transform->position.x + width && mY >= transform->position.y && mY < transform->position.y + height) {
+		if (input->fire1Down) {
 			onMouseDown();
 		}
-	}
 
-	if (input->fire1Up) {
-		if (mX >= transform->position.x && mX < transform->position.x + width && mY >= transform->position.y && mY < transform->position.y + height) {
+		if (input->fire1Up) {
 			onMouseUp();
 		}
+
 	}
+
+
 
 	if (gotFocus && !focused) {
 		focused = true;

@@ -138,7 +138,7 @@ SpriteSheetHelper::SpriteSheetHelper(int width, int height)
 	helper.setDisplayPort(0, 0, scaledWidth, scaledHeight);
 
 	auto sheet = helper.add();
-	sheet->addComponent(new SpriteRenderer("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png", scaledWidth, scaledHeight, NULL));
+	sheet->addComponent(new SpriteRenderer("../Assets/Sprites/HaGameEngine/Environment/terrain.png", scaledWidth, scaledHeight, NULL));
 	auto cursor = sheet->addComponent(new FollowCursor(scaledWidth, scaledHeight));
 
 	game.prepareScene();
@@ -151,4 +151,26 @@ SpriteSheetHelper::SpriteSheetHelper(int width, int height)
 
 SpriteSheetHelper::~SpriteSheetHelper()
 {
+}
+
+void SpriteSheetHelper::autoLoad(int width, int height, int rows, int cols, char * saveTo) {
+
+	float cellWidth = width / cols;
+	float cellHeight = height / rows;
+
+	std::vector<SpriteSheetCell> cells;
+
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			SpriteSheetCell cell;
+			cell.cellType = "cell:" + std::to_string(i) + "|" + std::to_string(j);
+			cell.x = j * cellWidth;
+			cell.y = i * cellHeight;
+			cell.width = cellWidth;
+			cell.height = cellHeight;
+			cells.push_back(cell);
+		}
+	}
+
+	SpriteSheetLoader::save(saveTo, cells);
 }

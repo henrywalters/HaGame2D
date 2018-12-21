@@ -17,6 +17,10 @@ void ButtonComponent::onClick() {
 	onClickFunc();
 }
 
+void ButtonComponent::onHover() {
+	onHoverFunc();
+}
+
 void ButtonComponent::updateUI() {
 	
 	display->fillRect(transform->relativePosition.x, transform->relativePosition.y, relativeWidth, relativeHeight, color, 5);

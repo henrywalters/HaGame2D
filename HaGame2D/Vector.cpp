@@ -55,6 +55,16 @@ Vector & Vector::operator -= (const Vector &b) {
 	return *this;
 }
 
+bool Vector::isContainedBy(float _x, float _y, float _w, float _h)
+{
+	if (x >= _x && x <= _x + _w && y >= _y && y <= _y + _h) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 float Vector::magnitude() {
 	return sqrt((x * x) + (y * y) + (z * z));
 }

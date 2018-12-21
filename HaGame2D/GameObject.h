@@ -7,6 +7,7 @@
 #include "Display.h"
 #include <map>
 #include <string>
+#include "BoxComponent.h"
 
 class Scene;
 
@@ -50,6 +51,7 @@ public:
 	Vector origin;
 
 	bool staticObject = false;
+	bool trackedOffScreen = true;
 	
 	char * name = NULL;
 	char * tag = NULL;
@@ -105,6 +107,8 @@ public:
 		}
 		return false;
 	}
+
+	bool isWithinViewport(Matrix viewport);
 
 	//Component Methods
 	template<class T>

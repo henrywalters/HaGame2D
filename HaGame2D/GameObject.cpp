@@ -86,6 +86,40 @@ void GameObject::update() {
 	}
 }
 
+bool GameObject::isWithinViewport(Matrix viewport)
+{
+	BoxComponent * box = getComponent<BoxComponent>();
+	float bx, by, bw, bh;
+
+	bx = position.x;
+	by = position.y;
+
+	if (box == NULL) {
+		bw = 1; bh = 1;
+	}
+	else {
+		bw = box->width;
+		bh = box->height;
+	}
+	
+	bool isWithin = false;
+
+	if (Vector(bx, by).isContainedBy(viewport.get(0), viewport.get(1), viewport.get(2), viewport.get(3))) {
+		isWithin = true;
+	}
+	else if (Vector(bx + bw, by).isContainedBy(viewport.get(0), viewport.get(1), viewport.get(2), viewport.get(3))) {
+		isWithin = true;
+	}
+	else if (Vector(bx, by + bh).isContainedBy(viewport.get(0), viewport.get(1), viewport.get(2), viewport.get(3))) {
+		isWithin = true;
+	}
+	else if (Vector(bx + bw, by + bh).isContainedBy(viewport.get(0), viewport.get(1), viewport.get(2), viewport.get(3))) {
+		isWithin = true;
+	}
+
+	return isWithin;
+}
+
 GameObject * GameObject::add() {
 	GameObject * gameObject = new GameObject();
 	gameObject->parentGameObject = this;

@@ -12,6 +12,5 @@
 #include "OrthogonolCharacterController.h"
 #include "BoxCollider.h"
 #include "SpriteRenderer.h"
-
 #include "SpriteAnimationRenderer.h"
 #include "Random.h"
