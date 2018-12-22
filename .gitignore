@@ -1,1 +1,7 @@
-.vs/HaGame2D/v15/Browse.VC.opendb
+.vs/
+HaGame2D/Release/
+HaGame2D/Debug/
+Release/
+Debug/
+Dist/
+Pong/
