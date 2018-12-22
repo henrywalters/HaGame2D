@@ -195,6 +195,18 @@
     <ClInclude Include="Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InputDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardMouseInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JoystickInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -348,6 +360,18 @@
       <Filter>Source Files\Math</Filter>
     </ClCompile>
     <ClCompile Include="HelperFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardMouseInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JoystickInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

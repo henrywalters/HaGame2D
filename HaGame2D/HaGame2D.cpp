@@ -9,10 +9,19 @@
 #include "SpriteSheetHelper.h"
 #include "MapBuilder.h"
 #include "MapLoader.h"
+#include "InputManager.h"
+
 
 int main(int argc, char* argv[])
 {
-	ZeldaClone zelda = ZeldaClone();
+
+	InputManager input;
+
+	while (true) {
+		input.poll();
+	}
+
+	//ZeldaClone zelda = ZeldaClone();
 
     //SpriteSheetHelper helper = SpriteSheetHelper(320, 320);
 	//SpriteSheetHelper::autoLoad(320, 320, 10, 10, "terrain-tiles.ssd");

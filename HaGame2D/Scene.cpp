@@ -104,6 +104,8 @@ void Scene::destroy(GameObject * gameObject) {
 
 }
 
+
+
 void Scene::tick() {
 
 	int startFrame = SDL_GetTicks();
@@ -112,14 +114,11 @@ void Scene::tick() {
 
 	input->globalizeMouse(displayPort.get(0), displayPort.get(1), screen, viewport);
 
-	//Iterate through the game objects .. lets do this
-
 	std::queue<GameObject *> objectQueue;
 	std::vector<GameObject *> objectBuffer;
 
 	int quadInsert = SDL_GetTicks();
 
-	//quadTree = new QuadTree(screenWidth, screenHeight);
 	quadTree = new QuadTree(10000, 10000);
 	quadTree->setDisplay(display);
 
@@ -140,8 +139,6 @@ void Scene::tick() {
 
 		objectBuffer.push_back(currentObject);
 
-		//update current object
-
 		if (currentObject->parentGameObject != NULL) {
 
 			auto * collider = currentObject->getComponent<BoxCollider>();
@@ -152,7 +149,6 @@ void Scene::tick() {
 				int quadNeighbors = SDL_GetTicks();
 				tick = SDL_GetTicks();
 				collider->checkCollisions(neighbors);
-				//collider->checkCollisions(gameObjects);
 			}
 
 			if (currentObject->parentGameObject->positionUpdated) {
