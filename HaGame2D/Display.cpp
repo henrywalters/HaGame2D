@@ -121,7 +121,10 @@ void Display::drawPNG(PNG png) {
 void Display::drawTexture(TextureRect rect, Texture texture, TextureRect clip, int z_index) {
 	SDL_Rect sdlRect = rect.getSDLRect();
 	SDL_Rect *sdlClip = clip.getSDLRectPointer();
-	dispatch(z_index, [this, texture, sdlClip, sdlRect] { SDL_RenderCopy(renderer, texture.texture, sdlClip, &sdlRect); });
+	dispatch(z_index, [this, texture, sdlClip, sdlRect] { 
+		SDL_RenderCopy(renderer, texture.texture, sdlClip, &sdlRect); 
+		free(sdlClip);
+	});
 }
 
 void Display::drawText(TextureRect rect, Text text, TextureRect clip, int z_index) {
@@ -129,6 +132,7 @@ void Display::drawText(TextureRect rect, Text text, TextureRect clip, int z_inde
 	SDL_Rect *sdlClip = clip.getSDLRectPointer();
 	dispatch(z_index, [this, text, z_index, sdlClip, sdlRect] {
 		SDL_RenderCopy(renderer, text.texture, sdlClip, &sdlRect);
+		free(sdlClip);
 	});
 }
 
