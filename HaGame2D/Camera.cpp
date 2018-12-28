@@ -20,8 +20,6 @@ void Camera::lerp(Vector newOrigin, int frames) {
 
 	float distance = (lerpEnd - lerpStart).magnitude();
 
-	
-	
 	if (distance > 0) {
 		lerping = true;
 		lerpFrames = frames;

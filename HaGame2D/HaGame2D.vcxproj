@@ -179,6 +179,7 @@
     <ClInclude Include="HaType.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputComponent.h" />
+    <ClInclude Include="Logger.h" />
     <ClInclude Include="MapBuilder.h" />
     <ClInclude Include="MapLoader.h" />
     <ClInclude Include="Math.h" />
@@ -234,6 +235,7 @@
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputComponent.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MapBuilder.cpp" />
     <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="Math.cpp" />

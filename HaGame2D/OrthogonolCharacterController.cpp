@@ -15,6 +15,10 @@ OrthogonolCharacterController::~OrthogonolCharacterController()
 }
 
 void OrthogonolCharacterController::update() {
+	if (!positionedCamera) {
+		gameScene->camera.positionCenter(Vector(transform->position.x, transform->position.y));
+		positionedCamera = true;
+	}
 
 	BoxCollider *collider = transform->getComponent<BoxCollider>();
 

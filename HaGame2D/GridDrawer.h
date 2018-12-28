@@ -119,7 +119,7 @@ public:
 			clearAll();
 			for (MapCell cell : cells) {
 				GridCell gridCell = grid.get(cell.y, cell.x);
-				auto mapTileDef = SpriteSheetLoader::getSpriteMap("mapbuilder-tiles.txt");
+				auto mapTileDef = SpriteSheetLoader::getSpriteMap("terrain-tiles.ssd");
 
 				gridCell.layers[cell.z_index]->type = PalletType::SpritePallet;
 				gridCell.layers[cell.z_index]->spriteSheet = spriteSheet;

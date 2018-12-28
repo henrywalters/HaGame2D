@@ -5,6 +5,7 @@
 #include "SpriteAnimationRenderer.h"
 #include "Game.h"
 #include "MapLoader.h"
+#include "Component.h"
 
 char * LINK = "link";
 
@@ -370,6 +371,67 @@ public:
 	}
 };
 
+class Label {
+public:
+	static GameObject * initialize(Scene *scene, Vector pos, Vector size, std::string msg, RGB color = Color::black()) {
+		auto text = scene->add();
+		text->move(pos);
+		auto renderer = text->addComponent(new TextRenderer(size.x, size.y));
+		renderer->setAllignment(TextAllignments::Center);
+		renderer->setFontSize(16);
+		renderer->setFontColor(color);
+		renderer->setMessage(msg);
+		return text;
+	}
+};
+
+class ConsoleMessage {
+	int startedAt;
+	int expiresIn = 5000;
+	GameObject *message;
+public:
+	ConsoleMessage(GameObject * _message) {
+		message = _message;
+	}
+
+};
+
+class GameConsole : public Logger {
+private:
+	void writeLog(std::string message) {
+		auto msg = console->add();
+		msg->move(Vector(5, messages.size() * 20));
+		auto renderer = msg->addComponent(new TextRenderer(w, 22));
+		renderer->setAllignment(TextAllignments::Left);
+		renderer->setFontSize(20);
+		renderer->setFontColor(Color::red());
+		renderer->setMessage(">> " + message);
+		scene->instantiate(msg);
+		messages.push(msg);
+	}
+	std::queue<GameObject *> messages;
+public:
+	
+
+	GameObject * console;
+	int h, w;
+
+	GameConsole(Scene * scene, int width, int height) {
+		console = scene->add();
+		h = height, w = width;
+		console->addComponent(new BoxRenderer(w, h, true, Color("#2f3030").rgb));
+		setScene(scene);
+	}
+
+	void update() {
+
+	}
+
+	void log(std::string message) {		
+		writeLog(message);
+	}
+};
+
 
 class Particle : BoxComponent {
 	RGB color;
@@ -384,9 +446,19 @@ ZeldaClone::ZeldaClone()
 	
 	Scene overWorld = *zelda.addScene("overworld");
 	Scene menu = *zelda.addScene("menu");
+	Scene consoleContainer = *zelda.addScene("console");
 
 	overWorld.setDisplayPort(0, 0, 700, 650);
 	menu.setDisplayPort(700, 0, 300, 650);
+	consoleContainer.setDisplayPort(0, 650, 1000, 150);
+
+	GameConsole console = GameConsole(&consoleContainer, 990, 140);
+	
+	console.console->move(Vector(5, 5));
+
+	overWorld.setLogger(console);
+	menu.setLogger(console);
+	consoleContainer.setLogger(console);
 
 	auto title = menu.add();
 	
@@ -406,9 +478,15 @@ ZeldaClone::ZeldaClone()
 	auto map = overWorld.add();
 	auto bg = overWorld.add();
 
-	auto mapTileDef = SpriteSheetLoader::getSpriteMap("mapbuilder-tiles.txt");
-	auto mapTiles = overWorld.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/mapbuilder-tiles.png");
-	auto mapData = MapLoader::load("testing-arena.map");
+	auto mapTileDef = SpriteSheetLoader::getSpriteMap("terrain-tiles.ssd");
+	auto mapTiles = overWorld.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/terrain.png");
+	auto mapData = MapLoader::load("training-area.map");
+
+
+	auto link = Link::initialize(&overWorld);
+
+	link->move(Vector(275, 275));
+
 
 	for (MapCell mapCell : mapData) {
 		auto mapTile = mapTileDef[mapCell.key];
@@ -416,7 +494,7 @@ ZeldaClone::ZeldaClone()
 		tile->addComponent(new SpriteRenderer(mapTiles, mapTile, mapCell.width * tileSize, mapCell.height * tileSize));
 		tile->move(Vector(mapCell.y * tileSize, mapCell.x * tileSize));
 		
-		if (mapCell.key == "wall" || mapCell.key == "tree") {
+		if (mapCell.key == "wall" || mapCell.key == "tree" || mapCell.key == "dirt") {
 			tile->tag = "wall";
 			tile->addComponent(new BoxCollider(tileSize, tileSize));
 			tile->staticObject = true;
@@ -444,13 +522,19 @@ ZeldaClone::ZeldaClone()
 			tile->z_index = 15;
 		}
 
+		if (mapCell.key == "spawn") {
+			std::cout << "Moving link to spawn position\n";
+			link->setPosition(Vector(mapCell.y * tileSize, mapCell.x * tileSize));
+			
+		}
+
 	}
 
-	auto link = Link::initialize(&overWorld);
 
 	auto spellController = link->getComponent<SpellController>();
-	spellController->castFunc = [manaBar](float manaCost) {
+	spellController->castFunc = [manaBar, &console](float manaCost) {
 		manaBar->decrement(manaCost);
+		console.log("Shot Magic Bolt!");
 	};
 	
 	spellController->regenFunc = [manaBar](float regen) {
@@ -468,8 +552,6 @@ ZeldaClone::ZeldaClone()
 	};
 
 	Random rand;
-
-	link->move(Vector(275, 275));
 
 	zelda.prepareScene();
 

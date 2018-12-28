@@ -181,6 +181,7 @@ void Scene::tick() {
 
 	viewport = camera.getViewport();
 
+
 	for (int i = 0; i < gameObjects.size(); i++) {
 		Matrix obj;
 		obj.set(0, gameObjects[i]->position.x);

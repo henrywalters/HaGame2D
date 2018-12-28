@@ -73,6 +73,16 @@ public:
 		viewport = Matrix::translationMatrix(_origin);
 	}
 
+	void position(Vector _pos) {
+		viewport.set(0, _pos.x);
+		viewport.set(1, _pos.y);
+	}
+
+	void positionCenter(Vector centerPos) {
+		viewport.set(0, centerPos.x - display->displayPort.get(2) / 2.0);
+		viewport.set(1, centerPos.y - display->displayPort.get(3) / 2.0);
+	}
+
 	void move(Vector _delta) {
 		viewport += Matrix::translationMatrix(_delta);
 	}

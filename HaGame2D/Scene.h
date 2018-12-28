@@ -18,6 +18,7 @@
 #include <queue>
 #include "Camera.h"
 #include "DataSample.h"
+#include "Logger.h"
 
 class Scene : public GameObjectTree
 {
@@ -36,6 +37,9 @@ protected:
 	const float SAMPLE_SIZE = 60;
 
 	static std::unordered_map<char *, GameObject *> gameObjectTable;
+
+	bool hasLogger = false;
+	Logger logger;
 
 public:
 
@@ -67,6 +71,22 @@ public:
 	void tick();
 	void loop();
 
+	void setLogger(Logger _logger) {
+		logger = _logger;
+		hasLogger = true;
+
+		std::cout << "Set Logger!\n";
+	}
+
+
+	void log(std::string message) {
+		if (hasLogger) {
+			logger.log(message);
+		}
+		else {
+			std::cout << "WARNING - can not log message because no logger has been set\n";
+		}
+	}
 
 	static GameObject * instantiate(char * id, GameObject * gameObject);
 	GameObject * instantiate(GameObject * gameObject);

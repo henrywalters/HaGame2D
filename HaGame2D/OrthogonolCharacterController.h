@@ -18,6 +18,8 @@ public:
 	bool xAxisLocked = false;
 	bool yAxisLocked = false;
 
+	bool positionedCamera = false;
+
 	void onCreate() {
 		transform->addTag(IGNORE_ORIGIN);
 	}

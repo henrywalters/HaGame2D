@@ -2,6 +2,7 @@
 #include "Display.h"
 #include "Input.h"
 #include "Scene.h"
+#include "Component.h"
 #include <string>
 #include <unordered_map>
 
@@ -23,6 +24,7 @@ class Game
 	std::vector<std::string> keys;
 	std::vector<std::string> activeKeys;
 
+	
 
 public:
 	Display * display;
