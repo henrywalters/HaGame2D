@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include "Loggable.h"
+#include <iostream>
 
 class Scene;
 
@@ -16,6 +18,12 @@ public:
 		scene = _scene;
 	}
 
-	virtual void log(std::string message) {};
+	virtual void log(std::string message) {
+		std::cout << message << "\n";
+	};
+
+	virtual void log(Loggable message) {
+		log(message.toString());
+	}
 };
 

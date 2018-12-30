@@ -63,6 +63,14 @@ void Game::prepareScene() {
 	activeKeys.clear();
 	for (std::string key : keys) {
 		if (sceneExists(key) && scenes[key].active) {
+			if (loggerHandle != NULL) {
+				scenes[key].scene->setLogger(loggerHandle);
+			}
+			else {
+				std::cout << "WARNING - failed to set logger handle, falling back to console\n";
+				scenes[key].scene->setLogger(new Logger);
+			}
+			
 			scenes[key].scene->initializeGameObjects();
 			activeKeys.push_back(key);
 		}

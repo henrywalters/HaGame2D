@@ -16,7 +16,6 @@ void TextRenderer::onCreate() {
 	text = display->loadText(font, fontSize, message, fontColor);
 	textWidth = text.size.x; 
 	textHeight = text.size.y;
-	printf("Text size: %f x %f", textWidth, textHeight);
 }
 
 void TextRenderer::update() {

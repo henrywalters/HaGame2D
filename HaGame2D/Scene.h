@@ -39,12 +39,14 @@ protected:
 	static std::unordered_map<char *, GameObject *> gameObjectTable;
 
 	bool hasLogger = false;
-	Logger logger;
+
 
 public:
 
 	Display * display;
 	Input * input;
+
+	Logger *logger;
 
 	//Profiling objects
 	DataSample<float> fpsData;
@@ -71,21 +73,9 @@ public:
 	void tick();
 	void loop();
 
-	void setLogger(Logger _logger) {
+	void setLogger(Logger *_logger) {
 		logger = _logger;
 		hasLogger = true;
-
-		std::cout << "Set Logger!\n";
-	}
-
-
-	void log(std::string message) {
-		if (hasLogger) {
-			logger.log(message);
-		}
-		else {
-			std::cout << "WARNING - can not log message because no logger has been set\n";
-		}
 	}
 
 	static GameObject * instantiate(char * id, GameObject * gameObject);

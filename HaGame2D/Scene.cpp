@@ -71,6 +71,9 @@ void Scene::initializeGameObjects() {
 
 		for (int j = 0; j < objects[i]->componentCount; j++) {
 			objects[i]->components[j]->initialize(display, input, this);
+			if (hasLogger) {
+				objects[i]->components[j]->setLogger(logger);
+			}
 			objects[i]->components[j]->onCreate();
 		}
 	}
@@ -209,7 +212,7 @@ void Scene::tick() {
 	
 	quadTree->clear();
 
-	fpsData.add(SDL_GetTicks() - startFrame);
+	//fpsData.add(SDL_GetTicks() - startFrame);
 
 }
 

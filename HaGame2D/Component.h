@@ -10,9 +10,8 @@ class Scene;
 class Component
 {
 private:
-	bool canLog = false;
-	Logger logger;
-
+	Logger *logger;
+	bool hasLogger = false;
 public:
 
 	typedef Component base;
@@ -41,6 +40,21 @@ public:
 		display = _display;
 		input = _input;
 		gameScene = _gameScene;
+	}
+
+	void setLogger(Logger *_logger) {
+		logger = _logger;
+		hasLogger = true;
+	}
+
+
+	void log(std::string message) {
+		if (hasLogger || logger != NULL) {
+			logger->log(message);
+		}
+		else {
+			//std::cout << "WARNING - can not log message because no logger has been set\n";
+		}
 	}
 
 	template<class T>

@@ -15,9 +15,9 @@ BoxRenderer::~BoxRenderer()
 
 void BoxRenderer::update() {
 	if (fill) {
-		display->fillRect(transform->relativePosition.x, transform->relativePosition.y, relativeWidth, relativeHeight, color, transform->z_index);
+		display->fillRect(transform->relativePosition.x, transform->relativePosition.y, width, height, color, transform->z_index);
 	}
 	else {
-		display->drawRect(transform->relativePosition.x, transform->relativePosition.y, relativeWidth, relativeHeight, color, transform->z_index);
+		display->drawRect(transform->relativePosition.x, transform->relativePosition.y, width, height, color, transform->z_index);
 	}
 }

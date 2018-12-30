@@ -179,6 +179,10 @@
     <ClInclude Include="HaType.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputComponent.h" />
+    <ClInclude Include="InteractableComponent.h" />
+    <ClInclude Include="InteractionRequirement.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Loggable.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MapBuilder.h" />
     <ClInclude Include="MapLoader.h" />
@@ -235,6 +239,10 @@
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputComponent.cpp" />
+    <ClCompile Include="InteractableComponent.cpp" />
+    <ClCompile Include="InteractionRequirement.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Loggable.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MapBuilder.cpp" />
     <ClCompile Include="MapLoader.cpp" />

@@ -13,7 +13,7 @@ public:
 
 	bool fill = false;
 
-	BoxRenderer(float width, float height);
+	BoxRenderer(float _width, float _height);
 	BoxRenderer(float _width, float _height, bool _fill) {
 		width = _width;
 		height = _height;

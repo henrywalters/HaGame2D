@@ -11,7 +11,7 @@ SpriteSheetLoader::~SpriteSheetLoader()
 {
 }
 
-bool SpriteSheetLoader::save(const char * saveFile, std::vector<SpriteSheetCell> cells) {
+bool SpriteSheetLoader::save(std::string saveFile, std::vector<SpriteSheetCell> cells) {
 	std::ofstream file(saveFile);
 
 	if (file.is_open()) {
@@ -25,7 +25,7 @@ bool SpriteSheetLoader::save(const char * saveFile, std::vector<SpriteSheetCell>
 	return false;
 }
 
-std::vector<SpriteSheetCell> SpriteSheetLoader::load(const char * loadFile) {
+std::vector<SpriteSheetCell> SpriteSheetLoader::load(std::string loadFile) {
 	std::ifstream file(loadFile);
 	std::vector<SpriteSheetCell> cells;
 
@@ -52,7 +52,7 @@ std::unordered_map<std::string, SpriteSheetCell> SpriteSheetLoader::getSpriteMap
 	return animMap;
 }
 
-std::unordered_map<std::string, SpriteSheetCell> SpriteSheetLoader::getSpriteMap(char * loadFile)
+std::unordered_map<std::string, SpriteSheetCell> SpriteSheetLoader::getSpriteMap(std::string loadFile)
 {
 	return getSpriteMap(SpriteSheetLoader::load(loadFile));
 }

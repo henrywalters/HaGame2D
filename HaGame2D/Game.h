@@ -5,6 +5,7 @@
 #include "Component.h"
 #include <string>
 #include <unordered_map>
+#include "Logger.h"
 
 const float DEFAULT_ASPECT_RATIO = 4 / 3;
 const int DEFAULT_HEIGHT = 600;
@@ -24,7 +25,7 @@ class Game
 	std::vector<std::string> keys;
 	std::vector<std::string> activeKeys;
 
-	
+	Logger * loggerHandle;
 
 public:
 	Display * display;
@@ -43,6 +44,10 @@ public:
 
 	void activateScene(std::string tag);
 	void deactivateScene(std::string tag);
+
+	void setLogger(Logger *logger) {
+		loggerHandle = logger;
+	}
 
 	//before loading the game, goes through all of the scenes and filters out only those which are active.
 

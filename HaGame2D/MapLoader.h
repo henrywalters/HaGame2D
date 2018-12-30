@@ -44,7 +44,7 @@ public:
 	MapLoader();
 	~MapLoader();
 
-	static std::vector<MapCell> load(char * filePath) {
+	static std::vector<MapCell> load(std::string filePath) {
 		std::ifstream file(filePath);
 		std::vector<MapCell> map;
 
@@ -60,7 +60,7 @@ public:
 		return map;
 	}
 
-	static void save(char * filePath, std::vector<MapCell> map) {
+	static void save(std::string filePath, std::vector<MapCell> map) {
 		std::ofstream ofs(filePath);
 		for (auto cell : map) {
 			ofs << cell;

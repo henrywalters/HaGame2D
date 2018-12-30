@@ -101,3 +101,7 @@ Vector Vector::Zero() {
 void Vector::display() {
 	std::cout << "Vector <" << x << ", " << y << ", " << z << ">" << std::endl;
 }
+
+std::string Vector::toString() {
+	return "<" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ">";
+}

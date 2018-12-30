@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Loggable.h"
 
 class Vector
 {
@@ -32,6 +33,8 @@ public:
 	bool isContainedBy(float x, float y, float w, float h);
 
 	void display();
+
+	std::string toString();
 
 	static Vector Identity();
 	static Vector Zero();

@@ -6,6 +6,7 @@
 #include "Game.h"
 #include "MapLoader.h"
 #include "Component.h"
+#include "InteractableComponent.h"
 
 char * LINK = "link";
 
@@ -122,9 +123,9 @@ class Animator : public Component {
 		else if (input->right) {
 			anim->setState("mover");
 		}
-		else if (input->space) {
-			anim->setState("attack");
-		}
+		//else if (input->space) {
+		//	anim->setState("attack");
+		//}
 		else {
 			anim->setState("idle");
 		}
@@ -319,7 +320,7 @@ public:
 			}
 		}
 
-		if (input->fire1 && canCast && mana >= manaCost) {
+		if (input->fire1 && canCast ) { // && mana >= manaCost) {
 			auto controller = transform->getComponent<OrthogonolCharacterController>();
 			auto spell = gameScene->instantiate(Spell::castSpell(gameScene, transform->position, controller->currentDirection * 3));
 			auto anim = spell->getComponent<SpriteAnimationRenderer>();
@@ -329,6 +330,7 @@ public:
 			lastCast = SDL_GetTicks();
 			mana -= manaCost;
 			canCast = false;
+			log("Shot Fireball!");
 		}
 
 		auto collider = transform->getComponent<BoxCollider>();
@@ -385,33 +387,31 @@ public:
 	}
 };
 
-class ConsoleMessage {
+class ConsoleMessage : public Component {
 	int startedAt;
-	int expiresIn = 5000;
-	GameObject *message;
+	int expiresIn = 2000;
+	
 public:
-	ConsoleMessage(GameObject * _message) {
-		message = _message;
+	ConsoleMessage() {}
+	std::function<void()> onDestroyFunc;
+	void onCreate() {
+		startedAt = SDL_GetTicks();
 	}
 
+	void update() {
+		if (SDL_GetTicks() - startedAt >= expiresIn) {
+			gameScene->destroy(transform);
+			onDestroyFunc();
+		}
+	}
 };
 
 class GameConsole : public Logger {
-private:
-	void writeLog(std::string message) {
-		auto msg = console->add();
-		msg->move(Vector(5, messages.size() * 20));
-		auto renderer = msg->addComponent(new TextRenderer(w, 22));
-		renderer->setAllignment(TextAllignments::Left);
-		renderer->setFontSize(20);
-		renderer->setFontColor(Color::red());
-		renderer->setMessage(">> " + message);
-		scene->instantiate(msg);
-		messages.push(msg);
-	}
-	std::queue<GameObject *> messages;
-public:
 	
+public:
+
+	std::queue<GameObject *> messages;
+
 
 	GameObject * console;
 	int h, w;
@@ -419,7 +419,7 @@ public:
 	GameConsole(Scene * scene, int width, int height) {
 		console = scene->add();
 		h = height, w = width;
-		console->addComponent(new BoxRenderer(w, h, true, Color("#2f3030").rgb));
+		//console->addComponent(new BoxRenderer(w, h, true, Color("#2f3030").rgb));
 		setScene(scene);
 	}
 
@@ -428,15 +428,313 @@ public:
 	}
 
 	void log(std::string message) {		
-		writeLog(message);
+		auto msg = console->add();
+		msg->move(Vector(5, messages.size() * 24));
+		auto renderer = msg->addComponent(new TextRenderer(w, 24));
+		auto controller = msg->addComponent(new ConsoleMessage());
+
+		controller->onDestroyFunc = [this]() {
+			this->messages.pop();
+			std::queue<GameObject *> tempCopy = this->messages;
+			while (!tempCopy.empty()) {
+				auto msg = tempCopy.front();
+				msg->move(Vector(0, -24));
+				tempCopy.pop();
+			}
+		};
+
+		renderer->setAllignment(TextAllignments::Left);
+		renderer->setFontSize(20);
+		renderer->setFontColor(Color::red());
+		renderer->setMessage(">> " + message);
+		scene->instantiate(msg);
+		messages.push(msg);
 	}
 };
-
 
 class Particle : BoxComponent {
 	RGB color;
 	Vector velocity;
 	float speed;
+};
+
+class KeyRequirement : public InteractionRequirement {
+
+public:
+
+	Inventory inventory;
+
+	KeyRequirement() {
+		setFailMessage("You need a key for this door");
+	}
+
+	bool evaluate() {
+		if (inventory.inventoryItemExists("key")) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+};
+
+class Door : public InteractableComponent {
+public:
+	Door(float width, float height) : InteractableComponent(width, height) {
+		KeyRequirement keyReq;
+		addRequirement(keyReq);
+	};
+};
+
+class ChestRequirement : public InteractionRequirement {
+	InventoryItem *chestLoot;
+
+public:
+	ChestRequirement(InventoryItem *loot) {
+		chestLoot = loot;
+		setFailMessage("There is nothing left in this chest");
+		setPassMessage("You received " + std::to_string(loot->quantity) + " " + loot->name);
+	}
+
+	bool evaluate() {
+		std::cout << ("Loot: " + chestLoot->name + " quantity: " + std::to_string(chestLoot->quantity));
+		return chestLoot->quantity >= 0;
+	}
+};
+
+class Chest : public InteractableComponent {
+	InventoryItem *loot;
+public:
+	Chest(float width, float height, InventoryItem *item = new InventoryItem{"key", 1}) : InteractableComponent(width, height) {
+		loot = item;
+		ChestRequirement req = ChestRequirement(loot);
+		addRequirement(req);
+	}
+
+	void use() {
+		log("Trying to open chest");
+	}
+};
+
+class Map {
+
+	GameObject *mapObject;
+
+	std::unordered_map<std::string, SpriteSheetCell> mapDefinition;
+	Texture mapText;
+	std::vector<MapCell> mapData;
+
+	std::vector<std::vector<bool>> mapWalls;
+
+	Vector spawn;
+
+	int w = 0, h = 0;
+
+	float initialWalls = 0;
+	float finalWalls = 0;
+
+	void getMapDimensions() {
+		for (MapCell cell : mapData) {
+			if (cell.x >= w) {
+				w = cell.x;
+			}
+
+			if (cell.y >= h) {
+				h = cell.y;
+			}
+		}
+
+		std::cout << "Map Size: " << w << ", " << h << "\n";
+	}
+
+	void initializeMapStruct() {
+		for (int i = 0; i <= w; i++) {
+			std::vector<bool> row;
+			for (int j = 0; j <= h; j++) {
+				row.push_back(false);
+			}
+			mapWalls.push_back(row);
+		}
+	}
+
+	void populateMapStruct() {
+		for (MapCell cell : mapData) {
+			if (cell.key == "wall" || cell.key == "tree" || cell.key == "dirt") {
+				initialWalls++;
+				mapWalls[cell.x][cell.y] = true;
+			}
+		}
+	}
+
+	bool isInternalWallTile(int x, int y) {
+		bool west = false, north = false, east = false, south = false;
+		
+		if (x - 1 >= 0) {
+			west = mapWalls[x - 1][y];
+		}
+
+		if (y - 1 >= 0) {
+			north = mapWalls[x][y - 1];
+		}
+
+		if (x + 1 <= w) {
+			
+			east = mapWalls[x + 1][y];
+		}
+
+		if (y + 1 <= h) {
+			south = mapWalls[x][y + 1];
+		}
+
+		return west && north && east && south;
+	}
+
+	void removeInternalWalls() {
+		std::vector<std::vector<bool>> cleanedMap;
+		for (int i = 0; i <= w; i++) {
+			std::vector<bool> row;
+			for (int j = 0; j <= h; j++) {
+				if (mapWalls[i][j]) {
+					if (isInternalWallTile(i, j)) {
+						row.push_back(false);
+					}
+					else {
+						row.push_back(true);
+						finalWalls++;
+					}
+				}
+				else {
+					row.push_back(false);
+				}
+			}
+
+			cleanedMap.push_back(row);
+		}
+
+		mapWalls = cleanedMap;
+	}
+
+	void buildMap() {
+		std::vector<std::vector<bool>> placedCollider;
+		for (int i = 0; i <= w; i++) {
+			std::vector<bool> row;
+			for (int j = 0; j <= h; j++) {
+				row.push_back(false);
+			}
+			placedCollider.push_back(row);
+		}
+
+		for (MapCell mapCell : mapData) {
+			auto mapTile = mapDefinition[mapCell.key];
+			auto tile = mapObject->add();
+			tile->addComponent(new SpriteRenderer(mapText, mapTile, mapCell.width * tileSize, mapCell.height * tileSize));
+			tile->move(Vector(mapCell.y * tileSize, mapCell.x * tileSize));
+
+			if (mapCell.key == "wall" || mapCell.key == "tree" || mapCell.key == "dirt") {
+				tile->tag = "wall";
+
+				if (!placedCollider[mapCell.x][mapCell.y] && mapWalls[mapCell.x][mapCell.y]) {
+					tile->addComponent(new BoxCollider(tileSize, tileSize));
+					placedCollider[mapCell.x][mapCell.y] = true;
+				}
+
+				tile->staticObject = true;
+			}
+
+			if (mapCell.key == "health") {
+				tile->tag = "health";
+				tile->addComponent(new BoxCollider(tileSize, tileSize));
+				tile->staticObject = true;
+			}
+
+			if (mapCell.key == "mana") {
+				tile->tag = "mana";
+				tile->addComponent(new BoxCollider(tileSize, tileSize));
+				tile->staticObject = true;
+			}
+
+			if (mapCell.key == "squib") {
+				tile->tag = "squib";
+				tile->addComponent(new MobSimpleController(Vector(0, 0)));
+				tile->addComponent(new BoxCollider(tileSize, tileSize));
+				tile->addComponent(new SpriteRenderer(mapText, mapDefinition["squib"], tileSize, tileSize));
+				tile->trackedOffScreen = false;
+				tile->z_index = 15;
+			}
+
+			if (mapCell.key == "spawn") {
+				spawn = Vector(mapCell.y * tileSize, mapCell.x * tileSize);
+				//tile->addComponent(new BoxRenderer(1000, 1000, true, Color::blue()));
+			}
+
+			if (mapCell.key == "chest") {
+
+				auto interaction = mapObject->add();
+				tile->tag = "chest";
+				interaction->tag = "chest";
+
+				interaction->addComponent(new BoxCollider(100, 100));
+				interaction->addComponent(new Chest(100, 100));
+				interaction->move(Vector(mapCell.y * tileSize - 25, mapCell.x * tileSize - 25));
+				interaction->addComponent(new BoxRenderer(100, 100, false, Color::blue()));
+				interaction->z_index = 17;
+			}
+
+			if (mapCell.key == "door") {
+
+				auto interaction = mapObject->add();
+				tile->tag = "door";
+				interaction->tag = "door";
+
+				interaction->addComponent(new BoxCollider(100, 100));
+				interaction->addComponent(new Door(100, 100));
+				interaction->move(Vector(mapCell.y * tileSize - 25, mapCell.x * tileSize - 25));
+				interaction->addComponent(new BoxRenderer(100, 100, false, Color::blue()));
+				interaction->z_index = 17;
+			}
+		}
+	}
+
+	void printMapStruct() {
+		for (int i = 0; i <= h; i++) {
+			for (int j = 0; j <= w; j++) {
+				std::cout << mapWalls[i][j] << " ";
+			}
+			std::cout << "\n";
+		}
+	}
+
+public:
+	Map(GameObject *map, Texture mapTexture, std::string definitionPath, std::string mapPath) {
+		mapObject = map;
+		mapDefinition = SpriteSheetLoader::getSpriteMap(definitionPath);
+		mapText = mapTexture;
+		mapData = MapLoader::load(mapPath);
+
+		getMapDimensions();
+		initializeMapStruct();
+		
+		//std::cout << "INITIAL \n\n";
+
+		populateMapStruct();
+		//printMapStruct();
+
+		removeInternalWalls();
+
+		//std::cout << "AFTER \n\n";
+
+		//printMapStruct();
+
+		float reduction =  100 * ((finalWalls - initialWalls) / initialWalls);
+
+		std::cout << "Reduced wall colliders from " << initialWalls << " to " << finalWalls << " resulting in a " << reduction << "% decrease.\n";
+
+		buildMap();
+	}
+
+	Vector getSpawn() {
+		return spawn;
+	}
 };
 
 ZeldaClone::ZeldaClone()
@@ -450,15 +748,13 @@ ZeldaClone::ZeldaClone()
 
 	overWorld.setDisplayPort(0, 0, 700, 650);
 	menu.setDisplayPort(700, 0, 300, 650);
-	consoleContainer.setDisplayPort(0, 650, 1000, 150);
+	consoleContainer.setDisplayPort(0, 650, 1000, 145);
 
 	GameConsole console = GameConsole(&consoleContainer, 990, 140);
 	
 	console.console->move(Vector(5, 5));
-
-	overWorld.setLogger(console);
-	menu.setLogger(console);
-	consoleContainer.setLogger(console);
+	
+	zelda.setLogger(&console);
 
 	auto title = menu.add();
 	
@@ -487,54 +783,13 @@ ZeldaClone::ZeldaClone()
 
 	link->move(Vector(275, 275));
 
+	Map mapRenderer = Map(bg, mapTiles, "terrain-tiles.ssd", "training-area.map");
 
-	for (MapCell mapCell : mapData) {
-		auto mapTile = mapTileDef[mapCell.key];
-		auto tile = bg->add();
-		tile->addComponent(new SpriteRenderer(mapTiles, mapTile, mapCell.width * tileSize, mapCell.height * tileSize));
-		tile->move(Vector(mapCell.y * tileSize, mapCell.x * tileSize));
-		
-		if (mapCell.key == "wall" || mapCell.key == "tree" || mapCell.key == "dirt") {
-			tile->tag = "wall";
-			tile->addComponent(new BoxCollider(tileSize, tileSize));
-			tile->staticObject = true;
-		}
-
-		if (mapCell.key == "health") {
-			tile->tag = "health";
-			tile->addComponent(new BoxCollider(tileSize, tileSize));
-			tile->staticObject = true;
-		}
-
-		if (mapCell.key == "mana") {
-			tile->tag = "mana";
-			tile->addComponent(new BoxCollider(tileSize, tileSize));
-			tile->staticObject = true;
-		}
-
-		if (mapCell.key == "squib") {
-			tile->tag = "squib";
-			tile->addComponent(new MobSimpleController(Vector(0, 0)));
-			tile->addComponent(new BoxCollider(tileSize, tileSize));
-			//tile->addComponent(new BoxRenderer(tileSize, tileSize));
-			tile->addComponent(new SpriteRenderer(mapTiles, mapTileDef["squib"], tileSize, tileSize));
-			tile->trackedOffScreen = false;
-			tile->z_index = 15;
-		}
-
-		if (mapCell.key == "spawn") {
-			std::cout << "Moving link to spawn position\n";
-			link->setPosition(Vector(mapCell.y * tileSize, mapCell.x * tileSize));
-			
-		}
-
-	}
-
+	link->setPosition(mapRenderer.getSpawn());
 
 	auto spellController = link->getComponent<SpellController>();
-	spellController->castFunc = [manaBar, &console](float manaCost) {
+	spellController->castFunc = [manaBar, &console, spellController](float manaCost) {
 		manaBar->decrement(manaCost);
-		console.log("Shot Magic Bolt!");
 	};
 	
 	spellController->regenFunc = [manaBar](float regen) {
@@ -560,7 +815,6 @@ ZeldaClone::ZeldaClone()
 	}
 
 }
-
 
 ZeldaClone::~ZeldaClone()
 {

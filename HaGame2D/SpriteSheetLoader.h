@@ -67,10 +67,10 @@ public:
 	SpriteSheetLoader();
 	~SpriteSheetLoader();
 
-	static bool save(const char * saveFile, std::vector<SpriteSheetCell> cells);
-	static std::vector<SpriteSheetCell> load(const char * saveFile);
+	static bool save(std::string saveFile, std::vector<SpriteSheetCell> cells);
+	static std::vector<SpriteSheetCell> load(std::string saveFile);
 
 	static std::unordered_map < std::string, SpriteSheetCell > getSpriteMap(std::vector<SpriteSheetCell> cells);
-	static std::unordered_map < std::string, SpriteSheetCell> getSpriteMap(char * loadFile);
+	static std::unordered_map < std::string, SpriteSheetCell> getSpriteMap(std::string loadFile);
 };
 
