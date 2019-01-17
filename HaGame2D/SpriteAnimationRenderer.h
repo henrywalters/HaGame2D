@@ -109,7 +109,7 @@ public:
 			}
 
 			if (this->currentAnimationFrame != NULL) {
-				auto boxColl = transform->getComponent<BoxCollider>();
+				auto boxColl = transform->getComponent<BoxComponent>();
 				TextureRect rect = TextureRect{ transform->relativePosition.x, transform->relativePosition.y, boxColl->width, boxColl->height };
 				TextureRect clip = TextureRect{ currentAnimationFrame->value.x, currentAnimationFrame->value.y, currentAnimationFrame->value.width, currentAnimationFrame->value.height };
 

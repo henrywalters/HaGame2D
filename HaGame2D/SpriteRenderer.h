@@ -7,7 +7,6 @@
 class SpriteRenderer :
 	public BoxComponent
 {
-	float width, height;
 	TextureRect clip;
 	bool initialized = false;
 public:
@@ -22,6 +21,10 @@ public:
 		height = _height;
 		clip = TextureRect{ _sprite.x, _sprite.y, _sprite.width, _sprite.height };
 		initialized = true;
+	}
+
+	void setSpriteSheetCell(SpriteSheetCell _sprite) {
+		clip = TextureRect{ _sprite.x, _sprite.y, _sprite.width, _sprite.height };
 	}
 
 	//Render a sprite - Null clip will assume to clip to 0,0,width,height

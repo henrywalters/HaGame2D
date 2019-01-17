@@ -10,12 +10,13 @@
 
 char * LINK = "link";
 
-
 const int tileSize = 50;
 const int playerSize = 50;
 
 const int DEFAULT_MIN = 0;
 const int DEFAULT_MAX = 100;
+
+Inventory *linksInventory = new Inventory();
 
 class Bar : public BoxComponent {
 
@@ -73,9 +74,14 @@ class HealthController : public Component {
 		auto collider = transform->getComponent<BoxCollider>();
 		for (auto collision : collider->currentCollisions) {
 			if (collision.gameObject->tag == "health") {
-				health += healthPot;
-				healFunc(healthPot);
-				gameScene->destroy(collision.gameObject);
+				if (health < 100) {
+					health += healthPot;
+					if (health >= 100) {
+						health = 100;
+					}
+					healFunc(healthPot);
+					gameScene->destroy(collision.gameObject);
+				}
 			}
 		}
 	}
@@ -138,7 +144,7 @@ public:
 	int lastChange;
 	int changeIn;
 
-	float damage = 5;
+	float damage = 20;
 
 	bool canDamage = true;
 	int lastDamage;
@@ -180,6 +186,7 @@ public:
 		if (playerDelta.magnitude() < 200) {
 			velocity = playerCenter - transform->position;
 			velocity.normalize();
+			velocity = velocity * 2;
 			chasing = true;
 		}
 		else {
@@ -191,7 +198,7 @@ public:
 				velocity.y = Random::number(-100, 100);
 				velocity.normalize();
 
-				velocity = velocity * 2;
+				velocity = velocity * 3;
 			}
 		}
 
@@ -303,7 +310,7 @@ public:
 	float cooldown = 250;
 	int lastCast;
 	bool canCast = true;
-	float manaCost = 10;
+	float manaCost = 14;
 
 	float mana = 100;
 
@@ -311,6 +318,8 @@ public:
 
 	std::function<void(float)> castFunc;
 	std::function<void(float)> regenFunc;
+
+	bool hasNotified = false;
 
 	void update() {
 
@@ -320,7 +329,7 @@ public:
 			}
 		}
 
-		if (input->fire1 && canCast ) { // && mana >= manaCost) {
+		if (input->fire1 && canCast && mana >= manaCost) {
 			auto controller = transform->getComponent<OrthogonolCharacterController>();
 			auto spell = gameScene->instantiate(Spell::castSpell(gameScene, transform->position, controller->currentDirection * 3));
 			auto anim = spell->getComponent<SpriteAnimationRenderer>();
@@ -330,15 +339,19 @@ public:
 			lastCast = SDL_GetTicks();
 			mana -= manaCost;
 			canCast = false;
-			log("Shot Fireball!");
 		}
 
 		auto collider = transform->getComponent<BoxCollider>();
 		for (auto collision : collider->currentCollisions) {
 			if (collision.gameObject->tag == "mana") {
-				mana += manaPot;
-				regenFunc(manaPot);
-				gameScene->destroy(collision.gameObject);
+				if (mana < 100) {
+					mana += manaPot;
+					if (mana > 100) {
+						mana = 100;
+					}
+					regenFunc(manaPot);
+					gameScene->destroy(collision.gameObject);
+				}
 			}
 		}
 	}
@@ -462,14 +475,15 @@ class KeyRequirement : public InteractionRequirement {
 
 public:
 
-	Inventory inventory;
+	Inventory *inventory;
 
 	KeyRequirement() {
 		setFailMessage("You need a key for this door");
+		setPassMessage("Opened door");
 	}
 
 	bool evaluate() {
-		if (inventory.inventoryItemExists("key")) {
+		if (inventory->inventoryItemExists("key") && inventory->getQuantity("key") > 0) {
 			return true;
 		}
 		else {
@@ -480,10 +494,22 @@ public:
 
 class Door : public InteractableComponent {
 public:
-	Door(float width, float height) : InteractableComponent(width, height) {
-		KeyRequirement keyReq;
+	GameObject *door;
+
+	Door(float width, float height, GameObject *_door) : InteractableComponent(width, height) {
+		KeyRequirement *keyReq = new KeyRequirement();
+		keyReq->inventory = linksInventory;
 		addRequirement(keyReq);
+		singleUse = true;
+		door = _door;
 	};
+
+	void use() {
+		linksInventory->takeFromInventory("key", 1);
+		log("Unlocked door");
+		gameScene->destroy(door);
+		clearRequirements();
+	}
 };
 
 class ChestRequirement : public InteractionRequirement {
@@ -493,12 +519,10 @@ public:
 	ChestRequirement(InventoryItem *loot) {
 		chestLoot = loot;
 		setFailMessage("There is nothing left in this chest");
-		setPassMessage("You received " + std::to_string(loot->quantity) + " " + loot->name);
 	}
 
 	bool evaluate() {
-		std::cout << ("Loot: " + chestLoot->name + " quantity: " + std::to_string(chestLoot->quantity));
-		return chestLoot->quantity >= 0;
+		return chestLoot->quantity > 0;
 	}
 };
 
@@ -507,12 +531,15 @@ class Chest : public InteractableComponent {
 public:
 	Chest(float width, float height, InventoryItem *item = new InventoryItem{"key", 1}) : InteractableComponent(width, height) {
 		loot = item;
-		ChestRequirement req = ChestRequirement(loot);
+		ChestRequirement *req = new ChestRequirement(loot);
 		addRequirement(req);
 	}
 
 	void use() {
-		log("Trying to open chest");
+		log("You received " + std::to_string(loot->quantity) + " " + loot->name);
+		linksInventory->addItem(*loot);
+		loot->quantity = 0;
+		log(linksInventory->getItem(loot->name).toString());
 	}
 };
 
@@ -641,13 +668,13 @@ class Map {
 				tile->staticObject = true;
 			}
 
-			if (mapCell.key == "health") {
+			if (mapCell.key == "healthPotion") {
 				tile->tag = "health";
 				tile->addComponent(new BoxCollider(tileSize, tileSize));
 				tile->staticObject = true;
 			}
 
-			if (mapCell.key == "mana") {
+			if (mapCell.key == "manaPotion") {
 				tile->tag = "mana";
 				tile->addComponent(new BoxCollider(tileSize, tileSize));
 				tile->staticObject = true;
@@ -671,12 +698,12 @@ class Map {
 
 				auto interaction = mapObject->add();
 				tile->tag = "chest";
-				interaction->tag = "chest";
+				interaction->tag = "chest_interaction";
+				tile->staticObject = true;
 
 				interaction->addComponent(new BoxCollider(100, 100));
 				interaction->addComponent(new Chest(100, 100));
 				interaction->move(Vector(mapCell.y * tileSize - 25, mapCell.x * tileSize - 25));
-				interaction->addComponent(new BoxRenderer(100, 100, false, Color::blue()));
 				interaction->z_index = 17;
 			}
 
@@ -684,12 +711,13 @@ class Map {
 
 				auto interaction = mapObject->add();
 				tile->tag = "door";
-				interaction->tag = "door";
+				tile->addComponent(new BoxCollider(tileSize, tileSize));
+				tile->staticObject = true;
 
+				interaction->tag = "door_interaction";
 				interaction->addComponent(new BoxCollider(100, 100));
-				interaction->addComponent(new Door(100, 100));
+				interaction->addComponent(new Door(100, 100, tile));
 				interaction->move(Vector(mapCell.y * tileSize - 25, mapCell.x * tileSize - 25));
-				interaction->addComponent(new BoxRenderer(100, 100, false, Color::blue()));
 				interaction->z_index = 17;
 			}
 		}
@@ -723,7 +751,7 @@ public:
 
 		//std::cout << "AFTER \n\n";
 
-		//printMapStruct();
+		printMapStruct();
 
 		float reduction =  100 * ((finalWalls - initialWalls) / initialWalls);
 
@@ -774,16 +802,16 @@ ZeldaClone::ZeldaClone()
 	auto map = overWorld.add();
 	auto bg = overWorld.add();
 
-	auto mapTileDef = SpriteSheetLoader::getSpriteMap("terrain-tiles.ssd");
+	auto mapTileDef = SpriteSheetLoader::getSpriteMap("../Assets/SSDefinitions/terrain-tiles.ssd");
 	auto mapTiles = overWorld.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/terrain.png");
-	auto mapData = MapLoader::load("training-area.map");
+	auto mapData = MapLoader::load("../Assets/Maps/level1.map");
 
 
 	auto link = Link::initialize(&overWorld);
 
 	link->move(Vector(275, 275));
 
-	Map mapRenderer = Map(bg, mapTiles, "terrain-tiles.ssd", "training-area.map");
+	Map mapRenderer = Map(bg, mapTiles, "../Assets/SSDefinitions/terrain-tiles.ssd", "../Assets/Maps/level1.map");
 
 	link->setPosition(mapRenderer.getSpawn());
 

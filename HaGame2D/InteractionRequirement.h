@@ -7,7 +7,7 @@ const std::string DEFAULT_PASS_MESSAGE = "";
 class InteractionRequirement
 {
 protected:
-	virtual bool evaluate() { return false; };
+	virtual bool evaluate() = 0;
 
     std::string failMessage = DEFAULT_FAIL_MESSAGE;
 	std::string passMessage = DEFAULT_PASS_MESSAGE;

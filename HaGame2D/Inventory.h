@@ -5,6 +5,10 @@
 struct InventoryItem {
 	std::string name;
 	int quantity;
+
+	std::string toString() {
+		return name + " x" + std::to_string(quantity);
+	}
 };
 
 class Inventory

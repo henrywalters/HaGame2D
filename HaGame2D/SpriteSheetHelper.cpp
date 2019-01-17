@@ -108,7 +108,7 @@ public:
 			std::cout << "\nSaving To: ";
 			std::string filePath;
 			std::cin >> filePath;
-			SpriteSheetLoader::save(filePath.c_str(), cells);
+			SpriteSheetLoader::save(filePath, cells);
 			//cells.clear();
 			menu = true;
 			canSave = false;
@@ -127,9 +127,8 @@ public:
 	}
 };
 
-SpriteSheetHelper::SpriteSheetHelper(int width, int height)
+SpriteSheetHelper::SpriteSheetHelper(std::string spritePath, int width, int height)
 {
-
 	float scaledWidth = scale * width;
 	float scaledHeight = scale * height;
 
@@ -138,7 +137,7 @@ SpriteSheetHelper::SpriteSheetHelper(int width, int height)
 	helper.setDisplayPort(0, 0, scaledWidth, scaledHeight);
 
 	auto sheet = helper.add();
-	sheet->addComponent(new SpriteRenderer("../Assets/Sprites/HaGameEngine/Environment/terrain.png", scaledWidth, scaledHeight, NULL));
+	sheet->addComponent(new SpriteRenderer(spritePath, scaledWidth, scaledHeight, NULL));
 	auto cursor = sheet->addComponent(new FollowCursor(scaledWidth, scaledHeight));
 
 	game.prepareScene();
@@ -153,7 +152,7 @@ SpriteSheetHelper::~SpriteSheetHelper()
 {
 }
 
-void SpriteSheetHelper::autoLoad(int width, int height, int rows, int cols, char * saveTo) {
+void SpriteSheetHelper::autoLoad(int width, int height, int rows, int cols, char * saveTo, std::string rowNames[], std::string colNames[]) {
 
 	float cellWidth = width / cols;
 	float cellHeight = height / rows;
@@ -163,7 +162,7 @@ void SpriteSheetHelper::autoLoad(int width, int height, int rows, int cols, char
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
 			SpriteSheetCell cell;
-			cell.cellType = "cell:" + std::to_string(i) + "|" + std::to_string(j);
+			cell.cellType = colNames[j] + "-of-" + rowNames[i];
 			cell.x = j * cellWidth;
 			cell.y = i * cellHeight;
 			cell.width = cellWidth;

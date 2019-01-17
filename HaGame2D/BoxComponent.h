@@ -12,6 +12,10 @@ public:
 	float relativeHeight;
 
 	BoxComponent();
+	BoxComponent(float w, float h) {
+		width = w;
+		height = h;
+	}
 	~BoxComponent();
 };
 

@@ -125,5 +125,6 @@ GameObject * GameObject::add() {
 	gameObject->parentGameObject = this;
 	childGameObjectCount += 1;
 	childGameObjects.push_back(gameObject);
+	
 	return gameObject;
 }

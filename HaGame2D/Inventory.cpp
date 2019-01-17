@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Inventory.h"
-
+#include <iostream>
 
 Inventory::Inventory()
 {
@@ -13,7 +13,8 @@ Inventory::~Inventory()
 
 bool Inventory::inventoryItemExists(std::string itemName)
 {
-	return (inventory.find(itemName) == inventory.end());
+	bool exists = (inventory.find(itemName) != inventory.end());
+	return exists;
 }
 
 int Inventory::getQuantity(std::string itemName)
@@ -32,6 +33,7 @@ void Inventory::addItem(InventoryItem item)
 		inventory[item.name].quantity += item.quantity;
 	}
 	else {
+		std::cout << "initializing item: " + item.toString() + "\n";
 		inventory[item.name] = item;
 	}
 }
@@ -40,6 +42,9 @@ void Inventory::addToInventory(std::string itemName, int quantity)
 {
 	if (inventoryItemExists(itemName)) {
 		inventory[itemName].quantity += quantity;
+	}
+	else {
+		addItem(InventoryItem{ itemName, quantity });
 	}
 }
 

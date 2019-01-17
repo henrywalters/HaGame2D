@@ -10,7 +10,7 @@
 const float DEFAULT_ASPECT_RATIO = 4 / 3;
 const int DEFAULT_HEIGHT = 600;
 const int DEFAULT_WIDTH = DEFAULT_HEIGHT * DEFAULT_ASPECT_RATIO;
-const int FPS = 60;
+const int FPS = 120;
 //const char * DEFAULT_WINDOW_TITLE = "HaGame2D: Untitled Game";
 
 struct GameScene {
@@ -23,7 +23,7 @@ class Game
 	char * title;
 	std::unordered_map<std::string, GameScene> scenes;
 	std::vector<std::string> keys;
-	std::vector<std::string> activeKeys;
+	std::unordered_map<std::string, bool> sceneStates;
 
 	Logger * loggerHandle;
 
@@ -44,6 +44,7 @@ public:
 
 	void activateScene(std::string tag);
 	void deactivateScene(std::string tag);
+	void resetScene(std::string tag);
 
 	void setLogger(Logger *logger) {
 		loggerHandle = logger;
@@ -54,5 +55,21 @@ public:
 	void prepareScene();
 
 	void tick();
+
+	std::vector<std::string> getScenes() {
+		return keys;
+	}
+
+	std::vector<std::string> getActiveScenes() {
+		std::vector<std::string> activeKeys;
+
+		for (auto key : keys) {
+			if (sceneStates[key]) {
+				activeKeys.push_back(key);
+			}
+		}
+
+		return activeKeys;
+	}
 };
 

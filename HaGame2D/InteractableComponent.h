@@ -14,7 +14,12 @@ class InteractableComponent : public BoxComponent
 
 	std::string message = "";
 
-	std::vector<InteractionRequirement> requirements;
+	std::vector<InteractionRequirement *> requirements;
+
+	bool triggered = false;
+
+protected:
+	bool singleUse = false;
 
 public:
 	InteractableComponent(float width, float height);
@@ -27,7 +32,8 @@ public:
 	void onCreate();
 	void update();
 
-	void addRequirement(InteractionRequirement requirement);
+	void addRequirement(InteractionRequirement *requirement);
+	void clearRequirements();
 
 	virtual void use() {};
 	virtual void useItemOn(InventoryItem item) {};

@@ -24,6 +24,7 @@ Scene * Game::addScene(std::string tag, bool active) {
 
 	if (!sceneExists(tag)) {
 		scenes[tag] = scene;
+		sceneStates[tag] = active;
 		keys.push_back(tag);
 	}
 	else {
@@ -49,20 +50,30 @@ bool Game::sceneExists(std::string tag) {
 
 void Game::activateScene(std::string tag) {
 	if (sceneExists(tag)) {
+		std::cout << "Activating Scene: " << tag << "\n";
 		scenes[tag].active = true;
+		sceneStates[tag] = true;
 	}
 }
 
 void Game::deactivateScene(std::string tag) {
 	if (sceneExists(tag)) {
+		std::cout << "Deactivating Scene: " << tag << "\n";
 		scenes[tag].active = false;
+		sceneStates[tag] = false;
+	}
+}
+
+void Game::resetScene(std::string tag)
+{
+	if (sceneExists(tag)) {
+		scenes[tag].scene->reset();
 	}
 }
 
 void Game::prepareScene() {
-	activeKeys.clear();
 	for (std::string key : keys) {
-		if (sceneExists(key) && scenes[key].active) {
+		if (sceneExists(key)) {
 			if (loggerHandle != NULL) {
 				scenes[key].scene->setLogger(loggerHandle);
 			}
@@ -72,7 +83,6 @@ void Game::prepareScene() {
 			}
 			
 			scenes[key].scene->initializeGameObjects();
-			activeKeys.push_back(key);
 		}
 	}
 }
@@ -86,6 +96,8 @@ void Game::tick() {
 
 	input->pollEvents();
 	running = !(input->quit);
+
+	std::vector<std::string> activeKeys = getActiveScenes();
 
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {

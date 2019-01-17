@@ -34,6 +34,15 @@
     <Filter Include="Source Files\Utilities">
       <UniqueIdentifier>{36eece12-986c-45b7-b167-3c5004096944}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CasinoAdventure">
+      <UniqueIdentifier>{48638d92-8a76-420a-8491-653f67ac8035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Casino Adventure">
+      <UniqueIdentifier>{5087c20e-de91-4d3f-9b61-413c52607e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components\UIComponents">
+      <UniqueIdentifier>{7d305205-560a-496c-b79a-6cb68cadf2d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -210,6 +219,30 @@
     <ClInclude Include="InteractionRequirement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BlackJack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CasinoGame.h">
+      <Filter>Header Files\Casino Adventure</Filter>
+    </ClInclude>
+    <ClInclude Include="CasinoAdventure.h">
+      <Filter>Header Files\Casino Adventure</Filter>
+    </ClInclude>
+    <ClInclude Include="CasinoPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Style.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CasinoMenus.h">
+      <Filter>Header Files\Casino Adventure</Filter>
+    </ClInclude>
+    <ClInclude Include="Promise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -344,9 +377,6 @@
     <ClCompile Include="BoxComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="ButtonComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ParameterSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -378,6 +408,30 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InteractionRequirement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackJack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoGame.cpp">
+      <Filter>Source Files\CasinoAdventure</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoAdventure.cpp">
+      <Filter>Source Files\CasinoAdventure</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonComponent.cpp">
+      <Filter>Source Files\Components\UIComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonMenu.cpp">
+      <Filter>Source Files\Components\UIComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoMenus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Promise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

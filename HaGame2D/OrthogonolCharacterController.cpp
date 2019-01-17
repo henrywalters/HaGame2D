@@ -73,25 +73,28 @@ void OrthogonolCharacterController::update() {
 			transform->move(Vector(finalVelocity.x, 0));
 			collisions = collider->currentCollisions;
 
+			Vector moveCamera = Vector::Zero();
+
 			if (abs(vel.x) != 0) {
 				for (auto collision : collisions) {
 					GameObject * object = collision.gameObject;
 					if (object != NULL) {
-						if (object->tag == "wall") {
+						if (object->tag == "wall" || object->tag == "door") {
 							BoxCollider * otherCollider = object->getComponent<BoxCollider>();
-
-							// Check if colliding in the right direction
-							if ((vel.x > 0 && transform->position.x < object->position.x) || (vel.x < 0 && transform->position.x + collider->width > object->position.x + otherCollider->height)) {
-								// Check for false positives with an epsilon value
-								if (
-									(transform->position.y + collider->height > object->position.y + epsilon && transform->position.y < object->position.y) 
-									|| 
-									(transform->position.y < object->position.y + otherCollider->height - epsilon && transform->position.y + collider->height > object->position.y + otherCollider->height)
-									) 
-								{
-									undoX = true;
+							if (otherCollider != NULL && otherCollider->active) {
+								// Check if colliding in the right direction
+								if ((vel.x > 0 && transform->position.x < object->position.x) || (vel.x < 0 && transform->position.x + collider->width > object->position.x + otherCollider->height)) {
+									// Check for false positives with an epsilon value
+									if (
+										(transform->position.y + collider->height > object->position.y + epsilon && transform->position.y < object->position.y)
+										||
+										(transform->position.y < object->position.y + otherCollider->height - epsilon && transform->position.y + collider->height > object->position.y + otherCollider->height)
+										)
+									{
+										undoX = true;
+									}
 								}
-							}	
+							}
 						}
 					}
 				}
@@ -102,7 +105,7 @@ void OrthogonolCharacterController::update() {
 				postCollisionVel.x = 0;
 			}
 			else {
-				gameScene->camera.move(Vector(finalVelocity.x, 0));
+				moveCamera.x = finalVelocity.x;
 			}
 
 			transform->move(Vector(0, finalVelocity.y));
@@ -112,16 +115,18 @@ void OrthogonolCharacterController::update() {
 				for (auto collision : collisions) {
 					GameObject * object = collision.gameObject;			
 					if (object != NULL) {
-						if (object->tag == "wall") {
+						if (object->tag == "wall" || object->tag == "door") {
 							BoxCollider * otherCollider = object->getComponent<BoxCollider>();
-							if ((vel.y > 0 && transform->position.y < object->position.y) || (vel.y < 0 && transform->position.y + collider->height > object->position.y + otherCollider->height)) {
-								if (
-									(transform->position.x + collider->width > object->position.x + epsilon && transform->position.x < object->position.x) 
-									|| 
-									(transform->position.x < object->position.x + otherCollider->width - epsilon && transform->position.x + collider->width > object->position.x + otherCollider->width)
-								) {
-									undoY = true;
-								}							
+							if (otherCollider != NULL && otherCollider->active) {
+								if ((vel.y > 0 && transform->position.y < object->position.y) || (vel.y < 0 && transform->position.y + collider->height > object->position.y + otherCollider->height)) {
+									if (
+										(transform->position.x + collider->width > object->position.x + epsilon && transform->position.x < object->position.x)
+										||
+										(transform->position.x < object->position.x + otherCollider->width - epsilon && transform->position.x + collider->width > object->position.x + otherCollider->width)
+										) {
+										undoY = true;
+									}
+								}
 							}
 						}
 					}
@@ -133,8 +138,10 @@ void OrthogonolCharacterController::update() {
 				postCollisionVel.y = 0;
 			}
 			else {
-				gameScene->camera.move(Vector(0, finalVelocity.y));
+				moveCamera.y = finalVelocity.y;
 			}
+			
+			gameScene->camera.move(moveCamera);
 		}
 		else {
 			transform->move(finalVelocity);

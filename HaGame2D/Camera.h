@@ -12,10 +12,10 @@ struct SceneBox {
 	Vector size;
 };
 
-const float MIN_ZOOM = 0.01;
-const float MAX_ZOOM = 20;
+const float MIN_ZOOM = 0.001;
+const float MAX_ZOOM = 100;
 
-const float DEFAULT_ZOOM_SPEED = 0.01;
+const float DEFAULT_ZOOM_SPEED = 0.03;
 
 class Camera
 {

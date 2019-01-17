@@ -19,13 +19,18 @@ void InteractableComponent::onCreate() {
 	}
 }
 
-void InteractableComponent::addRequirement(InteractionRequirement requirement) {
+void InteractableComponent::addRequirement(InteractionRequirement *requirement) {
 	requirements.push_back(requirement);
+}
+
+void InteractableComponent::clearRequirements()
+{
+	requirements.clear();
 }
 
 void InteractableComponent::update() {
 	bool hasUsed = false;
-	if (input->space && canUse) {
+	if (input->space && canUse && !(triggered && singleUse)) {
 		canUse = false;
 		if (hasColliderSet) {
 			for (auto collision : collider->currentCollisions) {
@@ -35,13 +40,16 @@ void InteractableComponent::update() {
 						bool passedRequirements = true;
 
 						for (auto requirement : requirements) {
-							passedRequirements = requirement.requirementMet();
+							passedRequirements = !requirement->requirementMet() ? false : passedRequirements;
 							if (!passedRequirements) {
-								log(requirement.getRequirementLog());
+								log(requirement->getRequirementLog());
 							}
 						}
 
 						if (passedRequirements) {
+
+							triggered = true;
+
 							use();
 
 							if (message != "") {

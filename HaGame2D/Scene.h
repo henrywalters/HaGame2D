@@ -29,7 +29,6 @@ protected:
 
 	QuadTree *quadTree;
 
-
 	std::vector<GameObject *> gameObjects;
 
 	std::vector<float> framerateSamples;
@@ -67,6 +66,8 @@ public:
 
 	void initialize(int sWidth, int sHeight, Display * _display, Input * _input);
 	void initializeGameObjects();
+
+	void reset();
 
 	void setDisplayPort(float x, float y, float width, float height);
 

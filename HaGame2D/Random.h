@@ -12,6 +12,11 @@ public:
 	~Random();
 
 	int generate(int lower, int upper);
+
+	//returns [lower, upper)
 	static int number(int lower, int upper);
+
+	//returns (-upper, -lower] union [lower, upper)
+	static int numberPlusMinus(int lower, int upper);
 };
 

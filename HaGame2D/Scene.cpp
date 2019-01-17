@@ -19,6 +19,8 @@ Scene::~Scene()
 {
 	free(display);
 	free(quadTree);
+	gameObjects.clear();
+	gameObjectTable.clear();
 }
 
 void Scene::initialize(int sWidth, int sHeight, Display * _display, Input * _input) {
@@ -79,6 +81,12 @@ void Scene::initializeGameObjects() {
 	}
 	gameObjects = objects;
 	gameObjectsInitialized = true;
+}
+
+void Scene::reset() {
+	gameObjects.clear();
+	gameObjectTable.clear();
+	gameObjectsInitialized = false;
 }
 
 GameObject * Scene::instantiate(GameObject * gameObject) {
@@ -152,9 +160,11 @@ void Scene::tick() {
 			if (collider != NULL && collider->active && !currentObject->staticObject) {
 				tick = SDL_GetTicks();
 				std::vector<GameObject *> neighbors = quadTree->getNeighbors(currentObject);
+
 				int quadNeighbors = SDL_GetTicks();
 				tick = SDL_GetTicks();
 				collider->checkCollisions(neighbors);
+
 				//collider->checkCollisions(gameObjects);
 			}
 

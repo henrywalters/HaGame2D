@@ -154,12 +154,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BlackJack.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="BoxComponent.h" />
     <ClInclude Include="BoxRenderer.h" />
     <ClInclude Include="ButtonComponent.h" />
+    <ClInclude Include="ButtonMenu.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="CasinoAdventure.h" />
+    <ClInclude Include="CasinoGame.h" />
+    <ClInclude Include="CasinoMenus.h" />
+    <ClInclude Include="CasinoPlayer.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="Color.h" />
@@ -194,6 +200,7 @@
     <ClInclude Include="Pong_BallController.h" />
     <ClInclude Include="Pong_ComputerController.h" />
     <ClInclude Include="Pong_GameLoop.h" />
+    <ClInclude Include="Promise.h" />
     <ClInclude Include="QuadTree.h" />
     <ClInclude Include="QuickList.h" />
     <ClInclude Include="Random.h" />
@@ -205,6 +212,7 @@
     <ClInclude Include="SpriteSheetHelper.h" />
     <ClInclude Include="SpriteSheetLoader.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Style.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextRenderer.h" />
     <ClInclude Include="UIComponent.h" />
@@ -214,11 +222,17 @@
     <ClInclude Include="ZeldaClone.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlackJack.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BoxComponent.cpp" />
     <ClCompile Include="BoxRenderer.cpp" />
     <ClCompile Include="ButtonComponent.cpp" />
+    <ClCompile Include="ButtonMenu.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CasinoAdventure.cpp" />
+    <ClCompile Include="CasinoGame.cpp" />
+    <ClCompile Include="CasinoMenus.cpp" />
+    <ClCompile Include="CasinoPlayer.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
     <ClCompile Include="Color.cpp" />
@@ -254,6 +268,7 @@
     <ClCompile Include="Pong_BallController.cpp" />
     <ClCompile Include="Pong_ComputerController.cpp" />
     <ClCompile Include="Pong_GameLoop.cpp" />
+    <ClCompile Include="Promise.cpp" />
     <ClCompile Include="QuadTree.cpp" />
     <ClCompile Include="QuickList.cpp" />
     <ClCompile Include="Random.cpp" />

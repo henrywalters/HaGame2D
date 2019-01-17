@@ -15,7 +15,7 @@
 class CamController : public Component {
 
 	Vector camPos = Vector::Zero();
-	float camSpeed = 2;
+	float camSpeed = 5;
 
 	void update() {
 		camPos = Vector::Zero();
@@ -207,17 +207,18 @@ MapBuilder::MapBuilder(char * save)
 	Scene pallet = *builder.addScene("pallet");
 	Scene tools = *builder.addScene("tools");
 
-	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/terrain.png");
-	auto tiles = SpriteSheetLoader::load("terrain-tiles.ssd");
+	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/platformer-tiles.png");
+	auto tiles = SpriteSheetLoader::load("../Assets/SSDefinitions/platformer-tiles.ssd");
 
 
 	world.setDisplayPort(0, 0, worldWidth, worldHeight);
 	pallet.setDisplayPort(0, worldHeight, palletWidth, palletHeight);
 	tools.setDisplayPort(worldWidth, 0, toolWidth, toolHeight);
 
-
-	world.add()->addComponent(new GridLines(mapWidth, mapHeight, cols, rows));
-	auto map = world.add();
+	auto builderGrid = world.add();
+	builderGrid->move(Vector(-0.5 * mapWidth, -0.5 * mapHeight));
+	builderGrid->add()->addComponent(new GridLines(mapWidth, mapHeight, cols, rows));
+	auto map = builderGrid->add();
 
 	GridDrawer *mapDrawer = map->addComponent(new GridDrawer(mapWidth, mapHeight, rows, cols));
 
