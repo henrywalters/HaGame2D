@@ -16,6 +16,7 @@ class MenuManager {
 	Game *game;
 	int openMenuIndex;
 	bool menuIsOpen;
+	std::unordered_map<std::string, bool> initialzedMenus;
 public:
 	MenuManager(Game *casino) {
 		game = casino;
@@ -26,17 +27,20 @@ public:
 	void openMenu(Menu menu) {
 		closeMenu((Menu)openMenuIndex);
 		openMenuIndex = menu;
-		game->activateScene(MENU_STRINGS[openMenuIndex]);
-		game->prepareScene();
+		game->activateScene(MENU_STRINGS[menu]);
 		menuIsOpen = true;
+
+		if (initialzedMenus.find(MENU_STRINGS[menu]) == initialzedMenus.end()) {
+			game->prepareScene();
+			initialzedMenus[MENU_STRINGS[menu]] = true;
+		}
+
 	}
 
 	void closeMenu(Menu menu) {
-		if (menuIsOpen) {
-			game->deactivateScene(MENU_STRINGS[openMenuIndex]);
-			game->resetScene(MENU_STRINGS[openMenuIndex]);
-			menuIsOpen = false;
-		}
+		game->deactivateScene(MENU_STRINGS[menu]);
+		//game->resetScene(MENU_STRINGS[menu]);
+		menuIsOpen = false;
 	}
 
 	Scene *get(Menu menu) {
@@ -60,19 +64,18 @@ private:
 
 	bool running = true;
 
-
-
 	void playerCount() {
 		std::vector<Participant> participants;
 		auto resolution = Resolution<int>()
 			.then([this](int players) {
-				std::cout << "Selected: " << players << " players\n";
+				menus->closeMenu(Menu::PlayerCount);
+				replayGame();
 			})
 			.except([]() {
 
 			});
-			auto menu = playerCountMenu.play(resolution, participants);
-			menus->openMenu(Menu::PlayerCount);
+		auto menu = playerCountMenu.play(resolution, participants);
+		menus->openMenu(Menu::PlayerCount);
 	}
 
 	void settings() {
@@ -83,13 +86,31 @@ private:
 
 	}
 
+	void replayGame() {
+		std::vector<Participant> participants;
+		auto resolution = Resolution<int>()
+			.then([this](int replay) {
+				menus->closeMenu(Menu::ReplayGame);
+				if (replay == 0) {
+					mainGameMenu();
+				}
+				else {
+					mainGameMenu();
+				}
+			})
+			.except([]() {
+
+		});
+		auto menu = replayGameMenu.play(resolution, participants);
+		menus->openMenu(Menu::ReplayGame);
+	}
+
 	void mainGameMenu() {
 		std::vector<Participant> participants;
 
 		auto resolution = Resolution<MainMenuOption>()
 			.then([this](MainMenuOption option) {
 				menus->closeMenu(Menu::Main);
-				std::cout << "Woot: " << option << "\n";
 				switch (option) {
 				case MainMenuOption::NewCareer:
 					playerCount();

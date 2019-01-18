@@ -24,7 +24,7 @@ void Input::pollEvents() {
 
 	fire2Up = false;
 	fire1Up = false;
-	fire1Up = false;
+	fire1Down = false;
 	fire2Down = false;
 
 	while (SDL_PollEvent(&e) != 0) {

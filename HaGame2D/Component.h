@@ -27,6 +27,9 @@ public:
 	virtual ~Component() {
 		active = false;
 		onDestroy();
+		//delete logger;
+		//delete display;
+		//delete input;
 	};
 
 	GameObject * transform;

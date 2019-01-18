@@ -47,10 +47,14 @@ const std::vector<MenuItem<int>> REPLAY_GAME_LIST = {
 
 template <class T>
 class CasinoMenu : public CasinoGame<T>, Promise<T> {
+
+	GameObject *menuObject;
+	bool initialized = false;
 	
 public:
 
 	std::vector<MenuItem<T>> items;
+
 
 	CasinoMenu(std::vector<MenuItem<T>> _items, std::string _name) : CasinoGame<T>(_name), Promise<T>() {
 		name = _name;
@@ -58,17 +62,21 @@ public:
 	}
 
 	Promise<T> play(Resolution<T> resolution, std::vector<Participant> participants) {
-		GameObject *object = scene->instantiate(new GameObject());
-		auto menuContainer = object->add();
-		auto menu = menuContainer->addComponent(new ButtonMenu<T>(items));
-		menuContainer->move(Vector(500 - BTN_WIDTH / 2, 50));
-		
-		object->addComponent(new BoxRenderer(1000, 1000, true, Color::green()));
-		menu->selectOptionFunc = [this, resolution](T value) {
-			std::cout << "Selected option: " << value << "\n";
-			resolve(resolution, value);
-		};
+		if (!initialized) {
 
+			initialized = true;
+
+			menuObject = scene->instantiate(new GameObject());
+			auto menuContainer = menuObject->add();
+			menuContainer->move(Vector(500, 50));
+			auto menu = menuContainer->addComponent(new ButtonMenu<T>(items));
+			
+			menuObject->addComponent(new BoxRenderer(1000, 1000, true, Color::green()));
+			menu->selectOptionFunc = [this, resolution](T value) {
+				std::cout << "Selected option: " << value << "\n";
+				resolve(resolution, value);
+			};
+		}
 		return *this;
 	}
 };

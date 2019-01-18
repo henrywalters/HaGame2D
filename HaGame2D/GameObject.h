@@ -126,6 +126,11 @@ public:
 	//GameObject Methods
 	GameObject * add();
 
+	void destroyComponents() {
+		for (int i = 0; i < componentCount; i++) {
+			delete components[i];
+		}
+	}
 
 };
 

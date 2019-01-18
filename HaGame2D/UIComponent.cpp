@@ -17,31 +17,35 @@ void UIComponent::update() {
 	float mY = input->mouseYGlobal;
 
 	bool gotFocus = false;
-
+	/*
 	if (!canClick) {
 		if (SDL_GetTicks() - lastClick >= CLICK_DELAY) {
 			canClick = true;
 		}
 	}
-
+	*/
 	if (mX >= transform->position.x && mX < transform->position.x + width && mY >= transform->position.y && mY < transform->position.y + height) {
 		//onHover();
+		/*
 		if (input->fire1) {
 			if (canClick) {
-				onClick();
+				//onClick();
 				lastClick = SDL_GetTicks();
 				canClick = false;
 			}
 
-			gotFocus = true;
-		}
+			gotF
+		*/
 
-		if (input->fire1Down) {
+		if (input->fire1Down && canClick) {
+			onClick();
 			onMouseDown();
+			canClick = false;
 		}
 
 		if (input->fire1Up) {
 			onMouseUp();
+			canClick = true;
 		}
 
 	}

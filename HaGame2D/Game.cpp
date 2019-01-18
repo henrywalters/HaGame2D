@@ -72,6 +72,17 @@ void Game::resetScene(std::string tag)
 }
 
 void Game::prepareScene() {
+	
+	/*
+		When building a ui state machine, it is likely you will have multiple scenes with buttons on them.
+		Since changing a scene resets the inputs, pressed keys/mouse buttons will be considered up and
+		therefore allowed to click. This presents problems. An easy solution is to just poll the events before
+		the scene starts to ensure every thing is representative of the true state without affecting game
+		state.
+	*/
+
+	input->pollEvents();
+
 	for (std::string key : keys) {
 		if (sceneExists(key)) {
 			if (loggerHandle != NULL) {
@@ -117,6 +128,9 @@ void Game::tick() {
 
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
+
+			std::cout << "Displaying scene: " << key << "\n";
+
 			scenes[key].scene->display->draw();
 		}
 	}
