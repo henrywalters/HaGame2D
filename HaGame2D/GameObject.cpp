@@ -31,24 +31,29 @@ GameObject::~GameObject()
 	}
 }
 
-void GameObject::setPosition(Vector pos) {
+GameObject * GameObject::setPosition(Vector pos) {
 	position = pos;
+	return this;
 }
 
-void GameObject::setRotation(float theta) {
+GameObject * GameObject::setRotation(float theta) {
 	rotation = theta;
+	return this;
 }
 
-void GameObject::setScale(Vector newScale) {
+GameObject * GameObject::setScale(Vector newScale) {
 	scale = newScale;
+	return this;
 }
 
-void GameObject::move(Vector delta) {
+GameObject * GameObject::move(Vector delta) {
 	position += delta;
+	return this;
 }
 
-void GameObject::rotate(float theta) {
+GameObject * GameObject::rotate(float theta) {
 	rotation += theta;
+	return this;
 }
 
 /*

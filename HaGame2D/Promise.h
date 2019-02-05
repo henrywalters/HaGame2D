@@ -38,6 +38,13 @@ public:
 	}
 
 	template <class T>
+	void resolve(Resolution<T> resolution) {
+		if (resolution.hasResolve) {
+			resolution.resolveFunc();
+		}
+	}
+
+	template <class T>
 	void reject(Resolution<T> resolution) {
 		if (resolution.hasReject) {
 			resolution.rejectFunc();

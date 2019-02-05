@@ -228,9 +228,6 @@
     <ClInclude Include="CasinoAdventure.h">
       <Filter>Header Files\Casino Adventure</Filter>
     </ClInclude>
-    <ClInclude Include="CasinoPlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ButtonMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -241,6 +238,24 @@
       <Filter>Header Files\Casino Adventure</Filter>
     </ClInclude>
     <ClInclude Include="Promise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextLabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CasinoDeck.h">
+      <Filter>Header Files\Casino Adventure</Filter>
+    </ClInclude>
+    <ClInclude Include="CasinoPlayer.h">
+      <Filter>Header Files\Casino Adventure</Filter>
+    </ClInclude>
+    <ClInclude Include="DeckOfCards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -419,19 +434,34 @@
     <ClCompile Include="CasinoAdventure.cpp">
       <Filter>Source Files\CasinoAdventure</Filter>
     </ClCompile>
-    <ClCompile Include="CasinoPlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ButtonComponent.cpp">
       <Filter>Source Files\Components\UIComponents</Filter>
     </ClCompile>
     <ClCompile Include="ButtonMenu.cpp">
       <Filter>Source Files\Components\UIComponents</Filter>
     </ClCompile>
-    <ClCompile Include="CasinoMenus.cpp">
+    <ClCompile Include="Promise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Promise.cpp">
+    <ClCompile Include="TextLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoDeck.cpp">
+      <Filter>Source Files\CasinoAdventure</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoMenus.cpp">
+      <Filter>Source Files\CasinoAdventure</Filter>
+    </ClCompile>
+    <ClCompile Include="CasinoPlayer.cpp">
+      <Filter>Source Files\CasinoAdventure</Filter>
+    </ClCompile>
+    <ClCompile Include="DeckOfCards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

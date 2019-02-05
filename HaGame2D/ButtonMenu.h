@@ -9,6 +9,7 @@ const RGB BORDER_COLOR = Color::black();
 const int BTN_WIDTH = 350;
 const int BTN_HEIGHT = 60;
 const int MARGIN = 25;
+const int TOP_MARGIN = 100;
 
 template <class T>
 struct RawMenuItem {
@@ -68,8 +69,9 @@ void ButtonMenu<T>::onCreate() {
 		auto btnContainer = item.transform->add();
 
 		auto btn = btnContainer->addComponent(new ButtonComponent(BTN_WIDTH, BTN_HEIGHT));
+		
 
-		btnContainer->move(Vector(0, index * (MARGIN + BTN_HEIGHT)));
+		btnContainer->move(Vector(gameScene->screenWidth / 2 - BTN_WIDTH / 2, index * (MARGIN + BTN_HEIGHT) + TOP_MARGIN));
 
 		btn->color = BG_COLOR;
 
@@ -82,7 +84,7 @@ void ButtonMenu<T>::onCreate() {
 		btnLabel->setMessage(item.label);
 		btnLabel->setAllignment(TextAllignments::Center);
 		btnLabel->setFontColor(Color::black());
-		btnLabel->setFont("../Assets/Fonts/Casino.ttf");
+		btnLabel->setFont("../Assets/Fonts/Casino3D.ttf");
 
 		gameScene->instantiate(btnContainer);
 

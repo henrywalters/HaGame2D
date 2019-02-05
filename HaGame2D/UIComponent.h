@@ -4,7 +4,7 @@
 #include "GameObject.h"
 #include "SDL.h"
 
-const int CLICK_DELAY = 1000;
+const int CLICK_DELAY = 100;
 
 class UIComponent : public BoxComponent
 {

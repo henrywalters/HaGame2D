@@ -108,8 +108,12 @@ void Scene::destroy(GameObject * gameObject) {
 
 	GameObject * parent = gameObject->parentGameObject;
 
-	std::remove(parent->childGameObjects.begin(), parent->childGameObjects.end(), gameObject);
-
+	if (parent != NULL) {
+		std::remove(parent->childGameObjects.begin(), parent->childGameObjects.end(), gameObject);
+	}
+	else {
+		std::cout << "WARNING - not destroying anything because gameObject does not have parent object\n";
+	}
 	//This MUST be changed soon. 
 	gameObject->active = false;
 

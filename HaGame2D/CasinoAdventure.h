@@ -1,6 +1,7 @@
 #pragma once
 #include "HaGame2D.h"
 #include "CasinoMenus.h"
+#include "BlackJack.h"
 //General Constants
 
 const int WIDTH = 1000;
@@ -56,25 +57,38 @@ private:
 
 	std::vector<CasinoPlayer> players;
 
+	std::vector<Participant> participants;
+
+	std::string currentGame;
+
 	std::unordered_map<std::string, CasinoGame<void>> games;
 
 	CasinoMenu<MainMenuOption> mainMenu = CasinoMenuFactory::MainMenu();
 	CasinoMenu<int> playerCountMenu = CasinoMenuFactory::PlayerCount();
 	CasinoMenu<int> replayGameMenu = CasinoMenuFactory::ReplayGame();
+	CasinoMenu<CasinoGameTypes> chooseGameMenu = CasinoMenuFactory::ChooseGame();
+
+	BettingMenu betMenu = CasinoMenuFactory::Bet();
+
+	BlackJack blackjack;
 
 	bool running = true;
 
 	void playerCount() {
-		std::vector<Participant> participants;
-		auto resolution = Resolution<int>()
-			.then([this](int players) {
-				menus->closeMenu(Menu::PlayerCount);
-				replayGame();
-			})
-			.except([]() {
+		auto resolve = Resolution<int>();
 
-			});
-		auto menu = playerCountMenu.play(resolution, participants);
+		resolve.then([&](int playerCount) {
+			menus->closeMenu(Menu::PlayerCount);
+			players.clear();
+			
+			for (int i = 0; i < playerCount; i++) {
+				players.push_back(CasinoPlayer("Player " + std::to_string(i + 1)));
+			}
+
+			chooseGame();
+		});
+
+		playerCountMenu.play(resolve);
 		menus->openMenu(Menu::PlayerCount);
 	}
 
@@ -86,22 +100,37 @@ private:
 
 	}
 
+	void chooseGame() {
+		auto resolve = Resolution<CasinoGameTypes>();
+
+		resolve.then([this](CasinoGameTypes game) {
+			menus->closeMenu(Menu::ChooseGame);
+			currentGame = CASINO_GAME_STRINGS[game];
+			captureBets();
+		});
+
+		chooseGameMenu.play(resolve);
+
+		menus->openMenu(Menu::ChooseGame);
+	}
+
 	void replayGame() {
-		std::vector<Participant> participants;
-		auto resolution = Resolution<int>()
-			.then([this](int replay) {
+		auto resolve = Resolution<int>();
+		
+		resolve.then([this](int replay) {
 				menus->closeMenu(Menu::ReplayGame);
 				if (replay == 0) {
-					mainGameMenu();
+					chooseGame();
+				}
+				else if (replay == 1) {
+					replayGame();
 				}
 				else {
 					mainGameMenu();
 				}
-			})
-			.except([]() {
-
 		});
-		auto menu = replayGameMenu.play(resolution, participants);
+
+		replayGameMenu.play(resolve);
 		menus->openMenu(Menu::ReplayGame);
 	}
 
@@ -118,12 +147,13 @@ private:
 				case MainMenuOption::Quit:
 					running = false;
 					break;
-				case MainMenuOption::Settings:
+				/*case MainMenuOption::Settings:
 					settings();
 					break;
 				case MainMenuOption::LoadCareer:
 					loadGame();
 					break;
+					*/
 				}
 				
 			})
@@ -132,21 +162,29 @@ private:
 				std::cout << "Failed to handle main menu for some reason";
 			});
 
-		auto menu = mainMenu.play(resolution, participants);
+		mainMenu.play(resolution);
 
 		menus->openMenu(Menu::Main);
 	}
 
 	void playGame(std::string game) {
 		if (games.find(game) != games.end()) {
+
 			casino->activateScene(game);
 
-			std::vector<Participant> participants = captureBets();
+			casino->prepareScene();
+			
+			auto resolve = Resolution<void>();
+			resolve.then([this, game] () {
+				std::cout << "Finished playin blackjack";
+				casino->deactivateScene(game);
+				mainGameMenu();
+			});
 
-			//games[game].play(participants);
+			blackjack.setParticipants(participants);
+			blackjack.play(resolve);
 
-			casino->resetScene(game);
-			casino->deactivateScene(game);
+			
 		}
 		else {
 			std::cout << "WARNING - Game: " << game << " does not exist\n";
@@ -156,33 +194,32 @@ private:
 	template<class T>
 	void addGame(CasinoGame<T> game) {
 		if (games.find(game.getName()) == games.end()) {
-			game.setScene(casino);
 			games[game.getName()] = game;
+			games[game.getName()].setScene(casino);
+			std::cout << "Added game: " << game.getName() << "\n";
 		}
 	}
 
-	std::vector<Participant> captureBets() {
-		std::vector<Participant> participants;
+	void captureBets() {
+
+		participants.clear();
 
 		for (CasinoPlayer player : players) {
-			Participant participant;
-			participant.bet = 0;
-			participant.player = &player;
+			Participant participant = Participant{ player, 0 };
+			std::cout << "Player: " << player.getName() << "\n";
 			participants.push_back(participant);
 		}
 
-		if (games.find(MENU_STRINGS[Menu::Bet]) != games.end()) {
-			menus->openMenu(Menu::Bet);
-
-			//games[MENU_STRINGS[Menu::Bet]].play(participants);
-
+		auto resolve = Resolution<void>();
+		resolve.then([this]() {
 			menus->closeMenu(Menu::Bet);
-		}
-		else {
-			std::cout << "WARNING - Bet menu has not been created. Try addGame(CasinoGame betMenu).\n";
-		}
+			playGame(currentGame);
+		});
 
-		return participants;
+		betMenu.setParticipants(participants);
+		betMenu.play(resolve);
+
+		menus->openMenu(Menu::Bet);
 	}
 
 
@@ -192,7 +229,6 @@ public:
 	~CasinoAdventure();
 
 	void loop() {
-
 		casino->prepareScene();
 
 		mainGameMenu();

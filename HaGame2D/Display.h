@@ -56,7 +56,7 @@ struct TextureRect {
 };
 
 const int Z_INDEX_START = 0;
-const int Z_INDEX_END = 20;
+const int Z_INDEX_END = 10000;
 
 const int Z_DEFAULT = 10;
 

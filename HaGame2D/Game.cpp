@@ -128,9 +128,6 @@ void Game::tick() {
 
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
-
-			std::cout << "Displaying scene: " << key << "\n";
-
 			scenes[key].scene->display->draw();
 		}
 	}

@@ -65,4 +65,3 @@ public:
 		return dynamic_cast<T *>(this) != NULL;
 	}
 };
-

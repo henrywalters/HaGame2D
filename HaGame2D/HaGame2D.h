@@ -18,3 +18,6 @@
 #include "SpriteSheetLoader.h"
 #include "Style.h"
 #include "Promise.h"
+#include "TextLabel.h"
+#include "Controller.h"
+#include "Button.h"

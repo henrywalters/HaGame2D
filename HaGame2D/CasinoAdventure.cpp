@@ -10,6 +10,14 @@ CasinoAdventure::CasinoAdventure(int noOfPlayers)
 	mainMenu.setScene(casino);
 	playerCountMenu.setScene(casino);
 	replayGameMenu.setScene(casino);
+	chooseGameMenu.setScene(casino);
+	betMenu.setScene(casino);
+
+	//addGame(blackjack);
+
+	blackjack.setScene(casino);
+	games["BlackJack"] = blackjack;
+
 
 	if (noOfPlayers > 0 && noOfPlayers <= MAX_PLAYERS) {
 		for (int i = 1; i <= noOfPlayers; i++) {

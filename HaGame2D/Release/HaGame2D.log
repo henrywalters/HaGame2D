@@ -1,1 +1,260 @@
-﻿  HaGame2D.vcxproj -> C:\Users\henry\Documents\Visual Studio 2017\Projects\HaGame2D\Release\HaGame2D.exe
+﻿  BlackJack.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Scene.h(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Game.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteAnimationRenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(108): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(117): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(138): warning C4018: '<': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(126): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(140): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(140): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(147): warning C4018: '<': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(148): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(156): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(167): warning C4018: '<=': signed/unsigned mismatch
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(166): note: while compiling class template member function 'CasinoCard DeckOfCards<CasinoCard>::peak(int)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(171): note: see reference to function template instantiation 'CasinoCard DeckOfCards<CasinoCard>::peak(int)' being compiled
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(19): note: see reference to class template instantiation 'DeckOfCards<CasinoCard>' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(137): warning C4018: '<': signed/unsigned mismatch
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(136): note: while compiling class template member function 'void DeckOfCards<CasinoCard>::shuffle(void)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(168): note: see reference to function template instantiation 'void DeckOfCards<CasinoCard>::shuffle(void)' being compiled
+  CasinoAdventure.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Scene.h(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Game.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteAnimationRenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(161): warning C4018: '>=': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(226): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(228): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(229): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(234): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(235): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(237): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(241): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(108): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(117): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(138): warning C4018: '<': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(126): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(140): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(140): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(147): warning C4018: '<': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(148): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(156): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(167): warning C4018: '<=': signed/unsigned mismatch
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(166): note: while compiling class template member function 'CasinoCard DeckOfCards<CasinoCard>::peak(int)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(171): note: see reference to function template instantiation 'CasinoCard DeckOfCards<CasinoCard>::peak(int)' being compiled
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(19): note: see reference to class template instantiation 'DeckOfCards<CasinoCard>' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(137): warning C4018: '<': signed/unsigned mismatch
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(136): note: while compiling class template member function 'void DeckOfCards<CasinoCard>::shuffle(void)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(168): note: see reference to function template instantiation 'void DeckOfCards<CasinoCard>::shuffle(void)' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoGame.h(53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoGame.h(50): note: while compiling class template member function 'void CasinoGame<void>::setScene(Game *)'
+  CasinoAdventure.cpp(14): note: see reference to function template instantiation 'void CasinoGame<void>::setScene(Game *)' being compiled
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(199): note: see reference to class template instantiation 'CasinoGame<void>' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(71): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(63): note: while compiling class template member function 'void ButtonMenu<T>::onCreate(void)'
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(85): note: see reference to class template instantiation 'ButtonMenu<T>' being compiled
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(77): note: while compiling class template member function 'void CasinoMenu<CasinoGameTypes>::play(Resolution<T>)'
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoAdventure.h(112): note: see reference to function template instantiation 'void CasinoMenu<CasinoGameTypes>::play(Resolution<T>)' being compiled
+          with
+          [
+              T=CasinoGameTypes
+          ]
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(82): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  CasinoDeck.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Scene.h(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Game.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteAnimationRenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(108): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(117): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(138): warning C4018: '<': signed/unsigned mismatch
+CasinoDeck.cpp(12): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+CasinoDeck.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  DeckOfCards.cpp
+  HaGame2D.cpp
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(50): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Display.h(52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Input.h(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BoxCollider.h(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Camera.h(83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Scene.h(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\Game.h(12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteSheetLoader.h(56): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\SpriteAnimationRenderer.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(108): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(117): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(138): warning C4018: '<': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(126): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(140): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(140): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(147): warning C4018: '<': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(148): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(156): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(161): warning C4018: '>=': signed/unsigned mismatch
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(226): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(228): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(229): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(234): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(235): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(237): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(241): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(167): warning C4018: '<=': signed/unsigned mismatch
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(166): note: while compiling class template member function 'CasinoCard DeckOfCards<CasinoCard>::peak(int)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(171): note: see reference to function template instantiation 'CasinoCard DeckOfCards<CasinoCard>::peak(int)' being compiled
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoDeck.h(19): note: see reference to class template instantiation 'DeckOfCards<CasinoCard>' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(137): warning C4018: '<': signed/unsigned mismatch
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\DeckOfCards.h(136): note: while compiling class template member function 'void DeckOfCards<CasinoCard>::shuffle(void)'
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\BlackJack.h(168): note: see reference to function template instantiation 'void DeckOfCards<CasinoCard>::shuffle(void)' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(71): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(63): note: while compiling class template member function 'void ButtonMenu<T>::onCreate(void)'
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(85): note: see reference to class template instantiation 'ButtonMenu<T>' being compiled
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(77): note: while compiling class template member function 'void CasinoMenu<CasinoGameTypes>::play(Resolution<T>)'
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoAdventure.h(112): note: see reference to function template instantiation 'void CasinoMenu<CasinoGameTypes>::play(Resolution<T>)' being compiled
+          with
+          [
+              T=CasinoGameTypes
+          ]
+  c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\CasinoMenus.h(277): note: see reference to class template instantiation 'CasinoMenu<CasinoGameTypes>' being compiled
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\henry\documents\visual studio 2017\projects\hagame2d\hagame2d\ButtonMenu.h(82): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  Generating code
+  17 of 5785 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    55 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  HaGame2D.vcxproj -> C:\Users\henry\Documents\Visual Studio 2017\Projects\HaGame2D\Release\HaGame2D.exe
