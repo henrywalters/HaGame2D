@@ -15,6 +15,7 @@ public:
 		renderer->setFontColor(color);
 		renderer->setFont(font);
 		renderer->setMessage(msg);
+		scene->instantiate(text);
 		return text;
 	}
 };

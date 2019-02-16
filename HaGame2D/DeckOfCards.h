@@ -134,6 +134,7 @@ public:
 
 	//Shuffle all cards in the deck
 	void shuffle() {
+		srand(time(0));
 		for (int i = 0; i < deck.size(); i++) {
 			std::random_shuffle(deck.begin(), deck.end());
 		}

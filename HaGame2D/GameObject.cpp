@@ -133,3 +133,15 @@ GameObject * GameObject::add() {
 	
 	return gameObject;
 }
+
+void GameObject::initialize(Display * display, Input * input, Scene * scene)
+{
+	for (auto gameObject : childGameObjects) {
+		gameObject->initialize(display, input, scene);
+	}
+
+	for (int i = 0; i < componentCount; i++) {
+		components[i]->initialize(display, input, scene);
+		components[i]->onCreate();
+	}
+}

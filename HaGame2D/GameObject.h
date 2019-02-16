@@ -142,6 +142,8 @@ public:
 		}
 	}
 
+	void initialize(Display *display, Input *input, Scene * scene);
+
 };
 
 template<class T>

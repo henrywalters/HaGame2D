@@ -17,6 +17,7 @@ public:
 
 	static GameObject * initialize(Scene * scene, Vector pos, Vector size, RGB color, std::string message, std::string font, int fontSize, RGB fontColor, std::function<void()> onClickFunc) {
 		auto btn = new GameObject();
+		btn->move(pos);
 		btn->addComponent(new BoxRenderer(size.x, size.y, true))->color = color;
 		btn->addComponent(new ButtonComponent(size.x, size.y))->onClickFunc = onClickFunc;
 		auto label = btn->addComponent(new TextRenderer(size.x, size.y));
@@ -26,7 +27,6 @@ public:
 		label->setFontSize(fontSize);
 		label->setMessage(message);
 		scene->instantiate(btn);
-		btn->move(pos);
 		return btn;
 	}
 };

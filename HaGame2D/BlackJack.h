@@ -2,7 +2,8 @@
 #include "HaGame2D.h"
 #include "CasinoDeck.h"
 #include "CasinoGame.h"
-
+#include "BlackjackStrategy.h"
+#include "Loop.h"
 class Timeout : public Component {
 
 	std::function<void()> _callback;
@@ -48,6 +49,8 @@ class BlackJack : public CasinoGame<void>
 	std::vector<Hand *> playerHands;
 	std::vector<GameObject *> playerPromptBtns;
 	Hand * dealerHand;
+	CasinoCard dealerFaceupCard;
+
 public:
 	BlackJack() : CasinoGame<void>("BlackJack") {
 	}
@@ -67,7 +70,8 @@ public:
 					dealerHand->addToHandFaceDown(deck->deal());
 				}
 				else {
-					dealerHand->addToHand(deck->deal());
+					dealerFaceupCard = deck->deal();
+					dealerHand->addToHand(dealerFaceupCard);
 				}
 			}
 			else {
@@ -92,14 +96,51 @@ public:
 		auto prompt = new GameObject();
 
 		auto btnFactory = ButtonFactory(scene, Color::white(), Color::black(), 24, "../Assets/Fonts/Casino3D.ttf");
+		auto labelFactory = TextLabelFactory(scene, "../Assets/Fonts/Casino3D.ttf", 24, Color::black());
+
 		auto origin = playerOrigins[playerIndex];
 
-		GameObject * hitBtn = btnFactory.createTextButton(origin + Vector(45, 150), Vector(60, 40), "Hit", [this, playerIndex]() {
+		GameObject * scoreLabel;
+		scoreLabel = labelFactory.build(playerHands[playerIndex]->printScore(), origin + Vector(-15, 75), Vector(60, 30));
+
+		GameObject * hitBtn = btnFactory.createTextButton(origin + Vector(45, 150), Vector(60, 40), "Hit", [this, playerIndex, &labelFactory, &origin, &scoreLabel]() {
 			playerHands[playerIndex]->addToHand(deck->deal());
+			
+			if (scoreLabel != NULL) {
+				scene->destroy(scoreLabel);
+			}
+
+			scoreLabel = labelFactory.build(playerHands[playerIndex]->printScore(), origin + Vector(-15, 75), Vector(60, 30));
+
 			std::cout << "Player: " << playerIndex << " score is: " << playerHands[playerIndex]->printScore() << "\n";
+
+			if (playerHands[playerIndex]->hasBusted()) {
+				killPromptBtns();
+
+				std::cout << "Player: " << playerIndex << " busted\n";
+				if (playerIndex > 0) {
+					promptPlayer(playerIndex - 1);
+				}
+				else {
+					promptDealer();
+				}
+			}
+			else {
+				if (playerHands[playerIndex]->calculateBestScore() == 21) {
+					killPromptBtns();
+					if (playerIndex > 0) {
+						promptPlayer(playerIndex - 1);
+					}
+					else {
+						promptDealer();
+					}
+				}
+			}
 		});
 		GameObject * dummyObject = prompt->add();
-		dummyObject = btnFactory.createTextButton(origin + Vector(-35, 150), Vector(60, 40), "Hold", [this, playerIndex, hitBtn, dummyObject]() {
+		dummyObject = btnFactory.createTextButton(origin + Vector(-35, 150), Vector(60, 40), "Hold", [this, playerIndex, hitBtn, dummyObject, prompt]() {
+
+			scene->destroy(prompt);
 
 			killPromptBtns();
 
@@ -176,7 +217,56 @@ public:
 
 		deal();
 
-		promptPlayer(participants.size() - 1);
+		
+
+		Loop::For(scene, 0, deck->size(), 1, 1500, [this](int index) {
+
+			index = index % (participants.size() + 2);
+
+			if (index < participants.size()) {
+				BasicStrategy strategy;
+				BlackjackMoves move = BlackjackMoves::Hit;
+				bool doubleDowned = false;
+				while (move != BlackjackMoves::Stick && !doubleDowned && playerHands[index]->calculateBestScore() < 21) {
+					PlayerContext context;
+					context.dealerCard = dealerFaceupCard;
+					context.hand = playerHands[index];
+
+					move = strategy.evaluate(context);
+
+					if (move == BlackjackMoves::Hit || move == BlackjackMoves::Split) {
+						context.hand->addToHand(deck->deal());
+					}
+					else if (move == BlackjackMoves::DoubleDown) {
+						context.hand->addToHand(deck->deal());
+					}
+				}
+
+			}
+			else if (index == participants.size()) {
+				DealerStrategy dStrat;
+				BlackjackMoves dMove = BlackjackMoves::Hit;
+				while (dMove != BlackjackMoves::Stick) {
+					dMove = dStrat.evaluate(dealerHand->calculateBestScore());
+					if (dMove == BlackjackMoves::Hit) {
+						dealerHand->addToHand(deck->deal());
+					}
+				}
+			}
+			else {
+				for (int i = 0; i < participants.size(); i++) {
+					playerHands[i]->emptyHand(deck);
+				}
+
+				dealerHand->emptyHand(deck);
+			}
+
+				
+		});
+
+		
+
+		//promptPlayer(participants.size() - 1);
 		/*
 		auto timeout = new GameObject();
 

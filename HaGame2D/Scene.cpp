@@ -97,6 +97,7 @@ GameObject * Scene::instantiate(GameObject * gameObject) {
 	}
 	gameObjects.push_back(gameObject);
 	add(gameObject);
+
 	return gameObject;
 }
 
@@ -171,7 +172,7 @@ void Scene::tick() {
 
 				//collider->checkCollisions(gameObjects);
 			}
-
+			
 			if (currentObject->parentGameObject->positionUpdated) {
 				currentObject->move(currentObject->parentGameObject->positionDelta);
 			}
@@ -191,11 +192,11 @@ void Scene::tick() {
 			}
 		}
 	}
-
+	/*
 	if (objectBuffer.size() != gameObjects.size()) {
 		gameObjects = objectBuffer;
 	}
-
+	*/
 	viewport = camera.getViewport();
 
 

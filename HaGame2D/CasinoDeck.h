@@ -125,6 +125,10 @@ public:
 			CasinoCard card = hand.back();
 			hand.pop_back();
 			deck->discard(card);
+			auto controller = card.transform->getComponent<CasinoCardController>();
+			controller->moveTo(deck->deckObject->position);
+			controller->setOrientation(Orientation::Facedown);
+			controller->transform->z_index = 0;
 		}
 	}
 
@@ -169,7 +173,7 @@ public:
 
 	int calculateBestScore() {
 		auto scores = calculatePossibleTotalScores();
-		int best;
+		int best = 0;
 		for (int score : scores) {
 			if (score > best) {
 				best = score;
@@ -192,5 +196,44 @@ public:
 
 	bool hasBusted() {
 		return calculateBestScore() > 21;
+	}
+
+	bool hasAce() {
+		for (int i = 0; i < hand.size(); i++) {
+			if (hand[i].card == Cards::Ace) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	bool isSplit() {
+		return hand.size() == 2 && hand[0].card == hand[1].card;
+	}
+
+	bool getSplitValue() {
+		return hand[0].card == Cards::Ace ? 11 : hand[0].card >= 10 ? 10 : hand[0].card + 1;
+	}
+
+	bool canDoubleDown() {
+		return hand.size() == 2;
+	}
+
+	std::vector<CasinoCard> getHand() {
+		std::vector<CasinoCard> cards;
+		for (int i = 0; i < hand.size(); i++) {
+			cards.push_back(hand[i]);
+		}
+		return cards;
+	}
+
+	CasinoCard firstFaceupCard() {
+		for (int i = 0; i < hand.size(); i++) {
+			std::cout << "Checking " << std::to_string(hand[i].card) << "\n";
+			if (hand[i].orientation == Orientation::Faceup) {
+				return hand[i];
+			}
+		}
+		std::cout << "WARNING - didnt find a face up card\n";
 	}
 };
