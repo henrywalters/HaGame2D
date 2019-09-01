@@ -12,8 +12,5 @@ public:
 
 	GraphicsComponent();
 	~GraphicsComponent();
-
-	
-
 };
 

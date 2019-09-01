@@ -210,6 +210,12 @@
     <ClInclude Include="InteractionRequirement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RacingGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CarController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -378,6 +384,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InteractionRequirement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RacingGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CarController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -29,6 +29,7 @@ protected:
 
 	QuadTree *quadTree;
 
+	float _dt = 0;
 
 	std::vector<GameObject *> gameObjects;
 
@@ -87,6 +88,14 @@ public:
 
 	Vector screenCenter() {
 		return Vector(screenWidth / 2, screenHeight / 2);
+	}
+
+	void setDT(float dt) {
+		_dt = dt;
+	}
+
+	float dt() {
+		return _dt;
 	}
 };
 

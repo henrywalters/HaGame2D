@@ -4,7 +4,7 @@
 #include "SpriteSheetLoader.h"
 #include "Game.h"
 
-const int scale = 3;
+const int scale = 2;
 
 class FollowCursor : public BoxComponent {
 public:
@@ -138,7 +138,7 @@ SpriteSheetHelper::SpriteSheetHelper(int width, int height)
 	helper.setDisplayPort(0, 0, scaledWidth, scaledHeight);
 
 	auto sheet = helper.add();
-	sheet->addComponent(new SpriteRenderer("../Assets/Sprites/HaGameEngine/Environment/terrain.png", scaledWidth, scaledHeight, NULL));
+	sheet->addComponent(new SpriteRenderer("../Assets/Sprites/HaGameEngine/Misc/car.png", scaledWidth, scaledHeight, NULL));
 	auto cursor = sheet->addComponent(new FollowCursor(scaledWidth, scaledHeight));
 
 	game.prepareScene();

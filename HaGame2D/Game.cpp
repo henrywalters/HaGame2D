@@ -94,8 +94,6 @@ void Game::tick() {
 		}
 	}
 
-	
-
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
 			Scene * scene = scenes[key].scene;
@@ -115,6 +113,12 @@ void Game::tick() {
 
 	if (elapsedTime <= 1000 / FPS) {
 		SDL_Delay((1000 / FPS) - elapsedTime);
+	}
+
+	for (std::string key : activeKeys) {
+		if (sceneExists(key)) {
+			scenes[key].scene->setDT(SDL_GetTicks() - frameStart);
+		}
 	}
 
 }

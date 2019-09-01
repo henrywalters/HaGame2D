@@ -31,24 +31,40 @@ GameObject::~GameObject()
 	}
 }
 
-void GameObject::setPosition(Vector pos) {
+GameObject* GameObject::setZIndex(int zIndex)
+{
+	z_index = zIndex;
+	return this;
+}
+
+GameObject* GameObject::setPosition(Vector pos) {
 	position = pos;
+	return this;
 }
 
-void GameObject::setRotation(float theta) {
+GameObject* GameObject::setRotation(float theta) {
 	rotation = theta;
+	return this;
 }
 
-void GameObject::setScale(Vector newScale) {
+GameObject* GameObject::setScale(Vector newScale) {
 	scale = newScale;
+	return this;
 }
 
-void GameObject::move(Vector delta) {
+// Move the game object relative to its current position and rotation;
+GameObject * GameObject::move(Vector delta) {
+	delta.x = delta.x * cos(rotation) - delta.y * sin(rotation);
+	delta.y = delta.x * sin(rotation) + delta.y * cos(rotation);
+	std::cout<< rotation;
+	std::cout << delta.toString();
 	position += delta;
+	return this;
 }
 
-void GameObject::rotate(float theta) {
+GameObject* GameObject::rotate(float theta) {
 	rotation += theta;
+	return this;
 }
 
 /*

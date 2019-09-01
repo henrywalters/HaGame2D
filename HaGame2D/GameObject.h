@@ -73,14 +73,16 @@ public:
 
 	virtual ~GameObject();
 
+	GameObject* setZIndex(int zIndex);
+
 	//Directly set the three primary properties
-	void setPosition(Vector position);
-	void setRotation(float rotation);
-	void setScale(Vector scale);
+	GameObject * setPosition(Vector position);
+	GameObject* setRotation(float rotation);
+	GameObject* setScale(Vector scale);
 
 	//Relatively alter the three primary properties
-	void move(Vector positionDelta);
-	void rotate(float rotationDelta);
+	GameObject * move(Vector positionDelta);
+	GameObject* rotate(float rotationDelta);
 
 	//origin methods - Remove origin handling at all from the object. Only care about world position;
 	//void setOrigin(Vector origin);

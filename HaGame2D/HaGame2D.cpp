@@ -9,12 +9,17 @@
 #include "SpriteSheetHelper.h"
 #include "MapBuilder.h"
 #include "MapLoader.h"
+#include "RacingGame.h"
+#include "Platformer.h"
 
 int main(int argc, char* argv[])
 {
-	ZeldaClone zelda = ZeldaClone();
+	// ZeldaClone zelda = ZeldaClone();
+	Platformer platformer = Platformer();
 
-    //SpriteSheetHelper helper = SpriteSheetHelper(320, 320);
+	//RacingGame racing = RacingGame();
+
+    //SpriteSheetHelper helper = SpriteSheetHelper(264, 264);
 	//SpriteSheetHelper::autoLoad(320, 320, 10, 10, "terrain-tiles.ssd");
 	//MapBuilder builder("training-area.map");
 

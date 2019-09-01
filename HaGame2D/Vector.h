@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Loggable.h"
+#include <SDL.h>
 
 class Vector
 {
