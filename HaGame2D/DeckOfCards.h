@@ -2,6 +2,7 @@
 #include <deque>
 #include <vector>
 #include <exception>
+#include <string>
 
 enum Suits {
 	Clubs,

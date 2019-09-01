@@ -4,8 +4,8 @@
 #include "BlackJack.h"
 //General Constants
 
-const int WIDTH = 1000;
-const int HEIGHT = 800;
+const int WIDTH = 800;
+const int HEIGHT = 600;
 
 const int MAX_PLAYERS = 4;
 
