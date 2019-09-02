@@ -49,6 +49,8 @@ public:
 	}
 
 	void update() {
+		sprite.angle = transform->rotation;
+		sprite.anchor = transform->origin;
 		display->drawTexture(TextureRect{ transform->relativePosition.x, transform->relativePosition.y, width, height }, sprite, clip, transform->z_index);
 	}
 };

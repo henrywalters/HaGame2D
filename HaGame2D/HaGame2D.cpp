@@ -11,45 +11,19 @@
 #include "MapLoader.h"
 #include "BlackJack.h"
 #include "CasinoAdventure.h"
+#include "Platformer.h"
 
 int main(int argc, char* argv[])
 {
+
+	Platformer platformer = Platformer();
 	//ZeldaClone zelda = ZeldaClone();
 
-    //SpriteSheetHelper helper = SpriteSheetHelper("../Assets/Sprites/HaGameEngine/Characters/Link.png", 418, 173);
+    // SpriteSheetHelper helper = SpriteSheetHelper("../Assets/Sprites/HaGameEngine/Characters/mario-3.gif", 292, 177);
 
-	std::string rows[] = {
-		"Clubs",
-		"Spades",
-		"Hearts",
-		"Diamonds"
-	};
+	// CasinoAdventure adventure = CasinoAdventure(1);
 
-	std::string cols[] = {
-		"Ace",
-		"Two",
-		"Three",
-		"Four",
-		"Five",
-		"Six",
-		"Seven",
-		"Eight",
-		"Nine",
-		"Ten",
-		"Jack",
-		"Queen",
-		"King",
-		"REPLACE_ME"
-	};
-
-	//SpriteSheetHelper::autoLoad(1008, 384, 4, 14, "../Assets/SSDefinitions/cards.ssd", rows, cols);
-	//MapBuilder builder("../Assets/Maps/platformer-level1.map");
-
-	//BlackJack yo;
-
-	CasinoAdventure adventure = CasinoAdventure(1);
-
-	adventure.loop();
+	// adventure.loop();
 
 	return 0;
 }

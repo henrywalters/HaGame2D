@@ -204,6 +204,7 @@
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="OrthogonolCharacterController.h" />
     <ClInclude Include="ParameterSet.h" />
+    <ClInclude Include="Platformer.h" />
     <ClInclude Include="Pong.h" />
     <ClInclude Include="Pong_BallController.h" />
     <ClInclude Include="Pong_ComputerController.h" />
@@ -281,6 +282,7 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="OrthogonolCharacterController.cpp" />
     <ClCompile Include="ParameterSet.cpp" />
+    <ClCompile Include="Platformer.cpp" />
     <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Pong_BallController.cpp" />
     <ClCompile Include="Pong_ComputerController.cpp" />

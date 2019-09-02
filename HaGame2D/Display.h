@@ -20,6 +20,8 @@ struct PNG {
 struct Texture {
 	std::string path;
 	SDL_Texture * texture;
+	Vector anchor;
+	float angle;
 };
 
 struct Text {

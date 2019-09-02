@@ -270,6 +270,9 @@
     <ClInclude Include="HaScript.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Platformer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -483,6 +486,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HaScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Platformer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

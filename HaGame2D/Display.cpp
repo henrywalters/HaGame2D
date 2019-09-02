@@ -122,7 +122,10 @@ void Display::drawTexture(TextureRect rect, Texture texture, TextureRect clip, i
 	SDL_Rect sdlRect = rect.getSDLRect();
 	SDL_Rect *sdlClip = clip.getSDLRectPointer();
 	dispatch(z_index, [this, texture, sdlClip, sdlRect] { 
-		SDL_RenderCopy(renderer, texture.texture, sdlClip, &sdlRect); 
+		SDL_Point* point = new SDL_Point();
+		point->x = texture.anchor.x;
+		point->y = texture.anchor.y;
+		SDL_RenderCopyEx(renderer, texture.texture, sdlClip, &sdlRect, texture.angle * (180 / M_PI), point, SDL_FLIP_NONE);
 		free(sdlClip);
 	});
 }

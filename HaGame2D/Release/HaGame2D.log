@@ -1,12 +1,272 @@
-﻿  CasinoAdventure.cpp
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(40,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(41,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+﻿  BlackJack.cpp
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(49,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(50,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(108,115): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(108,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(117,115): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(117,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(142,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(202,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(224,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(231,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(53,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(60,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(67,31): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(70,36): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(103,29): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Loop.h(27,34): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(167,50): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(175,49): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(181,60): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(188,22): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(189,117): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(226,14): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(257,23): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(169,13): warning C4018:  '<=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(168): message :  while compiling class template member function 'T DeckOfCards<T>::peak(int)'
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(168): message :         with
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(168): message :         [
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(168): message :             T=CasinoCard
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(168): message :         ]
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(212): message :  see reference to function template instantiation 'T DeckOfCards<T>::peak(int)' being compiled
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(212): message :         with
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(212): message :         [
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(212): message :             T=CasinoCard
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(212): message :         ]
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(19): message :  see reference to class template instantiation 'DeckOfCards<CasinoCard>' being compiled
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(138,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(137): message :  while compiling class template member function 'void DeckOfCards<CasinoCard>::shuffle(void)'
+C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(209): message :  see reference to function template instantiation 'void DeckOfCards<CasinoCard>::shuffle(void)' being compiled
+  BlackjackStrategy.cpp
+C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(139,2): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(108,115): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(108,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(117,115): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(117,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(142,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(202,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(224,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(231,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(53,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(60,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(67,31): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(70,36): warning C4018:  '>=': signed/unsigned mismatch
+  BoxCollider.cpp
+C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(103,29): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  BoxComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.cpp(22,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  BoxRenderer.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Button.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  ButtonComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  ButtonMenu.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  Camera.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+  CasinoAdventure.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
@@ -102,16 +362,382 @@ C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :         with
 C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :         [
 C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :             T=CasinoGameTypes
 C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :         ]
-  HaGame2D.cpp
+  CasinoDeck.cpp
 C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(74,56): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(40,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(41,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(49,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(50,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(108,115): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(108,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(117,115): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(117,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(142,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(202,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(224,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(231,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.cpp(14,54): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  CasinoGame.cpp
+C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.cpp(14,43): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  CasinoMenus.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(161,20): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(226,70): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(228,73): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(229,73): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(234,62): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(235,62): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(237,66): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(241,61): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(74,103): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(63): message :  while compiling class template member function 'void ButtonMenu<T>::onCreate(void)'
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(63): message :         with
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(63): message :         [
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(63): message :             T=CasinoGameTypes
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(63): message :         ]
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(85): message :  see reference to class template instantiation 'ButtonMenu<T>' being compiled
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(85): message :         with
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(85): message :         [
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(85): message :             T=CasinoGameTypes
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(85): message :         ]
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(77): message :  while compiling class template member function 'void CasinoMenu<CasinoGameTypes>::play(Resolution<T>)'
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(77): message :         with
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(77): message :         [
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(77): message :             T=CasinoGameTypes
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(77): message :         ]
+C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(277): message :  see reference to class template instantiation 'CasinoMenu<CasinoGameTypes>' being compiled
+  Circle.cpp
+C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(74,56): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  CollisionComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Component.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Controller.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  Display.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(11,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(11,44): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(59,22): warning C4244:  '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(60,22): warning C4244:  '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(66,26): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(67,26): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(68,26): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(69,26): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,20): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,20): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,23): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,23): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,26): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,26): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,33): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(94,33): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,20): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,20): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,23): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,23): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,26): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,26): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,33): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(102,33): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(112,44): warning C4244:  'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(112,40): warning C4244:  'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(112,36): warning C4244:  'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(112,32): warning C4244:  'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(126,28): warning C4244:  '=': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(127,28): warning C4244:  '=': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(197,32): warning C4838:  conversion from 'int' to 'Uint8' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(197,41): warning C4838:  conversion from 'int' to 'Uint8' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(197,50): warning C4838:  conversion from 'int' to 'Uint8' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(206,53): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(206,37): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(216,10): warning C4477:  'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
+  Game.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Display.cpp(230,10): warning C4477:  'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'TTF_Font *'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  GameObject.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Compiling...
+  GameObjectTree.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  GraphicsComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  GridDrawer.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(100,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(101,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(121,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(121,38): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(18,12): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(19,12): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(23,73): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(23,58): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(50,78): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(50,63): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Grid.h(162,17): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Grid.h(159): message :  while compiling class template member function 'GridIndex Grid<GridCell>::getSpatialIndex(Vector,Vector)'
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.cpp(21): message :  see reference to function template instantiation 'GridIndex Grid<GridCell>::getSpatialIndex(Vector,Vector)' being compiled
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(36): message :  see reference to class template instantiation 'Grid<GridCell>' being compiled
+  GridLines.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Grid.h(163,17): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  HaGame2D.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
@@ -203,10 +829,665 @@ C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :         [
 C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :             T=CasinoGameTypes
 C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message :         ]
 C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(277): message :  see reference to class template instantiation 'CasinoMenu<CasinoGameTypes>' being compiled
+  HaType.cpp
 C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(74,56): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(51,19): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(52,21): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(57,24): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(58,26): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(69,34): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(140,97): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(140,93): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(156,25): warning C4244:  'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(157,31): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(158,32): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(162,45): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(162,39): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(163,35): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(163,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(165,42): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(179,51): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  HelperFunctions.cpp
+C:\Users\henry\HaGame2D\HaGame2D\HaType.cpp(179,33): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  InputComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  InteractableComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Loop.cpp
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+  MapBuilder.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Loop.h(27,34): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(100,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(101,16): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(121,46): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\GridDrawer.h(121,38): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(202,9): warning C4477:  'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'int'
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(202,9): warning C4477:  'printf' : format string '%f' requires an argument of type 'double', but variadic argument 2 has type 'int'
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(219,49): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(219,32): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(220,59): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(220,49): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(223,69): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(223,59): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(254,53): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(259,52): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(272,53): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(285,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(297,36): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  OrthogonolCharacterController.cpp
+C:\Users\henry\HaGame2D\HaGame2D\MapBuilder.cpp(297,27): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  Platformer.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  Pong.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(54,42): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(55,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(61,49): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(62,50): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(63,44): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(64,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(66,49): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(67,50): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(68,44): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(69,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(86,150): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(86,112): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(99,127): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(99,89): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(100,77): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(100,39): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(110,38): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(110,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(116,48): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(117,83): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(117,55): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(118,79): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  Pong_BallController.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Pong.cpp(118,41): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  Pong_ComputerController.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Pong_BallController.cpp(19,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Pong_GameLoop.cpp
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  QuadTree.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  Rect.cpp
+C:\Users\henry\HaGame2D\HaGame2D\QuadTree.cpp(191,37): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,32): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,32): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,44): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,44): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,48): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,48): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,55): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+  Scene.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Rect.cpp(17,55): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(41,42): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(41,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(44,39): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(44,26): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(48,54): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(48,41): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(49,56): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(49,43): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(60,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(142,20): warning C4018:  '<': signed/unsigned mismatch
+  Compiling...
+  SpriteAnimationRenderer.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Scene.cpp(203,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  SpriteRenderer.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  SpriteSheetHelper.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(33,11): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(34,12): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(35,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(36,18): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(132,20): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(133,21): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(135,32): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(135,19): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(141,66): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(141,53): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(157,18): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+  TextLabel.cpp
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetHelper.cpp(158,19): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  TextRenderer.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+  UIComponent.cpp
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\UIComponent.cpp(16,11): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+  ZeldaClone.cpp
+C:\Users\henry\HaGame2D\HaGame2D\UIComponent.cpp(17,11): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(42,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(43,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(44,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(45,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(51,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(52,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(53,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Display.h(54,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,40): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(54,32): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Camera.h(83,31): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Scene.h(90,29): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Game.h(12,42): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(41,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(46,16): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(51,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteSheetLoader.h(56,21): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\SpriteAnimationRenderer.h(15,42): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(165,36): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(194,36): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(197,32): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(198,32): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(228,40): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(229,40): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(337,1): warning C4305:  'argument': truncation from 'double' to 'float'
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(415,34): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(445,39): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(446,54): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(566,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(570,13): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(591,18): warning C4244:  'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(591,26): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(663,32): warning C4244:  'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(663,43): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(663,66): warning C4244:  'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(663,77): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(665,28): warning C4244:  'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\ZeldaClone.cpp(665,39): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
   Generating code
-  2 of 5288 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+C:\Users\henry\HaGame2D\HaGame2D\Matrix.cpp(49): warning C4715: 'Matrix::get': not all control paths return a value
+  1128 of 4072 functions (27.7%) were compiled, the rest were copied from previous compilation.
+    44 functions were new in current compilation
+    441 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   HaGame2D.vcxproj -> C:\Users\henry\HaGame2D\Release\HaGame2D.exe
