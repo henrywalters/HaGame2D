@@ -24,11 +24,14 @@ public:
 	Vector operator + (const Vector& b);
 	Vector operator - (const Vector& b);
 	Vector operator * (float scalar);
+
 	bool operator == (const Vector & b);
 	bool operator != (const Vector & b);
 
 	Vector& operator += (const Vector & b);
 	Vector& operator -= (const Vector & b);
+
+	Vector cross(Vector b);
 
 	bool isContainedBy(float x, float y, float w, float h);
 

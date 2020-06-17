@@ -768,7 +768,7 @@ public:
 ZeldaClone::ZeldaClone()
 {
 
-	Game zelda = Game(1000, 800, "Zelda Clone");
+	Game zelda = Game(800, 800, "Zelda Clone");
 	
 	Scene overWorld = *zelda.addScene("overworld");
 	Scene menu = *zelda.addScene("menu");

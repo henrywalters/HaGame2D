@@ -95,6 +95,7 @@ public:
 	}
 
 	void update() {
+		log(currentState);
 		if (currentState != DEFAULT_STATE) {
 			if (currentState != IDLE_STATE) {
 				currentTicks += SDL_GetTicks() - lastTick;

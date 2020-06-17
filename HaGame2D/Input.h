@@ -60,5 +60,9 @@ public:
 	void readTextStream() {
 		streamingText = true;
 	}
+
+	Vector mousePos() {
+		return Vector(mouseX, mouseY);
+	}
 };
 

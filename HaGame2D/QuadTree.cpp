@@ -58,8 +58,8 @@ void QuadTree::split(Quadrant * quadrant) {
 	quadrant->quad3 = quad3;
 	quadrant->quad4 = quad4;
 	
-	//display->drawLine(midX, quadrant->y, midX, quadrant->y + quadrant->height, Color::green(), 18);
-	//display->drawLine(quadrant->x, midY, quadrant->x + quadrant->width, midY, Color::green(),18);
+	display->drawLine(midX, quadrant->y, midX, quadrant->y + quadrant->height, Color::green(), 18);
+	display->drawLine(quadrant->x, midY, quadrant->x + quadrant->width, midY, Color::green(),18);
 	
 }
 

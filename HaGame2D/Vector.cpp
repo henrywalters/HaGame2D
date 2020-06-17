@@ -55,6 +55,15 @@ Vector & Vector::operator -= (const Vector &b) {
 	return *this;
 }
 
+Vector Vector::cross(Vector b)
+{
+	Vector vect;
+	vect.x = y * b.z - z * b.y;
+	vect.y = z * b.x - x * b.z;
+	vect.z = x * b.y - y * b.x;
+	return vect;
+}
+
 bool Vector::isContainedBy(float _x, float _y, float _w, float _h)
 {
 	if (x >= _x && x <= _x + _w && y >= _y && y <= _y + _h) {

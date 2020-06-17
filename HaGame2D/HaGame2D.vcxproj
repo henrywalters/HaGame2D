@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryGrid.h" />
     <ClInclude Include="BlackJack.h" />
     <ClInclude Include="BlackjackStrategy.h" />
     <ClInclude Include="Box.h" />
@@ -171,6 +172,10 @@
     <ClInclude Include="CasinoMenus.h" />
     <ClInclude Include="CasinoPlayer.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="CircleCollider.h" />
+    <ClInclude Include="CircleComponent.h" />
+    <ClInclude Include="CircleRenderer.h" />
+    <ClInclude Include="Clock.h" />
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Component.h" />
@@ -179,6 +184,8 @@
     <ClInclude Include="DataSample.h" />
     <ClInclude Include="DeckOfCards.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="Display3D.h" />
+    <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectTree.h" />
@@ -187,6 +194,7 @@
     <ClInclude Include="GridDrawer.h" />
     <ClInclude Include="GridLines.h" />
     <ClInclude Include="HaGame2D.h" />
+    <ClInclude Include="HaGame3D.h" />
     <ClInclude Include="HaScript.h" />
     <ClInclude Include="HaString.h" />
     <ClInclude Include="HaType.h" />
@@ -194,7 +202,9 @@
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="InteractableComponent.h" />
     <ClInclude Include="InteractionRequirement.h" />
+    <ClInclude Include="IntervalComponent.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Line.h" />
     <ClInclude Include="Loggable.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Loop.h" />
@@ -204,6 +214,7 @@
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="OrthogonolCharacterController.h" />
     <ClInclude Include="ParameterSet.h" />
+    <ClInclude Include="Physics.h" />
     <ClInclude Include="Platformer.h" />
     <ClInclude Include="Pong.h" />
     <ClInclude Include="Pong_BallController.h" />
@@ -215,7 +226,10 @@
     <ClInclude Include="Random.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="RigidBody.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Set.h" />
+    <ClInclude Include="Snake.h" />
     <ClInclude Include="SpriteAnimationRenderer.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="SpriteSheetHelper.h" />
@@ -227,12 +241,15 @@
     <ClInclude Include="TextLabel.h" />
     <ClInclude Include="TextRenderer.h" />
     <ClInclude Include="UIComponent.h" />
+    <ClInclude Include="Util.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="VerticalCharacterController.h" />
     <ClInclude Include="WindowsDialogue.h" />
     <ClInclude Include="WorldMapper.h" />
     <ClInclude Include="ZeldaClone.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryGrid.cpp" />
     <ClCompile Include="BlackJack.cpp" />
     <ClCompile Include="BlackjackStrategy.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
@@ -248,6 +265,10 @@
     <ClCompile Include="CasinoMenus.cpp" />
     <ClCompile Include="CasinoPlayer.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircleCollider.cpp" />
+    <ClCompile Include="CircleComponent.cpp" />
+    <ClCompile Include="CircleRenderer.cpp" />
+    <ClCompile Include="Clock.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -256,6 +277,7 @@
     <ClCompile Include="DataSample.cpp" />
     <ClCompile Include="DeckOfCards.cpp" />
     <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Display3D.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectTree.cpp" />
@@ -264,6 +286,7 @@
     <ClCompile Include="GridDrawer.cpp" />
     <ClCompile Include="GridLines.cpp" />
     <ClCompile Include="HaGame2D.cpp" />
+    <ClCompile Include="HaGame3D.cpp" />
     <ClCompile Include="HaScript.cpp" />
     <ClCompile Include="HaString.cpp" />
     <ClCompile Include="HaType.cpp" />
@@ -273,6 +296,7 @@
     <ClCompile Include="InteractableComponent.cpp" />
     <ClCompile Include="InteractionRequirement.cpp" />
     <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Line.cpp" />
     <ClCompile Include="Loggable.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Loop.cpp" />
@@ -282,6 +306,7 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="OrthogonolCharacterController.cpp" />
     <ClCompile Include="ParameterSet.cpp" />
+    <ClCompile Include="Physics.cpp" />
     <ClCompile Include="Platformer.cpp" />
     <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Pong_BallController.cpp" />
@@ -292,6 +317,7 @@
     <ClCompile Include="QuickList.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="RigidBody.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteAnimationRenderer.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
@@ -306,7 +332,9 @@
     <ClCompile Include="TextLabel.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
     <ClCompile Include="UIComponent.cpp" />
+    <ClCompile Include="Util.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="VerticalCharacterController.cpp" />
     <ClCompile Include="WindowsDialogue.cpp" />
     <ClCompile Include="WorldMapper.cpp" />
     <ClCompile Include="ZeldaClone.cpp" />

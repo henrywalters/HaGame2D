@@ -1,15 +1,25 @@
 #pragma once
-#include "GameObject.h"
-class Circle :
-	public GameObject
-{
+
+class Circle {
+private:
+	float _radius;
+
 public:
 
-	float radius;
+	Circle() {
+		_radius = 0;
+	}
 
-	Circle(float radius);
-	~Circle();
+	Circle(float radius) {
+		_radius = radius;
+	}
 
-	void draw(Display *display);
+	void setRadius(float radius) {
+		_radius = radius;
+	}
+
+	float getRadius() {
+		return _radius;
+	}
+
 };
-

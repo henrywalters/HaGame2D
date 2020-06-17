@@ -7,7 +7,7 @@ class GridLines : public BoxComponent
 {
 public:
 
-	Grid<int> grid;
+	Grid<bool> grid;
 
 	RGB color = Color::blue();
 

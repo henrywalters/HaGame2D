@@ -4,6 +4,8 @@
 
 GameObject::GameObject()
 {
+	uid = Random::number(1000000, 9999999);
+
 	position = Vector::Zero();
 	origin = Vector::Zero();
 	scale = Vector::Identity();
@@ -31,6 +33,12 @@ GameObject::~GameObject()
 	}
 }
 
+GameObject* GameObject::setName(char * _name)
+{
+	name = _name;
+	return this;
+}
+
 GameObject * GameObject::setPosition(Vector pos) {
 	position = pos;
 	return this;
@@ -56,19 +64,11 @@ GameObject * GameObject::rotate(float theta) {
 	return this;
 }
 
-/*
-void GameObject::moveOrigin(Vector newOrigin) {
-	origin += newOrigin;
-	newOrigin.display();
-	origin.display();
-	relativePosition = position - origin;
+GameObject* GameObject::setOrigin(Vector newOrigin) {
+	origin = newOrigin;
+	return this;
 }
 
-void GameObject::setOrigin(Vector newOrigin) {
-	origin = newOrigin;
-	relativePosition = position - origin;
-}
-*/
 
 void GameObject::update() {
 

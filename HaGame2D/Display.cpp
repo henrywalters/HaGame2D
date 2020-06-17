@@ -13,7 +13,7 @@ Display::Display(int w, int h, char * _title)
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
 	screen = SDL_GetWindowSurface(window);
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED );
 
 	int imgFlags = IMG_INIT_PNG;
 	if (!(IMG_Init(imgFlags) & imgFlags))
@@ -86,8 +86,27 @@ void Display::render() {
 	SDL_RenderPresent(renderer);
 }
 
+void Display::displayMetric(std::string metric)
+{
+	std::string newTitle = std::string(title) + " - " + metric;
+	SDL_SetWindowTitle(window, newTitle.c_str());
+}
+
 void Display::setRenderColor(RGB rgb, int alpha) {
 	SDL_SetRenderDrawColor(renderer, rgb.r, rgb.g, rgb.b, alpha);
+}
+
+void Display::drawPixel(float x, float y, RGB color, int z_index)
+{
+	dispatch(z_index, [this, x, y, color] {
+		setRenderColor(color);
+		SDL_RenderDrawLine(renderer, x, y, x, y);
+	});
+}
+
+void Display::drawPixel(Vector pos, RGB color, int z_index)
+{
+	drawPixel(pos.x, pos.y, color, z_index);
 }
 
 void Display::drawRect(float x, float y, float width, float height, RGB color, int z_index) {
@@ -111,6 +130,32 @@ void Display::drawLine(float x1, float y1, float x2, float y2, RGB color, int z_
 		setRenderColor(color);
 		SDL_RenderDrawLine(renderer, x1, y1, x2, y2); 
 	});
+}
+
+void Display::drawLine(Vector p1, Vector p2, RGB color, int z_index)
+{
+	drawLine(p1.x, p1.y, p2.x, p2.y, color, z_index);
+}
+
+void Display::drawTriangle(Vector p1, Vector p2, Vector p3, RGB color, int z_index)
+{
+	Vector center = Vector(displayPort.get(2) / 2, displayPort.get(3) / 2);
+
+	Vector p1Prime = p1 + center;
+	Vector p2Prime = p2 + center;
+	Vector p3Prime = p3 + center;
+
+	dispatch(z_index, [this, p1Prime, p2Prime, p3Prime, color, z_index]() {
+		drawLine(p1Prime, p2Prime, color, z_index);
+		drawLine(p2Prime, p3Prime, color, z_index);
+		drawLine(p3Prime, p1Prime, color, z_index);
+	});
+	
+}
+
+void Display::drawTriangle(Triangle triangle, RGB color, int z_index)
+{
+	drawTriangle(triangle.p1, triangle.p2, triangle.p3, color, z_index);
 }
 
 void Display::drawPNG(PNG png) {

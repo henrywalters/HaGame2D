@@ -1,4 +1,6 @@
 #pragma once
+#include "Vector.h"
+
 class Math
 {
 public:
@@ -17,6 +19,19 @@ public:
 	//Maps the index of a set of subElements to the value of the lesser side of where the subElement belongs in the larger element. 
 	static float mapToUniformDistribution(float subSize, float spacing, int subElementIndex) {
 		return subElementIndex * (subSize + spacing) + spacing;
+	}
+
+	static Vector rotatePointAroundPoint(Vector point, Vector origin, float theta) {
+		float s = sin(theta);
+		float c = cos(theta);
+
+		Vector vect;
+
+		vect.x = c * (point.x - origin.x) - s * (point.y - origin.y) + origin.x;
+		vect.y = s * (point.x - origin.x) + c * (point.y - origin.y) + origin.y;
+		vect.z = point.z;
+
+		return vect;
 	}
 
 };

@@ -17,6 +17,24 @@ struct PNG {
 	SDL_Surface * image;
 };
 
+struct Triangle {
+	Vector p1;
+	Vector p2;
+	Vector p3;
+
+	std::string toString() {
+		return p1.toString() + ", " + p2.toString() + ", " + p3.toString();
+	}
+
+	Triangle operator + (Vector vector) {
+		return Triangle{
+			p1 + vector,
+			p2 + vector,
+			p3 + vector
+		};
+	}
+};
+
 struct Texture {
 	std::string path;
 	SDL_Texture * texture;
@@ -54,7 +72,6 @@ struct TextureRect {
 		rect.h = height;
 		return rect;
 	}
-
 };
 
 const int Z_INDEX_START = 0;
@@ -106,10 +123,17 @@ public:
 	void draw();
 	void render();
 
+	void displayMetric(std::string);
+
 	void setRenderColor(RGB rgb, int alpha = 0xFF);
+	void drawPixel(float x, float y, RGB color, int z_index = Z_DEFAULT);
+	void drawPixel(Vector pos, RGB color, int z_index = Z_DEFAULT);
 	void drawRect(float x, float y, float width, float height, RGB color, int z_index = Z_DEFAULT);
 	void fillRect(float x, float y, float width, float height, RGB color, int z_index = Z_DEFAULT);
 	void drawLine(float x1, float y1, float x2, float y2, RGB color, int z_index = Z_DEFAULT);
+	void drawLine(Vector p1, Vector p2, RGB color, int z_index = Z_DEFAULT);
+	void drawTriangle(Vector p1, Vector p2, Vector p3, RGB color, int z_index = Z_DEFAULT);
+	void drawTriangle(Triangle triangle, RGB color, int z_index = Z_DEFAULT);
 	void drawPNG(PNG png);
 	void drawTexture(TextureRect rect, Texture texture, TextureRect clip, int z_index = Z_DEFAULT);
 

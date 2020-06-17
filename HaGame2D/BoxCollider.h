@@ -51,12 +51,20 @@ struct Box {
 	bool operator == (const Box& box) {
 		return (x == box.x && y == box.y && width == box.width && height == box.height);
 	}
+
+	bool xOverlaps(Box box) {
+		return (x > box.x && x < box.x + box.width) || (x + width > box.x && x + width < box.x + box.width);
+	}
+
+	bool yOverlaps(Box box) {
+		return (y > box.y && x < box.y + box.height) || (y + height > box.y && y + height < box.y + box.height);
+	}
 };
 
 class BoxCollider : public CollisionComponent
 {
 
-	const float epsilon = 5;
+	const float epsilon = 3;
 
 public:
 

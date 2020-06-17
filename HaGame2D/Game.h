@@ -6,11 +6,13 @@
 #include <string>
 #include <unordered_map>
 #include "Logger.h"
+#include "Clock.h"
 
 const float DEFAULT_ASPECT_RATIO = 4 / 3;
 const int DEFAULT_HEIGHT = 600;
 const int DEFAULT_WIDTH = DEFAULT_HEIGHT * DEFAULT_ASPECT_RATIO;
-const int FPS = 120;
+const int FPS = 60;
+const bool CAP_FPS = false;
 //const char * DEFAULT_WINDOW_TITLE = "HaGame2D: Untitled Game";
 
 struct GameScene {
@@ -27,6 +29,15 @@ class Game
 
 	Logger * loggerHandle;
 
+	float averageFps;
+	DataSample<float> fpsMeter;
+
+	Clock clock;
+	float maxTick;
+
+	int _fps;
+	bool _capFps;
+
 public:
 	Display * display;
 	Input * input;
@@ -37,6 +48,8 @@ public:
 	bool running = true;
 
 	int screenWidth, screenHeight;
+
+	void setFps(int fps, bool fpsCapped = true);
 
 	Scene * addScene(std::string tag, bool active = true);
 	Scene * getScene(std::string tag);

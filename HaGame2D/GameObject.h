@@ -8,6 +8,7 @@
 #include <map>
 #include <string>
 #include "BoxComponent.h"
+#include "Random.h"
 
 class Scene;
 
@@ -57,6 +58,8 @@ public:
 	char * tag = NULL;
 	char * id = NULL;
 
+	long uid;
+
 	int componentCount = 0;
 
 	int z_index = Z_DEFAULT;
@@ -73,16 +76,8 @@ public:
 
 	virtual ~GameObject();
 
-	/*
-		Fundamental operations on a game object return self. This allows chaining which is syntacically pleasing.
-
-		For example, 
-		auto componentClass = object->add()
-									->move(Vector(50, 50))
-									->setScale(Vector(2, 2))
-									->addComponent(new Component());
-	*/
-
+	GameObject* setName(char * _name);
+	
 	//Directly set the three primary properties
 	GameObject * setPosition(Vector position);
 	GameObject * setRotation(float rotation);
@@ -92,9 +87,8 @@ public:
 	GameObject * move(Vector positionDelta);
 	GameObject * rotate(float rotationDelta);
 
-	//origin methods - Remove origin handling at all from the object. Only care about world position;
-	//void setOrigin(Vector origin);
-	//void moveOrigin(Vector origin);
+	//origin methods - controls the center of a game object
+	GameObject * setOrigin(Vector origin);
 
 	virtual void draw(Display *display){};
 	void update();
@@ -123,6 +117,15 @@ public:
 	//Component Methods
 	template<class T>
 	T * addComponent(T * component);
+
+	template<class T>
+	GameObject* addComponents(std::vector<T> components);
+
+	template<class T>
+	GameObject* addComponentAnd(T* component);
+
+	template<class T>
+	GameObject* addComponentAnd(T* component, std::function<void(T *)> callback);
 
 	template<class T>
 	T * getComponent();
@@ -158,6 +161,44 @@ inline T * GameObject::addComponent(T * component)
 	}
 
 	return component;
+}
+
+template<class T>
+inline GameObject* GameObject::addComponents(std::vector<T> components) {
+	for (component : components) {
+		addComponent(component);
+	}
+	return this;
+}
+
+template<class T>
+inline GameObject* GameObject::addComponentAnd(T* component)
+{
+	if (std::is_base_of<Component, T>::value) {
+		if (componentCount < MAX_COMPONENTS - 1) {
+			components[componentCount] = component;
+			components[componentCount]->transform = this;
+			componentCount += 1;
+		}
+	}
+
+	return this;
+}
+
+template<class T>
+inline GameObject* GameObject::addComponentAnd(T* component, std::function<void(T*)> callback)
+{
+	if (std::is_base_of<Component, T>::value) {
+		if (componentCount < MAX_COMPONENTS - 1) {
+			components[componentCount] = component;
+			components[componentCount]->transform = this;
+			componentCount += 1;
+
+			callback(component);
+		}
+	}
+
+	return this;
 }
 
 template<class T>

@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "stdafx.h"
 #include "Scene.h"
 #include "DataSample.h"
 #include "Camera.h"
@@ -140,7 +141,6 @@ void Scene::tick() {
 	quadTree->setDisplay(display);
 
 	for (int i = 0; i < gameObjects.size(); i++) {
-
 		if (gameObjects[i]->getComponent<BoxCollider>() != NULL) {
 			quadTree->insert(gameObjects[i]);
 		}
@@ -192,13 +192,8 @@ void Scene::tick() {
 			}
 		}
 	}
-	/*
-	if (objectBuffer.size() != gameObjects.size()) {
-		gameObjects = objectBuffer;
-	}
-	*/
-	viewport = camera.getViewport();
 
+	viewport = camera.getViewport();
 
 	for (int i = 0; i < gameObjects.size(); i++) {
 		Matrix obj;

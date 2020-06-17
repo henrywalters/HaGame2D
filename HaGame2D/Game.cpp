@@ -9,11 +9,24 @@ Game::Game(int _screenWidth, int _screenHeight, char * _title)
 	display = new Display(screenWidth, screenHeight, title);
 	display->setFont(24, DOROVAR_FONT);
 	input = new Input();
+	setFps(FPS, CAP_FPS);
 }
-
 
 Game::~Game()
 {
+}
+
+void Game::setFps(int fps, bool fpsCapped)
+{
+	_fps = fps;
+	_capFps = fpsCapped;
+	maxTick = 1000000 / _fps;
+	std::cout << _fps << " " << _capFps;
+	std::cout << std::to_string(maxTick);
+	fpsMeter = DataSample<float>("FPS", _capFps ? _fps : 100);
+	fpsMeter.onFullSample([this](float fpsSample) {
+		display->displayMetric("FPS: " + std::to_string(1000000 / fpsSample));
+	});
 }
 
 Scene * Game::addScene(std::string tag, bool active) {
@@ -21,6 +34,7 @@ Scene * Game::addScene(std::string tag, bool active) {
 	scene.active = active;
 	scene.scene = new Scene();
 	scene.scene->initialize(screenWidth, screenHeight, display, input);
+	scene.scene->setDisplayPort(0, 0, screenWidth, screenHeight);
 
 	if (!sceneExists(tag)) {
 		scenes[tag] = scene;
@@ -100,44 +114,49 @@ void Game::prepareScene() {
 
 void Game::tick() {
 
-	int frameStart;
-	int elapsedTime;
-
-	frameStart = SDL_GetTicks();
+	clock.start();
 
 	input->pollEvents();
 	running = !(input->quit);
 
 	std::vector<std::string> activeKeys = getActiveScenes();
-
+	
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
 			Scene * scene = scenes[key].scene;
 			scene->display->clear();
 		}
 	}
-
 	
-
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
 			Scene * scene = scenes[key].scene;
 			scene->tick();
 		}
 	}
-
+	
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
 			scenes[key].scene->display->draw();
 		}
 	}
-
+	
+	
 	display->render();
 
-	elapsedTime = SDL_GetTicks() - frameStart;
+	float elapsedTime = clock.stop();
 
-	if (elapsedTime <= 1000 / FPS) {
-		SDL_Delay((1000 / FPS) - elapsedTime);
+	if (elapsedTime <= 100000 / _fps && _capFps) {
+		clock.wait((100000 / _fps) - elapsedTime);
 	}
 
+	float dt = clock.stop();
+
+	fpsMeter.add(dt);
+
+	for (std::string key : activeKeys) {
+		if (sceneExists(key)) {
+			scenes[key].scene->setDt(dt);
+		}
+	}
 }

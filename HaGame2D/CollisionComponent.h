@@ -24,6 +24,14 @@ struct Collision {
 	void print() {
 		std::cout << "Colliding Up: " << up << "\nColliding Down: " << down << "\nColliding Right: " << right << "\nColliding Left: " << left << "\n\n";
 	}
+
+	std::string subString(std::string tag, bool colliding, float offset) {
+		return tag + ": " + std::to_string(colliding) +" (" + std::to_string(offset) + ")";
+	}
+
+	std::string toString() {
+		return subString("Up", up, upOverlap) + " " + subString("Down", down, downOverlap) + " " + subString("Left", left, leftOverlap) + " " + subString("Right", right, rightOverlap);
+	}
 };
 
 class CollisionComponent : public Component

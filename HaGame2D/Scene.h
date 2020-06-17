@@ -19,6 +19,7 @@
 #include "Camera.h"
 #include "DataSample.h"
 #include "Logger.h"
+#include "Util.h"
 
 class Scene : public GameObjectTree
 {
@@ -39,6 +40,7 @@ protected:
 
 	bool hasLogger = false;
 
+	float _dt_ms;
 
 public:
 
@@ -88,6 +90,18 @@ public:
 
 	Vector screenCenter() {
 		return Vector(screenWidth / 2, screenHeight / 2);
+	}
+
+	void setDt(float dt_ms) {
+		_dt_ms = dt_ms;
+	}
+
+	float dt() {
+		return _dt_ms;
+	}
+
+	float dt_s() {
+		return _dt_ms / 100000;
 	}
 };
 
