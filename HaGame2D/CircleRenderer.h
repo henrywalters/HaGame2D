@@ -19,7 +19,7 @@ public:
 	CircleRenderer(float radius) : CircleComponent(radius) {}
 
 	void update() {
-		int r = getCircle().radius;
+		int r = getRadius();
 		int x = -r;
 		int y = 0;
 		int err = 2 - 2 * r;

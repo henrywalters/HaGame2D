@@ -1,26 +1,30 @@
 #pragma once
 #include "Component.h"
 #include "Circle.h"
+#include "GameObject.h"
 
 class CircleComponent :
 	public Component
 {
 private:
-
-	Circle _circle;
+	
+	float _radius;
 
 public:
 	
 	CircleComponent(float radius) {
-		_circle = Circle{ radius };
+		_radius = radius;
+	}
+	
+	float getRadius() {
+		return _radius;
 	}
 
 	Circle getCircle() {
-		return _circle;
-	}
-
-	void setCircle(Circle circle) {
-		_circle = circle;
+		return Circle{
+			transform->position,
+			_radius,
+		};
 	}
 };
 

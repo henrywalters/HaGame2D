@@ -7,6 +7,12 @@ public:
 	Math();
 	~Math();
 
+	static float clamp(float val, float min, float max) {
+		if (val > max) return max;
+		else if (val < min) return min;
+		else return val;
+	}
+
 	static int sign(float numb) {
 		return numb >= 0 ? 1 : -1;
 	}

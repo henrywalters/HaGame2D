@@ -40,12 +40,12 @@ public:
 	CollisionComponent();
 	~CollisionComponent();
 
-	std::vector<GameObject*>collidingWith;
-
 	std::vector<Collision> currentCollisions;
 
-	virtual std::vector<Collision> checkCollisions(std::vector<GameObject *> gameObjects) = 0;
+	//virtual std::vector<Collision> checkCollisions(std::vector<GameObject *> gameObjects) = 0;
 
 	bool pollCollisions = false;
+
+	bool isColliding = false;
 };
 

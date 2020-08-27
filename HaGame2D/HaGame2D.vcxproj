@@ -255,6 +255,7 @@
     <ClCompile Include="BinaryGrid.cpp" />
     <ClCompile Include="BlackJack.cpp" />
     <ClCompile Include="BlackjackStrategy.cpp" />
+    <ClCompile Include="Box.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BoxComponent.cpp" />
     <ClCompile Include="BoxRenderer.cpp" />

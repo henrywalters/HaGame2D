@@ -36,19 +36,12 @@ int main(int argc, char* argv[])
 	sandbox->setLogger(new Logger());
 
 	GameObject* player = sandbox->add()
-		->setPosition(Vector(50, 50))
-		->addComponentAnd(new CircleRenderer(50));
+		->setPosition(Vector(50, 50));
 
-	
+	auto collider = player->addComponent(new CircleCollider(50));
+	auto renderer = player->addComponent(new CircleRenderer(50));
 
-	GameObject* container = player->add();
-	container->move(Vector(-50, -50));
-	container->addComponentAnd(new BoxRenderer(100, 100))
-		->addComponentAnd(new BoxCollider(100, 100));
-
-	BoxCollider* collider = container->getComponent<BoxCollider>();
 	collider->pollCollisions = true;
-	auto renderer = container->getComponent<BoxRenderer>();
 
 	int playerSpeed = 20;
 
@@ -60,19 +53,27 @@ int main(int argc, char* argv[])
 
 		auto objects = sandbox->getGameObjectsWhere<CircleRenderer>();
 
-		if (collider->collidingWith.size() > 0) {
+		if (collider->isColliding) {
 			renderer->color = Color::green();
 		}
 		else {
 			renderer->color = Color::blue();
 		}
 
-		if (sandbox->input->fire1) {
+		if (sandbox->input->fire1Down) {
 			events.emit("fire", sandbox->input->mousePos());
 			auto cube = sandbox->instantiate((new GameObject())
-				->setPosition(sandbox->input->mousePos() - Vector(2.5, 2.5))
-				->addComponentAnd((new BoxCollider(5, 5)))
-				->addComponentAnd(new BoxRenderer(5, 5))
+				->setPosition(sandbox->input->mousePos())
+				->addComponentAnd(new CircleRenderer(50))
+				->addComponentAnd(new CircleCollider(50))
+			);
+		}
+
+		if (sandbox->input->fire2) {
+			auto cube = sandbox->instantiate((new GameObject())
+				->setPosition(sandbox->input->mousePos() - Vector(10, 10))
+				->addComponentAnd(new BoxRenderer(20, 20))
+				->addComponentAnd(new BoxCollider(20, 20))
 			);
 		}
 

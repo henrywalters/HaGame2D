@@ -13,14 +13,19 @@ C:\Users\henry\HaGame2D\HaGame2D\Input.h(56,32): warning C4244: '=': conversion 
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(57,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(65,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\henry\HaGame2D\HaGame2D\Input.h(65,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(26,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(27,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(28,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(29,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(35,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(36,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(37,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(38,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(36,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(37,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(38,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(39,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(45,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(46,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(47,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(48,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\henry\HaGame2D\HaGame2D\Circle.h(5,11): warning C4099: 'Box': type name first seen using 'class' now seen using 'struct'
+C:\Users\henry\HaGame2D\HaGame2D\Box.h(8): message : see declaration of 'Box'
+C:\Users\henry\HaGame2D\HaGame2D\Circle.h(7,15): warning C4099: 'Circle': type name first seen using 'class' now seen using 'struct'
+C:\Users\henry\HaGame2D\HaGame2D\Circle.h(7): message : see declaration of 'Circle'
+C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\Users\henry\HaGame2D\HaGame2D\Camera.h(15,29): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\henry\HaGame2D\HaGame2D\Camera.h(18,38): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\henry\HaGame2D\HaGame2D\Camera.h(82,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
@@ -111,8 +116,8 @@ C:\Users\henry\HaGame2D\HaGame2D\CasinoAdventure.h(112): message : see reference
 C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(277): message : see reference to class template instantiation 'CasinoMenu<CasinoGameTypes>' being compiled
 C:\Users\henry\HaGame2D\HaGame2D\ButtonMenu.h(74,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating code
-  39 of 4187 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+  1 of 4259 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    203 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   HaGame2D.vcxproj -> C:\Users\henry\HaGame2D\Release\HaGame2D.exe
