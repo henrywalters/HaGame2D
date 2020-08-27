@@ -6,7 +6,6 @@
 class GameObjectTree
 {
 public:
-
 	GameObject * root;
 
 	GameObjectTree();
@@ -20,5 +19,18 @@ public:
 	GameObject * add(GameObject * gameObject);
 
 	std::vector<GameObject *> getGameObjects();
-
+	
+	template<class T>
+	std::vector<GameObject*> getGameObjectsWhere();
 };
+
+template<class T>
+inline std::vector<GameObject*> GameObjectTree::getGameObjectsWhere() {
+	std::vector<GameObject*> gameObjects;
+	for (auto gameObject : getGameObjects()) {
+		if (gameObject->getComponent<T>() != NULL) {
+			gameObjects.push_back(gameObject);
+		}
+	}
+	return gameObjects;
+}

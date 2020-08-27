@@ -13,10 +13,13 @@ private:
 
 public:
 
+	RGB color = Color::blue();
+	bool fill = false;
+
 	CircleRenderer(float radius) : CircleComponent(radius) {}
 
 	void update() {
-		int r = getCircle().getRadius();
+		int r = getCircle().radius;
 		int x = -r;
 		int y = 0;
 		int err = 2 - 2 * r;
@@ -25,10 +28,10 @@ public:
 		float yPos = transform->position.y;
 
 		do {
-			display->drawPixel(xPos - x, yPos + y, Color::blue());
-			display->drawPixel(xPos - y, yPos - x, Color::blue());
-			display->drawPixel(xPos + x, yPos - y, Color::blue());
-			display->drawPixel(xPos + y, yPos + x, Color::blue());
+			display->drawPixel(xPos - x, yPos + y, color);
+			display->drawPixel(xPos - y, yPos - x, color);
+			display->drawPixel(xPos + x, yPos - y, color);
+			display->drawPixel(xPos + y, yPos + x, color);
 
 			r = err;
 

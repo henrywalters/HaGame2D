@@ -20,6 +20,9 @@
 #include "DataSample.h"
 #include "Logger.h"
 #include "Util.h"
+#include "System.h"
+
+class System;
 
 class Scene : public GameObjectTree
 {
@@ -31,6 +34,8 @@ protected:
 	QuadTree *quadTree;
 
 	std::vector<GameObject *> gameObjects;
+
+	std::vector<System*> systems;
 
 	std::vector<float> framerateSamples;
 
@@ -66,8 +71,8 @@ public:
 	Scene();
 	~Scene();
 
-	void initialize(int sWidth, int sHeight, Display * _display, Input * _input);
-	void initializeGameObjects();
+	void initializeScreen(int sWidth, int sHeight, Display * _display, Input * _input);
+	void initialize();
 
 	void reset();
 
@@ -86,7 +91,11 @@ public:
 	
 	void destroy(GameObject * gameObject);
 
-	static GameObject * getGameObject(char * id);
+	static GameObject* getGameObject(char* id);
+
+	void addSystem(System* system) {
+		systems.push_back(system);
+	}
 
 	Vector screenCenter() {
 		return Vector(screenWidth / 2, screenHeight / 2);
@@ -102,6 +111,10 @@ public:
 
 	float dt_s() {
 		return _dt_ms / 100000;
+	}
+
+	Vector screenSize() {
+		return Vector(screenWidth, screenHeight);
 	}
 };
 

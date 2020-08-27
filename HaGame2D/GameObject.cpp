@@ -127,11 +127,15 @@ bool GameObject::isWithinViewport(Matrix viewport)
 
 GameObject * GameObject::add() {
 	GameObject * gameObject = new GameObject();
-	gameObject->parentGameObject = this;
+	return add(gameObject);
+}
+
+GameObject* GameObject::add(GameObject* child)
+{
+	child->parentGameObject = this;
 	childGameObjectCount += 1;
-	childGameObjects.push_back(gameObject);
-	
-	return gameObject;
+	childGameObjects.push_back(child);
+	return child;
 }
 
 void GameObject::initialize(Display * display, Input * input, Scene * scene)

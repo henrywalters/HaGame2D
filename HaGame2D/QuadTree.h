@@ -44,6 +44,20 @@ struct Quadrant {
 		return (point.x >= x && point.x < x + width && point.y >= y && point.y < y + height);
 	}
 
+	bool containsFull(Box box) {
+		return contains(Vector(box.x, box.y)) &&
+			contains(Vector(box.x, box.y + box.height)) &&
+			contains(Vector(box.x + box.width, box.y)) &&
+			contains(Vector(box.x + box.width, box.y + box.height));
+	}
+
+	bool containsPartial(Box box) {
+		return contains(Vector(box.x, box.y)) ||
+			contains(Vector(box.x, box.y + box.height)) ||
+			contains(Vector(box.x + box.width, box.y)) ||
+			contains(Vector(box.x + box.width, box.y + box.height));
+	}
+
 	bool operator == (const Quadrant &other) {
 		return (x == other.x && y == other.y && width == other.width && height == other.height);
 	}
@@ -118,10 +132,25 @@ struct Quadrant {
 			return quad4;
 		}
 		else {
-			//std::cout << "WARNING - Failed to find child that contains point: ";
-			//point.display();
 			return this;
 		}
+	}
+
+	// Return which quadrants atleast partially contain the box.
+	std::vector<Quadrant*> getBoundingQuadrants(Box box) {
+		std::vector<Quadrant*> quads;
+		
+		if (!isSplit()) {
+			quads.push_back(this);
+			return quads;
+		}
+		
+		if (quad1->containsPartial(box)) quads.push_back(quad1);
+		if (quad2->containsPartial(box)) quads.push_back(quad2);
+		if (quad3->containsPartial(box)) quads.push_back(quad3);
+		if (quad4->containsPartial(box)) quads.push_back(quad4);
+
+		return quads;
 	}
 
 };
@@ -149,10 +178,11 @@ public:
 
 	Display * display;
 
-	const int MAX_CHILDREN_IN_QUADRANT = 8;
+	const int MAX_CHILDREN_IN_QUADRANT = 4;
 	const int MAX_DEPTH = 10;
 
 	QuadTree(float width, float height);
+	QuadTree(Vector size);
 	~QuadTree();
 
 	void clear();

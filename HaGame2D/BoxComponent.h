@@ -17,5 +17,10 @@ public:
 		height = h;
 	}
 	~BoxComponent();
+
+	void setSize(Vector size) {
+		width = size.x;
+		height = size.y;
+	}
 };
 

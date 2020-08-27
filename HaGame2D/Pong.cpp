@@ -136,7 +136,7 @@ Pong::Pong()
 
 	ballController->launch(Vector(2, 1));
 
-	pong.initializeGameObjects();
+	pong.initialize();
 
 	pong.loop();
 }

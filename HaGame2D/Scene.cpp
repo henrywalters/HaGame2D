@@ -24,7 +24,7 @@ Scene::~Scene()
 	gameObjectTable.clear();
 }
 
-void Scene::initialize(int sWidth, int sHeight, Display * _display, Input * _input) {
+void Scene::initializeScreen(int sWidth, int sHeight, Display * _display, Input * _input) {
 
 	screenWidth = sWidth;
 	screenHeight = sHeight;
@@ -55,7 +55,7 @@ void Scene::setDisplayPort(float x, float y, float width, float height) {
 	viewport = Matrix(Vector(x, y), Vector(width, height));
 }
 
-void Scene::initializeGameObjects() {
+void Scene::initialize() {
 	std::vector<GameObject *> objects = getGameObjects();
 	int unmappedObjects = 0;
 	for (int i = 0; i < objects.size(); i++) {
@@ -82,6 +82,11 @@ void Scene::initializeGameObjects() {
 	}
 	gameObjects = objects;
 	gameObjectsInitialized = true;
+
+	for (auto system : systems) {
+		system->setScene(this);
+		system->onInit();
+	}
 }
 
 void Scene::reset() {
@@ -134,8 +139,9 @@ void Scene::tick() {
 	std::queue<GameObject *> objectQueue;
 	std::vector<GameObject *> objectBuffer;
 
-	int quadInsert = SDL_GetTicks();
+	//int quadInsert = SDL_GetTicks();
 
+	/*
 	//quadTree = new QuadTree(screenWidth, screenHeight);
 	quadTree = new QuadTree(10000, 10000);
 	quadTree->setDisplay(display);
@@ -145,6 +151,12 @@ void Scene::tick() {
 			quadTree->insert(gameObjects[i]);
 		}
 	}
+	*/
+
+	for (auto system : systems) {
+		system->update();
+	}
+	
 
 	int tick = SDL_GetTicks();
 
@@ -159,7 +171,7 @@ void Scene::tick() {
 		//update current object
 
 		if (currentObject->parentGameObject != NULL) {
-
+			/*
 			auto * collider = currentObject->getComponent<BoxCollider>();
 
 			if (collider != NULL && collider->active && !currentObject->staticObject) {
@@ -172,7 +184,7 @@ void Scene::tick() {
 
 				//collider->checkCollisions(gameObjects);
 			}
-			
+			*/
 			if (currentObject->parentGameObject->positionUpdated) {
 				currentObject->move(currentObject->parentGameObject->positionDelta);
 			}
@@ -220,7 +232,7 @@ void Scene::tick() {
 		}
 	}
 	
-	quadTree->clear();
+	//quadTree->clear();
 
 	//fpsData.add(SDL_GetTicks() - startFrame);
 

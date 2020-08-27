@@ -211,7 +211,7 @@ HaType::HaType()
 		wall->staticObject = true;
 	}
 	*/
-	game.initializeGameObjects();
+	game.initialize();
 
 	anim->setState("fly-slow");
 

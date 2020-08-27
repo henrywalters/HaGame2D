@@ -139,6 +139,8 @@ public:
 	//GameObject Methods
 	GameObject * add();
 
+	GameObject* add(GameObject* child);
+
 	void destroyComponents() {
 		for (int i = 0; i < componentCount; i++) {
 			delete components[i];
@@ -206,7 +208,7 @@ inline T * GameObject::getComponent()
 {
 	for (int i = 0; i < componentCount; i++) {
 		
-		if ((*components[i]).isInstanceOf<T>()) {
+		if (components[i]->isInstanceOf<T>()) {
 			return dynamic_cast<T *>(components[i]);
 		}
 	}

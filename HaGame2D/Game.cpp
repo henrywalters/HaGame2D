@@ -33,7 +33,7 @@ Scene * Game::addScene(std::string tag, bool active) {
 	GameScene scene;
 	scene.active = active;
 	scene.scene = new Scene();
-	scene.scene->initialize(screenWidth, screenHeight, display, input);
+	scene.scene->initializeScreen(screenWidth, screenHeight, display, input);
 	scene.scene->setDisplayPort(0, 0, screenWidth, screenHeight);
 
 	if (!sceneExists(tag)) {
@@ -107,7 +107,7 @@ void Game::prepareScene() {
 				scenes[key].scene->setLogger(new Logger);
 			}
 			
-			scenes[key].scene->initializeGameObjects();
+			scenes[key].scene->initialize();
 		}
 	}
 }

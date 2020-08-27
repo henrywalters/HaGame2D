@@ -177,6 +177,7 @@
     <ClInclude Include="CircleRenderer.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="CollisionComponent.h" />
+    <ClInclude Include="CollisionSystem.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Controller.h" />
@@ -186,6 +187,7 @@
     <ClInclude Include="Display.h" />
     <ClInclude Include="Display3D.h" />
     <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="events.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectTree.h" />
@@ -237,6 +239,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Strategy.h" />
     <ClInclude Include="Style.h" />
+    <ClInclude Include="System.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextLabel.h" />
     <ClInclude Include="TextRenderer.h" />
@@ -270,6 +273,7 @@
     <ClCompile Include="CircleRenderer.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
+    <ClCompile Include="CollisionSystem.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Controller.cpp" />
@@ -329,6 +333,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="System.cpp" />
     <ClCompile Include="TextLabel.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
     <ClCompile Include="UIComponent.cpp" />

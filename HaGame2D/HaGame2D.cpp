@@ -16,10 +16,20 @@
 #include "Snake.h"
 #include "DoublyLinkedList.h"
 #include "CircleRenderer.h"
+#include "CollisionSystem.h"
+
+GameObject* newRect(Scene *scene, Vector pos, Vector size) {
+	return scene->add()
+		->setPosition(pos)
+		->addComponentAnd(new BoxRenderer(size.x, size.y))
+		->addComponentAnd(new BoxCollider(size.x, size.y));
+}
 
 int main(int argc, char* argv[])
 {
 	Game game = Game(600, 600, "Experiments");
+
+	EventManager<Vector> events = EventManager<Vector>();
 
 	Scene* sandbox = game.addScene("sandbox");
 	sandbox->setDisplayPort(0, 0, 600, 600);
@@ -29,19 +39,48 @@ int main(int argc, char* argv[])
 		->setPosition(Vector(50, 50))
 		->addComponentAnd(new CircleRenderer(50));
 
-	sandbox->initializeGameObjects();
+	
 
-	int playerSpeed = 5;
+	GameObject* container = player->add();
+	container->move(Vector(-50, -50));
+	container->addComponentAnd(new BoxRenderer(100, 100))
+		->addComponentAnd(new BoxCollider(100, 100));
+
+	BoxCollider* collider = container->getComponent<BoxCollider>();
+	collider->pollCollisions = true;
+	auto renderer = container->getComponent<BoxRenderer>();
+
+	int playerSpeed = 20;
+
+	sandbox->addSystem(new CollisionSystem());
+
+	sandbox->initialize();
 
 	while (game.running) {
 
-		if (sandbox->input->fire1Down) {
-			sandbox->logger->log("Fire");
+		auto objects = sandbox->getGameObjectsWhere<CircleRenderer>();
 
-			sandbox->instantiate((new GameObject())
+		if (collider->collidingWith.size() > 0) {
+			renderer->color = Color::green();
+		}
+		else {
+			renderer->color = Color::blue();
+		}
+
+		if (sandbox->input->fire1) {
+			events.emit("fire", sandbox->input->mousePos());
+			auto cube = sandbox->instantiate((new GameObject())
 				->setPosition(sandbox->input->mousePos() - Vector(2.5, 2.5))
-				->addComponentAnd(new CircleRenderer(10))
+				->addComponentAnd((new BoxCollider(5, 5)))
+				->addComponentAnd(new BoxRenderer(5, 5))
 			);
+		}
+
+		if (sandbox->input->shift) {
+			playerSpeed = 20;
+		}
+		else {
+			playerSpeed = 5;
 		}
 
 		if (sandbox->input->up) {

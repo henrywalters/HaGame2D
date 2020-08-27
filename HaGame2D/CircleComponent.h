@@ -12,7 +12,7 @@ private:
 public:
 	
 	CircleComponent(float radius) {
-		_circle = Circle(radius);
+		_circle = Circle{ radius };
 	}
 
 	Circle getCircle() {
