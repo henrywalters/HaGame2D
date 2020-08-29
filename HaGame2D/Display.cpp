@@ -120,7 +120,7 @@ void Display::drawRect(float x, float y, float width, float height, RGB color, i
 void Display::fillRect(float x, float y, float width, float height, RGB color, int z_index) {
 	SDL_Rect rect = { x, y, width, height };
 	dispatch(z_index, [this, rect, color] { 
-		setRenderColor(color);
+		setRenderColor(color, 5);
 		SDL_RenderFillRect(renderer, &rect); 
 	});
 }

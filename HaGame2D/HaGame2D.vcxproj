@@ -214,10 +214,12 @@
     <ClInclude Include="MapLoader.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="OLC_2020_TheGreatMachine.h" />
     <ClInclude Include="OrthogonolCharacterController.h" />
     <ClInclude Include="ParameterSet.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="Platformer.h" />
+    <ClInclude Include="PlatformerMapBuilder.h" />
     <ClInclude Include="Pong.h" />
     <ClInclude Include="Pong_BallController.h" />
     <ClInclude Include="Pong_ComputerController.h" />
@@ -229,6 +231,7 @@
     <ClInclude Include="Rect.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />
+    <ClInclude Include="Sandbox.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Set.h" />
     <ClInclude Include="Snake.h" />
@@ -243,6 +246,9 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextLabel.h" />
     <ClInclude Include="TextRenderer.h" />
+    <ClInclude Include="TGMBody.h" />
+    <ClInclude Include="TGMLevelBuilder.h" />
+    <ClInclude Include="TGMPlayerController.h" />
     <ClInclude Include="UIComponent.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Vector.h" />
@@ -309,6 +315,7 @@
     <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="OLC_2020_TheGreatMachine.cpp" />
     <ClCompile Include="OrthogonolCharacterController.cpp" />
     <ClCompile Include="ParameterSet.cpp" />
     <ClCompile Include="Physics.cpp" />

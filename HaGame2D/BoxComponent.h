@@ -22,5 +22,9 @@ public:
 		width = size.x;
 		height = size.y;
 	}
+
+	Vector getRelativeScale() {
+		return Vector(relativeWidth / width, relativeHeight / height);
+	}
 };
 

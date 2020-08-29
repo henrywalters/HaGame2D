@@ -70,6 +70,7 @@ void Input::pollEvents() {
 		}
 
 		if (e.type == SDL_MOUSEWHEEL) {
+			std::cout << e.wheel.direction << std::endl;
 			if (e.wheel.y > 0) {
 				mouseScroll = 1;
 			}

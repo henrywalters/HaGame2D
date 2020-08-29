@@ -85,8 +85,6 @@ public:
 				CircleCollider* circleCollider = object->getComponent<CircleCollider>();
 				if (circleCollider) collider->currentCollisions = checkCircleCollisions(object->uid, circleCollider->getCircle(), gameObjects);
 
-				std::cout << "Object: " << object->uid << " Colliding with : " << collider->currentCollisions.size() << "/" << (gameObjects.size() - 1) << " objects" << std::endl;
-
 				if (collider->currentCollisions.size() > 0) {
 					collider->isColliding = true;
 					for (auto collision : collider->currentCollisions) {

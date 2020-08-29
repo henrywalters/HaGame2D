@@ -9,6 +9,7 @@
 #include "Color.h"
 #include "BoxComponent.h"
 #include "BoxRenderer.h"
+#include "CircleRenderer.h"
 #include "GridLines.h"
 #include "RigidBody.h"
 #include "OrthogonolCharacterController.h"
@@ -28,3 +29,5 @@
 #include "Physics.h"
 #include "DoublyLinkedList.h"
 #include "events.h"
+#include "BoxCollider.h"
+#include "CircleCollider.h"

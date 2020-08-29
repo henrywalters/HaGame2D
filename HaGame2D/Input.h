@@ -64,5 +64,9 @@ public:
 	Vector mousePos() {
 		return Vector(mouseX, mouseY);
 	}
+
+	Vector globalMousePos() {
+		return Vector(mouseXGlobal, mouseYGlobal);
+	}
 };
 

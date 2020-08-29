@@ -16,7 +16,7 @@ public:
 	RGB color = Color::blue();
 	bool fill = false;
 
-	CircleRenderer(float radius) : CircleComponent(radius) {}
+	CircleRenderer(float radius, bool positionCenter = true) : CircleComponent(radius, positionCenter) {}
 
 	void update() {
 		int r = getRadius();
@@ -24,8 +24,8 @@ public:
 		int y = 0;
 		int err = 2 - 2 * r;
 
-		float xPos = transform->position.x;
-		float yPos = transform->position.y;
+		float xPos = getCircle().center.x;
+		float yPos = getCircle().center.y;
 
 		do {
 			display->drawPixel(xPos - x, yPos + y, color);

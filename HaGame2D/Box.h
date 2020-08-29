@@ -22,7 +22,6 @@ public:
 	}
 
 	bool collidingWith(Box rect) {
-		std::cout << rect.toString() << std::endl;
 		return (x <= rect.x + rect.width &&
 			x + width >= rect.x &&
 			y <= rect.y + rect.height &&

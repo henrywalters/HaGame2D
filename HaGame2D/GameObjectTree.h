@@ -22,6 +22,8 @@ public:
 	
 	template<class T>
 	std::vector<GameObject*> getGameObjectsWhere();
+
+	std::vector<GameObject*> getGameObjectsWhereHasTag(std::string tag);
 };
 
 template<class T>
@@ -29,6 +31,16 @@ inline std::vector<GameObject*> GameObjectTree::getGameObjectsWhere() {
 	std::vector<GameObject*> gameObjects;
 	for (auto gameObject : getGameObjects()) {
 		if (gameObject->getComponent<T>() != NULL) {
+			gameObjects.push_back(gameObject);
+		}
+	}
+	return gameObjects;
+}
+
+inline std::vector<GameObject*> GameObjectTree::getGameObjectsWhereHasTag(std::string tag) {
+	std::vector<GameObject*> gameObjects;
+	for (auto gameObject : getGameObjects()) {
+		if (gameObject->hasTag(tag)) {
 			gameObjects.push_back(gameObject);
 		}
 	}

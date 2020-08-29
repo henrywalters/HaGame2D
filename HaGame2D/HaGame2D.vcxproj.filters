@@ -330,6 +330,24 @@
     <ClInclude Include="events.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Sandbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlatformerMapBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OLC_2020_TheGreatMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMPlayerController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMLevelBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -591,6 +609,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OLC_2020_TheGreatMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

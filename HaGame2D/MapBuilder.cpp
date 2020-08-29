@@ -15,31 +15,34 @@
 class CamController : public Component {
 
 	Vector camPos = Vector::Zero();
-	float camSpeed = 5;
+	float camSpeed = 25;
+	float zoomSpeed = 0.5;
 
 	void update() {
 		camPos = Vector::Zero();
 
+		float dt = gameScene->dt_s();
+
 		if (input->up) {
-			camPos.y = -1 * camSpeed;
+			camPos.y = -1 * camSpeed * dt;
 		}
 		else if (input->down) {
-			camPos.y = camSpeed;
+			camPos.y = camSpeed * dt;
 		}
 
 		if (input->left) {
-			camPos.x = -1 * camSpeed;
+			camPos.x = -1 * camSpeed * dt;
 		}
 		else if (input->right) {
-			camPos.x = camSpeed;
+			camPos.x = camSpeed * dt;
 		}
 
 		if (input->one) {
-			gameScene->camera.zoomIn();
+			gameScene->camera.zoomIn(zoomSpeed * dt);
 		}
 
 		if (input->two) {
-			gameScene->camera.zoomOut();
+			gameScene->camera.zoomOut(zoomSpeed * dt);
 		}
 
 		gameScene->camera.move(camPos);
@@ -207,8 +210,8 @@ MapBuilder::MapBuilder(char * save)
 	Scene pallet = *builder.addScene("pallet");
 	Scene tools = *builder.addScene("tools");
 
-	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/platformer-tiles.png");
-	auto tiles = SpriteSheetLoader::load("../Assets/SSDefinitions/platformer-tiles.ssd");
+	auto tileSheet = pallet.display->loadTexture("../Assets/Sprites/HaGameEngine/Environment/terrain.png");
+	auto tiles = SpriteSheetLoader::load("../Assets/SSDefinitions/terrain-tiles.ssd");
 
 
 	world.setDisplayPort(0, 0, worldWidth, worldHeight);

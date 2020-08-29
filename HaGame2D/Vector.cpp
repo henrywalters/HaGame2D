@@ -80,9 +80,11 @@ float Vector::magnitude() {
 
 void Vector::normalize() {
 	float mag = magnitude();
-	x = x / mag;
-	y = y / mag;
-	z = z / mag;
+	if (mag != 0) {
+		x = x / mag;
+		y = y / mag;
+		z = z / mag;
+	}
 }
 
 Vector Vector::normalized() {
