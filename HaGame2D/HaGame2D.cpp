@@ -35,11 +35,11 @@ int main(int argc, char* argv[])
 
 	//sandbox();
 
-	auto levelBuilder = TGM::LevelBuilder();
-	levelBuilder.run();
+	//auto levelBuilder = TGM::LevelBuilder();
+	//levelBuilder.run();
 
-	// auto olc = OLC_2020_TheGreatMachine();
-	// olc.run();
+	auto olc = TGM::OLC_2020_TheGreatMachine();
+	olc.run();
 
 	//auto builder = PlatformerMapBuilder();
 	//builder.run();

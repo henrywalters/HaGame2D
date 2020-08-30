@@ -220,6 +220,7 @@
     <ClInclude Include="Physics.h" />
     <ClInclude Include="Platformer.h" />
     <ClInclude Include="PlatformerMapBuilder.h" />
+    <ClInclude Include="Polygon.h" />
     <ClInclude Include="Pong.h" />
     <ClInclude Include="Pong_BallController.h" />
     <ClInclude Include="Pong_ComputerController.h" />

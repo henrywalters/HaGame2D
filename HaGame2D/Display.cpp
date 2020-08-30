@@ -51,7 +51,7 @@ void Display::setDisplayPort(float x, float y, float w, float h) {
 }
 
 void Display::clear() {
-	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
+	SDL_SetRenderDrawColor(renderer, clearColor.r, clearColor.g, clearColor.b, clearColor.a);
 	SDL_RenderClear(renderer);
 }
 

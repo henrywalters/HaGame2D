@@ -12,7 +12,39 @@
 class CollisionSystem :
 	public System
 {
-private:
+
+public:
+
+	EventChannel<Collision> events;
+
+	CollisionSystem() : System("Collision_System") {
+		events = EventChannel<Collision>();
+	}
+
+	void update() {
+		auto gameObjects = getScene()->getGameObjectsWhere<CollisionComponent>();
+		for (auto object : gameObjects) {
+			auto collider = object->getComponent<CollisionComponent>();
+			
+			if (collider->pollCollisions) {
+				collider->isColliding = false;
+
+				BoxCollider* boxCollider = object->getComponent<BoxCollider>();
+				if (boxCollider) collider->currentCollisions = checkBoxCollisions(object->uid, boxCollider->getBox(), gameObjects);
+
+				CircleCollider* circleCollider = object->getComponent<CircleCollider>();
+				if (circleCollider) collider->currentCollisions = checkCircleCollisions(object->uid, circleCollider->getCircle(), gameObjects);
+
+				if (collider->currentCollisions.size() > 0) {
+					collider->isColliding = true;
+					for (auto collision : collider->currentCollisions) {
+						events.trigger(collision);
+					}
+				}
+			}
+		}
+	}
+
 	std::vector<Collision> checkCircleCollisions(long uid, Circle circle, std::vector<GameObject*> gameObjects) {
 		auto collisions = std::vector<Collision>();
 
@@ -61,38 +93,6 @@ private:
 		}
 
 		return collisions;
-	}
-
-public:
-
-	EventChannel<Collision> events;
-
-	CollisionSystem() : System("Collision_System") {
-		events = EventChannel<Collision>();
-	}
-
-	void update() {
-		auto gameObjects = getScene()->getGameObjectsWhere<CollisionComponent>();
-		for (auto object : gameObjects) {
-			auto collider = object->getComponent<CollisionComponent>();
-			
-			if (collider->pollCollisions) {
-				collider->isColliding = false;
-
-				BoxCollider* boxCollider = object->getComponent<BoxCollider>();
-				if (boxCollider) collider->currentCollisions = checkBoxCollisions(object->uid, boxCollider->getBox(), gameObjects);
-
-				CircleCollider* circleCollider = object->getComponent<CircleCollider>();
-				if (circleCollider) collider->currentCollisions = checkCircleCollisions(object->uid, circleCollider->getCircle(), gameObjects);
-
-				if (collider->currentCollisions.size() > 0) {
-					collider->isColliding = true;
-					for (auto collision : collider->currentCollisions) {
-						events.trigger(collision);
-					}
-				}
-			}
-		}
 	}
 };
 

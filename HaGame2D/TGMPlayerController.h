@@ -1,6 +1,7 @@
 #pragma once
 #include "HaGame2D.h"
 #include "TGMBody.h";
+#include "CollisionSystem.h"
 
 const float RUN_SPEED = 40.0f;
 const float SPEED = 15.0f;
@@ -26,6 +27,7 @@ namespace TGM {
 		float dt;
 
 		Vector velocity;
+		Vector accel;
 		float rotVelocity;
 
 		Scene* scene;
@@ -34,13 +36,18 @@ namespace TGM {
 		float playerMass;
 		Vector playerSize;
 
+		CollisionSystem* collisionSystem;
+
+		CircleCollider* collider;
+
 		Vector center() {
 			return player->position + Vector(playerSize.x / 2.0f, playerSize.y / 2.0f);
 		}
 
 	public:
-		PlayerController(GameObject* _player) : System("Player Controller") {
+		PlayerController(GameObject* _player, CollisionSystem* _collisionSystem) : System("Player Controller") {
 			player = _player;
+			collisionSystem = _collisionSystem;
 		}
 
 		void onInit() {
@@ -53,16 +60,24 @@ namespace TGM {
 			TGM::BodyComponent* body = player->getComponent<TGM::BodyComponent>();
 			if (body == NULL) throw new std::exception("TGM::BodyComponent required on player");
 
+			collider = player->getComponent<CircleCollider>();
+			if (collider == NULL) throw new std::exception("Player must have a circle collider component");
+
 			playerMass = body->mass;
 			velocity = Vector::Zero();
 			rotVelocity = 0;
+
+			collisionSystem->events.subscribe([this](Collision coll) {
+				std::cout << "Colliding with: " << coll.gameObject->uid << " moving " << velocity.toString() << "m/s" << std::endl;
+				player->move(velocity * -5 * scene->dt_s());
+			});
 		}
 
 		void update() {
 			dt = scene->dt_s();
 
 			// Movement portion
-			Vector accel = Vector::Zero();
+			accel = Vector::Zero();
 
 			accelMag = input->shift ? RUN_ACCEL : ACCEL;
 			deaccel = input->shift ? RUN_DEACCEL : DEACCEL;
@@ -94,6 +109,8 @@ namespace TGM {
 			if (nextSpeed < input->shift ? RUN_SPEED : SPEED) {
 				velocity += accel * dt;
 			}
+
+			adjustVelocityForBoundaries(dt);
 			
 			player->move(velocity * dt);
 
@@ -103,6 +120,23 @@ namespace TGM {
 			auto mouseAngle = atan(mouseDelta.y / mouseDelta.x);
 
 			player->setRotation(mouseAngle);
+		}
+
+		Circle adjustedCircle(Vector delta) {
+			Circle adjusted;
+			adjusted = collider->getCircle();
+			adjusted.center += delta;
+			return adjusted;
+		}
+
+		bool isCollidingIf(Vector delta) {
+			auto circle = adjustedCircle(delta);
+			return collisionSystem->checkCircleCollisions(player->uid, circle, getScene()->getGameObjectsWhere<CollisionComponent>()).size() > 0;
+		}
+
+		void adjustVelocityForBoundaries(float dt) {
+			if (velocity.x != 0 && isCollidingIf(Vector(velocity.x * dt, 0))) velocity.x = 0;
+			if (velocity.y != 0 && isCollidingIf(Vector(0, velocity.y * dt))) velocity.y = 0;
 		}
 	};
 };

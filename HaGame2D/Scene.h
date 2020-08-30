@@ -93,8 +93,9 @@ public:
 
 	static GameObject* getGameObject(char* id);
 
-	void addSystem(System* system) {
+	System* addSystem(System* system) {
 		systems.push_back(system);
+		return system;
 	}
 
 	Vector screenCenter() {

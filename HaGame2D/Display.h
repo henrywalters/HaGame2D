@@ -11,6 +11,7 @@
 #include <iostream>
 #include "Vector.h"
 #include "Matrix.h"
+#include "Polygon.h"
 
 struct PNG {
 	std::string path;
@@ -106,6 +107,8 @@ public:
 	SDL_Renderer * renderer = NULL;
 	TTF_Font *font = NULL;
 
+	RGB clearColor = Color::black();
+
 	//Call this function from the sub scene so that it may inhereit the render properties without actually creating a new display window.
 	void initialize(SDL_Window * window, SDL_Surface * screen, SDL_Renderer * renderer);
 
@@ -132,6 +135,10 @@ public:
 	void fillRect(float x, float y, float width, float height, RGB color, int z_index = Z_DEFAULT);
 	void drawLine(float x1, float y1, float x2, float y2, RGB color, int z_index = Z_DEFAULT);
 	void drawLine(Vector p1, Vector p2, RGB color, int z_index = Z_DEFAULT);
+
+	template <size_t size>
+	void drawPolygon(Polygon<size> polygon, RGB color, int z_index = Z_DEFAULT);
+
 	void drawTriangle(Vector p1, Vector p2, Vector p3, RGB color, int z_index = Z_DEFAULT);
 	void drawTriangle(Triangle triangle, RGB color, int z_index = Z_DEFAULT);
 	void drawPNG(PNG png);
@@ -156,3 +163,18 @@ public:
 
 };
 
+template<size_t size>
+inline void Display::drawPolygon(Polygon<size> polygon, RGB color, int z_index)
+{
+	if (size <= 0) {
+		throw new std::exception("Invalid Polygon size");
+	}
+	else if (size == 1) {
+		drawPixel(polygon.vertices[0], color, z_index);
+	}
+	else {
+		for (int i = 1; i < size; i++) {
+			drawLine(polygon.vertices[i - 1], polygon.vertices[i], color, z_index);
+		}
+	}
+}

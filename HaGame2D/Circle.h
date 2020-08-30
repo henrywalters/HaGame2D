@@ -16,10 +16,10 @@ struct Circle {
 
 		Vector distance = center - closestPoint;
 
-		return distance.magnitude() <= radius;
+		return distance.magnitude() < radius;
 	}
 
 	bool collidingWith(Circle circle) {
-		return (circle.center - center).magnitude() <= circle.radius + radius;
+		return (circle.center - center).magnitude() < circle.radius + radius;
 	}
 };
