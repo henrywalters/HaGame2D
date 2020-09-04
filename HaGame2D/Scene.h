@@ -68,6 +68,8 @@ public:
 
 	int FPS = 60;
 
+	Vector origin = Vector::Zero();
+
 	Scene();
 	~Scene();
 
@@ -111,7 +113,7 @@ public:
 	}
 
 	float dt_s() {
-		return _dt_ms / 100000;
+		return _dt_ms / 1000000;
 	}
 
 	Vector screenSize() {

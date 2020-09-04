@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AssetLoader.h" />
     <ClInclude Include="BinaryGrid.h" />
     <ClInclude Include="BlackJack.h" />
     <ClInclude Include="BlackjackStrategy.h" />
@@ -248,8 +249,17 @@
     <ClInclude Include="TextLabel.h" />
     <ClInclude Include="TextRenderer.h" />
     <ClInclude Include="TGMBody.h" />
+    <ClInclude Include="TGMDoor.h" />
+    <ClInclude Include="TGMEnemies.h" />
+    <ClInclude Include="TGMEnum.h" />
+    <ClInclude Include="TGMHealthBar.h" />
     <ClInclude Include="TGMLevelBuilder.h" />
+    <ClInclude Include="TGMLevelLoader.h" />
+    <ClInclude Include="TGMLevers.h" />
+    <ClInclude Include="TGMPlatform.h" />
     <ClInclude Include="TGMPlayerController.h" />
+    <ClInclude Include="TGMProjectile.h" />
+    <ClInclude Include="TGMTriggerReceiver.h" />
     <ClInclude Include="UIComponent.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Vector.h" />
@@ -345,6 +355,7 @@
     <ClCompile Include="System.cpp" />
     <ClCompile Include="TextLabel.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
+    <ClCompile Include="TGMProjectile.cpp" />
     <ClCompile Include="UIComponent.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="Vector.cpp" />

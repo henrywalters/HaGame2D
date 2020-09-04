@@ -39,6 +39,10 @@ public:
 		}
 	}
 
+	void unsubscribeAll() {
+		listeners.clear();
+	}
+
 	void unsubscribe(long id) {
 		listeners.erase(id);
 	}

@@ -42,7 +42,7 @@ class Camera
 	Display *display;
 	Input * input;
 
-	bool drawCursor = true;;
+	bool drawCursor = false;
 
 public:
 	Camera();

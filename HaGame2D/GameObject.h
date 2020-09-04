@@ -29,7 +29,7 @@ private:
 	Vector oldOrigin;
 
 	int tagCount = 0;
-	std::string tags[MAX_TAGS];
+	std::vector<std::string> tags;
 
 public:
 
@@ -94,22 +94,32 @@ public:
 	void update();
 
 	void addTag(std::string tag) {
-		if (tagCount < MAX_TAGS - 1) {
-			tags[tagCount] = tag;
-			tagCount += 1;
-		}
-		else {
-			std::cout << "WARNING - Max tags for game object exceeded\n";
-		}
+		tags.push_back(tag);
+		tagCount += 1;
+	}
+
+	GameObject* addTagAnd(std::string tag) {
+		addTag(tag);
+		return this;
 	}
 
 	bool hasTag(std::string tag) {
-		for (int i = 0; i < tagCount; i++) {
+		for (int i = 0; i < tags.size(); i++) {
 			if (tags[i] == tag) {
 				return true;
 			}
 		}
 		return false;
+	}
+
+	void removeTag(std::string tag) {
+		for (int i = 0; i < tags.size(); i++) {
+			if (tags[i] == tag) {
+				tags.erase(tags.begin() + i);
+				tagCount--;
+				return;
+			}
+		}
 	}
 
 	bool isWithinViewport(Matrix viewport);
@@ -143,8 +153,10 @@ public:
 
 	void destroyComponents() {
 		for (int i = 0; i < componentCount; i++) {
+			components[i]->onDestroy();
 			delete components[i];
 		}
+		componentCount = 0;
 	}
 
 	void initialize(Display *display, Input *input, Scene * scene);

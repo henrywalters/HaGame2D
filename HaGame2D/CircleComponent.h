@@ -36,7 +36,7 @@ public:
 
 	Circle getCircle() {
 
-		Vector position = transform->position;
+		Vector position = transform->relativePosition;
 
 		if (!getPositionCenter()) position += Vector(getRadius(), getRadius());
 

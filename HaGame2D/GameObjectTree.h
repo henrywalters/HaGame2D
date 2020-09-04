@@ -18,6 +18,9 @@ public:
 	//Adds a pre-existing game object to the game object tree.
 	GameObject * add(GameObject * gameObject);
 
+	// Remove a game object from the tree
+	void cleanTree();
+
 	std::vector<GameObject *> getGameObjects();
 	
 	template<class T>
@@ -30,7 +33,7 @@ template<class T>
 inline std::vector<GameObject*> GameObjectTree::getGameObjectsWhere() {
 	std::vector<GameObject*> gameObjects;
 	for (auto gameObject : getGameObjects()) {
-		if (gameObject->getComponent<T>() != NULL) {
+		if (gameObject->getComponent<T>() != NULL && gameObject->getComponent<T>()->active && gameObject->active) {
 			gameObjects.push_back(gameObject);
 		}
 	}

@@ -13,7 +13,10 @@ Display::Display(int w, int h, char * _title)
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
 	screen = SDL_GetWindowSurface(window);
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED );
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
+
+	SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "0");
 
 	int imgFlags = IMG_INIT_PNG;
 	if (!(IMG_Init(imgFlags) & imgFlags))
@@ -93,7 +96,7 @@ void Display::displayMetric(std::string metric)
 }
 
 void Display::setRenderColor(RGB rgb, int alpha) {
-	SDL_SetRenderDrawColor(renderer, rgb.r, rgb.g, rgb.b, alpha);
+	SDL_SetRenderDrawColor(renderer, rgb.r, rgb.g, rgb.b, rgb.a);
 }
 
 void Display::drawPixel(float x, float y, RGB color, int z_index)
@@ -170,7 +173,9 @@ void Display::drawTexture(TextureRect rect, Texture texture, TextureRect clip, i
 		SDL_Point* point = new SDL_Point();
 		point->x = texture.anchor.x;
 		point->y = texture.anchor.y;
-		SDL_RenderCopyEx(renderer, texture.texture, sdlClip, &sdlRect, texture.angle * (180 / M_PI), point, SDL_FLIP_NONE);
+		SDL_SetTextureAlphaMod(texture.texture, texture.alpha);
+		SDL_RendererFlip flip = texture.angle > 90 && texture.angle < 270 ? SDL_FLIP_VERTICAL : SDL_FLIP_NONE;
+		SDL_RenderCopyEx(renderer, texture.texture, sdlClip, &sdlRect, texture.angle * (180 / M_PI), point, flip);
 		free(sdlClip);
 	});
 }
@@ -206,7 +211,7 @@ PNG Display::loadPNG(std::string path) {
 
 Texture Display::loadTexture(std::string path) {
 	//The final texture
-	Texture newTexture = Texture{ path, NULL };
+	Texture newTexture = Texture{ 0xFF, path, NULL };
 
 	//Load image at specified path
 	SDL_Surface* loadedSurface = IMG_Load(path.c_str());
@@ -221,6 +226,9 @@ Texture Display::loadTexture(std::string path) {
 		if (newTexture.texture == NULL)
 		{
 			printf("Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError());
+		}
+		else {
+			SDL_SetTextureBlendMode(newTexture.texture, SDL_BLENDMODE_BLEND);
 		}
 
 		//Get rid of old loaded surface

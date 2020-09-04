@@ -37,6 +37,7 @@ struct Triangle {
 };
 
 struct Texture {
+	Uint8 alpha;
 	std::string path;
 	SDL_Texture * texture;
 	Vector anchor;
@@ -150,7 +151,13 @@ public:
 	Texture loadTexture(std::string path);
 	void setFont(int fontSize, std::string font = DEFAULT_FONT);
 
+	void destroyText(Text text) {
+		SDL_DestroyTexture(text.texture);
+		TTF_CloseFont(text.font);
+	}
+
 	Text loadText(std::string font, int fontSize, std::string text, RGB color = Color::white());
+
 
 	//Helpful because this function will update the size of the text object for you.
 	//Text updateText(Text textObject, std::string text, int fontSize = DEFAULT_FONTSIZE, RGB color = Color::white());

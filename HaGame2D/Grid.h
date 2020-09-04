@@ -65,6 +65,8 @@ public:
 	GridIndex begin();
 	GridIndex next(GridIndex index);
 	GridIndex end();
+
+	std::vector<T> flatten();
 	
 };
 
@@ -128,14 +130,14 @@ template<class T>
 inline void Grid<T>::set(GridIndex index, T value)
 {
 	if (index.x >= 0 && index.x < cols && index.y >= 0 && index.y < rows) {
-		grid[index.y][index.x] = value;
+		grid[index.x][index.y] = value;
 	}
 }
 
 template<class T>
 inline void Grid<T>::clear(GridIndex index)
 {
-	grid[index.y][index.x] = NULL;
+	grid[index.x][index.y] = NULL;
 }
 
 template<class T>
@@ -150,7 +152,7 @@ template<class T>
 inline T Grid<T>::get(GridIndex index)
 {
 	if (index. y >= 0 && index.y < rows && index.x >= 0 && index.x < cols) {
-		return grid[index.y][index.x];
+		return grid[index.x][index.y];
 	}
 }
 
@@ -169,7 +171,7 @@ inline T Grid<T>::getSpatial(Vector transform, Vector globalPos)
 {
 	GridIndex index = getSpatialIndex(transform, globalPos);
 	if (index.x >= 0 && index.x < cols && index.y >= 0 && index.y < rows) {
-		return grid[index.y][index.x];
+		return grid[index.x][index.y];
 	}
 	else {
 		return NULL;
@@ -204,4 +206,16 @@ template<class T>
 inline GridIndex Grid<T>::end()
 {
 	return GridIndex{ cols - 1, rows - 1 };
+}
+
+template<class T>
+inline std::vector<T> Grid<T>::flatten()
+{
+	auto cells = std::vector<T>();
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			cells.push_back(get(i, j));
+		}
+	}
+	return cells;
 }

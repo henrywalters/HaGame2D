@@ -5,31 +5,20 @@
 GameObject::GameObject()
 {
 	uid = Random::number(1000000, 9999999);
-
+	tags = std::vector<std::string>();
 	position = Vector::Zero();
 	origin = Vector::Zero();
 	scale = Vector::Identity();
+	childGameObjects = {};
 	rotation = 0;
-
-	for (int i = 0; i < MAX_TAGS; i++) {
-		tags[i] = "";
-	}
 }
 
 
 GameObject::~GameObject()
 {
-	for (int i = 0; i < componentCount; i++) {
-		delete components[i];		
-	}
-	componentCount = 0;
-	if (childGameObjectCount == 0) {
-		active = false;
-	}
-	else {
-		for (auto gameObject : childGameObjects) {
-			delete gameObject;
-		}
+	destroyComponents();
+	for (auto gameObject : childGameObjects) {
+		delete gameObject;
 	}
 }
 
@@ -126,8 +115,8 @@ bool GameObject::isWithinViewport(Matrix viewport)
 }
 
 GameObject * GameObject::add() {
-	GameObject * gameObject = new GameObject();
-	return add(gameObject);
+	GameObject * child = new GameObject();
+	return add(child);
 }
 
 GameObject* GameObject::add(GameObject* child)

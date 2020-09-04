@@ -18,6 +18,7 @@ public:
 	float height;
 
 	BoxCollider(float width, float height);
+	BoxCollider(Vector size);
 	~BoxCollider();
 
 	Box getBox() {

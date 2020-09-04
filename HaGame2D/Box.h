@@ -68,4 +68,12 @@ public:
 	bool yOverlaps(Box box) {
 		return (y > box.y && x < box.y + box.height) || (y + height > box.y && y + height < box.y + box.height);
 	}
+
+	Vector position() {
+		return Vector(x, y);
+	}
+
+	Vector size() {
+		return Vector(width, height);
+	}
 };

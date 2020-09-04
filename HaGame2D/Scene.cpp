@@ -56,6 +56,12 @@ void Scene::setDisplayPort(float x, float y, float width, float height) {
 }
 
 void Scene::initialize() {
+
+	for (auto system : systems) {
+		system->setScene(this);
+		system->onInit();
+	}
+
 	std::vector<GameObject *> objects = getGameObjects();
 	int unmappedObjects = 0;
 	for (int i = 0; i < objects.size(); i++) {
@@ -82,14 +88,10 @@ void Scene::initialize() {
 	}
 	gameObjects = objects;
 	gameObjectsInitialized = true;
-
-	for (auto system : systems) {
-		system->setScene(this);
-		system->onInit();
-	}
 }
 
 void Scene::reset() {
+	cleanTree();
 	gameObjects.clear();
 	gameObjectTable.clear();
 	gameObjectsInitialized = false;
@@ -97,12 +99,17 @@ void Scene::reset() {
 
 GameObject * Scene::instantiate(GameObject * gameObject) {
 	Scene::instantiate((char *)std::to_string(Random::number(0, 100000)).c_str(), gameObject);
+	// gameObject->initialize(display, input, this);
 	for (int i = 0; i < gameObject->componentCount; i++) {
 		gameObject->components[i]->initialize(display, input, this);
 		gameObject->components[i]->onCreate();
 	}
+	for (auto child : gameObject->childGameObjects) {
+		child->parentGameObject = gameObject;
+		instantiate(child);
+	}
 	gameObjects.push_back(gameObject);
-	add(gameObject);
+	// add(gameObject);
 
 	return gameObject;
 }
@@ -113,7 +120,7 @@ void Scene::destroy(GameObject * gameObject) {
 		gameObject->components[i]->onDestroy();
 	}
 
-	GameObject * parent = gameObject->parentGameObject;
+	GameObject* parent = gameObject->parentGameObject;
 
 	if (parent != NULL) {
 		std::remove(parent->childGameObjects.begin(), parent->childGameObjects.end(), gameObject);
@@ -129,6 +136,8 @@ void Scene::destroy(GameObject * gameObject) {
 void Scene::tick() {
 
 	int startFrame = SDL_GetTicks();
+
+	camera.update();
 
 	Matrix displayPort = display->displayPort;
 
@@ -171,24 +180,9 @@ void Scene::tick() {
 		//update current object
 
 		if (currentObject->parentGameObject != NULL) {
-			/*
-			auto * collider = currentObject->getComponent<BoxCollider>();
-
-			if (collider != NULL && collider->active && !currentObject->staticObject) {
-				tick = SDL_GetTicks();
-				std::vector<GameObject *> neighbors = quadTree->getNeighbors(currentObject);
-
-				int quadNeighbors = SDL_GetTicks();
-				tick = SDL_GetTicks();
-				collider->checkCollisions(neighbors);
-
-				//collider->checkCollisions(gameObjects);
-			}
-			*/
 			if (currentObject->parentGameObject->positionUpdated) {
 				currentObject->move(currentObject->parentGameObject->positionDelta);
 			}
-
 		}
 
 

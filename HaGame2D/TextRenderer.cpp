@@ -13,6 +13,7 @@ TextRenderer::~TextRenderer()
 }
 
 void TextRenderer::onCreate() {
+	dirty = false;
 	text = display->loadText(font, fontSize, message, fontColor);
 	textWidth = text.size.x; 
 	textHeight = text.size.y;
@@ -20,6 +21,15 @@ void TextRenderer::onCreate() {
 
 void TextRenderer::update() {
 	if (message.length() > 0) {
+
+		if (dirty) {
+			display->destroyText(text);
+			text = display->loadText(font, fontSize, message, fontColor);
+			textWidth = text.size.x;
+			textHeight = text.size.y;
+
+			dirty = false;
+		}
 
 		float relativeWidthRatio = relativeWidth / width;
 		float relativeHeightRatio = relativeHeight / height;
@@ -35,40 +45,40 @@ void TextRenderer::update() {
 
 		switch (allignment) {
 		case TextAllignments::Left:
-			posX = transform->position.x;
-			posY = transform->position.y + (height / 2 - textHeight / 2);
+			posX = transform->relativePosition.x;
+			posY = transform->relativePosition.y + (height / 2 - textHeight / 2);
 			break;
 		case TextAllignments::Center:
-			posX = transform->position.x + (width / 2 - textWidth / 2);
-			posY = transform->position.y + (height / 2 - textHeight / 2);
+			posX = transform->relativePosition.x + (width / 2 - textWidth / 2);
+			posY = transform->relativePosition.y + (height / 2 - textHeight / 2);
 			break;
 		case TextAllignments::Right:
-			posX = transform->position.x + width - textWidth;
-			posY = transform->position.y + (height / 2 - textHeight / 2);
+			posX = transform->relativePosition.x + width - textWidth;
+			posY = transform->relativePosition.y + (height / 2 - textHeight / 2);
 			break;
 		case TextAllignments::TopLeft:
-			posX = transform->position.x;
-			posY = transform->position.y;
+			posX = transform->relativePosition.x;
+			posY = transform->relativePosition.y;
 			break;
 		case TextAllignments::TopCenter:
-			posX = transform->position.x + (width / 2 - textWidth / 2);
-			posY = transform->position.y;
+			posX = transform->relativePosition.x + (width / 2 - textWidth / 2);
+			posY = transform->relativePosition.y;
 			break;
 		case TextAllignments::TopRight:
-			posX = transform->position.x + width - textWidth;
-			posY = transform->position.y;
+			posX = transform->relativePosition.x + width - textWidth;
+			posY = transform->relativePosition.y;
 			break;
 		case TextAllignments::BottomLeft:
-			posX = transform->position.x;
-			posY = transform->position.y + width - textHeight;
+			posX = transform->relativePosition.x;
+			posY = transform->relativePosition.y + width - textHeight;
 			break;
 		case TextAllignments::BottomCenter:
-			posX = transform->position.x + (width / 2 - textWidth / 2);
-			posY = transform->position.y + width - textHeight;
+			posX = transform->relativePosition.x + (width / 2 - textWidth / 2);
+			posY = transform->relativePosition.y + width - textHeight;
 			break;
 		case TextAllignments::BottomRight:
-			posX = transform->position.x + width - textWidth;
-			posY = transform->position.y + width - textHeight;
+			posX = transform->relativePosition.x + width - textWidth;
+			posY = transform->relativePosition.y + width - textHeight;
 			break;
 		}
 

@@ -34,6 +34,8 @@ private:
 	float textWidth;
 	float textHeight;
 
+	bool dirty;
+
 	TextAllignments allignment = TextAllignments::Left;
 
 public:
@@ -44,18 +46,22 @@ public:
 
 	void setFontSize(int fs) {
 		fontSize = fs;
+		dirty = true;
 	}
 
 	void setFont(std::string _font) {
 		font = _font;
+		dirty = true;
 	}
 
 	void setFontColor(RGB fc) {
 		fontColor = fc;
+		dirty = true;
 	}
 
 	void setMessage(std::string _message) {
 		message = _message;
+		dirty = true;
 	}
 
 	void setMargin(float horiz, float vert) {

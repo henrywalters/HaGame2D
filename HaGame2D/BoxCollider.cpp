@@ -8,6 +8,12 @@ BoxCollider::BoxCollider(float _width, float _height)
 	height = _height;
 }
 
+BoxCollider::BoxCollider(Vector size)
+{
+	width = size.x;
+	height = size.y;
+}
+
 
 BoxCollider::~BoxCollider()
 {

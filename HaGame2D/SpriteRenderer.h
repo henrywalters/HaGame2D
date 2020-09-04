@@ -13,6 +13,8 @@ public:
 
 	std::string path;
 	Texture sprite;
+
+	bool draw = true;
 	
 	//Render a sprite from a sprite sheet with config file.
 	SpriteRenderer(Texture _spriteSheet, SpriteSheetCell _sprite, float _width, float _height) {
@@ -49,9 +51,12 @@ public:
 	}
 
 	void update() {
-		sprite.angle = transform->rotation;
-		sprite.anchor = transform->origin;
-		display->drawTexture(TextureRect{ transform->relativePosition.x, transform->relativePosition.y, width, height }, sprite, clip, transform->z_index);
+		if (draw) {
+			sprite.angle = transform->rotation;
+			sprite.anchor = transform->origin;
+			display->drawTexture(TextureRect{ transform->relativePosition.x, transform->relativePosition.y, width, height }, sprite, clip, transform->z_index);
+		}
+
 	}
 };
 

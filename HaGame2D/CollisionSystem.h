@@ -23,10 +23,12 @@ public:
 
 	void update() {
 		auto gameObjects = getScene()->getGameObjectsWhere<CollisionComponent>();
+		int checks = 0;
 		for (auto object : gameObjects) {
 			auto collider = object->getComponent<CollisionComponent>();
 			
-			if (collider->pollCollisions) {
+			if (collider->pollCollisions && collider->active) {
+				checks++;
 				collider->isColliding = false;
 
 				BoxCollider* boxCollider = object->getComponent<BoxCollider>();
@@ -54,13 +56,14 @@ public:
 				bool colliding = false;
 
 				BoxCollider* boxCollider = object->getComponent<BoxCollider>();
-				if (boxCollider && circle.collidingWithBox(boxCollider->getBox())) colliding = true;
+				if (boxCollider && boxCollider->active && circle.collidingWithBox(boxCollider->getBox())) colliding = true;
 
 				CircleCollider* circleCollider = object->getComponent<CircleCollider>();
-				if (circleCollider && circle.collidingWith(circleCollider->getCircle())) colliding = true;
+				if (circleCollider && circleCollider->active && circle.collidingWith(circleCollider->getCircle())) colliding = true;
 
 				if (colliding) {
 					Collision collision;
+					collision.sourceUid = uid;
 					collision.gameObject = object;
 					collisions.push_back(collision);
 				}
@@ -86,6 +89,7 @@ public:
 
 				if (colliding) {
 					Collision collision;
+					collision.sourceUid = uid;
 					collision.gameObject = object;
 					collisions.push_back(collision);
 				}

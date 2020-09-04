@@ -26,6 +26,11 @@ void Input::pollEvents() {
 	fire1Up = false;
 	fire1Down = false;
 	fire2Down = false;
+	
+	actionDown = false;
+
+	esc = false;
+	enter = false;
 
 	while (SDL_PollEvent(&e) != 0) {
 		if (e.type == SDL_QUIT) {
@@ -121,6 +126,12 @@ void Input::pollEvents() {
 
 		if (e.type == SDL_KEYDOWN) {
 			switch (e.key.keysym.sym) {
+			case SDLK_e:
+				if (!action) {
+					actionDown = true;
+				}
+				action = true;
+				break;
 			case SDLK_w:
 				up = true;
 				break;
@@ -163,11 +174,23 @@ void Input::pollEvents() {
 			case SDLK_LSHIFT:
 				shift = true;
 				break;
+			case SDLK_RETURN:
+				enter = true;
+				break;
+			case SDLK_ESCAPE:
+				esc = true;
+				break;
 			}
 		}
 
 		if (e.type == SDL_KEYUP) {
 			switch (e.key.keysym.sym) {
+			case SDLK_e:
+				if (action) {
+					actionDown = false;
+				}
+				action = false;
+				break;
 			case SDLK_w:
 				up = false;
 				break;
@@ -209,6 +232,12 @@ void Input::pollEvents() {
 				break;
 			case SDLK_LSHIFT:
 				shift = false;
+				break;
+			case SDLK_RETURN:
+				enter = false;
+				break;
+			case SDLK_ESCAPE:
+				esc = false;
 				break;
 			}
 		}

@@ -22,6 +22,9 @@ public:
 	bool two = false;
 	bool three = false;
 
+	bool action = false;
+	bool actionDown = false;
+
 	bool quit;
 
 	int mouseX, mouseY;
@@ -34,6 +37,10 @@ public:
 	bool fire2Down = false;
 	bool fire1Up = false;
 	bool fire2Up = false;
+
+	bool esc;
+
+	bool enter;
 
 	int mouseScroll = 0;
 

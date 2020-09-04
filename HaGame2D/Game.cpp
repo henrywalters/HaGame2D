@@ -67,6 +67,7 @@ void Game::activateScene(std::string tag) {
 		std::cout << "Activating Scene: " << tag << "\n";
 		scenes[tag].active = true;
 		sceneStates[tag] = true;
+		scenes[tag].scene->input->pollEvents();
 	}
 }
 

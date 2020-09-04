@@ -28,10 +28,23 @@ GameObject * GameObjectTree::add() {
 GameObject * GameObjectTree::add(GameObject * gameObject) {
 	root->childGameObjects.push_back(gameObject);
 	root->childGameObjectCount += 1;
-	gameObject->parentGameObject = root;
+	//gameObject->parentGameObject = root;
 	return gameObject;
 }
 
+
+void GameObjectTree::cleanTree()
+{
+	auto gameObjects = getGameObjects();
+	for (auto gameObject : gameObjects) {
+		gameObject->destroyComponents();
+		gameObject->childGameObjectCount = 0;
+		gameObject->childGameObjects.clear();
+		gameObject->active = false;
+		free(gameObject);
+	}
+	root = new GameObject();
+}
 
 std::vector<GameObject *> GameObjectTree::getGameObjects() {
 	std::vector<GameObject *> objects;
@@ -41,12 +54,13 @@ std::vector<GameObject *> GameObjectTree::getGameObjects() {
 
 	while (!queue.empty()) {
 		GameObject * current = queue.front();
-
 		objects.push_back(current);
 		queue.pop();
 
 		for (int i = 0; i < current->childGameObjectCount; i++) {
-			queue.push(current->childGameObjects[i]);
+			if (current->childGameObjects[i]->active) {
+				queue.push(current->childGameObjects[i]);
+			}	
 		}
 	}
 

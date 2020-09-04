@@ -20,13 +20,14 @@ void Camera::lerp(Vector newOrigin, int frames) {
 
 	float distance = (lerpEnd - lerpStart).magnitude();
 
-	if (distance > 0) {
+	if (distance > 0 && !lerping) {
 		lerping = true;
 		lerpFrames = frames;
 		currentLerpFrame = 0;
 
 		//distance * (1 / lerpFrames / distance) 
 		lerpPerFrame = (lerpEnd - lerpStart).normalized() * (distance / lerpFrames);
+		std::cout << "Lerp Per Frame: " << lerpPerFrame.toString() << lerpFrames << "Times" << std::endl;
 	}
 }
 
@@ -46,6 +47,7 @@ void Camera::update() {
 			currentLerpFrame += 1;
 		}
 		else {
+			std::cout << "Done\n";
 			lerping = false;
 		}
 	}

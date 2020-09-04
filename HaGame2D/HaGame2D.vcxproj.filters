@@ -351,6 +351,36 @@
     <ClInclude Include="Polygon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TGMEnemies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMLevers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMTriggerReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMDoor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMEnum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMLevelLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMProjectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMHealthBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -615,6 +645,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OLC_2020_TheGreatMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TGMProjectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

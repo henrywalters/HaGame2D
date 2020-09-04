@@ -5,7 +5,9 @@
 
 struct Collision {
 
-	GameObject * gameObject;
+	long sourceUid;
+
+	GameObject* gameObject;
 
 	bool up;
 	bool down;
