@@ -11,6 +11,10 @@ class Input
 public:
 
 	bool up = false; bool down = false; bool left = false; bool right = false;
+	bool upPressed = false;
+	bool downPressed = false;
+	bool leftPressed = false;
+	bool rightPressed = false;
 
 	bool space = false;
 
@@ -38,9 +42,10 @@ public:
 	bool fire1Up = false;
 	bool fire2Up = false;
 
-	bool esc;
+	bool esc = false;
 
-	bool enter;
+	bool enter = false;
+	bool enterDown = false;
 
 	int mouseScroll = 0;
 
@@ -50,6 +55,8 @@ public:
 
 	Input();
 	~Input();
+
+	void clear();
 
 	void pollEvents();
 

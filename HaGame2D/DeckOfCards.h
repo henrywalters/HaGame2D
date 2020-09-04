@@ -136,8 +136,10 @@ public:
 	//Shuffle all cards in the deck
 	void shuffle() {
 		srand(time(0));
+		std::random_device rd;
+		std::mt19937 g(rd());
 		for (int i = 0; i < deck.size(); i++) {
-			std::random_shuffle(deck.begin(), deck.end());
+			std::shuffle(deck.begin(), deck.end(), g);
 		}
 	}
 

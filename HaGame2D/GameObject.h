@@ -154,7 +154,8 @@ public:
 	void destroyComponents() {
 		for (int i = 0; i < componentCount; i++) {
 			components[i]->onDestroy();
-			delete components[i];
+			components[i]->active = false;
+			//free(components[i]);
 		}
 		componentCount = 0;
 	}

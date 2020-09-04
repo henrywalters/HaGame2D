@@ -41,7 +41,6 @@ void GameObjectTree::cleanTree()
 		gameObject->childGameObjectCount = 0;
 		gameObject->childGameObjects.clear();
 		gameObject->active = false;
-		free(gameObject);
 	}
 	root = new GameObject();
 }

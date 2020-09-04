@@ -35,6 +35,7 @@ class Game
 	Clock clock;
 	float maxTick;
 
+protected:
 	int _fps;
 	bool _capFps;
 

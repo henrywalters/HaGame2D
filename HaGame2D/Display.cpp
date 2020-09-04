@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Display.h"
 #include <iostream>
+#include <filesystem>
 
 Display::Display(int w, int h, char * _title)
 {
@@ -13,7 +14,7 @@ Display::Display(int w, int h, char * _title)
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
 	screen = SDL_GetWindowSurface(window);
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED  );
 
 	SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "0");
@@ -266,7 +267,7 @@ Text Display::loadText(std::string font, int fontSize, std::string text, RGB col
 		SDL_FreeSurface(textSurface);
 	}
 	else {
-		printf("Failed to print text: %s because of %s", text, SDL_GetError());
+		printf("Failed to print text because of %s", SDL_GetError());
 	}
 
 	return newText;

@@ -36,5 +36,10 @@ float Clock::stop(ClockPrecision precision)
 
 void Clock::wait(long timeInMicroSeconds)
 {
-	std::this_thread::sleep_for(std::chrono::microseconds(timeInMicroSeconds));
+	//std::this_thread::sleep_for(std::chrono::microseconds(timeInMicroSeconds));
+	float elapsed = 0;
+	long start = Clock::now();
+	while (elapsed < timeInMicroSeconds) {
+		elapsed = Clock::now() - start;
+	}
 }

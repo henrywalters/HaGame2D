@@ -24,6 +24,8 @@ const float MAX_ROT_VEL = 2.0f;
 
 const float EPSILON = 0.05f;
 
+const std::string BULLET_PATH = "Assets/Sprites/bullet.png";
+
 namespace TGM {
 
 	class PlayerController : public System {
@@ -58,7 +60,7 @@ namespace TGM {
 
 		GameObject* addBullet(Scene* scene, Box rect, Vector velocity, float rotation, float momentum) {
 			auto bullet = scene->add()
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/bullet.png", rect.width, rect.height, NULL))
+				->addComponentAnd(new SpriteRenderer(BULLET_PATH, rect.width, rect.height, NULL))
 				->addComponentAnd(new BoxCollider(rect.width, rect.height))
 				->setPosition(Vector(rect.x, rect.y))
 				->addTagAnd("PLAYER_BULLET")
@@ -73,6 +75,7 @@ namespace TGM {
 
 	public:
 		std::function<void()> onLevelComplete = []() {};
+		std::function<void()> onDead = []() {};
 		GameObject* player;
 		PlayerController(CollisionSystem* _collisionSystem, TriggerReceiverSystem* _trSystem) : System("Player Controller") {
 			trSystem = _trSystem;
@@ -130,7 +133,7 @@ namespace TGM {
 					if (coll.gameObject->hasTag("ENEMY_BULLET")) {
 						healthBar->doDamage(coll.gameObject->getComponent<Projectile>()->momentum);
 						if (!healthBar->isAlive()) {
-							// GAME OVER
+							onDead();
 						}
 						coll.gameObject->getComponent<CollisionComponent>()->active = false;
 

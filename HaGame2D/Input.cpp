@@ -14,6 +14,46 @@ Input::~Input()
 {
 }
 
+void Input::clear()
+{
+
+	up = false; down = false; left = false; right = false;
+	upPressed = false;
+	downPressed = false;
+	leftPressed = false;
+	rightPressed = false;
+
+	space = false;
+
+	q = false;
+
+	shift = false;
+
+	one = false;
+	two = false;
+	three = false;
+
+	action = false;
+	actionDown = false;
+
+	quit;
+
+	mouseX, mouseY;
+	mouseXGlobal, mouseYGlobal;
+
+	fire1 = false;
+	fire2 = false;
+
+	fire1Down = false;
+	fire2Down = false;
+	fire1Up = false;
+	fire2Up = false;
+
+	esc = false;
+	enter = false;
+	enterDown = false;
+}
+
 void Input::pollEvents() {
 	SDL_Event e;
 
@@ -27,7 +67,14 @@ void Input::pollEvents() {
 	fire1Down = false;
 	fire2Down = false;
 	
+	upPressed = false;
+	downPressed = false;
+	rightPressed = false;
+	leftPressed = false;
+
 	actionDown = false;
+
+	enterDown = false;
 
 	esc = false;
 	enter = false;
@@ -133,27 +180,51 @@ void Input::pollEvents() {
 				action = true;
 				break;
 			case SDLK_w:
+				if (!up) {
+					upPressed = true;
+				}
 				up = true;
 				break;
 			case SDLK_UP:
+				if (!up) {
+					upPressed = true;
+				}
 				up = true;
 				break;
 			case SDLK_a:
+				if (!left) {
+					leftPressed = true;
+				}
 				left = true;
 				break;
 			case SDLK_LEFT:
+				if (!left) {
+					leftPressed = true;
+				}
 				left = true;
 				break;
 			case SDLK_s:
+				if (!down) {
+					downPressed = true;
+				}
 				down = true;
 				break;
 			case SDLK_DOWN:
+				if (!down) {
+					downPressed = true;
+				}
 				down = true;
 				break;
 			case SDLK_d:
+				if (!right) {
+					rightPressed = true;
+				}
 				right = true;
 				break;
 			case SDLK_RIGHT:
+				if (!right) {
+					rightPressed = true;
+				}
 				right = true;
 				break;
 			case SDLK_SPACE:
@@ -175,6 +246,9 @@ void Input::pollEvents() {
 				shift = true;
 				break;
 			case SDLK_RETURN:
+				if (!enter) {
+					enterDown = true;
+				}
 				enter = true;
 				break;
 			case SDLK_ESCAPE:
@@ -192,27 +266,51 @@ void Input::pollEvents() {
 				action = false;
 				break;
 			case SDLK_w:
+				if (up) {
+					upPressed = false;
+				}
 				up = false;
 				break;
 			case SDLK_UP:
+				if (up) {
+					upPressed = false;
+				}
 				up = false;
 				break;
 			case SDLK_a:
+				if (left) {
+					leftPressed = false;
+				}
 				left = false;
 				break;
 			case SDLK_LEFT:
+				if (left) {
+					leftPressed = false;
+				}
 				left = false;
 				break;
 			case SDLK_s:
+				if (down) {
+					downPressed = false;
+				}
 				down = false;
 				break;
 			case SDLK_DOWN:
+				if (down) {
+					downPressed = false;
+				}
 				down = false;
 				break;
 			case SDLK_d:
+				if (right) {
+					rightPressed = false;
+				}
 				right = false;
 				break;
 			case SDLK_RIGHT:
+				if (right) {
+					rightPressed = false;
+				}
 				right = false;
 				break;
 			case SDLK_SPACE:
@@ -234,6 +332,9 @@ void Input::pollEvents() {
 				shift = false;
 				break;
 			case SDLK_RETURN:
+				if (enter) {
+					enterDown = false;
+				}
 				enter = false;
 				break;
 			case SDLK_ESCAPE:

@@ -1,4 +1,5 @@
 #pragma once
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 #include "HaGame2D.h"
 #include "TGMPlayerController.h"
 #include "TGMEnemies.h"
@@ -14,13 +15,24 @@
 namespace TGM {
 
 	const std::vector<std::string> levels = {
-		"../Assets/TGM/Levels/level1.txt",
-		"../Assets/TGM/Levels/level2.txt"
+		"Assets/Levels/level3.txt",
+		"Assets/Levels/level2.txt",
+		"Assets/Levels/level3.txt",
 	};
+
+	const std::string SPLASH_PATH = "Assets/Sprites/TGMHome.png";
+	
+	const std::string DOOR_PATH = "Assets/Sprites/door.png";
+	const std::string END_PATH = "Assets/Sprites/end.png";
+	const std::string ENEMY_PATH = "Assets/Sprites/enemy.png";
+	const std::string HEALTH_PATH = "Assets/Sprites/health.png";
+	const std::string PLAYER_PATH = "Assets/Sprites/player.png";
+	const std::string WALL_PATH = "Assets/Sprites/wall.png";
 
 	const std::vector<std::string> levelNames = {
 		"The Awakening",
-		"Blood Bath"
+		"Blood Bath",
+		"Aftermath",
 	};
 
 	const int GAME_WIDTH = 800;
@@ -29,12 +41,12 @@ namespace TGM {
 	const int UI_PADDING = 20;
 	const int UI_HEIGHT = 100;
 
-	const int BLOCK_WIDTH = 120;
-	const int BLOCK_HEIGHT = 120;
+	const int BLOCK_WIDTH = 80;
+	const int BLOCK_HEIGHT = 80;
 	const Vector BLOCK_SIZE = Vector(BLOCK_WIDTH, BLOCK_HEIGHT);
 	const Vector HEALTHBOX_SIZE = Vector(BLOCK_WIDTH / 3, BLOCK_HEIGHT / 3);
 	const Vector ENEMY_SIZE = Vector(BLOCK_WIDTH * 0.75f, BLOCK_HEIGHT * 0.75f);
-	const Vector BTN_SIZE = Vector(300, 50);
+	const Vector BTN_SIZE = Vector(800, 50);
 
 	const Color BG_COLOR = Color(0x4F, 0x4F, 0x4F, 0xFF);
 	const Color FG_COLOR = Color(0xD1, 0xD1, 0xD1, 0xFF);
@@ -49,12 +61,15 @@ namespace TGM {
 	const Color PURPLE = Color(162, 9, 232, 255);
 	const Color ORANGE = Color(232, 132, 9, 255);
 
+	const float BTN_MARGIN = 50;
+
 	enum GAME_STATES {
 		LOADING,
 		MAIN_MENU,
 		PLAYING,
 		IN_GAME_MENU,
 		WIN_SCREEN,
+		DEAD_SCREEN,
 	};
 
 	enum BLOCK_TYPES {
@@ -74,82 +89,81 @@ namespace TGM {
 		GREEN,
 	};
 
+	const std::vector<std::string> mainMenuOptions = {
+		"New Game",
+		//"Levels",
+		"Quit to Desktop",
+	};
+
+	const std::vector<std::string> inGameMenuOptions = {
+		"Reset Level",
+		"Quit",
+	};
+
+	const std::vector<std::string> deadMenuOptions = {
+		"Reset Level",
+		"Quit",
+	};
+
 	class OLC_2020_TheGreatMachine : public Game
 	{
 	private:
 
 		Scene* global;
 		Scene* home;
-		// Scene* game;
 		Scene* gameMenu;
 		Scene* ui;
 		Scene* winScreen;
+		Scene* deadScreen;
 
 		std::vector<Scene*> levelScenes = {};
 
 		GAME_STATES state;
 
-		//TGM::PlayerController* playerController;
-		//TGM::EnemySystem* enemySystem;
-		//TGM::TriggerReceiverSystem* trSystem;
-		//CollisionSystem* collisionSystem;
-
 		int elapsedSeconds;
 
 		int currentLevelNum = -1;
 
+		int mainMenuOption = 0;
+		int inGameMenuOption = 0;
+		int deadScreenMenuOption = 0;
+
+		std::vector<GameObject*> mainMenuBtns;
+		std::vector<GameObject*> inGameMenuBtns;
+		std::vector<GameObject*> deadMenuBtns;
+
 	public:
-		OLC_2020_TheGreatMachine() : Game(GAME_WIDTH, GAME_HEIGHT, "The Great Machine") {
+		OLC_2020_TheGreatMachine() : Game(GAME_WIDTH, GAME_HEIGHT, "GOOM - OLC 2020: The Great Machine") {
 
 			state = GAME_STATES::LOADING;
 
-			// Initialize Scenes
-			// game = addScene("game", false);
+			deadScreen = addScene("dead", false);
 			gameMenu = addScene("gameMenu", false);
 			global = addScene("global", true);
 			home = addScene("home", false);
 			winScreen = addScene("win", false);
+			
 
 			// Home screen
 			home->add()
-				->addComponentAnd(new SpriteRenderer("../Assets/Sprites/HaGameEngine/TGMHome.png", GAME_WIDTH, GAME_HEIGHT, NULL));
+				->addComponentAnd(new SpriteRenderer(SPLASH_PATH, GAME_WIDTH, GAME_HEIGHT, NULL));
 
-			
-			addLabel(home, Vector(0, GAME_HEIGHT / 2.0f - 37.5), Vector(GAME_WIDTH, 75), 48, WHITE, "The Great Machine");
-			addLabel(home, Vector(GAME_WIDTH / 2 - BTN_SIZE.x / 2, GAME_HEIGHT / 2.0f + 20), Vector(BTN_SIZE.x, BTN_SIZE.y), 36, WHITE, "New Game")
-				->addComponentAnd(new BoxRenderer(BTN_SIZE.x, BTN_SIZE.y, false))
-				->addComponent(new ButtonComponent(BTN_SIZE.x, BTN_SIZE.y))
-				->onClickFunc = [this]() {
-				nextLevel();
-			};
-
-			addLabel(home, Vector(GAME_WIDTH / 2 - BTN_SIZE.x / 2, GAME_HEIGHT / 2.0f + 120.0f), Vector(BTN_SIZE.x, BTN_SIZE.y), 36, WHITE, "Quit to Desktop")
-				->addComponentAnd(new BoxRenderer(BTN_SIZE.x, BTN_SIZE.y, false))
-				->addComponent(new ButtonComponent(BTN_SIZE.x, BTN_SIZE.y))
-				->onClickFunc = [this]() {
-				quitToDesktop();
-			};
+			addLabel(home, Vector(0, GAME_HEIGHT / 2.0f - 100), Vector(GAME_WIDTH, 75), 48, WHITE, "GOOM");
+			mainMenuBtns = addMenuButtons(home, mainMenuOptions, Vector(0, GAME_HEIGHT / 2.0f - 50.0), BTN_SIZE, 36, WHITE);
 
 			// Win screen
 			addLabel(winScreen, Vector(0, GAME_HEIGHT / 2.0f - 200), Vector(GAME_WIDTH, 75), 48, WHITE, "You've Won!");
 			addLabel(winScreen, Vector(GAME_WIDTH / 2 - BTN_SIZE.x / 2, GAME_HEIGHT / 2.0f ), Vector(BTN_SIZE.x, BTN_SIZE.y), 36, WHITE, "Thanks for playing");
-
 			addLabel(winScreen, Vector(GAME_WIDTH / 2 - BTN_SIZE.x / 2, GAME_HEIGHT / 2.0f + 150.0f), Vector(BTN_SIZE.x, BTN_SIZE.y), 28, WHITE, "Developed by Henry Walters");
 
-			// In Game Menu
-			addLabel(gameMenu, Vector(GAME_WIDTH / 2 - BTN_SIZE.x / 2, GAME_HEIGHT / 2.0f - 50.0f), Vector(BTN_SIZE.x, BTN_SIZE.y), 36, WHITE, "Reset")
-				->addComponentAnd(new BoxRenderer(BTN_SIZE.x, BTN_SIZE.y, false))
-				->addComponent(new ButtonComponent(BTN_SIZE.x, BTN_SIZE.y))
-				->onClickFunc = [this]() {
-				resetLevel(currentLevelNum);
-			};
+			// Dead Screen
+			addLabel(deadScreen, Vector(0, GAME_HEIGHT / 2.0f - 100), Vector(GAME_WIDTH, 75), 48, WHITE, "You've Died!");
+			deadMenuBtns = addMenuButtons(deadScreen, deadMenuOptions, Vector(0, GAME_HEIGHT / 2.0f - 50.0), BTN_SIZE, 36, WHITE);
 
-			addLabel(gameMenu, Vector(GAME_WIDTH / 2 - BTN_SIZE.x / 2, GAME_HEIGHT / 2.0f + 50.0f), Vector(BTN_SIZE.x, BTN_SIZE.y), 36, WHITE, "Quit")
-				->addComponentAnd(new BoxRenderer(BTN_SIZE.x, BTN_SIZE.y, false))
-				->addComponent(new ButtonComponent(BTN_SIZE.x, BTN_SIZE.y))
-				->onClickFunc = [this]() {
-				quit();
-			};
+		
+			// In Game Menu
+			addLabel(gameMenu, Vector(0, GAME_HEIGHT / 2.0f - 100), Vector(GAME_WIDTH, 75), 48, WHITE, "Paused");
+			inGameMenuBtns = addMenuButtons(gameMenu, inGameMenuOptions, Vector(0, GAME_HEIGHT / 2.0f - 50.0), BTN_SIZE, 36, WHITE);
 
 			// MISC
 			float wallWidth = GAME_WIDTH;
@@ -157,16 +171,21 @@ namespace TGM {
 
 			createLevels();
 
-			activateScene("home");
+			changeState(GAME_STATES::MAIN_MENU);
 		};
 
 		void run() {
+
+			setFps(60);
+
 			global->initialize();
 			home->initialize();
 			gameMenu->initialize();
 			winScreen->initialize();
+			deadScreen->initialize();
 
 			while (running) {
+				tick();
 				if (global->input->esc) {
 					if (state == GAME_STATES::PLAYING) {
 						changeState(GAME_STATES::IN_GAME_MENU);
@@ -176,19 +195,66 @@ namespace TGM {
 					}
 				}
 
-				tick();
+				if (state == GAME_STATES::MAIN_MENU) {
+					handleMenuItem(mainMenuOption, mainMenuBtns);
+					if (home->input->enterDown) {
+						if (mainMenuOption == 0) {
+							nextLevel();
+						}
+						else if (mainMenuOption == 1) {
+							quitToDesktop();
+						}
+					}
+				}
+
+				if (state == GAME_STATES::IN_GAME_MENU) {
+					handleMenuItem(inGameMenuOption, inGameMenuBtns);
+					if (home->input->enterDown) {
+						if (inGameMenuOption == 0) {
+							resetLevel(currentLevelNum);
+						}
+						else if (inGameMenuOption == 1) {
+							quit();
+						}
+					}
+				}
+
+				if (state == GAME_STATES::DEAD_SCREEN) {
+					handleMenuItem(deadScreenMenuOption, deadMenuBtns);
+					if (home->input->enterDown) {
+						if (deadScreenMenuOption == 0) {
+							resetLevel(currentLevelNum);
+						}
+						else if (deadScreenMenuOption == 1) {
+							quit();
+						}
+					}
+				}
+			}
+		}
+
+		void handleMenuItem(int& item, std::vector<GameObject*> items) {
+			int size = items.size();
+			if (global->input->upPressed) {
+				item = Math::clamp(item - 1, 0, size - 1);
+			}
+			if (global->input->downPressed) {
+				item = Math::clamp(item + 1, 0, size - 1);
+			}
+
+			for (int i = 0; i < size; i++) {
+				if (i == item) items[i]->getComponent<TextRenderer>()->setFontColor(RED.rgb);
+				else items[i]->getComponent<TextRenderer>()->setFontColor(WHITE.rgb);
 			}
 		}
 
 		void changeState(GAME_STATES _state) {
 			state = _state;
 
-			deactivateScene("game");
 			deactivateScene("gameMenu");
 			deactivateScene("home");
 			deactivateScene("win");
-
-			std::cout << "LEVELS: " << levels.size();
+			deactivateScene("dead");
 
 			for (int i = 0; i < levels.size(); i++) {
 				deactivateScene(levelNames[i]);
@@ -201,9 +267,14 @@ namespace TGM {
 			if (state == GAME_STATES::IN_GAME_MENU) activateScene("gameMenu");
 			if (state == GAME_STATES::PLAYING) activateScene(levelNames[currentLevelNum]);
 			if (state == GAME_STATES::WIN_SCREEN) activateScene("win");
+			if (state == GAME_STATES::DEAD_SCREEN) activateScene("dead");
 		}
 
 		void quit() {
+			mainMenuOption = 0;
+			inGameMenuOption = 0;
+			deadScreenMenuOption = 0;
+
 			currentLevelNum = -1;
 			for (int i = 0; i < levels.size(); i++) {
 				clearLevel(i);
@@ -216,7 +287,6 @@ namespace TGM {
 		}
 
 		void nextLevel() {
-			std::cout << currentLevelNum << " vs " << levels.size() << std::endl;
 			if (currentLevelNum == levels.size() - 1) {
 				changeState(GAME_STATES::WIN_SCREEN);
 			}
@@ -227,7 +297,6 @@ namespace TGM {
 		}
 
 		Scene* currentLevel() {
-			std::cout << "Level: " << currentLevelNum << std::endl;
 			return levelScenes[currentLevelNum];
 		}
 
@@ -246,6 +315,12 @@ namespace TGM {
 				auto playerController = new TGM::PlayerController(collisionSystem, trSystem);
 				playerController->onLevelComplete = [this]() {
 					nextLevel();
+				};
+
+				playerController->onDead = [this]() {
+					if (state != GAME_STATES::DEAD_SCREEN) {
+						changeState(GAME_STATES::DEAD_SCREEN);
+					}
 				};
 
 				// Add systems to game
@@ -267,9 +342,13 @@ namespace TGM {
 		}
 
 		void clearLevel(int levelIndex) {
+			std::cout << "Clearing Level: " << levelIndex << std::endl;
 			levelScenes[levelIndex]->reset();
+			std::cout << "RESET LEVEL\n";
 			loadLevel(levelScenes[levelIndex], LevelLoader::load(levels[levelIndex]));
+			std::cout << "LOADED LEVEL\n";
 			levelScenes[levelIndex]->initialize();
+			std::cout << "Initialized Level\n";
 		}
 
 		void resetLevel(int levelIndex) {
@@ -340,9 +419,21 @@ namespace TGM {
 			}
 		}
 
+		std::vector<GameObject*> addMenuButtons(Scene* scene, std::vector<std::string> buttonNames, Vector startPos, Vector btnSize, float fontSize, Color color) {
+			auto btns = std::vector<GameObject*>();
+			int index = 0;
+			for (auto name : buttonNames) {
+				btns.push_back(
+					addLabel(scene, startPos + Vector(0, index * btnSize.y + BTN_MARGIN), btnSize, fontSize, color, name)
+				);
+				index++;
+			}
+			return btns;
+		}
+
 		GameObject* addPlayer(Scene *scene) {
 			auto player = scene->add()
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/player.png", 50, 50, NULL))
+				->addComponentAnd(new SpriteRenderer(PLAYER_PATH, 50, 50, NULL))
 				->addComponentAnd(new TGM::Body(10))
 				->addComponentAnd(new TGM::HealthBar())
 				->addComponentAnd<CircleCollider>(new CircleCollider(25, false))
@@ -358,7 +449,7 @@ namespace TGM {
 
 		GameObject* addEndPoint(Scene* scene, Box rect) {
 			return scene->add()
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/end.png", rect.width, rect.height, NULL))
+				->addComponentAnd(new SpriteRenderer(END_PATH, rect.width, rect.height, NULL))
 				->setPosition(rect.position())
 				->addComponentAnd(new BoxCollider(rect.size()))
 				->addTagAnd("END");
@@ -378,7 +469,7 @@ namespace TGM {
 		GameObject* addEnemy(Scene* scene, Box rect) {
 			auto enemy = scene->add()
 				->setPosition(rect.position())
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/enemy.png", rect.width, rect.height, NULL))
+				->addComponentAnd(new SpriteRenderer(ENEMY_PATH, rect.width, rect.height, NULL))
 				->addComponentAnd(new CircleCollider(rect.width / 2, false))
 				->addComponentAnd(new HealthBar())
 				->addComponentAnd(new Enemy())
@@ -395,7 +486,7 @@ namespace TGM {
 		GameObject* addHealthBox(Scene* scene, Box rect, float value) {
 			return scene->add()
 				->setPosition(rect.position())
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/health.png", rect.width, rect.height, NULL))
+				->addComponentAnd(new SpriteRenderer(HEALTH_PATH, rect.width, rect.height, NULL))
 				->addComponentAnd(new BoxCollider(rect.width, rect.height))
 				->addComponentAnd(new HealthPickup(value))
 				->addTagAnd("HEALTH");
@@ -404,7 +495,7 @@ namespace TGM {
 		GameObject* addDoor(Scene* scene, Box rect, Color color, bool open) {
 			return scene->add()
 				->addComponentAnd(new TGM::Door(Vector(rect.width, rect.height), color, open))
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/door.png", BLOCK_SIZE.x, BLOCK_SIZE.y, NULL))
+				->addComponentAnd(new SpriteRenderer(DOOR_PATH, BLOCK_SIZE.x, BLOCK_SIZE.y, NULL))
 				->addComponentAnd(new BoxCollider(rect.width, rect.height))
 				->addComponentAnd(new Receiver())
 				->setPosition(Vector(rect.x, rect.y))
@@ -439,7 +530,7 @@ namespace TGM {
 			GameObject* wall = scene->add();
 			wall->tag = "WALL";
 			wall->addTag("WALL");
-			wall->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/wall.png", BLOCK_SIZE.x, BLOCK_SIZE.y, NULL))
+			wall->addComponentAnd(new SpriteRenderer(WALL_PATH, BLOCK_SIZE.x, BLOCK_SIZE.y, NULL))
 				->addComponentAnd(new BoxCollider(rect.width, rect.height))
 				->setPosition(Vector(rect.x, rect.y));
 			return wall;

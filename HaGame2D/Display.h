@@ -85,7 +85,9 @@ const std::string DOROVAR_FONT = "DorovarFLF-Carolus.ttf";
 const std::string DOROVAR_ITALIC_FONT = "DOROVARFLF_Italic.ttf";
 const std::string BLOODLUST_FONT = "bloodlust.ttf";
 
-const std::string DEFAULT_FONT = DOROVAR_FONT;
+const std::string NEUROPOL = "neuropol-x-free.regular.ttf";
+
+const std::string DEFAULT_FONT = NEUROPOL;
 const int DEFAULT_FONTSIZE = 24;
 
 class Display
@@ -122,6 +124,12 @@ public:
 	~Display();
 
 	void setDisplayPort(float x, float y, float width, float height);
+
+	static Vector monitorSize() {
+		SDL_DisplayMode DM;
+		SDL_GetCurrentDisplayMode(0, &DM);
+		return Vector(DM.w, DM.h);
+	}
 
 	void clear();
 	void draw();

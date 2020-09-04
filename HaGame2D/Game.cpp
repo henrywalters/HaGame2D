@@ -67,7 +67,7 @@ void Game::activateScene(std::string tag) {
 		std::cout << "Activating Scene: " << tag << "\n";
 		scenes[tag].active = true;
 		sceneStates[tag] = true;
-		scenes[tag].scene->input->pollEvents();
+		scenes[tag].scene->input->clear();
 	}
 }
 
@@ -76,6 +76,8 @@ void Game::deactivateScene(std::string tag) {
 		std::cout << "Deactivating Scene: " << tag << "\n";
 		scenes[tag].active = false;
 		sceneStates[tag] = false;
+		scenes[tag].scene->input->clear();
+		input->clear();
 	}
 }
 
@@ -146,9 +148,10 @@ void Game::tick() {
 	display->render();
 
 	float elapsedTime = clock.stop();
+	float budget = 1000000 / _fps;
 
-	if (elapsedTime <= 100000 / _fps && _capFps) {
-		clock.wait((100000 / _fps) - elapsedTime);
+	if (elapsedTime <= budget && _capFps) {
+		clock.wait((1000000 / _fps) - elapsedTime);
 	}
 
 	float dt = clock.stop();

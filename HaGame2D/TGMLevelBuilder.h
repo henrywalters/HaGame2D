@@ -4,12 +4,12 @@
 
 namespace TGM {
 
-	const std::string saveTo = "../Assets/TGM/Levels/level2.txt";
+	const std::string saveTo = "Assets/Levels/level3.txt";
 
 	std::vector<CellConnection*> connections = std::vector<CellConnection*>();
 
-	const Vector GRID_SIZE = Vector(1000, 1000);
-	const Vector GRID_PARTITIONS = Vector(75, 75);
+	const Vector GRID_SIZE = Vector(1500, 1500);
+	const Vector GRID_PARTITIONS = Vector(100, 100);
 	const Vector CELL_SIZE = Vector(GRID_SIZE.x / GRID_PARTITIONS.x, GRID_SIZE.y / GRID_PARTITIONS.y);
 
 	const float CAMERA_SLOW = 100.0f;

@@ -36,6 +36,8 @@ namespace TGM {
 	const float MAX_ATTACK_RATE = 2;
 	const float MIN_ATTACK_RATE = 20;
 
+	const std::string ENEMY_BULLET_PATH = "Assets/Sprites/enemyBullet.png";
+
 	enum EnemyState {
 		Idle,
 		Pursuing,
@@ -85,7 +87,7 @@ namespace TGM {
 
 		GameObject* addBullet(Box rect, Vector velocity, float rotation, float momentum) {
 			auto bullet = scene->add()
-				->addComponentAnd(new SpriteRenderer("../Assets/TGM/Sprites/enemyBullet.png", rect.width, rect.height, NULL))
+				->addComponentAnd(new SpriteRenderer(ENEMY_BULLET_PATH, rect.width, rect.height, NULL))
 				->addComponentAnd(new BoxCollider(rect.width, rect.height))
 				->setPosition(Vector(rect.x, rect.y))
 				->addTagAnd("ENEMY_BULLET")
@@ -130,7 +132,7 @@ namespace TGM {
 					component->state = EnemyState::Attacking;
 					Vector vel = playerDelta.normalized() * HandgunBullet.speed * -1;
 					if (component->attack()) {
-						addBullet(Box{ enemy->position.x, enemy->position.y, 20, 20 }, vel, 0, 15);
+						addBullet(Box{ enemy->position.x, enemy->position.y, 20, 20 }, vel, 0, 7.5);
 					}
 				}
 
