@@ -28,11 +28,11 @@ private:
 	RGB fontColor = Color::white();
 	std::string message = " ";
 
-	float verticalMargin = 0;
-	float horizontalMargin = 0;
+	double verticalMargin = 0;
+	double horizontalMargin = 0;
 
-	float textWidth;
-	float textHeight;
+	double textWidth;
+	double textHeight;
 
 	bool dirty;
 
@@ -42,7 +42,7 @@ public:
 
 	Text text;
 
-	TextRenderer(float _width, float _height);
+	TextRenderer(double _width, double _height);
 
 	void setFontSize(int fs) {
 		fontSize = fs;
@@ -64,7 +64,7 @@ public:
 		dirty = true;
 	}
 
-	void setMargin(float horiz, float vert) {
+	void setMargin(double horiz, double vert) {
 		verticalMargin = vert;
 		horizontalMargin = horiz;
 	}

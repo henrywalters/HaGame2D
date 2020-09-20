@@ -2,7 +2,7 @@
 #include "BoxCollider.h"
 
 
-BoxCollider::BoxCollider(float _width, float _height)
+BoxCollider::BoxCollider(double _width, double _height)
 {
 	width = _width;
 	height = _height;

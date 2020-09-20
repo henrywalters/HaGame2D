@@ -10,7 +10,7 @@ A quick and dirty matrix class specifically for 2D.
 class Matrix
 {
 private:
-	float matrix[4];
+	double matrix[4];
 	bool validIndex(int index) {
 		return index >= 0 && index < 4;
 	}
@@ -25,7 +25,7 @@ private:
 
 public:
 	Matrix();
-	Matrix(float _matrix[4]);
+	Matrix(double _matrix[4]);
 
 	/*
 		Example:
@@ -38,7 +38,7 @@ public:
 		return Matrix(Vector(1, 0), Vector(0, 1));
 	}
 
-	static Matrix UniformMatrix(float value) {
+	static Matrix UniformMatrix(double value) {
 		Matrix box;
 		for (int i = 0; i < 4; i++) {
 			box.matrix[i] = value;
@@ -58,7 +58,7 @@ public:
 		return box;
 	}
 
-	static Matrix translationMatrix(float value) {
+	static Matrix translationMatrix(double value) {
 		Matrix box;
 		box.matrix[0] = value;
 		box.matrix[1] = value;
@@ -77,28 +77,28 @@ public:
 		return box;
 	}
 
-	static Matrix sizeMatrix(float value) {
+	static Matrix sizeMatrix(double value) {
 		Matrix box;
 		box.matrix[2] = value;
 		box.matrix[3] = value;
 		return box;
 	}
 
-	static Matrix scaleMatrix(float scale) {
-		float m[] = { scale, 0, 0, scale };
+	static Matrix scaleMatrix(double scale) {
+		double m[] = { scale, 0, 0, scale };
 		return Matrix(m);
 	}
 
-	static Matrix scaleMatrix(float scaleX, float scaleY) {
-		float m[] = { scaleX, 0, 0, scaleY };
+	static Matrix scaleMatrix(double scaleX, double scaleY) {
+		double m[] = { scaleX, 0, 0, scaleY };
 		return Matrix(m);
 	}
 
-	void set(int index, float value);
-	void set(int row, int col, float value);
+	void set(int index, double value);
+	void set(int row, int col, double value);
 
-	float get(int index);
-	float get(int row, int col);
+	double get(int index);
+	double get(int row, int col);
 
 	Matrix operator + (const Matrix &other);
 	Matrix & operator += (const Matrix & other);
@@ -107,14 +107,14 @@ public:
 	Matrix & operator -= (const Matrix & other);
 
 	Matrix operator *(const Matrix & other);
-	Matrix operator * (float scalar);
+	Matrix operator * (double scalar);
 
 	bool operator == (const Matrix & other);
 
 	Vector lMultiply(Vector rowVector);
 	Vector rMultiply(Vector colVector);
 
-	float determinant();
+	double determinant();
 
 	std::string toString() {
 		std::string res = "\n[ " + std::to_string(matrix[0]) + " " + std::to_string(matrix[2]) + " ]\n" + "[ " + std::to_string(matrix[1]) + " " + std::to_string(matrix[3]) + " ]\n";

@@ -8,6 +8,9 @@
 #include "Box.h"
 #include "BoxCollider.h"
 #include "CircleCollider.h"
+#include "GameObjectGrid.h"
+
+const Vector COLLISION_GRID_CELL_SIZE = Vector(800, 800);
 
 class CollisionSystem :
 	public System
@@ -16,6 +19,7 @@ class CollisionSystem :
 public:
 
 	EventChannel<Collision> events;
+	GameObjectGrid grid = GameObjectGrid(Vector::Zero(), COLLISION_GRID_CELL_SIZE);
 
 	CollisionSystem() : System("Collision_System") {
 		events = EventChannel<Collision>();
@@ -24,6 +28,9 @@ public:
 	void update() {
 		auto gameObjects = getScene()->getGameObjectsWhere<CollisionComponent>();
 		int checks = 0;
+
+		grid.addMany(gameObjects);
+
 		for (auto object : gameObjects) {
 			auto collider = object->getComponent<CollisionComponent>();
 			
@@ -32,10 +39,10 @@ public:
 				collider->isColliding = false;
 
 				BoxCollider* boxCollider = object->getComponent<BoxCollider>();
-				if (boxCollider) collider->currentCollisions = checkBoxCollisions(object->uid, boxCollider->getBox(), gameObjects);
+				if (boxCollider) collider->currentCollisions = checkBoxCollisions(object->uid, boxCollider->getBox(), grid.getNeighbors(object));
 
 				CircleCollider* circleCollider = object->getComponent<CircleCollider>();
-				if (circleCollider) collider->currentCollisions = checkCircleCollisions(object->uid, circleCollider->getCircle(), gameObjects);
+				if (circleCollider) collider->currentCollisions = checkCircleCollisions(object->uid, circleCollider->getCircle(), grid.getNeighbors(object));
 
 				if (collider->currentCollisions.size() > 0) {
 					collider->isColliding = true;
@@ -45,6 +52,8 @@ public:
 				}
 			}
 		}
+
+		grid.clear();
 	}
 
 	std::vector<Collision> checkCircleCollisions(long uid, Circle circle, std::vector<GameObject*> gameObjects) {

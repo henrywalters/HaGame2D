@@ -40,7 +40,7 @@ class ForLoop : public LoopComponent {
 
 	std::function<void(int)> callback;
 	int begin, end;
-	float step;
+	double step;
 	int index;
 
 protected:
@@ -57,7 +57,7 @@ protected:
 
 public:
 
-	ForLoop(int _begin, int _end, float _step, int delayInMs, std::function<void(int)> _callback) : LoopComponent(delayInMs) {
+	ForLoop(int _begin, int _end, double _step, int delayInMs, std::function<void(int)> _callback) : LoopComponent(delayInMs) {
 		begin = _begin, end = _end, step = _step;
 		callback = _callback;
 		index = 0;
@@ -92,7 +92,7 @@ public:
 	Loop();
 	~Loop();
 
-	static GameObject * For(Scene *scene, int begin, int end, float step, int delayInMs, std::function<void(int)> callback) {
+	static GameObject * For(Scene *scene, int begin, int end, double step, int delayInMs, std::function<void(int)> callback) {
 		auto loopObject = scene->add();
 		loopObject->addComponent(new ForLoop(begin, end, step, delayInMs, callback));
 		scene->instantiate(loopObject);

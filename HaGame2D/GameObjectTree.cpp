@@ -28,7 +28,7 @@ GameObject * GameObjectTree::add() {
 GameObject * GameObjectTree::add(GameObject * gameObject) {
 	root->childGameObjects.push_back(gameObject);
 	root->childGameObjectCount += 1;
-	//gameObject->parentGameObject = root;
+	gameObject->parentGameObject = root;
 	return gameObject;
 }
 

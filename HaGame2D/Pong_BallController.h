@@ -11,8 +11,8 @@ public:
 	Pong_BallController(Vector origin);
 	~Pong_BallController();
 
-	float initialSpeed = 3;
-	float speed = 3;
+	double initialSpeed = 3;
+	double speed = 3;
 
 	Vector velocity = Vector::Zero();
 	Vector origin;

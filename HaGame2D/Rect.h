@@ -6,12 +6,12 @@ class Rect : public GameObject
 {
 public:
 
-	float width;
-	float height;
+	double width;
+	double height;
 
 	Vector velocity = Vector(0, 0);
 
-	Rect(float width, float height);
+	Rect(double width, double height);
 	~Rect();
 
 	void draw(Display * display) override;

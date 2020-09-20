@@ -26,7 +26,7 @@ void OrthogonolCharacterController::update() {
 
 	Vector vel = Vector::Zero();
 
-	float epsilon = 3;
+	double epsilon = 3;
 	Vector tmpDir = Vector::Zero();
 	bool moved = false;
 	if (!xAxisLocked) {

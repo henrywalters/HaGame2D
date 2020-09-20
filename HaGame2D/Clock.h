@@ -12,7 +12,7 @@ class Clock
 {
 	long internalTime;
 
-	static float castToInt(long timeInMicroSeconds, ClockPrecision precision);
+	static double castToInt(long timeInMicroSeconds, ClockPrecision precision);
 
 public:
 
@@ -21,7 +21,7 @@ public:
 	static long now(ClockPrecision precision = ClockPrecision::Microsecond);
 
 	void start();
-	float stop(ClockPrecision precision = ClockPrecision::Microsecond);
+	double stop(ClockPrecision precision = ClockPrecision::Microsecond);
 	void wait(long timeInMicroSeconds);
 };
 

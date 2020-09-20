@@ -12,10 +12,10 @@ struct SceneBox {
 	Vector size;
 };
 
-const float MIN_ZOOM = 0.001;
-const float MAX_ZOOM = 100;
+const double MIN_ZOOM = 0.001;
+const double MAX_ZOOM = 100;
 
-const float DEFAULT_ZOOM_SPEED = 0.03;
+const double DEFAULT_ZOOM_SPEED = 0.03;
 
 class Camera
 {
@@ -34,10 +34,10 @@ class Camera
 
 	Vector focus;
 
-	float screenWidth;
-	float screenHeight;
+	double screenWidth;
+	double screenHeight;
 
-	float zoomFactor;
+	double zoomFactor;
 
 	Display *display;
 	Input * input;
@@ -48,7 +48,7 @@ public:
 	Camera();
 	~Camera();
 
-	void setScreenDimensions(float sWidth, float sHeight) {
+	void setScreenDimensions(double sWidth, double sHeight) {
 		screenWidth = sWidth;
 		screenHeight = sHeight;
 		viewport.set(2, sWidth);
@@ -93,17 +93,17 @@ public:
 	void dolly(Vector delta);
 	void stopDollying();
 
-	void setZoom(float zoom) {
+	void setZoom(double zoom) {
 		if (zoom <= MAX_ZOOM && zoom >= MIN_ZOOM) {
 			zoomFactor = zoom;
 		}
 	}
 
-	void zoomIn(float delta = DEFAULT_ZOOM_SPEED) {
+	void zoomIn(double delta = DEFAULT_ZOOM_SPEED) {
 		setZoom(zoomFactor + delta);
 	}
 
-	void zoomOut(float delta = DEFAULT_ZOOM_SPEED) {
+	void zoomOut(double delta = DEFAULT_ZOOM_SPEED) {
 		setZoom(zoomFactor - delta);
 	}
 

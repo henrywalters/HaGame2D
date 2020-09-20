@@ -13,7 +13,7 @@ public:
 	std::function<void()> onClickFunc;
 	std::function<void()> onHoverFunc;
 
-	ButtonComponent(float _width, float _height);
+	ButtonComponent(double _width, double _height);
 	~ButtonComponent();
 
 	void onClick();

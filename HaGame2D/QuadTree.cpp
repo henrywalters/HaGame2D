@@ -2,7 +2,7 @@
 #include "QuadTree.h"
 
 
-QuadTree::QuadTree(float width, float height)
+QuadTree::QuadTree(double width, double height)
 {
 	root = new Quadrant;
 	root->init(NULL, Box{ 0, 0, width, height });
@@ -37,10 +37,10 @@ void QuadTree::clear() {
 }
 
 void QuadTree::split(Quadrant * quadrant) {
-	float subWidth = quadrant->width / 2;
-	float subHeight = quadrant->height / 2;
-	float midX = quadrant->x + (quadrant->width / 2);
-	float midY = quadrant->y + (quadrant->height / 2);
+	double subWidth = quadrant->width / 2;
+	double subHeight = quadrant->height / 2;
+	double midX = quadrant->x + (quadrant->width / 2);
+	double midY = quadrant->y + (quadrant->height / 2);
 
 	//std::cout << "Splitting: " + Box{ quadrant->x, quadrant->y, quadrant->width, quadrant->height }.toString() << "\n";
 

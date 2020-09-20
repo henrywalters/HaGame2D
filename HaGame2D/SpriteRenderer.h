@@ -17,7 +17,7 @@ public:
 	bool draw = true;
 	
 	//Render a sprite from a sprite sheet with config file.
-	SpriteRenderer(Texture _spriteSheet, SpriteSheetCell _sprite, float _width, float _height) {
+	SpriteRenderer(Texture _spriteSheet, SpriteSheetCell _sprite, double _width, double _height) {
 		sprite = _spriteSheet;
 		width = _width;
 		height = _height;
@@ -30,7 +30,7 @@ public:
 	}
 
 	//Render a sprite - Null clip will assume to clip to 0,0,width,height
-	SpriteRenderer(std::string _path, float _width, float _height, TextureRect *_clip) {
+	SpriteRenderer(std::string _path, double _width, double _height, TextureRect *_clip) {
 		path = _path;
 		width = _width;
 		height = _height;

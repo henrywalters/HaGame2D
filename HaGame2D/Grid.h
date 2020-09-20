@@ -28,17 +28,17 @@ private:
 
 public:
 
-	float width;
-	float height;
+	double width;
+	double height;
 
 	int rows;
 	int cols;
 
-	float rowSize;
-	float colSize;
+	double rowSize;
+	double colSize;
 
 	Grid() {};
-	Grid(float _width, float _height, int _rows, int _cols);
+	Grid(double _width, double _height, int _rows, int _cols);
 	~Grid();
 
 	void setPartitionCount(int _rows, int _cols);
@@ -71,7 +71,7 @@ public:
 };
 
 template<class T>
-Grid<T>::Grid(float _width, float _height, int _rows, int _cols)
+Grid<T>::Grid(double _width, double _height, int _rows, int _cols)
 {
 	width = _width;
 	height = _height;

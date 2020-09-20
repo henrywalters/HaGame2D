@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Clock.h"
 #include <iostream>
-float Clock::castToInt(long ms, ClockPrecision precision)
+double Clock::castToInt(long ms, ClockPrecision precision)
 {
 	switch (precision) {
 	case ClockPrecision::Microsecond:
@@ -28,7 +28,7 @@ void Clock::start()
 	internalTime = now();
 }
 
-float Clock::stop(ClockPrecision precision)
+double Clock::stop(ClockPrecision precision)
 {
 	long stop = now();
 	return castToInt(stop - internalTime, precision);
@@ -37,7 +37,7 @@ float Clock::stop(ClockPrecision precision)
 void Clock::wait(long timeInMicroSeconds)
 {
 	//std::this_thread::sleep_for(std::chrono::microseconds(timeInMicroSeconds));
-	float elapsed = 0;
+	double elapsed = 0;
 	long start = Clock::now();
 	while (elapsed < timeInMicroSeconds) {
 		elapsed = Clock::now() - start;

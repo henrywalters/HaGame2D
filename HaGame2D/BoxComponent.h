@@ -5,14 +5,14 @@ class BoxComponent : public Component
 {
 public:
 
-	float width;
-	float height;
+	double width;
+	double height;
 
-	float relativeWidth;
-	float relativeHeight;
+	double relativeWidth;
+	double relativeHeight;
 
 	BoxComponent();
-	BoxComponent(float w, float h) {
+	BoxComponent(double w, double h) {
 		width = w;
 		height = h;
 	}

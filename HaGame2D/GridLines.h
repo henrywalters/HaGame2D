@@ -11,7 +11,7 @@ public:
 
 	RGB color = Color::blue();
 
-	GridLines(float width, float height, int xpartitions, int ypartitions);
+	GridLines(double width, double height, int xpartitions, int ypartitions);
 	~GridLines();
 
 	void update();

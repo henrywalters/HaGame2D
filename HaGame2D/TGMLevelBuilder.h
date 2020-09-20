@@ -12,11 +12,11 @@ namespace TGM {
 	const Vector GRID_PARTITIONS = Vector(100, 100);
 	const Vector CELL_SIZE = Vector(GRID_SIZE.x / GRID_PARTITIONS.x, GRID_SIZE.y / GRID_PARTITIONS.y);
 
-	const float CAMERA_SLOW = 100.0f;
-	const float CAMERA_FAST = 200.0f;
+	const double CAMERA_SLOW = 100.0f;
+	const double CAMERA_FAST = 200.0f;
 
-	const float CAMERA_ZOOM_SLOW = 0.1f;
-	const float CAMERA_ZOOM_FAST = 0.5f;
+	const double CAMERA_ZOOM_SLOW = 0.1f;
+	const double CAMERA_ZOOM_FAST = 0.5f;
 
 	int* toolkitOption = new int(0);
 	int* tool = new int(0);
@@ -88,8 +88,8 @@ namespace TGM {
 	class CameraSystem : public System {
 
 		Scene* scene;
-		float speed;
-		float zoomSpeed;
+		double speed;
+		double zoomSpeed;
 
 	public:
 		CameraSystem() : System("Camera System") {}
@@ -102,7 +102,7 @@ namespace TGM {
 
 		void update() {
 
-			float dt = scene->dt_s();
+			double dt = scene->dt_s();
 
 			speed = scene->input->shift ? CAMERA_FAST : CAMERA_SLOW;
 			zoomSpeed = scene->input->shift ? CAMERA_ZOOM_FAST : CAMERA_ZOOM_SLOW;
@@ -390,17 +390,21 @@ namespace TGM {
 			gridEvents->on("draw", [this](GridIndex v) {
 				LevelCell* cell = nullptr;
 				cell = cells->get(v);
-				cell->active = true;
-				cell->cellType = *toolkitOption;
+				if (cell != NULL) {
+					cell->active = true;
+					cell->cellType = *toolkitOption;
 
-				cells->set(v, cell);
+					cells->set(v, cell);
+				}
 			});
 
 			gridEvents->on("erase", [](GridIndex v) {
 				LevelCell* cell = nullptr;
 				cell = cells->get(v);
-				cell->active = false;
-				cells->set(v, cell);
+				if (cell != NULL) {
+					cell->active = false;
+					cells->set(v, cell);
+				}
 			});
 
 			builder = addScene("builder");

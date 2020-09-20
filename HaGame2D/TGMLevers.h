@@ -4,7 +4,7 @@
 
 namespace TGM {
 
-	const float LEVER_PADDING = 10;
+	const double LEVER_PADDING = 10;
 
 	class LeverDisplay : public Component {
 	public:

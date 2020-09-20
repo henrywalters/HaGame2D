@@ -2,7 +2,7 @@
 #include "GridLines.h"
 
 
-GridLines::GridLines(float _width, float _height, int x, int y)
+GridLines::GridLines(double _width, double _height, int x, int y)
 {
 	grid = Grid<bool>(_width, _height, y, x);
 	height = _height;
@@ -16,8 +16,8 @@ GridLines::~GridLines()
 
 void GridLines::update() {
 
-	float xSize = relativeWidth / grid.cols;
-	float ySize = relativeHeight / grid.rows;
+	double xSize = relativeWidth / grid.cols;
+	double ySize = relativeHeight / grid.rows;
 
 	for (int i = 0; i <= grid.cols; i++) {
 		display->drawLine(transform->relativePosition.x + i * xSize, transform->relativePosition.y, transform->relativePosition.x + i * xSize, transform->relativePosition.y + relativeHeight, color, 17);

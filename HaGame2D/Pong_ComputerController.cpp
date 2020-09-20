@@ -18,8 +18,8 @@ void Pong_ComputerController::update() {
 	BoxCollider * paddleCollider = transform->getComponent<BoxCollider>();
 	Box paddle = paddleCollider->getBox();
 
-	float paddleCenter = paddle.y + (paddle.height / 2);
-	float ballCenter = ballBox.y + (ballBox.height / 2);
+	double paddleCenter = paddle.y + (paddle.height / 2);
+	double ballCenter = ballBox.y + (ballBox.height / 2);
 
 	if (paddleCenter > ballCenter) {
 		transform->move(Vector(0, -1 * speed));

@@ -10,14 +10,14 @@
 class BoxCollider : public CollisionComponent
 {
 
-	const float epsilon = 3;
+	const double epsilon = 3;
 
 public:
 
-	float width;
-	float height;
+	double width;
+	double height;
 
-	BoxCollider(float width, float height);
+	BoxCollider(double width, double height);
 	BoxCollider(Vector size);
 	~BoxCollider();
 

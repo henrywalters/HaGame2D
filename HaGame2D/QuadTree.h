@@ -6,10 +6,10 @@
 
 
 struct Quadrant {
-	float x = 0;
-	float y = 0;
-	float width = 0;
-	float height = 0;
+	double x = 0;
+	double y = 0;
+	double width = 0;
+	double height = 0;
 
 	Quadrant *parent;
 	Quadrant *quad1;
@@ -181,7 +181,7 @@ public:
 	const int MAX_CHILDREN_IN_QUADRANT = 4;
 	const int MAX_DEPTH = 10;
 
-	QuadTree(float width, float height);
+	QuadTree(double width, double height);
 	QuadTree(Vector size);
 	~QuadTree();
 

@@ -13,13 +13,13 @@ public:
 
 	bool fill = false;
 
-	BoxRenderer(float _width, float _height);
-	BoxRenderer(float _width, float _height, bool _fill) {
+	BoxRenderer(double _width, double _height);
+	BoxRenderer(double _width, double _height, bool _fill) {
 		width = _width;
 		height = _height;
 		fill = _fill;
 	}
-	BoxRenderer(float _width, float _height, bool _fill, RGB _color) {
+	BoxRenderer(double _width, double _height, bool _fill, RGB _color) {
 		width = _width;
 		height = _height;
 		fill = _fill;

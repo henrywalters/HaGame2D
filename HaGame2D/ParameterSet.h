@@ -42,8 +42,8 @@ struct Parameter {
 		case ParameterType::Boolean:
 			if (std::is_same<T, bool>::value) outputVal = value == "true" || value == "t" || value == "True" || value == "1" ? true : false;
 			break;
-		case ParameterType::Float:
-			if (std::is_same<T, float>::value) outputVal = stof(value);
+		case ParameterType::double:
+			if (std::is_same<T, double>::value) outputVal = stof(value);
 			break;
 		case ParameterType::Integer:
 			if (std::is_same<T, int>::value) outputVal = stoi(value);
@@ -65,7 +65,7 @@ struct Parameter {
 		case ParameterType::Boolean && std::is_same<T, bool>::value:
 			return true;
 			break;
-		case ParameterType::Float && std::is_same<T, float>::value:
+		case ParameterType::double && std::is_same<T, double>::value:
 			return true;
 			break;
 		case ParameterType::Integer && std::is_same<T, int>::value:
@@ -141,18 +141,18 @@ public:
 		}
 	}
 
-	void addFloat(std::string key, float value) {
+	void adddouble(std::string key, double value) {
 		if (set.find(key) == set.end()) {
 			Parameter param;
 			param.key = key;
 			param.value = std::to_string(value);
-			param.type = ParameterType::Float;
+			param.type = ParameterType::double;
 			set[key] = param;
 			keys.push_back(key);
 		}
 		else {
 			set[key].value = value;
-			set[key].type = ParameterType::Float;
+			set[key].type = ParameterType::double;
 		}
 	}
 
@@ -177,8 +177,8 @@ public:
 			case ParameterType::Boolean:
 				addBool(key, value);
 				break;
-			case ParameterType::Float:
-				addFloat(key, value);
+			case ParameterType::double:
+				adddouble(key, value);
 				break;
 			case ParameterType::Integer:
 				addInt(key, value);
@@ -323,8 +323,8 @@ public:
 			else if (type == "int") {
 				param.type = ParameterType::Integer;
 			}
-			else if (type == "float") {
-				param.type = ParameterType::Float;
+			else if (type == "double") {
+				param.type = ParameterType::double;
 			}
 
 			paramSet.addParameter(param);

@@ -19,7 +19,7 @@ public:
 		_p2 = p2;
 	}
 
-	Line(float p1x, float p1y, float p2x, float p2y) {
+	Line(double p1x, double p1y, double p2x, double p2y) {
 		_p1 = Vector(p1x, p1y);
 		_p2 = Vector(p2x, p2y);
 	}

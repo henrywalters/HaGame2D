@@ -2,14 +2,14 @@
 #include "Vector.h"
 #include <unordered_map>
 
-const float DEFAULT_GRAVITY = 10.0;
-const float DEFAULT_MASS = 1.0;
-const float DEFAULT_SPRING = 0.5;
+const double DEFAULT_GRAVITY = 10.0;
+const double DEFAULT_MASS = 1.0;
+const double DEFAULT_SPRING = 0.5;
 
 struct RigidBodyParameters {
-	float gravity;
-	float mass;
-	float spring;
+	double gravity;
+	double mass;
+	double spring;
 };
 
 const RigidBodyParameters DEFAULT_RB_PARAMETERS{
@@ -20,7 +20,7 @@ const RigidBodyParameters DEFAULT_RB_PARAMETERS{
 
 class RigidBody : public Component
 {
-	const float epsilon = 3;
+	const double epsilon = 3;
 
 	RigidBodyParameters props;
 

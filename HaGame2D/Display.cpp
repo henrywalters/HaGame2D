@@ -11,7 +11,7 @@ Display::Display(int w, int h, char * _title)
 
 	displayPort = Matrix(Vector(0, 0), Vector(w, h));
 
-	SDL_Init(SDL_INIT_VIDEO);
+	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC );
 	window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
 	screen = SDL_GetWindowSurface(window);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED  );
@@ -50,7 +50,7 @@ Display::~Display()
 {
 }
 
-void Display::setDisplayPort(float x, float y, float w, float h) {
+void Display::setDisplayPort(double x, double y, double w, double h) {
 	displayPort = Matrix(Vector(x, y), Vector(w,h));
 }
 
@@ -100,7 +100,7 @@ void Display::setRenderColor(RGB rgb, int alpha) {
 	SDL_SetRenderDrawColor(renderer, rgb.r, rgb.g, rgb.b, rgb.a);
 }
 
-void Display::drawPixel(float x, float y, RGB color, int z_index)
+void Display::drawPixel(double x, double y, RGB color, int z_index)
 {
 	dispatch(z_index, [this, x, y, color] {
 		setRenderColor(color);
@@ -113,7 +113,7 @@ void Display::drawPixel(Vector pos, RGB color, int z_index)
 	drawPixel(pos.x, pos.y, color, z_index);
 }
 
-void Display::drawRect(float x, float y, float width, float height, RGB color, int z_index) {
+void Display::drawRect(double x, double y, double width, double height, RGB color, int z_index) {
 	SDL_Rect rect = { x, y, width, height };
 	dispatch(z_index, [this, rect, color] {
 		setRenderColor(color);
@@ -121,7 +121,7 @@ void Display::drawRect(float x, float y, float width, float height, RGB color, i
 	});
 }
 
-void Display::fillRect(float x, float y, float width, float height, RGB color, int z_index) {
+void Display::fillRect(double x, double y, double width, double height, RGB color, int z_index) {
 	SDL_Rect rect = { x, y, width, height };
 	dispatch(z_index, [this, rect, color] { 
 		setRenderColor(color, 5);
@@ -129,7 +129,7 @@ void Display::fillRect(float x, float y, float width, float height, RGB color, i
 	});
 }
 
-void Display::drawLine(float x1, float y1, float x2, float y2, RGB color, int z_index) {
+void Display::drawLine(double x1, double y1, double x2, double y2, RGB color, int z_index) {
 	dispatch(z_index, [this, x1, y1, x2, y2, color] {
 		setRenderColor(color);
 		SDL_RenderDrawLine(renderer, x1, y1, x2, y2); 

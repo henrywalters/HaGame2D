@@ -2,8 +2,8 @@
 #include "Color.h"
 
 struct Style {
-	float width = 150;
-	float height = 30;
+	double width = 150;
+	double height = 30;
 	
 	RGB foregroundColor = Color::black();
 	RGB backgroundColor = Color::green();

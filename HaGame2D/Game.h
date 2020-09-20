@@ -8,7 +8,7 @@
 #include "Logger.h"
 #include "Clock.h"
 
-const float DEFAULT_ASPECT_RATIO = 4 / 3;
+const double DEFAULT_ASPECT_RATIO = 4 / 3;
 const int DEFAULT_HEIGHT = 600;
 const int DEFAULT_WIDTH = DEFAULT_HEIGHT * DEFAULT_ASPECT_RATIO;
 const int FPS = 60;
@@ -29,11 +29,11 @@ class Game
 
 	Logger * loggerHandle;
 
-	float averageFps;
-	DataSample<float> fpsMeter;
+	double averageFps;
+	DataSample<double> fpsMeter;
 
 	Clock clock;
-	float maxTick;
+	double maxTick;
 
 protected:
 	int _fps;

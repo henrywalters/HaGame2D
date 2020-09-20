@@ -6,7 +6,7 @@ WorldMapper::WorldMapper()
 {
 }
 
-Matrix WorldMapper::scaleViewport(Matrix viewport, float scale) {
+Matrix WorldMapper::scaleViewport(Matrix viewport, double scale) {
 	//std::cout << "Unscaled Viewport: " << viewport.toString();
 	Matrix scaledViewport = Matrix::scaleMatrix(scale) * viewport;
 	scaledViewport.set(0, scaledViewport.get(0) + 0.5 * (scaledViewport.get(0) - viewport.get(0)));

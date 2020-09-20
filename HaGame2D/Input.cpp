@@ -242,6 +242,9 @@ void Input::pollEvents() {
 			case SDLK_3:
 				three = true;
 				break;
+			case SDLK_4:
+				four = true;
+				break;
 			case SDLK_LSHIFT:
 				shift = true;
 				break;
@@ -327,6 +330,9 @@ void Input::pollEvents() {
 				break;
 			case SDLK_3:
 				three = false;
+				break;
+			case SDLK_4:
+				four = false;
 				break;
 			case SDLK_LSHIFT:
 				shift = false;

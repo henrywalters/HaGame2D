@@ -9,11 +9,11 @@ class CircleComponent :
 private:
 	
 	bool _positionCenter;
-	float _radius;
+	double _radius;
 
 public:
 	
-	CircleComponent(float radius, bool positionCenter) {
+	CircleComponent(double radius, bool positionCenter) {
 		_radius = radius;
 		_positionCenter = positionCenter;
 	}
@@ -22,7 +22,7 @@ public:
 		_positionCenter = positionCenter;
 	}
 
-	void setRadius(float radius) {
+	void setRadius(double radius) {
 		_radius = radius;
 	}
 
@@ -30,7 +30,7 @@ public:
 		return _positionCenter;
 	}
 	
-	float getRadius() {
+	double getRadius() {
 		return _radius;
 	}
 

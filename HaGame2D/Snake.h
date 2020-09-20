@@ -6,7 +6,7 @@
 const int GRID_X = 40;
 const int GRID_Y = 40;
 
-const float TICK_SPEED = 500000;
+const double TICK_SPEED = 500000;
 
 const RGB SNAKE_COLOR = Color::blue();
 const RGB APPLE_COLOR = Color::green();
@@ -147,7 +147,7 @@ public:
 		}
 	}
 
-	void updateEveryInterval(float dt) {
+	void updateEveryInterval(double dt) {
 
 		GridPosition frontPos = _snake.front();
 		GridPosition backPos = _snake.removeFromBack();

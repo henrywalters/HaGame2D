@@ -7,12 +7,12 @@
 class CircleCollider : public CollisionComponent
 {
 
-	float _radius;
+	double _radius;
 	bool _positionCenter;
 
 public:
 
-	CircleCollider(float radius, bool positionCenter = true) {
+	CircleCollider(double radius, bool positionCenter = true) {
 		_radius = radius;
 		_positionCenter = positionCenter;
 	}

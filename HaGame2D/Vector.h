@@ -5,25 +5,25 @@
 class Vector
 {
 public:
-	float x = NULL;
-	float y = NULL;
-	float z = NULL;
+	double x = NULL;
+	double y = NULL;
+	double z = NULL;
 
 	Vector();
-	Vector(float x, float y);
-	Vector(float x, float y, float z);
+	Vector(double x, double y);
+	Vector(double x, double y, double z);
 	~Vector();
 
 	void normalize();
 	Vector normalized();
 
-	float magnitude();
+	double magnitude();
 
-	float dot(Vector b);
+	double dot(Vector b);
 
 	Vector operator + (const Vector& b);
 	Vector operator - (const Vector& b);
-	Vector operator * (float scalar);
+	Vector operator * (double scalar);
 
 	bool operator == (const Vector & b);
 	bool operator != (const Vector & b);
@@ -33,7 +33,7 @@ public:
 
 	Vector cross(Vector b);
 
-	bool isContainedBy(float x, float y, float w, float h);
+	bool isContainedBy(double x, double y, double w, double h);
 
 	void display();
 
@@ -46,5 +46,5 @@ public:
 struct Transform {
 	Vector position;
 	Vector scale;
-	float rotation;
+	double rotation;
 };

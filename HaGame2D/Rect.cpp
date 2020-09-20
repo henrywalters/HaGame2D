@@ -2,7 +2,7 @@
 #include "Rect.h"
 #include <iostream>
 
-Rect::Rect(float _width, float _height)
+Rect::Rect(double _width, double _height)
 {
 	width = _width;
 	height = _height;

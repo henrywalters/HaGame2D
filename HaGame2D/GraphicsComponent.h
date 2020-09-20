@@ -8,7 +8,7 @@ class GraphicsComponent : public Component
 
 public:
 
-	float width, height;
+	double width, height;
 
 	GraphicsComponent();
 	~GraphicsComponent();

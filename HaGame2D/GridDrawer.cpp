@@ -2,7 +2,7 @@
 #include "GridDrawer.h"
 
 
-GridDrawer::GridDrawer(float _width, float _height, int rows, int cols)
+GridDrawer::GridDrawer(double _width, double _height, int rows, int cols)
 {
 	grid = Grid<GridCell>(_width, _height, rows, cols);
 	width = _width; height = _height;
@@ -15,8 +15,8 @@ GridDrawer::~GridDrawer()
 
 void GridDrawer::update() {
 	if (active) {
-		float mX = input->mouseXGlobal;
-		float mY = input->mouseYGlobal;
+		double mX = input->mouseXGlobal;
+		double mY = input->mouseYGlobal;
 
 		GridIndex mIndex = grid.getSpatialIndex(transform->position, Vector(mX, mY));
 
@@ -71,8 +71,8 @@ void GridDrawer::update() {
 
 		//draw a little box to show where you'll draw at.
 		Vector scale = Vector(relativeWidth / width, relativeHeight / height);
-		float relColSize = scale.x * grid.colSize;
-		float relRowSize = scale.y * grid.rowSize;
+		double relColSize = scale.x * grid.colSize;
+		double relRowSize = scale.y * grid.rowSize;
 		Vector pos = Vector(transform->relativePosition.x + (mIndex.x - brushSize / 2) * relColSize, transform->relativePosition.y + (mIndex.y - brushSize / 2) * relRowSize);
 		Vector size = Vector(brushSize * grid.colSize, brushSize * grid.rowSize);
 		

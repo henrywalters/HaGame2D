@@ -14,9 +14,9 @@ struct BinaryGridNode {
 
 class BinaryGrid : public BoxComponent
 {
-	float _height, _width;
+	double _height, _width;
 	int _xPartitions, _yPartitions;
-	float _nodeWidth, _nodeHeight;
+	double _nodeWidth, _nodeHeight;
 
 	Grid<bool> _grid;
 
@@ -32,7 +32,7 @@ class BinaryGrid : public BoxComponent
 
 public:
 
-	BinaryGrid(float width, float height, int xPartitions, int yPartitions, RGB gridColor = Color::blue()) : BoxComponent(width, height) {
+	BinaryGrid(double width, double height, int xPartitions, int yPartitions, RGB gridColor = Color::blue()) : BoxComponent(width, height) {
 		_width = width;
 		_height = height;
 		_xPartitions = xPartitions;
@@ -51,8 +51,8 @@ public:
 	}
 
 	void update() {
-		float xSize = relativeWidth / _grid.cols;
-		float ySize = relativeHeight / _grid.rows;
+		double xSize = relativeWidth / _grid.cols;
+		double ySize = relativeHeight / _grid.rows;
 
 		for (int i = 0; i <= _grid.cols; i++) {
 			display->drawLine(transform->relativePosition.x + i * xSize, transform->relativePosition.y, transform->relativePosition.x + i * xSize, transform->relativePosition.y + relativeHeight, _gridColor, 17);
@@ -62,8 +62,8 @@ public:
 			display->drawLine(transform->relativePosition.x, transform->relativePosition.y + i * ySize, transform->relativePosition.x + relativeWidth, transform->relativePosition.y + i * ySize, _gridColor, 18);
 		}
 
-		float nodeWidth = relativeWidth / _xPartitions;
-		float nodeHeight = relativeHeight / _yPartitions;
+		double nodeWidth = relativeWidth / _xPartitions;
+		double nodeHeight = relativeHeight / _yPartitions;
 
 		for (BinaryGridNode node : _activeNodes.set()) {
 			display->fillRect(transform->relativePosition.x + node.x * nodeWidth + 1, transform->relativePosition.y + node.y * nodeHeight + 1, nodeWidth, nodeHeight, node.fillColor);

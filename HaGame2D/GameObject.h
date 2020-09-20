@@ -24,7 +24,7 @@ private:
 
 	Vector oldPosition;
 	Vector oldScale;
-	float oldRotation;
+	double oldRotation;
 
 	Vector oldOrigin;
 
@@ -39,7 +39,7 @@ public:
 
 	Vector positionDelta;
 	Vector scaleDelta;
-	float rotationDelta;
+	double rotationDelta;
 
 
 	Vector position;
@@ -48,7 +48,7 @@ public:
 	Vector scale;
 	Vector relativeScale;
 
-	float rotation;
+	double rotation;
 	Vector origin;
 
 	bool staticObject = false;
@@ -80,12 +80,12 @@ public:
 	
 	//Directly set the three primary properties
 	GameObject * setPosition(Vector position);
-	GameObject * setRotation(float rotation);
+	GameObject * setRotation(double rotation);
 	GameObject * setScale(Vector scale);
 
 	//Relatively alter the three primary properties
 	GameObject * move(Vector positionDelta);
-	GameObject * rotate(float rotationDelta);
+	GameObject * rotate(double rotationDelta);
 
 	//origin methods - controls the center of a game object
 	GameObject * setOrigin(Vector origin);

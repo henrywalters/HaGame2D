@@ -4,26 +4,80 @@
 namespace TGM {
 
 	struct Bullet {
-		float speed;
-		float momentum;
+		int projectiles;
+		Vector projectileSize;
+		double spread;
+		double speed;
+		double momentum;
 		bool automatic;
+		double delay;
+		int capacity;
+	};
+
+	const Bullet EnemyBullet = Bullet{
+		1,
+		Vector(20, 20),
+		0,
+		250,
+		12.5,
+		false,
+		0,
+		0,
 	};
 
 	const Bullet HandgunBullet = Bullet{
-		500,
+		1,
+		Vector(10, 10),
+		0,
+		1000,
 		25,
 		false,
+		0.2,
+		100,
+	};
+
+	const Bullet ShotgunBullet = Bullet{
+		20,
+		Vector(5, 5),
+		30,
+		1200,
+		6.0,
+		false,
+		0.4,
+		36,
+	};
+
+	const Bullet MachineGunBullet = Bullet{
+		1,
+		Vector(5, 5),
+		5,
+		1500,
+		20,
+		true,
+		0.2,
+		240,
+	};
+
+	const Bullet SMGBullet = Bullet{
+		1,
+		Vector(5, 5),
+		10,
+		1500,
+		5,
+		true,
+		0.08,
+		360,
 	};
 
 	class Projectile : public Component {
 	public:
 		Vector velocity;
-		float momentum;
-		float distance;
+		double momentum;
+		double distance;
 
 		CollisionComponent* collider;
 
-		Projectile(Vector _vel, float _momentum) {
+		Projectile(Vector _vel, double _momentum) {
 			velocity = _vel;
 			momentum = _momentum;
 			distance = 0;

@@ -2,7 +2,7 @@
 #include "TextRenderer.h"
 
 
-TextRenderer::TextRenderer(float _width, float _height)
+TextRenderer::TextRenderer(double _width, double _height)
 {
 	width = _width; height = _height;
 }
@@ -31,17 +31,17 @@ void TextRenderer::update() {
 			dirty = false;
 		}
 
-		float relativeWidthRatio = relativeWidth / width;
-		float relativeHeightRatio = relativeHeight / height;
+		double relativeWidthRatio = relativeWidth / width;
+		double relativeHeightRatio = relativeHeight / height;
 
 		textWidth = text.size.x;
 		textHeight = text.size.y;
 
-		float relTextWidth = textWidth * relativeWidthRatio;
-		float relTextHeight = textHeight * relativeHeightRatio;
+		double relTextWidth = textWidth * relativeWidthRatio;
+		double relTextHeight = textHeight * relativeHeightRatio;
 
-		float posX;
-		float posY;
+		double posX;
+		double posY;
 
 		switch (allignment) {
 		case TextAllignments::Left:

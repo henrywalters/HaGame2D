@@ -7,29 +7,29 @@ public:
 	Math();
 	~Math();
 
-	static float clamp(float val, float min, float max) {
+	static double clamp(double val, double min, double max) {
 		if (val > max) return max;
 		else if (val < min) return min;
 		else return val;
 	}
 
-	static int sign(float numb) {
+	static int sign(double numb) {
 		return numb >= 0 ? 1 : -1;
 	}
 
 	//Returns the spacing required to satisfy the condition that a set of subElements are evenly distributed in a larger element.
-	static float getUniformDistrubtionSpacing(float totalSize, float subSize, int subElementCount) {
+	static double getUniformDistrubtionSpacing(double totalSize, double subSize, int subElementCount) {
 		return (totalSize - subSize * subElementCount) / (subElementCount + 1);
 	}
 
 	//Maps the index of a set of subElements to the value of the lesser side of where the subElement belongs in the larger element. 
-	static float mapToUniformDistribution(float subSize, float spacing, int subElementIndex) {
+	static double mapToUniformDistribution(double subSize, double spacing, int subElementIndex) {
 		return subElementIndex * (subSize + spacing) + spacing;
 	}
 
-	static Vector rotatePointAroundPoint(Vector point, Vector origin, float theta) {
-		float s = sin(theta);
-		float c = cos(theta);
+	static Vector rotatePointAroundPoint(Vector point, Vector origin, double theta) {
+		double s = sin(theta);
+		double c = cos(theta);
 
 		Vector vect;
 

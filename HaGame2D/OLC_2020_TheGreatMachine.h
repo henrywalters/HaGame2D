@@ -1,5 +1,4 @@
 #pragma once
-#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 #include "HaGame2D.h"
 #include "TGMPlayerController.h"
 #include "TGMEnemies.h"
@@ -15,7 +14,7 @@
 namespace TGM {
 
 	const std::vector<std::string> levels = {
-		"Assets/Levels/level3.txt",
+		"Assets/Levels/level1.txt",
 		"Assets/Levels/level2.txt",
 		"Assets/Levels/level3.txt",
 	};
@@ -61,7 +60,7 @@ namespace TGM {
 	const Color PURPLE = Color(162, 9, 232, 255);
 	const Color ORANGE = Color(232, 132, 9, 255);
 
-	const float BTN_MARGIN = 50;
+	const double BTN_MARGIN = 50;
 
 	enum GAME_STATES {
 		LOADING,
@@ -142,7 +141,6 @@ namespace TGM {
 			global = addScene("global", true);
 			home = addScene("home", false);
 			winScreen = addScene("win", false);
-			
 
 			// Home screen
 			home->add()
@@ -166,8 +164,8 @@ namespace TGM {
 			inGameMenuBtns = addMenuButtons(gameMenu, inGameMenuOptions, Vector(0, GAME_HEIGHT / 2.0f - 50.0), BTN_SIZE, 36, WHITE);
 
 			// MISC
-			float wallWidth = GAME_WIDTH;
-			float wallHeight = 20;
+			double wallWidth = GAME_WIDTH;
+			double wallHeight = 20;
 
 			createLevels();
 
@@ -336,19 +334,13 @@ namespace TGM {
 				playerController->initialize();
 
 				levelScenes.push_back(game);
-
-				std::cout << "Added " << levelNames[i] << std::endl;
 			}
 		}
 
 		void clearLevel(int levelIndex) {
-			std::cout << "Clearing Level: " << levelIndex << std::endl;
 			levelScenes[levelIndex]->reset();
-			std::cout << "RESET LEVEL\n";
 			loadLevel(levelScenes[levelIndex], LevelLoader::load(levels[levelIndex]));
-			std::cout << "LOADED LEVEL\n";
 			levelScenes[levelIndex]->initialize();
-			std::cout << "Initialized Level\n";
 		}
 
 		void resetLevel(int levelIndex) {
@@ -419,7 +411,7 @@ namespace TGM {
 			}
 		}
 
-		std::vector<GameObject*> addMenuButtons(Scene* scene, std::vector<std::string> buttonNames, Vector startPos, Vector btnSize, float fontSize, Color color) {
+		std::vector<GameObject*> addMenuButtons(Scene* scene, std::vector<std::string> buttonNames, Vector startPos, Vector btnSize, double fontSize, Color color) {
 			auto btns = std::vector<GameObject*>();
 			int index = 0;
 			for (auto name : buttonNames) {
@@ -483,7 +475,7 @@ namespace TGM {
 			return enemy;
 		}
 
-		GameObject* addHealthBox(Scene* scene, Box rect, float value) {
+		GameObject* addHealthBox(Scene* scene, Box rect, double value) {
 			return scene->add()
 				->setPosition(rect.position())
 				->addComponentAnd(new SpriteRenderer(HEALTH_PATH, rect.width, rect.height, NULL))

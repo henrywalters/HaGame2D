@@ -3,23 +3,23 @@
 
 class IntervalComponent : public Component {
 	long _lastTick;
-	float _tickDelay;
+	double _tickDelay;
 
 public:
 
-	IntervalComponent(float tickDelay) {
+	IntervalComponent(double tickDelay) {
 		_tickDelay = tickDelay;
 		_lastTick = Clock::now();
 	}
 
 	virtual void updateEveryTick() {};
-	virtual void updateEveryInterval(float dt) = 0;
+	virtual void updateEveryInterval(double dt) = 0;
 
 	void update() {
 		updateEveryTick();
 		
 		long now = Clock::now();
-		float dt = now - _lastTick;
+		double dt = now - _lastTick;
 
 		if (dt >= _tickDelay) {
 			_lastTick = now;

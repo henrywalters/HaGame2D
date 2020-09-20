@@ -7,28 +7,28 @@ namespace TGM {
 
 	class HealthPickup : public Component {
 	public:
-		float health;
+		double health;
 
-		HealthPickup(float _health) {
+		HealthPickup(double _health) {
 			health = _health;
 		}
 	};
 
 	class HealthBar : public Component {
 	public:
-		float health;
+		double health;
 		CircleCollider* collider;
 
-		HealthBar(float initHealth = 100) {
+		HealthBar(double initHealth = 100) {
 			health = initHealth;
 		}
 
-		void doDamage(float dmg) {
+		void doDamage(double dmg) {
 			health -= dmg;
 			health = Math::clamp(health, 0, 100);
 		}
 
-		void addHealth(float _health) {
+		void addHealth(double _health) {
 			health += _health;
 			health = Math::clamp(health, 0, 100);
 		}
@@ -42,7 +42,7 @@ namespace TGM {
 		}
 
 		void update() {
-			float radius = collider->getCircle().radius;
+			double radius = collider->getCircle().radius;
 			display->drawRect(
 				transform->relativePosition.x + radius - (HEALTHBAR_SIZE.x / 2),
 				transform->relativePosition.y - 25, 

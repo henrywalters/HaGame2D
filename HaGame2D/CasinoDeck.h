@@ -46,7 +46,7 @@ class CasinoCardController : public Component {
 	Vector target;
 	bool moving = false;
 
-	float speed = 2;
+	double speed = 2;
 
 public:
 

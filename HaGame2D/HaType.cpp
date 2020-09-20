@@ -9,9 +9,9 @@
 
 class Bullet : public Component {
 
-	const float height = 2;
-	const float width = 5;
-	const float speed = 5;
+	const double height = 2;
+	const double width = 5;
+	const double speed = 5;
 
 	Vector position;
 	Vector velocity = Vector(speed, 0);
@@ -48,14 +48,14 @@ class ShipController : public Component {
 
 	Vector velocity;
 
-	float accel = .05;
-	float deaccel = .07;
-	float maxSpeed = 20;
-	float minSpeed = 4;
+	double accel = .05;
+	double deaccel = .07;
+	double maxSpeed = 20;
+	double minSpeed = 4;
 
-	float maxTurnSpeed = 4;
-	float turnAccel = 0.03;
-	float turnDeaccel = 0.07;
+	double maxTurnSpeed = 4;
+	double turnAccel = 0.03;
+	double turnDeaccel = 0.07;
 
 	void onCreate() {
 		anim = transform->getComponent<SpriteAnimationRenderer>();
@@ -125,11 +125,11 @@ int random(int min, int max) {
 
 class StarController : public Component {
 public:
-	float size;
+	double size;
 	Color color;
-	float height;
+	double height;
 
-	StarController(float _size, Color _color, float _height) {
+	StarController(double _size, Color _color, double _height) {
 		size = _size;
 		height = _height;
 		color = _color;
@@ -144,9 +144,9 @@ public:
 
 class Stars {
 public:
-	static void addStars(Scene &game, float stars, float width, float height) {
-		const float minStarSize = 1;
-		const float maxStarSize = 8;
+	static void addStars(Scene &game, double stars, double width, double height) {
+		const double minStarSize = 1;
+		const double maxStarSize = 8;
 
 		const int brightnessLevels = 20;
 
@@ -178,7 +178,7 @@ HaType::HaType()
 
 	Stars::addStars(game, 100, game.screenWidth, game.screenHeight);
 
-	float spaceSpeed = 0;
+	double spaceSpeed = 0;
 
 	auto spaceTiles = SpriteSheetLoader::getSpriteMap("ship_sprite.txt");
 

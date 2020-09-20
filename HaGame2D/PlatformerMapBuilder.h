@@ -4,17 +4,17 @@
 
 const Vector GRID_SIZE = Vector(1000, 1000);
 
-const float CAMERA_SLOW = 10.0f;
-const float CAMERA_FAST = 50.0f;
+const double CAMERA_SLOW = 10.0f;
+const double CAMERA_FAST = 50.0f;
 
-const float CAMERA_ZOOM_SLOW = 0.5f;
-const float CAMERA_ZOOM_FAST = 5.0f;
+const double CAMERA_ZOOM_SLOW = 0.5f;
+const double CAMERA_ZOOM_FAST = 5.0f;
 
 class CameraSystem : public System {
 
 	Scene* scene;
-	float speed;
-	float zoomSpeed;
+	double speed;
+	double zoomSpeed;
 
 public:
 	CameraSystem() : System("Camera System") {}
@@ -25,7 +25,7 @@ public:
 
 	void update() {
 
-		float dt = scene->dt_s();
+		double dt = scene->dt_s();
 
 		speed = scene->input->shift ? CAMERA_FAST : CAMERA_SLOW;
 		zoomSpeed = scene->input->shift ? CAMERA_ZOOM_FAST : CAMERA_ZOOM_SLOW;

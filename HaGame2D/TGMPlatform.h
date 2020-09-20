@@ -4,22 +4,22 @@
 
 namespace TGM {
 
-	const float SLIDER_WIDTH = 15;
+	const double SLIDER_WIDTH = 15;
 
 	class MovingPlatform : public Component {
 
 	public:
 		Vector currentVelocity;
 		bool moving;
-		float length;
+		double length;
 		Color platformColor;
 		Color sliderColor;
 		Direction direction;
 		BoxComponent* boxC;
 		BoxComponent* platformBoxC;
-		float speed;
+		double speed;
 
-		MovingPlatform(Color _platformColor, Color _sliderColor, Direction _direction, float _speed, bool _moving = true) {
+		MovingPlatform(Color _platformColor, Color _sliderColor, Direction _direction, double _speed, bool _moving = true) {
 			platformColor = _platformColor;
 			sliderColor = _sliderColor;
 			direction = _direction;
@@ -35,7 +35,7 @@ namespace TGM {
 		}
 
 		void update() {
-			float dt = gameScene->dt_s();
+			double dt = gameScene->dt_s();
 			
 			if (direction == Direction::Horizontal) {
 				display->fillRect(

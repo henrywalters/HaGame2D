@@ -15,13 +15,13 @@
 class CamController : public Component {
 
 	Vector camPos = Vector::Zero();
-	float camSpeed = 25;
-	float zoomSpeed = 0.5;
+	double camSpeed = 25;
+	double zoomSpeed = 0.5;
 
 	void update() {
 		camPos = Vector::Zero();
 
-		float dt = gameScene->dt_s();
+		double dt = gameScene->dt_s();
 
 		if (input->up) {
 			camPos.y = -1 * camSpeed * dt;
@@ -52,7 +52,7 @@ class CamController : public Component {
 class TileButton : public ButtonComponent {
 public :
 
-	TileButton(float width, float height) : ButtonComponent(width, height) {
+	TileButton(double width, double height) : ButtonComponent(width, height) {
 
 	}
 
@@ -78,7 +78,7 @@ public:
 
 	std::function<void(int)> onClickFunc;
 
-	SelectLayerButton(float width, float height, int layer) : ButtonComponent(width, height) {
+	SelectLayerButton(double width, double height, int layer) : ButtonComponent(width, height) {
 		std::cout << "Layer: " << layer << "\n";
 		z_index = layer;
 	};
@@ -95,7 +95,7 @@ public:
 
 	std::function<void(int, bool)> onClickFunc;
 
-	ViewLayerButton(float width, float height, int layer) : ButtonComponent(width, height) {
+	ViewLayerButton(double width, double height, int layer) : ButtonComponent(width, height) {
 		z_index = layer;
 	};
 
@@ -114,7 +114,7 @@ class ValueButtonComponent : public ButtonComponent {
 public:
 	std::function<void(T)> onClickFunc;
 
-	ValueButtonComponent(float width, float height, T value) : ButtonComponent(width, height) {
+	ValueButtonComponent(double width, double height, T value) : ButtonComponent(width, height) {
 		_value = value;
 	}
 

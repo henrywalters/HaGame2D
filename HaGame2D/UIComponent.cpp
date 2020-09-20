@@ -13,8 +13,8 @@ UIComponent::~UIComponent()
 
 void UIComponent::update() {
 
-	float mX = input->mouseXGlobal;
-	float mY = input->mouseYGlobal;
+	double mX = input->mouseXGlobal;
+	double mY = input->mouseYGlobal;
 
 	bool gotFocus = false;
 	/*

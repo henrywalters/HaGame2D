@@ -50,7 +50,7 @@ void Scene::initializeScreen(int sWidth, int sHeight, Display * _display, Input 
 	viewport = Matrix(Vector::Zero(), Vector(screenWidth, screenHeight));
 }
 
-void Scene::setDisplayPort(float x, float y, float width, float height) {
+void Scene::setDisplayPort(double x, double y, double width, double height) {
 	display->setDisplayPort(x, y, width, height);
 	viewport = Matrix(Vector(x, y), Vector(width, height));
 }
@@ -109,7 +109,7 @@ GameObject * Scene::instantiate(GameObject * gameObject) {
 		instantiate(child);
 	}
 	gameObjects.push_back(gameObject);
-	// add(gameObject);
+	add(gameObject);
 
 	return gameObject;
 }

@@ -11,7 +11,7 @@ public:
 	OrthogonolCharacterController();
 	~OrthogonolCharacterController();
 
-	float speed = 2.0f;
+	double speed = 2.0f;
 
 	Vector currentDirection = Vector::Zero();
 

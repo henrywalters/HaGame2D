@@ -7,11 +7,11 @@ Vector::Vector()
 	x = 0; y = 0; z = 0;
 }
 
-Vector::Vector(float _x, float _y) {
+Vector::Vector(double _x, double _y) {
 	x = _x; y = _y; z = 0;
 }
 
-Vector::Vector(float _x, float _y, float _z) {
+Vector::Vector(double _x, double _y, double _z) {
 	x = _x; y = _y; z = _z;
 }
 
@@ -23,7 +23,7 @@ Vector Vector::operator + (const Vector &b) {
 	return Vector(x + b.x, y + b.y, z + b.z);
 }
 
-Vector Vector::operator * (float scalar) {
+Vector Vector::operator * (double scalar) {
 	return Vector(x * scalar, y * scalar, z * scalar);
 }
 
@@ -64,7 +64,7 @@ Vector Vector::cross(Vector b)
 	return vect;
 }
 
-bool Vector::isContainedBy(float _x, float _y, float _w, float _h)
+bool Vector::isContainedBy(double _x, double _y, double _w, double _h)
 {
 	if (x >= _x && x <= _x + _w && y >= _y && y <= _y + _h) {
 		return true;
@@ -74,12 +74,12 @@ bool Vector::isContainedBy(float _x, float _y, float _w, float _h)
 	}
 }
 
-float Vector::magnitude() {
+double Vector::magnitude() {
 	return sqrt((x * x) + (y * y) + (z * z));
 }
 
 void Vector::normalize() {
-	float mag = magnitude();
+	double mag = magnitude();
 	if (mag != 0) {
 		x = x / mag;
 		y = y / mag;
@@ -88,7 +88,7 @@ void Vector::normalize() {
 }
 
 Vector Vector::normalized() {
-	float mag = magnitude();
+	double mag = magnitude();
 	if (mag == 0) {
 		return Vector::Zero();
 	}
@@ -97,7 +97,7 @@ Vector Vector::normalized() {
 	}
 }
 
-float Vector::dot(Vector b) {
+double Vector::dot(Vector b) {
 	return (x * b.x) + (y * b.y) + (z * b.z);
 }
 

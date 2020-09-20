@@ -8,10 +8,10 @@
 #include <sstream>
 
 struct MapCell {
-	float x;
-	float y;
-	float width;
-	float height;
+	double x;
+	double y;
+	double width;
+	double height;
 	int z_index;
 	std::string key;
 

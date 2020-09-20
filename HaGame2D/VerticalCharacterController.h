@@ -1,8 +1,8 @@
 #pragma once
 #include "HaGame2D.h"
 
-const float DEFAULT_WALK_FORCE = 10.0;
-const float DEFAULT_JUMP_FORCE = 100.0;
+const double DEFAULT_WALK_FORCE = 10.0;
+const double DEFAULT_JUMP_FORCE = 100.0;
 
 class VerticalCharacterController : public Component
 {

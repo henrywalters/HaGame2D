@@ -23,8 +23,8 @@ void Game::setFps(int fps, bool fpsCapped)
 	maxTick = 1000000 / _fps;
 	std::cout << _fps << " " << _capFps;
 	std::cout << std::to_string(maxTick);
-	fpsMeter = DataSample<float>("FPS", _capFps ? _fps : 100);
-	fpsMeter.onFullSample([this](float fpsSample) {
+	fpsMeter = DataSample<double>("FPS", _capFps ? _fps : 100);
+	fpsMeter.onFullSample([this](double fpsSample) {
 		display->displayMetric("FPS: " + std::to_string(1000000 / fpsSample));
 	});
 }
@@ -147,14 +147,14 @@ void Game::tick() {
 	
 	display->render();
 
-	float elapsedTime = clock.stop();
-	float budget = 1000000 / _fps;
+	double elapsedTime = clock.stop();
+	double budget = 1000000 / _fps;
 
 	if (elapsedTime <= budget && _capFps) {
 		clock.wait((1000000 / _fps) - elapsedTime);
 	}
 
-	float dt = clock.stop();
+	double dt = clock.stop();
 
 	fpsMeter.add(dt);
 

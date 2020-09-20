@@ -37,15 +37,15 @@ protected:
 
 	std::vector<System*> systems;
 
-	std::vector<float> framerateSamples;
+	std::vector<double> framerateSamples;
 
-	const float SAMPLE_SIZE = 60;
+	const double SAMPLE_SIZE = 60;
 
 	static std::unordered_map<char *, GameObject *> gameObjectTable;
 
 	bool hasLogger = false;
 
-	float _dt_ms;
+	double _dt_ms;
 
 public:
 
@@ -55,9 +55,9 @@ public:
 	Logger *logger;
 
 	//Profiling objects
-	DataSample<float> fpsData;
-	DataSample<float> drawTime;
-	DataSample<float> updateTime;
+	DataSample<double> fpsData;
+	DataSample<double> drawTime;
+	DataSample<double> updateTime;
 	Camera camera;
 
 	int screenWidth;
@@ -78,7 +78,7 @@ public:
 
 	void reset();
 
-	void setDisplayPort(float x, float y, float width, float height);
+	void setDisplayPort(double x, double y, double width, double height);
 
 	void tick();
 	void loop();
@@ -104,15 +104,15 @@ public:
 		return Vector(screenWidth / 2, screenHeight / 2);
 	}
 
-	void setDt(float dt_ms) {
+	void setDt(double dt_ms) {
 		_dt_ms = dt_ms;
 	}
 
-	float dt() {
+	double dt() {
 		return _dt_ms;
 	}
 
-	float dt_s() {
+	double dt_s() {
 		return _dt_ms / 1000000;
 	}
 

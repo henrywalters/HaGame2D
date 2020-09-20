@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "InteractableComponent.h"
 
-InteractableComponent::InteractableComponent(float _width, float _height)
+InteractableComponent::InteractableComponent(double _width, double _height)
 {
 	width = _width;
 	height = _height;

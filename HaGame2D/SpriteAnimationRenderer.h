@@ -12,14 +12,14 @@
 
 const std::string DEFAULT_STATE = "hide";
 const std::string IDLE_STATE = "idle";
-const float DEFAULT_ANIMATION_LENGTH = .2;
+const double DEFAULT_ANIMATION_LENGTH = .2;
 
 class SpriteAnimationRenderer :
 	public BoxComponent
 {
 
 	std::unordered_map<std::string, CyclicList<TextureRect>> animationMap;
-	std::unordered_map<std::string, float> animationLength;
+	std::unordered_map<std::string, double> animationLength;
 	std::vector<std::string> states;
 	std::string currentState;
 	CyclicNode<TextureRect> *currentAnimationFrame;
@@ -28,12 +28,12 @@ class SpriteAnimationRenderer :
 
 	int lastTick;
 	int currentTicks = 0;
-	float defaultAnimationLength;
+	double defaultAnimationLength;
 
 	char * spriteSheetPath;
 	char * spriteSheetConfigPath;
 public:
-	SpriteAnimationRenderer(char * _spriteSheetPath, char * _spriteSheetConfigPath, float _animationLengthSeconds = DEFAULT_ANIMATION_LENGTH) {
+	SpriteAnimationRenderer(char * _spriteSheetPath, char * _spriteSheetConfigPath, double _animationLengthSeconds = DEFAULT_ANIMATION_LENGTH) {
 		spriteSheetPath = _spriteSheetPath;
 		spriteSheetConfigPath = _spriteSheetConfigPath;
 		defaultAnimationLength = _animationLengthSeconds;
@@ -85,7 +85,7 @@ public:
 		}
 	}
 
-	void setStateLength(std::string state, float length) {
+	void setStateLength(std::string state, double length) {
 		if (stateExists(state)) {
 			animationLength[state] = length / animationMap[state].size();
 		}

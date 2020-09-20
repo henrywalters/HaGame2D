@@ -3,15 +3,15 @@
 
 namespace TGM {
 
-	const float GRAVITY = 1.0f;
+	const double GRAVITY = 1.0f;
 
 	class Body : public Component {
 	public:
 
 		Vector force;
-		float mass;
+		double mass;
 
-		Body(float _mass) {
+		Body(double _mass) {
 			mass = _mass;
 			zeroForces();
 		}
@@ -24,7 +24,7 @@ namespace TGM {
 			force += _force;
 		}
 
-		float calculateFrictionForce(float frictionCoef) {
+		double calculateFrictionForce(double frictionCoef) {
 			return frictionCoef * mass * GRAVITY;
 		}
 
@@ -32,23 +32,23 @@ namespace TGM {
 			return force * (1 / mass);
 		}
 
-		Vector calculateVelocity(float dt) {
+		Vector calculateVelocity(double dt) {
 			return calculateAcceleration() * dt;
 		}
 
-		Vector calculateVelocity(float dt, Vector initialVelocity) {
+		Vector calculateVelocity(double dt, Vector initialVelocity) {
 			return calculateVelocity(dt) + initialVelocity;
 		}
 
-		Vector calculatePosition(float dt) {
+		Vector calculatePosition(double dt) {
 			return calculateAcceleration() * dt * dt * 0.5;
 		}
 
-		Vector calculatePosition(float dt, Vector initialVelocity) {
+		Vector calculatePosition(double dt, Vector initialVelocity) {
 			return calculatePosition(dt) + initialVelocity * dt;
 		}
 
-		Vector calculatePosition(float dt, Vector initialVelocity, Vector initialPosition) {
+		Vector calculatePosition(double dt, Vector initialVelocity, Vector initialPosition) {
 			return calculatePosition(dt, initialVelocity) + initialPosition;
 		}
 	};

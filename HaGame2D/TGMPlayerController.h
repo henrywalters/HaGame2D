@@ -10,31 +10,33 @@
 #include "TGMProjectile.h"
 #include "TGMHealthBar.h"
 
-const float RUN_SPEED = 5.0f;
-const float SPEED = 10.0f;
+const double RUN_SPEED = 5.0f;
+const double SPEED = 10.0f;
 
-const float RUN_FORCE = 250.0f;
-const float WALK_FORCE = 300.0f;
+const double RUN_FORCE = 250.0f;
+const double WALK_FORCE = 300.0f;
 
-const float FRICTION_COEF = 15.0f;
+const double FRICTION_COEF = 15.0f;
 
-const float ROT_ACCEL = 0.1f;
-const float ROT_DEACCEL = 1.0f;
-const float MAX_ROT_VEL = 2.0f;
+const double ROT_ACCEL = 0.6f;
+const double ROT_DEACCEL = 1.0f;
+const double MAX_ROT_VEL = 0.1f;
 
-const float EPSILON = 0.05f;
+const double EPSILON = 0.3f;
 
 const std::string BULLET_PATH = "Assets/Sprites/bullet.png";
+
+const double SHOOT_DELAY = 0.2;
 
 namespace TGM {
 
 	class PlayerController : public System {
 
-		float speed;
-		float dt;
+		double speed;
+		double dt;
 
 		Vector velocity;
-		float rotVelocity;
+		double rotVelocity;
 
 		Scene* scene;
 		Input* input;
@@ -52,14 +54,21 @@ namespace TGM {
 		CircleCollider* collider;
 		TGM::HealthBar* healthBar;
 
-		float health = 100;
+		double health = 100;
+
+		double timeSinceLastShot = 0;
+		bool canShoot = true;
+
+		Bullet weaponType = HandgunBullet;
+
+		Gamepad *gamepad;
 
 		Vector center() {
 			return player->position + player->origin + Vector(playerSize.x / 2.0f, playerSize.y / 2.0f);
 		}
 
-		GameObject* addBullet(Scene* scene, Box rect, Vector velocity, float rotation, float momentum) {
-			auto bullet = scene->add()
+		GameObject* addBullet(Scene* scene, Box rect, Vector velocity, double rotation, double momentum) {
+			auto bullet = (new GameObject())
 				->addComponentAnd(new SpriteRenderer(BULLET_PATH, rect.width, rect.height, NULL))
 				->addComponentAnd(new BoxCollider(rect.width, rect.height))
 				->setPosition(Vector(rect.x, rect.y))
@@ -67,6 +76,7 @@ namespace TGM {
 				->addComponentAnd(new TGM::Projectile(velocity, momentum));
 
 			bullet->rotate(rotation);
+			bullet->getComponent<CollisionComponent>()->pollCollisions = true;
 
 			scene->instantiate(bullet);
 
@@ -77,8 +87,10 @@ namespace TGM {
 		std::function<void()> onLevelComplete = []() {};
 		std::function<void()> onDead = []() {};
 		GameObject* player;
+		
 		PlayerController(CollisionSystem* _collisionSystem, TriggerReceiverSystem* _trSystem) : System("Player Controller") {
 			trSystem = _trSystem;
+			gamepad = NULL;
 			collisionSystem = _collisionSystem;
 			chunkIndex = Vector::Zero();
 		}
@@ -87,6 +99,8 @@ namespace TGM {
 			scene = getScene();
 			player = scene->getGameObjectsWhereHasTag("PLAYER")[0];
 			input = scene->input;
+
+			gamepad = new Gamepad(0);
 
 			body = player->getComponent<TGM::Body>();
 			if (body == NULL) throw new std::exception("TGM::BodyComponent required on player");
@@ -104,14 +118,14 @@ namespace TGM {
 			collisionSystem->events.subscribe([this](Collision coll) {
 				if (coll.sourceUid == player->uid) {
 					if (coll.gameObject->hasTag("WALL")) {
-						player->move(velocity * -10 * scene->dt_s());
+						player->move(velocity * -50 * scene->dt_s());
 					}
 
 					if (coll.gameObject->hasTag("SLIDER_OBSTACLE")) {
 						// Handle Damage
 					}
 
-					if (coll.gameObject->hasTag("TRIGGER") && input->actionDown) {
+					if (coll.gameObject->hasTag("TRIGGER") && gamepad->aPressed) {
 						trSystem->trigger(coll.gameObject->uid, coll.gameObject->getComponent<Trigger>()->value == 1 ? 0 : 1);
 					}
 
@@ -131,11 +145,16 @@ namespace TGM {
 					}
 
 					if (coll.gameObject->hasTag("ENEMY_BULLET")) {
-						healthBar->doDamage(coll.gameObject->getComponent<Projectile>()->momentum);
-						if (!healthBar->isAlive()) {
-							onDead();
+						//std::cout << "Hit by " << coll.gameObject->uid << std::endl;
+						//std::cout << "Hit for " << coll.gameObject->getComponent<Projectile>()->momentum << std::endl;
+						if (coll.gameObject->getComponent<CollisionComponent>()->active) {
+							healthBar->doDamage(coll.gameObject->getComponent<Projectile>()->momentum);
+							if (!healthBar->isAlive()) {
+								onDead();
+							}
 						}
 						coll.gameObject->getComponent<CollisionComponent>()->active = false;
+						// scene->destroy(coll.gameObject);
 
 					}
 
@@ -151,25 +170,30 @@ namespace TGM {
 		}
 
 		void update() {
+			gamepad->pollDevice();
 			dt = scene->dt_s();
-			float radius = collider->getCircle().radius;
+			double radius = collider->getCircle().radius;
 
 			// Movement portion
 			body->zeroForces();
 			Vector dir = Vector::Zero();
 
-			float forceMag = input->shift ? RUN_FORCE : WALK_FORCE;
+			double forceMag = input->shift ? RUN_FORCE : WALK_FORCE;
 
+			/*
 			if (input->up) dir.y = -1;
 			if (input->down) dir.y = 1;
 			if (input->left) dir.x = -1;
 			if (input->right) dir.x = 1;
-
-			float speed = velocity.magnitude();
+			*/
+			if (gamepad->lAxis.magnitude() > 0.4) {
+				dir = gamepad->lAxis.normalized();
+			}
+			
+			double speed = velocity.magnitude();
 
 			if (speed < (input->shift ? RUN_SPEED : SPEED)) {
 				body->applyForce(dir.normalized() * forceMag);
-				player->rotate(dir.x * dt * 5);
 			}
 
 			if (speed > EPSILON) {
@@ -202,19 +226,72 @@ namespace TGM {
 
 			// Rotation portion
 
-			auto mouseDelta = input->globalMousePos() - center();
-			auto mouseAngle = atan2(mouseDelta.y, mouseDelta.x);
+			//auto mouseDelta = input->globalMousePos() - center();
+			//std::cout << "f(" << gamepad->rAxis.toString() << ") = " << atan2(gamepad->rAxis.x, -gamepad->rAxis.y) << std::endl;
+			if (gamepad->rAxis.magnitude() >= 0.4) {
+				auto mouseAngle = atan2(gamepad->rAxis.x, -gamepad->rAxis.y);
+				//player->setRotation(mouseAngle);
+				//player->rotate( gamepad->rAxis.x * dt * 7);
 
-			player->setRotation(mouseAngle + (M_PI / 2));
+				double rot = gamepad->rAxis.x - gamepad->rAxis.y;
+			
+				if (rot > 0 && rotVelocity < MAX_ROT_VEL) rotVelocity += rot * ROT_ACCEL * dt;
+				else if (rot < 0 && rotVelocity > -MAX_ROT_VEL) rotVelocity += rot * ROT_ACCEL * dt;
+			}
+			else if (gamepad->rAxis.magnitude() < 0.4 && abs(rotVelocity) > 0.01) {
+				rotVelocity += -Math::sign(rotVelocity) * ROT_DEACCEL * dt;
+			}
+			else {
+				rotVelocity = 0;
+			}
+
+			std::cout << rotVelocity << std::endl;
+			
+			player->rotate(rotVelocity);
 
 			// Shooting
 
-			if (input->fire1Down) {
-				
+			if (input->one) {
+				weaponType = HandgunBullet;
+			}
+
+			if (input->two) {
+				weaponType = ShotgunBullet;
+			}
+
+			if (input->three) {
+				weaponType = MachineGunBullet;
+			}
+
+			if (input->four) {
+				weaponType = SMGBullet;
+			}
+
+			if (!canShoot) {
+				timeSinceLastShot += dt;
+				if (timeSinceLastShot > weaponType.delay) {
+					canShoot = true;
+					timeSinceLastShot = 0;
+				}
+			}
+
+			if (((canShoot && weaponType.automatic && gamepad->rTrigger) || gamepad->rTriggerPressed)) {
+
+				gamepad->rumble(0.8, 50);
+
+				canShoot = false;
 				Vector pos = Vector(player->position.x + radius, player->position.y + radius);
 				pos += Vector(radius * cos(player->rotation - M_PI / 2), radius * sin(player->rotation - M_PI / 2));
-				Vector bulletVelocity = Vector(HandgunBullet.speed * cos(player->rotation - M_PI / 2), HandgunBullet.speed * sin(player->rotation - M_PI / 2));
-				addBullet(scene, Box{ pos.x, pos.y, 20, 20 }, bulletVelocity, player->rotation, HandgunBullet.momentum);
+				
+				for (int i = 0; i < weaponType.projectiles; i++) {
+					double rotation = player->rotation;
+					if (weaponType.spread > 0) {
+						rotation += ( M_PI * Random::number(-(weaponType.spread / 2) * 1000, (weaponType.spread / 2) * 1000) / 1000.0) / 180.0;
+					}
+					Vector bulletVelocity = Vector(weaponType.speed * cos(rotation - M_PI / 2), weaponType.speed * sin(rotation - M_PI / 2));
+					addBullet(scene, Box{ pos.x, pos.y, weaponType.projectileSize.x, weaponType.projectileSize.y }, bulletVelocity, rotation, weaponType.momentum);
+				}
+				
 			}
 		}
 
@@ -236,7 +313,7 @@ namespace TGM {
 			return false;
 		}
 
-		void adjustVelocityForBoundaries(float dt) {
+		void adjustVelocityForBoundaries(double dt) {
 			if (velocity.x != 0 && isCollidingIf(Vector(velocity.x, 0))) velocity.x = 0;
 			if (velocity.y != 0 && isCollidingIf(Vector(0, velocity.y))) velocity.y = 0;
 		}

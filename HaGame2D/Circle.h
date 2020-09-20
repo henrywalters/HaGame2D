@@ -6,7 +6,7 @@ struct Box;
 
 struct Circle {
 	Vector center;
-	float radius;
+	double radius;
 
 	bool collidingWithBox(Box box) {
 		Vector closestPoint = Vector(

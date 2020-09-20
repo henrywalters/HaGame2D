@@ -8,7 +8,7 @@ public:
 	WorldMapper();
 	~WorldMapper();
 
-	static Matrix scaleViewport(Matrix viewport, float scale);
+	static Matrix scaleViewport(Matrix viewport, double scale);
 	static Vector getScale(Matrix viewport, Matrix screen);
 
 	static Matrix worldToViewport(Matrix worldObj, Matrix viewport);

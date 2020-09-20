@@ -23,7 +23,7 @@ void RigidBody::applyForce(Vector force)
 
 void RigidBody::handleCollisions()
 {
-	float dt = gameScene->dt_s();
+	double dt = gameScene->dt_s();
 
 	auto collider = transform->getComponent<BoxCollider>();
 
@@ -63,7 +63,7 @@ void RigidBody::sumForces()
 
 void RigidBody::handlePhysics()
 {
-	float dt = gameScene->dt_s();
+	double dt = gameScene->dt_s();
 
 	accel = force * props.mass;
 

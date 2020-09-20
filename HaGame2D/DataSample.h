@@ -35,7 +35,7 @@ public:
 
 	void add(T sample) {
 		if (index % sampleSize == 0) {
-			float avg = sum / sampleSize;
+			double avg = sum / sampleSize;
 
 			if (hasCallback) {
 				callbackFn(avg);

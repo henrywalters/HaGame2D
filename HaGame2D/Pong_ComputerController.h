@@ -9,7 +9,7 @@ public:
 
 	GameObject * ball;
 
-	float speed = 5;
+	double speed = 5;
 
 	Pong_ComputerController(GameObject * ball);
 	~Pong_ComputerController();

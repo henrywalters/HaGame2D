@@ -9,7 +9,7 @@
 struct SpriteSheetCell {
 	std::string cellType;
 	int index;
-	float x, y, width, height;
+	double x, y, width, height;
 	
 	std::string getString() {
 		std::string out = cellType + '_' + std::to_string(index) + '_' + std::to_string(x) + '_' + std::to_string(y) + '_' + std::to_string(width) + '_' + std::to_string(height);

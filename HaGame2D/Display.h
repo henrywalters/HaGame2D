@@ -41,7 +41,7 @@ struct Texture {
 	std::string path;
 	SDL_Texture * texture;
 	Vector anchor;
-	float angle;
+	double angle;
 };
 
 struct Text {
@@ -55,7 +55,7 @@ struct Text {
 };
 
 struct TextureRect {
-	float x, y, width, height;
+	double x, y, width, height;
 
 	SDL_Rect * getSDLRectPointer() {
 		SDL_Rect * rect = new SDL_Rect;
@@ -123,7 +123,7 @@ public:
 	Display(int width, int height, char * title = "HaGame2D - Untitled Game");
 	~Display();
 
-	void setDisplayPort(float x, float y, float width, float height);
+	void setDisplayPort(double x, double y, double width, double height);
 
 	static Vector monitorSize() {
 		SDL_DisplayMode DM;
@@ -138,11 +138,11 @@ public:
 	void displayMetric(std::string);
 
 	void setRenderColor(RGB rgb, int alpha = 0xFF);
-	void drawPixel(float x, float y, RGB color, int z_index = Z_DEFAULT);
+	void drawPixel(double x, double y, RGB color, int z_index = Z_DEFAULT);
 	void drawPixel(Vector pos, RGB color, int z_index = Z_DEFAULT);
-	void drawRect(float x, float y, float width, float height, RGB color, int z_index = Z_DEFAULT);
-	void fillRect(float x, float y, float width, float height, RGB color, int z_index = Z_DEFAULT);
-	void drawLine(float x1, float y1, float x2, float y2, RGB color, int z_index = Z_DEFAULT);
+	void drawRect(double x, double y, double width, double height, RGB color, int z_index = Z_DEFAULT);
+	void fillRect(double x, double y, double width, double height, RGB color, int z_index = Z_DEFAULT);
+	void drawLine(double x1, double y1, double x2, double y2, RGB color, int z_index = Z_DEFAULT);
 	void drawLine(Vector p1, Vector p2, RGB color, int z_index = Z_DEFAULT);
 
 	template <size_t size>

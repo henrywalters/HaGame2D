@@ -11,27 +11,30 @@ private:
 
 	std::vector<Line> lines;
 
+	std::vector<Vector> pixels;
+
 public:
 
 	RGB color = Color::blue();
 	bool fill = false;
 
-	CircleRenderer(float radius, bool positionCenter = true) : CircleComponent(radius, positionCenter) {}
+	CircleRenderer(double radius, bool positionCenter = true) : CircleComponent(radius, positionCenter) {}
 
-	void update() {
+	void onCreate() {
+		pixels = {};
 		int r = getRadius();
 		int x = -r;
 		int y = 0;
 		int err = 2 - 2 * r;
 
-		float xPos = getCircle().center.x;
-		float yPos = getCircle().center.y;
+		double xPos = getCircle().center.x;
+		double yPos = getCircle().center.y;
 
 		do {
-			display->drawPixel(xPos - x, yPos + y, color);
-			display->drawPixel(xPos - y, yPos - x, color);
-			display->drawPixel(xPos + x, yPos - y, color);
-			display->drawPixel(xPos + y, yPos + x, color);
+			pixels.push_back(Vector(xPos - x, yPos + y));
+			pixels.push_back(Vector(xPos - y, yPos - x));
+			pixels.push_back(Vector(xPos + x, yPos - y));
+			pixels.push_back(Vector(xPos + y, yPos + x));
 
 			r = err;
 
@@ -39,6 +42,12 @@ public:
 			if (r > x || err > y) err += ++x * 2 + 1;
 
 		} while (x < 0);
+	}
+
+	void update() {
+		for (auto pixel : pixels) {
+			display->drawPixel(transform->position + pixel, color);
+		}
 	}
 };
 

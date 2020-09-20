@@ -9,13 +9,13 @@ const int scale = 3;
 class FollowCursor : public BoxComponent {
 public:
 
-	float x = 0, y = 0;
-	float screenWidth, screenHeight;
-	const float precisionSpeed = .25;
-	const float fullSpeed = 2;
-	float speed = .5;
+	double x = 0, y = 0;
+	double screenWidth, screenHeight;
+	const double precisionSpeed = .25;
+	const double fullSpeed = 2;
+	double speed = .5;
 
-	float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+	double x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 	bool placedFirstPoint = false;
 	bool placedSecondPoint = false;
 	bool canProceed = true;
@@ -129,8 +129,8 @@ public:
 
 SpriteSheetHelper::SpriteSheetHelper(std::string spritePath, int width, int height)
 {
-	float scaledWidth = scale * width;
-	float scaledHeight = scale * height;
+	double scaledWidth = scale * width;
+	double scaledHeight = scale * height;
 
 	Game game = Game(scaledWidth, scaledHeight);
 	Scene helper = *game.addScene("helper");
@@ -154,8 +154,8 @@ SpriteSheetHelper::~SpriteSheetHelper()
 
 void SpriteSheetHelper::autoLoad(int width, int height, int rows, int cols, char * saveTo, std::string rowNames[], std::string colNames[]) {
 
-	float cellWidth = width / cols;
-	float cellHeight = height / rows;
+	double cellWidth = width / cols;
+	double cellHeight = height / rows;
 
 	std::vector<SpriteSheetCell> cells;
 

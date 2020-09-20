@@ -33,7 +33,7 @@ GameObject * GameObject::setPosition(Vector pos) {
 	return this;
 }
 
-GameObject * GameObject::setRotation(float theta) {
+GameObject * GameObject::setRotation(double theta) {
 	rotation = theta;
 	return this;
 }
@@ -48,7 +48,7 @@ GameObject * GameObject::move(Vector delta) {
 	return this;
 }
 
-GameObject * GameObject::rotate(float theta) {
+GameObject * GameObject::rotate(double theta) {
 	rotation += theta;
 	return this;
 }
@@ -83,7 +83,7 @@ void GameObject::update() {
 bool GameObject::isWithinViewport(Matrix viewport)
 {
 	BoxComponent * box = getComponent<BoxComponent>();
-	float bx, by, bw, bh;
+	double bx, by, bw, bh;
 
 	bx = position.x;
 	by = position.y;

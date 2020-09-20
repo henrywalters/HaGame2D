@@ -193,6 +193,7 @@
     <ClInclude Include="events.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectGrid.h" />
     <ClInclude Include="GameObjectTree.h" />
     <ClInclude Include="GraphicsComponent.h" />
     <ClInclude Include="Grid.h" />
@@ -205,10 +206,12 @@
     <ClInclude Include="HaType.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputComponent.h" />
+    <ClInclude Include="InputDemo.h" />
     <ClInclude Include="InteractableComponent.h" />
     <ClInclude Include="InteractionRequirement.h" />
     <ClInclude Include="IntervalComponent.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="IsometricShooter.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Loggable.h" />
     <ClInclude Include="Logger.h" />
@@ -224,6 +227,7 @@
     <ClInclude Include="Platformer.h" />
     <ClInclude Include="PlatformerMapBuilder.h" />
     <ClInclude Include="Polygon.h" />
+    <ClInclude Include="PolygonRenderer.h" />
     <ClInclude Include="Pong.h" />
     <ClInclude Include="Pong_BallController.h" />
     <ClInclude Include="Pong_ComputerController.h" />

@@ -21,6 +21,8 @@
 #include "OLC_2020_TheGreatMachine.h"
 #include "TGMLevelBuilder.h"
 #include "Sandbox.h"
+#include "InputDemo.h"
+#include "IsometricShooter.h"
 
 GameObject* newRect(Scene *scene, Vector pos, Vector size) {
 	return scene->add()
@@ -34,6 +36,11 @@ int main(int argc, char* argv[])
 	//MapBuilder("../Assets/maptest");
 
 	//sandbox();
+	//auto inputDemo = InputDemo();
+	//inputDemo.run();
+
+	//auto shooter = IsometricShooter();
+	//shooter.run();
 
 	//auto levelBuilder = TGM::LevelBuilder();
 	//levelBuilder.run();

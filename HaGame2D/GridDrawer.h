@@ -39,7 +39,7 @@ public:
 
 	int brushSize = 4;
 
-	GridDrawer(float _width, float _height, int rows, int cols);
+	GridDrawer(double _width, double _height, int rows, int cols);
 	~GridDrawer();
 
 	void update();

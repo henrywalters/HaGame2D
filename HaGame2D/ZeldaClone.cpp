@@ -21,13 +21,13 @@ Inventory *linksInventory = new Inventory();
 class Bar : public BoxComponent {
 
 	RGB color;
-	float min, max;
-	float current = 50;
+	double min, max;
+	double current = 50;
 
 public:
 
 
-	Bar(RGB _color, float _min, float _max, float _current) {
+	Bar(RGB _color, double _min, double _max, double _current) {
 		width = 250;
 		height = 25;
 		color = _color;
@@ -36,13 +36,13 @@ public:
 		current = _current;
 	}
 
-	void setValue(float value) {
+	void setValue(double value) {
 		if (value >= min && value <= max) {
 			current = value;
 		}
 	}
 
-	void decrement(float delta) {
+	void decrement(double delta) {
 		if (current - delta >= min) {
 			current = current - delta;
 		}
@@ -51,7 +51,7 @@ public:
 		}
 	}
 
-	void increment(float delta) {
+	void increment(double delta) {
 		if (current + delta <= max) {
 			current = current + delta;
 		}
@@ -62,14 +62,14 @@ public:
 
 	void update() {
 		display->drawRect(transform->relativePosition.x, transform->relativePosition.y, relativeWidth, relativeHeight, color, 15);
-		float barWidth = (current / (max - min)) * relativeWidth;
+		double barWidth = (current / (max - min)) * relativeWidth;
 		display->fillRect(transform->relativePosition.x, transform->relativePosition.y, barWidth, relativeHeight, color, 15);
 	}
 };
 
 class HealthController : public Component {
-	float health = 100;
-	float healthPot = 25;
+	double health = 100;
+	double healthPot = 25;
 	void update() {
 		auto collider = transform->getComponent<BoxCollider>();
 		for (auto collision : collider->currentCollisions) {
@@ -87,17 +87,17 @@ class HealthController : public Component {
 	}
 public:
 
-	std::function<void(float)> damageFunc;
-	std::function<void(float)> healFunc;
+	std::function<void(double)> damageFunc;
+	std::function<void(double)> healFunc;
 
-	void damage(float dmg) {
+	void damage(double dmg) {
 		health -= dmg;
 		if (damageFunc != NULL) {
 			damageFunc(dmg);
 		}
 	}
 
-	void heal(float hp) {
+	void heal(double hp) {
 		health += hp;
 		if (healFunc != NULL) {
 			healFunc(hp);
@@ -144,7 +144,7 @@ public:
 	int lastChange;
 	int changeIn;
 
-	float damage = 20;
+	double damage = 20;
 
 	bool canDamage = true;
 	int lastDamage;
@@ -242,7 +242,7 @@ public:
 
 	static GameObject * initialize(Scene * scene, SpriteAnimationRenderer *renderer, Vector position, Vector velocity) {
 
-		float squibSize = 35.5;
+		double squibSize = 35.5;
 
 		GameObject * squib = scene->add();
 		squib->addComponent(new BoxCollider(squibSize, squibSize));
@@ -256,7 +256,7 @@ public:
 	}
 };
 
-const float SPELL_SIZE = 30;
+const double SPELL_SIZE = 30;
 
 class SpellCast : public BoxComponent {
 public:
@@ -307,17 +307,17 @@ public:
 class SpellController : public Component {
 public:
 
-	float cooldown = 250;
+	double cooldown = 250;
 	int lastCast;
 	bool canCast = true;
-	float manaCost = 14;
+	double manaCost = 14;
 
-	float mana = 100;
+	double mana = 100;
 
-	float manaPot = 25;
+	double manaPot = 25;
 
-	std::function<void(float)> castFunc;
-	std::function<void(float)> regenFunc;
+	std::function<void(double)> castFunc;
+	std::function<void(double)> regenFunc;
 
 	bool hasNotified = false;
 
@@ -468,7 +468,7 @@ public:
 class Particle : BoxComponent {
 	RGB color;
 	Vector velocity;
-	float speed;
+	double speed;
 };
 
 class KeyRequirement : public InteractionRequirement {
@@ -496,7 +496,7 @@ class Door : public InteractableComponent {
 public:
 	GameObject *door;
 
-	Door(float width, float height, GameObject *_door) : InteractableComponent(width, height) {
+	Door(double width, double height, GameObject *_door) : InteractableComponent(width, height) {
 		KeyRequirement *keyReq = new KeyRequirement();
 		keyReq->inventory = linksInventory;
 		addRequirement(keyReq);
@@ -529,7 +529,7 @@ public:
 class Chest : public InteractableComponent {
 	InventoryItem *loot;
 public:
-	Chest(float width, float height, InventoryItem *item = new InventoryItem{"key", 1}) : InteractableComponent(width, height) {
+	Chest(double width, double height, InventoryItem *item = new InventoryItem{"key", 1}) : InteractableComponent(width, height) {
 		loot = item;
 		ChestRequirement *req = new ChestRequirement(loot);
 		addRequirement(req);
@@ -557,8 +557,8 @@ class Map {
 
 	int w = 0, h = 0;
 
-	float initialWalls = 0;
-	float finalWalls = 0;
+	double initialWalls = 0;
+	double finalWalls = 0;
 
 	void getMapDimensions() {
 		for (MapCell cell : mapData) {
@@ -753,7 +753,7 @@ public:
 
 		printMapStruct();
 
-		float reduction =  100 * ((finalWalls - initialWalls) / initialWalls);
+		double reduction =  100 * ((finalWalls - initialWalls) / initialWalls);
 
 		std::cout << "Reduced wall colliders from " << initialWalls << " to " << finalWalls << " resulting in a " << reduction << "% decrease.\n";
 
@@ -816,20 +816,20 @@ ZeldaClone::ZeldaClone()
 	link->setPosition(mapRenderer.getSpawn());
 
 	auto spellController = link->getComponent<SpellController>();
-	spellController->castFunc = [manaBar, &console, spellController](float manaCost) {
+	spellController->castFunc = [manaBar, &console, spellController](double manaCost) {
 		manaBar->decrement(manaCost);
 	};
 	
-	spellController->regenFunc = [manaBar](float regen) {
+	spellController->regenFunc = [manaBar](double regen) {
 		manaBar->increment(regen);
 	};
 
 	auto healthController = link->getComponent<HealthController>();
-	healthController->damageFunc = [healthBar](float damage) {
+	healthController->damageFunc = [healthBar](double damage) {
 		healthBar->decrement(damage);
 	};
 
-	healthController->healFunc = [healthBar](float hp) {
+	healthController->healFunc = [healthBar](double hp) {
 		std::cout << "Played Healed\n";
 		healthBar->increment(hp);
 	};

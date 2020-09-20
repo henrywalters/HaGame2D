@@ -19,7 +19,7 @@ public:
 		transform->rotate(1 * M_PI / 180 * (gameScene->dt() / 5000));
 		transform->setOrigin(Vector(sin(transform->rotation) * 50, sin(transform->rotation) * 50));
 
-		float vel = 0.001;
+		double vel = 0.001;
 
 		if (input->up) {
 			transform->move(Vector(0, -1 * vel * gameScene->dt(), 0));
@@ -116,19 +116,19 @@ struct Mesh {
 };
 
 struct Vector4 {
-	float x, y, z, w;
+	double x, y, z, w;
 
 	Vector toVector() {
 		return Vector{ x, y, z };
 	}
 
-	static Vector4 toVector4(Vector v, float _w) {
+	static Vector4 toVector4(Vector v, double _w) {
 		return Vector4{ v.x, v.y, v.z, _w };
 	}
 };
 
 struct Matrix4 {
-	float m[4][4];
+	double m[4][4];
 
 	Vector4 leftMult(Vector4 v) {
 		return Vector4 {
@@ -143,10 +143,10 @@ struct Matrix4 {
 class Display3D
 {
 public:
-	static Matrix4 projectionMatrix(float fov, float nearClip, float farClip) {
-		float S = 1 / tan((fov / 2) * (M_PI / 180));
-		float f1 = (-1 * farClip) / (farClip - nearClip);
-		float f2 = (-1 * farClip * nearClip) / (farClip - nearClip);
+	static Matrix4 projectionMatrix(double fov, double nearClip, double farClip) {
+		double S = 1 / tan((fov / 2) * (M_PI / 180));
+		double f1 = (-1 * farClip) / (farClip - nearClip);
+		double f2 = (-1 * farClip * nearClip) / (farClip - nearClip);
 
 		// std::cout << "F1 = " << f1 << " F2 = " << f2 << std::endl << " S = " << S;
 
@@ -160,7 +160,7 @@ public:
 		};
 	}
 
-	static Vector projectPoint(Vector point, float fov, float nearClip, float farClip) {
+	static Vector projectPoint(Vector point, double fov, double nearClip, double farClip) {
 		Matrix4 projMatrix = projectionMatrix(fov, nearClip, farClip);
 		Vector4 projected = projMatrix.leftMult(Vector4::toVector4(point, 1));
 		// std::cout << point.toString() << std::endl;

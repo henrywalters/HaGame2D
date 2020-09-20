@@ -2,7 +2,7 @@
 #include "ButtonComponent.h"
 
 
-ButtonComponent::ButtonComponent(float _width, float _height)
+ButtonComponent::ButtonComponent(double _width, double _height)
 {
 	width = _width; height = _height;
 }

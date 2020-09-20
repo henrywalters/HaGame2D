@@ -8,10 +8,10 @@ class Circle;
 class Box {
 public:
 
-	float x;
-	float y;
-	float width;
-	float height;
+	double x;
+	double y;
+	double width;
+	double height;
 
 	bool boundedBy(Box otherBox) {
 		return (x >= otherBox.x && x + width <= otherBox.x + otherBox.width && y >= otherBox.y && y + height <= otherBox.y + otherBox.height);

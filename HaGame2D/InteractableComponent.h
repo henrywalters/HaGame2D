@@ -22,7 +22,7 @@ protected:
 	bool singleUse = false;
 
 public:
-	InteractableComponent(float width, float height);
+	InteractableComponent(double width, double height);
 	~InteractableComponent();
 	
 	void setMessage(std::string _message) {

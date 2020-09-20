@@ -2,7 +2,7 @@
 #include "BoxRenderer.h"
 
 
-BoxRenderer::BoxRenderer(float _width, float _height)
+BoxRenderer::BoxRenderer(double _width, double _height)
 {
 	width = _width;
 	height = _height;

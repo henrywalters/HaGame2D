@@ -178,7 +178,7 @@ public:
 
 			auto fg = new GameObject();
 			
-			float spacing = Math::getUniformDistrubtionSpacing(scene->screenWidth, CASINO_CARD_WIDTH, participants.size());
+			double spacing = Math::getUniformDistrubtionSpacing(scene->screenWidth, CASINO_CARD_WIDTH, participants.size());
 
 			auto dealerHandObject = new GameObject();
 			dealerHandObject->move(dealerOrigin);

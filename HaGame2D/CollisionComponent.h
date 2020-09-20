@@ -14,10 +14,10 @@ struct Collision {
 	bool left;
 	bool right;
 
-	float upOverlap;
-	float downOverlap;
-	float leftOverlap;
-	float rightOverlap;
+	double upOverlap;
+	double downOverlap;
+	double leftOverlap;
+	double rightOverlap;
 
 	bool isColliding() {
 		return up || down || left || right;
@@ -27,7 +27,7 @@ struct Collision {
 		std::cout << "Colliding Up: " << up << "\nColliding Down: " << down << "\nColliding Right: " << right << "\nColliding Left: " << left << "\n\n";
 	}
 
-	std::string subString(std::string tag, bool colliding, float offset) {
+	std::string subString(std::string tag, bool colliding, double offset) {
 		return tag + ": " + std::to_string(colliding) +" (" + std::to_string(offset) + ")";
 	}
 
