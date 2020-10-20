@@ -14,6 +14,10 @@ public:
 	Vector(double x, double y, double z);
 	~Vector();
 
+	inline Vector xVec() { return Vector(x, 0, 0); }
+	inline Vector yVec() { return Vector(0, y, 0); }
+	inline Vector zVec() { return Vector(0, 0, z); }
+
 	void normalize();
 	Vector normalized();
 

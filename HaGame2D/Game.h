@@ -22,7 +22,7 @@ struct GameScene {
 
 class Game
 {
-	char * title;
+	const char * title;
 	std::unordered_map<std::string, GameScene> scenes;
 	std::vector<std::string> keys;
 	std::unordered_map<std::string, bool> sceneStates;
@@ -43,7 +43,7 @@ public:
 	Display * display;
 	Input * input;
 
-	Game(int _screenWidth = DEFAULT_WIDTH, int _screenHeight = DEFAULT_HEIGHT, char * title = "HaGame2D: Untitled Game");
+	Game(int _screenWidth = DEFAULT_WIDTH, int _screenHeight = DEFAULT_HEIGHT, const char * title = "HaGame2D: Untitled Game");
 	~Game();
 
 	bool running = true;

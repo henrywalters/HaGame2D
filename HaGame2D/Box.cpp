@@ -2,6 +2,7 @@
 #include "Box.h"
 #include "Circle.h"
 #include "Vector.h"
+#include "Line.h"
 
 bool Box::collidingWithCircle(Circle circle)
 {
@@ -14,4 +15,9 @@ bool Box::collidingWithCircle(Circle circle)
 	Vector distance = circle.center - closestPoint;
 
 	return distance.magnitude() <= circle.radius;
+}
+
+bool Box::collidingWithLine(Line line)
+{
+	return Algorithms::LiangBarsky(x, y, x + width, y + height, line.p1().x, line.p1().y, line.p2().x, line.p2().y).has_value();
 }

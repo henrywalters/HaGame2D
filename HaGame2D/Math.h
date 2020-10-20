@@ -27,6 +27,10 @@ public:
 		return subElementIndex * (subSize + spacing) + spacing;
 	}
 
+	static Vector rotateVector(Vector vect, double theta) {
+		return rotatePointAroundPoint(vect, Vector::Zero(), theta);
+	}
+
 	static Vector rotatePointAroundPoint(Vector point, Vector origin, double theta) {
 		double s = sin(theta);
 		double c = cos(theta);

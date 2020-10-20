@@ -3,11 +3,8 @@
 #include <iostream>
 #include <filesystem>
 
-Display::Display(int w, int h, char * _title)
+Display::Display(int w, int h, const char * _title) : width(w), height(h), title(_title)
 {
-	width = w;
-	height = h;
-	title = _title;
 
 	displayPort = Matrix(Vector(0, 0), Vector(w, h));
 
@@ -71,13 +68,12 @@ void Display::draw() {
 	port.y = displayPort.get(1);
 	port.w = displayPort.get(2);
 	port.h = displayPort.get(3);
+
+	SDL_RenderSetViewport(renderer, &port);
 	
 	for (int i = Z_INDEX_START; i < Z_INDEX_END; i++) {
 		if (displayQueue[i].size() > 0) {
 			while (!displayQueue[i].empty()) {
-
-				SDL_RenderSetViewport(renderer, &port);
-
 				auto func = displayQueue[i].front();
 				func();
 				displayQueue[i].pop();
@@ -113,16 +109,18 @@ void Display::drawPixel(Vector pos, RGB color, int z_index)
 	drawPixel(pos.x, pos.y, color, z_index);
 }
 
-void Display::drawRect(double x, double y, double width, double height, RGB color, int z_index) {
-	SDL_Rect rect = { x, y, width, height };
+void Display::drawRect(double x, double y, double _width, double _height, RGB color, int z_index) {
+	if (!inDisplayPort(x, y, _width, _height)) return;
+	SDL_Rect rect = { x, y, _width, _height };
 	dispatch(z_index, [this, rect, color] {
 		setRenderColor(color);
 		SDL_RenderDrawRect(renderer, &rect); 
 	});
 }
 
-void Display::fillRect(double x, double y, double width, double height, RGB color, int z_index) {
-	SDL_Rect rect = { x, y, width, height };
+void Display::fillRect(double x, double y, double _width, double _height, RGB color, int z_index) {
+	if (!inDisplayPort(x, y, _width, _height)) return;
+	SDL_Rect rect = { x, y, _width, _height };
 	dispatch(z_index, [this, rect, color] { 
 		setRenderColor(color, 5);
 		SDL_RenderFillRect(renderer, &rect); 
@@ -130,6 +128,7 @@ void Display::fillRect(double x, double y, double width, double height, RGB colo
 }
 
 void Display::drawLine(double x1, double y1, double x2, double y2, RGB color, int z_index) {
+	if (!inDisplayPort(Vector(x1, y1), Vector(x2, y2))) return;
 	dispatch(z_index, [this, x1, y1, x2, y2, color] {
 		setRenderColor(color);
 		SDL_RenderDrawLine(renderer, x1, y1, x2, y2); 
@@ -168,6 +167,7 @@ void Display::drawPNG(PNG png) {
 }
 
 void Display::drawTexture(TextureRect rect, Texture texture, TextureRect clip, int z_index) {
+	if (!inDisplayPort(rect)) return;
 	SDL_Rect sdlRect = rect.getSDLRect();
 	SDL_Rect *sdlClip = clip.getSDLRectPointer();
 	dispatch(z_index, [this, texture, sdlClip, sdlRect] { 
@@ -182,6 +182,7 @@ void Display::drawTexture(TextureRect rect, Texture texture, TextureRect clip, i
 }
 
 void Display::drawText(TextureRect rect, Text text, TextureRect clip, int z_index) {
+	if (!inDisplayPort(rect)) return;
 	SDL_Rect sdlRect = rect.getSDLRect();
 	SDL_Rect *sdlClip = clip.getSDLRectPointer();
 	dispatch(z_index, [this, text, z_index, sdlClip, sdlRect] {

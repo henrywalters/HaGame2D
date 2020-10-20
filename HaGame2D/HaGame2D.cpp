@@ -23,13 +23,7 @@
 #include "Sandbox.h"
 #include "InputDemo.h"
 #include "IsometricShooter.h"
-
-GameObject* newRect(Scene *scene, Vector pos, Vector size) {
-	return scene->add()
-		->setPosition(pos)
-		->addComponentAnd(new BoxRenderer(size.x, size.y))
-		->addComponentAnd(new BoxCollider(size.x, size.y));
-}
+#include "RaycastTest.h"
 
 int main(int argc, char* argv[])
 {
@@ -45,11 +39,14 @@ int main(int argc, char* argv[])
 	//auto levelBuilder = TGM::LevelBuilder();
 	//levelBuilder.run();
 
-	auto olc = TGM::OLC_2020_TheGreatMachine();
-	olc.run();
+	//auto olc = TGM::OLC_2020_TheGreatMachine();
+	//olc.run();
 
 	//auto builder = PlatformerMapBuilder();
 	//builder.run();
+
+	auto rcTest = RaycastTest(1600, 1000);
+	rcTest.run();
 
 	return 0;
 }

@@ -125,7 +125,7 @@ namespace TGM {
 						// Handle Damage
 					}
 
-					if (coll.gameObject->hasTag("TRIGGER") && gamepad->aPressed) {
+					if (coll.gameObject->hasTag("TRIGGER") && (gamepad->aPressed || input->actionDown)) {
 						trSystem->trigger(coll.gameObject->uid, coll.gameObject->getComponent<Trigger>()->value == 1 ? 0 : 1);
 					}
 
@@ -180,15 +180,15 @@ namespace TGM {
 
 			double forceMag = input->shift ? RUN_FORCE : WALK_FORCE;
 
-			/*
+			
 			if (input->up) dir.y = -1;
 			if (input->down) dir.y = 1;
 			if (input->left) dir.x = -1;
 			if (input->right) dir.x = 1;
-			*/
-			if (gamepad->lAxis.magnitude() > 0.4) {
+			
+			/*if (gamepad->lAxis.magnitude() > 0.4) {
 				dir = gamepad->lAxis.normalized();
-			}
+			}*/
 			
 			double speed = velocity.magnitude();
 
@@ -226,24 +226,11 @@ namespace TGM {
 
 			// Rotation portion
 
-			//auto mouseDelta = input->globalMousePos() - center();
+			auto mouseDelta = input->globalMousePos() - center();
 			//std::cout << "f(" << gamepad->rAxis.toString() << ") = " << atan2(gamepad->rAxis.x, -gamepad->rAxis.y) << std::endl;
-			if (gamepad->rAxis.magnitude() >= 0.4) {
-				auto mouseAngle = atan2(gamepad->rAxis.x, -gamepad->rAxis.y);
-				//player->setRotation(mouseAngle);
-				//player->rotate( gamepad->rAxis.x * dt * 7);
 
-				double rot = gamepad->rAxis.x - gamepad->rAxis.y;
-			
-				if (rot > 0 && rotVelocity < MAX_ROT_VEL) rotVelocity += rot * ROT_ACCEL * dt;
-				else if (rot < 0 && rotVelocity > -MAX_ROT_VEL) rotVelocity += rot * ROT_ACCEL * dt;
-			}
-			else if (gamepad->rAxis.magnitude() < 0.4 && abs(rotVelocity) > 0.01) {
-				rotVelocity += -Math::sign(rotVelocity) * ROT_DEACCEL * dt;
-			}
-			else {
-				rotVelocity = 0;
-			}
+			auto mouseAngle = atan2(mouseDelta.x, -mouseDelta.y);
+			player->setRotation(mouseAngle);
 
 			std::cout << rotVelocity << std::endl;
 			
@@ -275,9 +262,9 @@ namespace TGM {
 				}
 			}
 
-			if (((canShoot && weaponType.automatic && gamepad->rTrigger) || gamepad->rTriggerPressed)) {
+			if (((canShoot && weaponType.automatic && input->fire1) || input->fire1Down)) {
 
-				gamepad->rumble(0.8, 50);
+				// gamepad->rumble(0.8, 50);
 
 				canShoot = false;
 				Vector pos = Vector(player->position.x + radius, player->position.y + radius);

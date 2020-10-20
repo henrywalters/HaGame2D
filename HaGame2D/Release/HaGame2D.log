@@ -1,141 +1,157 @@
 ﻿  HaGame2D.cpp
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(35,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(36,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(37,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(38,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(44,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(45,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(46,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(47,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(62,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(63,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(64,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(65,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(71,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(72,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(73,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(74,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Input.h(75,47): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Input.h(181,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Input.h(182,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\GameObject.h(107,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\GameObject.h(116,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\Circle.h(5,11): warning C4099: 'Box': type name first seen using 'class' now seen using 'struct'
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(8): message : see declaration of 'Box'
-C:\Users\henry\HaGame2D\HaGame2D\Circle.h(7,15): warning C4099: 'Circle': type name first seen using 'class' now seen using 'struct'
-C:\Users\henry\HaGame2D\HaGame2D\Circle.h(7): message : see declaration of 'Circle'
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\henry\HaGame2D\HaGame2D\Game.h(13,42): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\CircleRenderer.h(25,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(142,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(202,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(224,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(231,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(53,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(60,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(67,31): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(70,36): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackjackStrategy.h(103,29): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\Loop.h(27,34): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(188,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(226,14): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(257,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\CasinoMenus.h(161,20): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\PlatformerMapBuilder.h(61,54): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\PlatformerMapBuilder.h(61,41): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMPlayerController.h(280,1): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\henry\HaGame2D\HaGame2D\TGMPlayerController.h(289,100): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMPlayerController.h(289,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(57,49): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(57,32): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(59,57): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(59,36): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(60,57): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(60,36): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(237,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(240,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(257,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(277,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(302,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(419,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(26,109): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(26,90): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(228,1): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(301,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(301,39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(307,53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(307,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(419,97): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMLevelBuilder.h(419,78): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\IsometricShooter.h(5,41): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\henry\HaGame2D\HaGame2D\PolygonRenderer.h(21,2): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\PolygonRenderer.h(16): message : while compiling class template member function 'void PolygonRenderer<4>::update(void)'
-C:\Users\henry\HaGame2D\HaGame2D\IsometricShooter.h(52): message : see reference to class template instantiation 'PolygonRenderer<4>' being compiled
-C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(171,13): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(170): message : while compiling class template member function 'T DeckOfCards<T>::peak(int)'
+D:\Development\HaGame2D\HaGame2D\Box.h(39,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(40,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(41,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(42,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(48,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(49,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(50,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Box.h(51,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(62,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(63,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(64,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(65,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(71,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(72,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(73,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Display.h(74,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Input.h(75,47): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Input.h(181,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\Input.h(182,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\GameObject.h(107,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\GameObject.h(116,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\Circle.h(5,11): warning C4099: 'Box': type name first seen using 'class' now seen using 'struct'
+D:\Development\HaGame2D\HaGame2D\Box.h(10): message : see declaration of 'Box'
+D:\Development\HaGame2D\HaGame2D\Circle.h(7,15): warning C4099: 'Circle': type name first seen using 'class' now seen using 'struct'
+D:\Development\HaGame2D\HaGame2D\Circle.h(7): message : see declaration of 'Circle'
+D:\Development\HaGame2D\HaGame2D\BoxCollider.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Development\HaGame2D\HaGame2D\Game.h(13,42): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\CircleRenderer.h(25,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\CasinoDeck.h(142,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\CasinoDeck.h(202,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\CasinoDeck.h(224,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\CasinoDeck.h(231,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackjackStrategy.h(53,20): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackjackStrategy.h(60,20): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackjackStrategy.h(67,31): warning C4018: '>=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackjackStrategy.h(70,36): warning C4018: '>=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackjackStrategy.h(103,29): warning C4018: '>=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\Loop.h(27,34): warning C4018: '>=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackJack.h(188,22): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackJack.h(226,14): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\BlackJack.h(257,23): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\CasinoMenus.h(161,20): warning C4018: '>=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\PlatformerMapBuilder.h(61,54): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\PlatformerMapBuilder.h(61,41): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMPlayerController.h(276,100): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMPlayerController.h(276,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(57,49): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(57,32): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(59,57): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(59,36): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(60,57): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMEnemies.h(60,36): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(237,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(240,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(257,22): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(277,22): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(302,22): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(419,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(26,109): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(26,90): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(228,1): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(301,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(301,39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(307,53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(307,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(419,97): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\TGMLevelBuilder.h(419,78): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\IsometricShooter.h(5,41): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,122): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,116): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,110): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,104): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,88): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(44,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Development\HaGame2D\HaGame2D\PolygonRenderer.h(21,2): warning C4018: '<=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\PolygonRenderer.h(16): message : while compiling class template member function 'void PolygonRenderer<4>::update(void)'
+D:\Development\HaGame2D\HaGame2D\IsometricShooter.h(52): message : see reference to class template instantiation 'PolygonRenderer<4>' being compiled
+D:\Development\HaGame2D\HaGame2D\DeckOfCards.h(171,13): warning C4018: '<=': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\DeckOfCards.h(170): message : while compiling class template member function 'T DeckOfCards<T>::peak(int)'
           with
           [
               T=CasinoCard
           ]
-C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(212): message : see reference to function template instantiation 'T DeckOfCards<T>::peak(int)' being compiled
+D:\Development\HaGame2D\HaGame2D\BlackJack.h(212): message : see reference to function template instantiation 'T DeckOfCards<T>::peak(int)' being compiled
           with
           [
               T=CasinoCard
           ]
-C:\Users\henry\HaGame2D\HaGame2D\CasinoDeck.h(19): message : see reference to class template instantiation 'DeckOfCards<CasinoCard>' being compiled
-C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(138,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(137): message : while compiling class template member function 'void DeckOfCards<CasinoCard>::shuffle(void)'
-C:\Users\henry\HaGame2D\HaGame2D\BlackJack.h(209): message : see reference to function template instantiation 'void DeckOfCards<CasinoCard>::shuffle(void)' being compiled
-C:\Users\henry\HaGame2D\HaGame2D\DeckOfCards.h(141,2): warning C4018: '<': signed/unsigned mismatch
-  OLC_2020_TheGreatMachine.cpp
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(35,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(36,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(37,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(38,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(44,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(45,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(46,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(47,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(62,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(63,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(64,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(65,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(71,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(72,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(73,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Display.h(74,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Input.h(75,47): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Input.h(181,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\Input.h(182,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\GameObject.h(107,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\GameObject.h(116,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\Circle.h(5,11): warning C4099: 'Box': type name first seen using 'class' now seen using 'struct'
-C:\Users\henry\HaGame2D\HaGame2D\Box.h(8): message : see declaration of 'Box'
-C:\Users\henry\HaGame2D\HaGame2D\Circle.h(7,15): warning C4099: 'Circle': type name first seen using 'class' now seen using 'struct'
-C:\Users\henry\HaGame2D\HaGame2D\Circle.h(7): message : see declaration of 'Circle'
-C:\Users\henry\HaGame2D\HaGame2D\BoxCollider.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\henry\HaGame2D\HaGame2D\Game.h(13,42): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\CircleRenderer.h(25,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMPlayerController.h(280,1): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\henry\HaGame2D\HaGame2D\TGMPlayerController.h(289,100): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMPlayerController.h(289,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(57,49): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(57,32): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(59,57): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(59,36): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(60,57): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\TGMEnemies.h(60,36): warning C4244: 'argument': conversion from 'const double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(237,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(240,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(257,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(277,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(302,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\henry\HaGame2D\HaGame2D\OLC_2020_TheGreatMachine.h(419,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\CasinoDeck.h(19): message : see reference to class template instantiation 'DeckOfCards<CasinoCard>' being compiled
+D:\Development\HaGame2D\HaGame2D\DeckOfCards.h(138,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Development\HaGame2D\HaGame2D\DeckOfCards.h(137): message : while compiling class template member function 'void DeckOfCards<CasinoCard>::shuffle(void)'
+D:\Development\HaGame2D\HaGame2D\BlackJack.h(209): message : see reference to function template instantiation 'void DeckOfCards<CasinoCard>::shuffle(void)' being compiled
+D:\Development\HaGame2D\HaGame2D\DeckOfCards.h(141,2): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\Algorithms.h(51,21): warning C4018: '<': signed/unsigned mismatch
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(58): message : see reference to function template instantiation 'int Algorithms::MinIndex<GameObject*,float>(std::vector<GameObject *,std::allocator<GameObject *>>,std::function<float (GameObject *)>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\type_traits(1648,27): warning C4244: 'return': conversion from 'double' to '_Rx', possible loss of data
+          with
+          [
+              _Rx=float
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(902): message : see reference to function template instantiation '_Rx std::_Invoker_ret<_Rx,false>::_Call<_Callable&,_Ty>(_Callable &,_Ty &&)' being compiled
+          with
+          [
+              _Rx=float,
+              _Callable=Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,
+              _Ty=GameObject *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(903): message : see reference to function template instantiation '_Rx std::_Invoker_ret<_Rx,false>::_Call<_Callable&,_Ty>(_Callable &,_Ty &&)' being compiled
+          with
+          [
+              _Rx=float,
+              _Callable=Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,
+              _Ty=GameObject *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(902): message : while compiling class template member function '_Rx std::_Func_impl_no_alloc<Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,_Rx,GameObject *>::_Do_call(GameObject *&&)'
+          with
+          [
+              _Rx=float
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(796): message : see reference to class template instantiation 'std::_Func_impl_no_alloc<Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,_Ret,GameObject *>' being compiled
+          with
+          [
+              _Ret=float
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(993): message : see reference to variable template 'const bool _Is_large<std::_Func_impl_no_alloc<<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,float,GameObject *> >' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(1126): message : see reference to function template instantiation 'void std::_Func_class<_Ret,GameObject *>::_Reset<Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>>(_Fx &&)' being compiled
+          with
+          [
+              _Ret=float,
+              _Fx=Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\functional(1126): message : see reference to function template instantiation 'void std::_Func_class<_Ret,GameObject *>::_Reset<Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>>(_Fx &&)' being compiled
+          with
+          [
+              _Ret=float,
+              _Fx=Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>
+          ]
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(58): message : see reference to function template instantiation 'std::function<float (GameObject *)>::function<Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,0>(_Fx)' being compiled
+          with
+          [
+              _Fx=Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>
+          ]
+D:\Development\HaGame2D\HaGame2D\RaycastTest.h(56): message : see reference to function template instantiation 'std::function<float (GameObject *)>::function<Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>,0>(_Fx)' being compiled
+          with
+          [
+              _Fx=Raycaster::update::<lambda_d9a041f7ad4ec68250b2dde9969e08f2>
+          ]
   Generating code
-  1 of 5412 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  1 of 4733 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  HaGame2D.vcxproj -> C:\Users\henry\HaGame2D\Release\HaGame2D.exe
+  HaGame2D.vcxproj -> D:\Development\HaGame2D\Release\HaGame2D.exe

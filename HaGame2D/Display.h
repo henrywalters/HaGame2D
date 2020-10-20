@@ -117,10 +117,10 @@ public:
 
 	int width;
 	int height;
-	char * title;
+	const char * title;
 
 	Display();
-	Display(int width, int height, char * title = "HaGame2D - Untitled Game");
+	Display(int _width, int _height, const char* _title = "HaGame2D - Untitled Game");
 	~Display();
 
 	void setDisplayPort(double x, double y, double width, double height);
@@ -129,6 +129,15 @@ public:
 		SDL_DisplayMode DM;
 		SDL_GetCurrentDisplayMode(0, &DM);
 		return Vector(DM.w, DM.h);
+	}
+
+	inline bool inScreen(double x, double y) {
+		std::cout << "Size: " << width << "x" << height << std::endl;
+		return x >= 0 && x <= width && y >= 0 && y <= height;
+	}
+
+	inline bool inScreen(Vector v) {
+		return inScreen(v.x, v.y);
 	}
 
 	void clear();
@@ -140,8 +149,8 @@ public:
 	void setRenderColor(RGB rgb, int alpha = 0xFF);
 	void drawPixel(double x, double y, RGB color, int z_index = Z_DEFAULT);
 	void drawPixel(Vector pos, RGB color, int z_index = Z_DEFAULT);
-	void drawRect(double x, double y, double width, double height, RGB color, int z_index = Z_DEFAULT);
-	void fillRect(double x, double y, double width, double height, RGB color, int z_index = Z_DEFAULT);
+	void drawRect(double x, double y, double _width, double _height, RGB color, int z_index = Z_DEFAULT);
+	void fillRect(double x, double y, double _width, double _height, RGB color, int z_index = Z_DEFAULT);
 	void drawLine(double x1, double y1, double x2, double y2, RGB color, int z_index = Z_DEFAULT);
 	void drawLine(Vector p1, Vector p2, RGB color, int z_index = Z_DEFAULT);
 
@@ -174,6 +183,22 @@ public:
 
 	bool inDisplayPort(Vector point) {
 		return (point.x >= displayPort.get(0) && point.x < displayPort.get(0) + displayPort.get(2) && point.y >= displayPort.get(1) && point.y < displayPort.get(1) + displayPort.get(3));
+	}
+
+	bool inDisplayPort(Vector size, Vector pos) {
+		return inDisplayPort(pos) || inDisplayPort(pos + size.xVec()) || inDisplayPort(pos + size.yVec()) || inDisplayPort(pos + size);
+	}
+
+	bool inDisplayPort(double x, double y, double _width, double _height) {
+		return inDisplayPort(Vector(_width, _height), Vector(x, y));
+	}
+
+	bool inDisplayPort(TextureRect rect) {
+		return inDisplayPort(rect.x, rect.y, rect.width, rect.height);
+	}
+
+	bool inDisplayPort(Line line) {
+		return inDisplayPort(line.p1()) || inDisplayPort(line.p2());
 	}
 
 };

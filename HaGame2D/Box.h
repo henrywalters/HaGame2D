@@ -2,8 +2,10 @@
 #include "SDL.h"
 #include "Vector.h"
 #include "Math.h"
+#include "Algorithms.h"
 
 class Circle;
+class Line;
 
 class Box {
 public:
@@ -29,6 +31,8 @@ public:
 	}
 
 	bool collidingWithCircle(Circle circle);
+
+	bool collidingWithLine(Line line);
 
 	SDL_Rect* getSDLRectPointer() {
 		SDL_Rect* rect;

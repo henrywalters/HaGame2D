@@ -2,7 +2,7 @@
 #include "Game.h"
 
 
-Game::Game(int _screenWidth, int _screenHeight, char * _title)
+Game::Game(int _screenWidth, int _screenHeight, const char * _title)
 {
 	title = _title;
 	screenWidth = _screenWidth; screenHeight = _screenHeight;
@@ -123,6 +123,10 @@ void Game::tick() {
 	running = !(input->quit);
 
 	std::vector<std::string> activeKeys = getActiveScenes();
+
+	Clock t1, t2, t3;
+
+	t1.start();
 	
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
@@ -130,6 +134,9 @@ void Game::tick() {
 			scene->display->clear();
 		}
 	}
+
+	std::cout << "Scene Clear: " << t1.stop() << "\n";
+	t2.start();
 	
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
@@ -137,13 +144,17 @@ void Game::tick() {
 			scene->tick();
 		}
 	}
-	
+
+	std::cout << "Scene Tick: " << t2.stop() << "\n";
+	t3.start();
+
 	for (std::string key : activeKeys) {
 		if (sceneExists(key)) {
 			scenes[key].scene->display->draw();
 		}
 	}
 	
+	std::cout << "Scene Draw: " << t3.stop() << "\n";
 	
 	display->render();
 
