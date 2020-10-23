@@ -3,11 +3,15 @@
 #include "Vector.h"
 #include "Math.h"
 #include "Algorithms.h"
+#include "ICollidable.hpp"
+
+#ifndef BOX_H
+#define BOX_H
 
 class Circle;
 class Line;
 
-class Box {
+class Box : public ICollidable {
 public:
 
 	double x;
@@ -23,7 +27,7 @@ public:
 		return x <= point.x && x + width >= point.x && y <= point.y && y + height >= point.y;
 	}
 
-	bool collidingWith(Box rect) {
+	bool collidingWithBox(Box rect) {
 		return (x <= rect.x + rect.width &&
 			x + width >= rect.x &&
 			y <= rect.y + rect.height &&
@@ -33,6 +37,14 @@ public:
 	bool collidingWithCircle(Circle circle);
 
 	bool collidingWithLine(Line line);
+
+	CollisionType getCollisionType() {
+		return CollisionType::BoxCollider;
+	}
+
+	Box getBox() {
+		return *this;
+	}
 
 	SDL_Rect* getSDLRectPointer() {
 		SDL_Rect* rect;
@@ -81,3 +93,5 @@ public:
 		return Vector(width, height);
 	}
 };
+
+#endif

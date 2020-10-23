@@ -1,4 +1,6 @@
 #pragma once
+#ifndef LINE_H
+#define LINE_H
 #include "Vector.h"
 
 class Line
@@ -33,3 +35,4 @@ public:
 	}
 };
 
+#endif

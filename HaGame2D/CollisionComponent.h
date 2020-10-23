@@ -2,6 +2,7 @@
 #include "Component.h"
 #include <vector>
 #include <iostream>
+#include "ICollidable.hpp"
 
 struct Collision {
 
@@ -39,15 +40,13 @@ struct Collision {
 class CollisionComponent : public Component
 {
 public:
+	std::vector<Collision> currentCollisions;
+	bool pollCollisions = false;
+	bool isColliding = false;
+
 	CollisionComponent();
 	~CollisionComponent();
 
-	std::vector<Collision> currentCollisions;
-
-	//virtual std::vector<Collision> checkCollisions(std::vector<GameObject *> gameObjects) = 0;
-
-	bool pollCollisions = false;
-
-	bool isColliding = false;
+	virtual ICollidable getCollider() = 0;
 };
 

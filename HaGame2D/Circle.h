@@ -1,10 +1,16 @@
 #pragma once
+#ifndef CIRCLE_H
+#define CIRCLE_H
 #include "Box.h"
+#include "Line.h"
 #include "Vector.h"
+#include "ICollidable.hpp"
 
-struct Box;
+class Box;
+class Line;
 
-struct Circle {
+class Circle : public ICollidable {
+public:
 	Vector center;
 	double radius;
 
@@ -19,7 +25,17 @@ struct Circle {
 		return distance.magnitude() < radius;
 	}
 
-	bool collidingWith(Circle circle) {
+	bool collidingWithCircle(Circle circle) {
 		return (circle.center - center).magnitude() < circle.radius + radius;
 	}
+
+	bool collidingWithLine()
+
+	CollisionType getCollisionType() {
+		return CollisionTypes::CircleCollider;
+	}
+
+
 };
+
+#endif

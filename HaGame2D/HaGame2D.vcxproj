@@ -206,6 +206,7 @@
     <ClInclude Include="HaScript.h" />
     <ClInclude Include="HaString.h" />
     <ClInclude Include="HaType.h" />
+    <ClInclude Include="ICollidable.hpp" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="InputDemo.h" />
